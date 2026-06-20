@@ -96,6 +96,16 @@ ln -sf ~/.themes/Material-Gnome/gtk-4.0/gtk.css ~/.config/gtk-4.0/gtk.css
 ln -sf ~/.themes/Material-Gnome/gtk-4.0/gtk-dark.css ~/.config/gtk-4.0/gtk-dark.css
 ```
 
+### Optional: Manager App
+
+If you prefer a GUI workflow, [Material GNOME Manager](https://github.com/AdityaHebballe/Material-Gnome-Manager) is a community GTK4/Libadwaita app that can fetch and update the theme, install it locally, apply color presets, generate Matugen palettes, and link GTK4/Libadwaita files automatically.
+
+On Arch Linux, it is also available from the AUR:
+
+```bash
+yay -S material-gnome-manager-git
+```
+
 ---
 
 ## 📦 Flatpak Application Support
