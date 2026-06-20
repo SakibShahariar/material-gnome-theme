@@ -2,7 +2,23 @@
 
 A modern, cohesive theme for the GNOME desktop environment inspired by Google's Material You and Material 3 design languages. It provides a unified visual experience across GTK3, GTK4, and GNOME Shell with a focus on deep container colors, expressive active states, and minimal visual clutter.
 
-![Showcase](https://raw.githubusercontent.com/username/Material-Gnome/main/preview.png)
+![Showcase](screenshots/01-desktop.png)
+
+---
+
+## 🖼️ Screenshots
+
+| App Grid | Quick Settings |
+|---|---|
+| ![App Grid](screenshots/02-app-grid.png) | ![Quick Settings](screenshots/03-quick-settings.png) |
+
+| Notifications | Activities Overview |
+|---|---|
+| ![Notifications](screenshots/04-notifications.png) | ![Activities Overview](screenshots/06-activities-overview.png) |
+
+| GTK4 App | GTK3 App |
+|---|---|
+| ![GTK4 App](screenshots/05-gtk4-app.png) | ![GTK3 App](screenshots/07-gtk3-app.png) |
 
 ---
 
@@ -102,7 +118,17 @@ flatpak override --user --env=GTK_THEME=Material-Gnome
 
 ## 🎨 Color Themes
 
-The `themes/` folder contains a set of premade color themes as JSON files (Material You–style color tokens). There are two ways to apply one:
+The `themes/` folder contains a set of premade color themes as JSON files (Material You–style color tokens). A few examples:
+
+| Aqua Abyss | Arctic Blood | Burgundy Nights |
+|---|---|---|
+| ![Aqua Abyss](screenshots/themes/Aqua-Abyss.png) | ![Arctic Blood](screenshots/themes/Arctic-Blood.png) | ![Burgundy Nights](screenshots/themes/Burgundy-Nights.png) |
+
+| Desert Stone | Electric Lime |
+|---|---|
+| ![Desert Stone](screenshots/themes/Desert-Stone.png) | ![Electric Lime](screenshots/themes/Electric-Lime.png) |
+
+There are two ways to apply one:
 
 ### Option A: Manual swap
 
@@ -137,7 +163,17 @@ Every key in the JSON has a matching `--variable` in `colors.css` with the same 
 
 ## 🎨 Top Bar Layouts
 
-GNOME Shell's top bar can be swapped between several included styles. Each layout lives as a separate CSS file in `gnome-shell/layouts/`:
+GNOME Shell's top bar can be swapped between several included styles. A few examples:
+
+| Floating Capsule | Floating Capsule (Glass) |
+|---|---|
+| ![Floating Capsule](screenshots/layouts/floating-capsule.png) | ![Floating Capsule Glass](screenshots/layouts/floating-capsule-glass.png) |
+
+| Pill Duo | Unified Capsule | Segmented Dock |
+|---|---|---|
+| ![Pill Duo](screenshots/layouts/pill-duo.png) | ![Unified Capsule](screenshots/layouts/unified-capsule.png) | ![Segmented Dock](screenshots/layouts/segmented-dock.png) |
+
+Each layout lives as a separate CSS file in `gnome-shell/layouts/`:
 
 ```text
 gnome-shell/layouts/
