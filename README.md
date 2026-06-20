@@ -236,10 +236,12 @@ If you want to tweak or override specific elements (like changing the accent col
 
 ## 🙏 Acknowledgements
 
-This project builds on base files from these excellent theme repos — credit to their authors:
+This project builds on base files from these excellent theme repos by [Fausto-Korpsvart](https://github.com/Fausto-Korpsvart) — credit to the original author:
 
-* [Gruvbox](https://github.com/morhetz/gruvbox)
-* [Tokyonight](https://github.com/folke/tokyonight.nvim)
+* [Gruvbox-GTK-Theme](https://github.com/Fausto-Korpsvart/Gruvbox-GTK-Theme)
+* [Tokyonight-GTK-Theme](https://github.com/Fausto-Korpsvart/Tokyonight-GTK-Theme)
+
+Both are licensed under GPL-3.0, same as this project.
 
 ---
 
