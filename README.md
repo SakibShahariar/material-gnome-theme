@@ -120,13 +120,13 @@ flatpak override --user --env=GTK_THEME=Material-Gnome
 
 The `themes/` folder contains a set of premade color themes as JSON files (Material You–style color tokens). A few examples:
 
-| Aqua Abyss | Arctic Blood | Burgundy Nights |
+| Aqua Abyss | Arctic Blood | Forgotten Atelier |
 |---|---|---|
-| ![Aqua Abyss](screenshots/themes/Aqua-Abyss.png) | ![Arctic Blood](screenshots/themes/Arctic-Blood.png) | ![Burgundy Nights](screenshots/themes/Burgundy-Nights.png) |
+| ![Aqua Abyss](screenshots/themes/Aqua-Abyss.png) | ![Arctic Blood](screenshots/themes/Arctic-Blood.png) | ![Burgundy Nights](screenshots/themes/Forgotten-Atelier.png) |
 
-| Desert Stone | Electric Lime |
+| Desert Stone | Jade Vineyard |
 |---|---|
-| ![Desert Stone](screenshots/themes/Desert-Stone.png) | ![Electric Lime](screenshots/themes/Electric-Lime.png) |
+| ![Desert Stone](screenshots/themes/Desert-Stone.png) | ![Electric Lime](screenshots/themes/Jade-Vineyard.png) |
 
 There are two ways to apply one:
 
