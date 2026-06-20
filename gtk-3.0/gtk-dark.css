@@ -4144,7 +4144,14 @@ messagedialog .dialog-action-box .linked:not(.vertical) > button.suggested-actio
 
 messagedialog .dialog-action-box button.destructive-action:not(:disabled),
 messagedialog .dialog-action-box .linked:not(.vertical) > button.destructive-action:not(:disabled) {
-  color: @error;
+  color: @on_error;
+  background-color: @error;
+}
+
+messagedialog .dialog-action-box button.destructive-action:not(:disabled):hover {
+  color: @on_error;
+  background-color: @error;
+  box-shadow: inset 0 0 0 9999px alpha(@on_error, 0.08);
 }
 
 .csd filechooser {
@@ -5766,11 +5773,14 @@ window.background.chromium > button:disabled {
 window.background.chromium menubar,
 window.background.chromium headerbar {
   color: alpha(@primary, 0.7);
-  transition: color 0.2s ease;
+  background-color: @surface;
+  transition: color 0.2s ease, background-color 0.2s ease;
 }
 
 window.background.chromium headerbar.titlebar {
   padding: 0 12px;
+  background-color: @surface;
+  background-image: none;
 }
 
 window.background.chromium headerbar.titlebar button:active {
@@ -6140,3 +6150,97 @@ window.background > grid > widget > widget > scrolledwindow > viewport > grid > 
   padding-bottom: 3px;
   transition: background-color 0.2s ease;
 }
+
+/* GTK NAMED COLORS */
+
+@define-color theme_fg_color @on_surface;
+
+@define-color theme_text_color @on_surface;
+
+@define-color theme_bg_color @surface_container;
+
+@define-color theme_base_color @surface_container_low;
+
+@define-color theme_selected_bg_color @primary;
+
+@define-color theme_selected_fg_color @on_primary;
+
+@define-color insensitive_bg_color @surface_container_lowest;
+
+@define-color insensitive_fg_color alpha(@on_surface, 0.5);
+
+@define-color insensitive_base_color @surface_container_lowest;
+
+@define-color theme_unfocused_fg_color alpha(@on_surface, 0.7);
+
+@define-color theme_unfocused_text_color alpha(@on_surface, 0.7);
+
+@define-color theme_unfocused_bg_color @surface_container;
+
+@define-color theme_unfocused_base_color @surface_container_low;
+
+@define-color theme_unfocused_selected_bg_color alpha(@primary, 0.7);
+
+@define-color theme_unfocused_selected_fg_color @on_primary;
+
+@define-color unfocused_insensitive_color alpha(@on_surface, 0.5);
+
+@define-color borders alpha(@on_surface, 0.12);
+
+@define-color unfocused_borders alpha(@on_surface, 0.08);
+
+@define-color warning_color @tertiary;
+@define-color error_color @error;
+@define-color success_color @secondary;
+
+@define-color wm_focused_title @on_surface;
+@define-color wm_unfocused_title alpha(@on_surface, 0.7);
+@define-color wm_highlight alpha(@on_surface, 0.1);
+@define-color wm_border @shadow;
+@define-color wm_focused_bg @surface;
+@define-color wm_unfocused_bg @surface;
+@define-color wm_button_icon @on_surface;
+@define-color wm_button_focused_bg @surface_container_high;
+@define-color wm_button_unfocused_bg @surface_container;
+@define-color wm_button_hover_fg @on_primary;
+@define-color wm_button_active_fg @on_primary;
+@define-color wm_button_hover_bg @primary;
+@define-color wm_button_active_bg @primary_container;
+
+@define-color content_view_bg @surface_container_low;
+@define-color placeholder_text_color @on_surface_variant;
+@define-color text_view_bg @surface_container_low;
+
+@define-color accent_color @primary;
+@define-color accent_bg_color @primary;
+@define-color accent_fg_color @on_primary;
+@define-color destructive_color @error;
+@define-color destructive_bg_color @error;
+@define-color destructive_fg_color @on_error;
+@define-color success_bg_color @secondary_container;
+@define-color success_fg_color @on_secondary_container;
+@define-color warning_bg_color @tertiary_container;
+@define-color warning_fg_color @on_tertiary_container;
+
+@define-color toolbar_bg_color @surface_container;
+@define-color toolbar_fg_color @on_surface;
+@define-color toolbar_highlight_color alpha(@primary, 0.15);
+@define-color tab_selected_bg_color @surface_container_high;
+@define-color tab_selected_fg_color @on_surface;
+@define-color ntp_bg @surface;
+@define-color ntp_fg @on_surface;
+@define-color ntp_header @surface_container;
+
+@define-color theme_button_bg_color @surface_container_low;
+@define-color theme_button_fg_color @on_surface;
+@define-color theme_button_decoration_hover @primary;
+@define-color theme_button_decoration_focus @primary;
+@define-color theme_entry_bg_color @surface_container_low;
+@define-color theme_entry_fg_color @on_surface;
+@define-color theme_sidebar_bg_color @surface_container_low;
+@define-color theme_sidebar_fg_color @on_surface;
+@define-color theme_sidebar_backdrop_color @surface_container;
+@define-color theme_sidebar_border_color alpha(@on_surface, 0.12);
+
+@define-color theme_header_bg_color @surface;
+@define-color theme_toolbar_bg_color @surface;

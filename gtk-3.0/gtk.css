@@ -6151,50 +6151,48 @@ window.background > grid > widget > widget > scrolledwindow > viewport > grid > 
   transition: background-color 0.2s ease;
 }
 
-
-
 /* GTK NAMED COLORS */
-/* widget text/foreground color */
+
 @define-color theme_fg_color @on_surface;
-/* text color for entries, views and content in general */
+
 @define-color theme_text_color @on_surface;
-/* widget base background color */
+
 @define-color theme_bg_color @surface_container;
-/* text widgets and the like base background color */
+
 @define-color theme_base_color @surface_container_low;
-/* base background color of selections */
+
 @define-color theme_selected_bg_color @primary;
-/* text/foreground color of selections */
+
 @define-color theme_selected_fg_color @on_primary;
-/* base background color of insensitive widgets */
+
 @define-color insensitive_bg_color @surface_container_lowest;
-/* text foreground color of insensitive widgets */
+
 @define-color insensitive_fg_color alpha(@on_surface, 0.5);
-/* insensitive text widgets and the like base background color */
+
 @define-color insensitive_base_color @surface_container_lowest;
-/* widget text/foreground color on backdrop windows */
+
 @define-color theme_unfocused_fg_color alpha(@on_surface, 0.7);
-/* text color for entries, views and content in general on backdrop windows */
+
 @define-color theme_unfocused_text_color alpha(@on_surface, 0.7);
-/* widget base background color on backdrop windows */
+
 @define-color theme_unfocused_bg_color @surface_container;
-/* text widgets and the like base background color on backdrop windows */
+
 @define-color theme_unfocused_base_color @surface_container_low;
-/* base background color of selections on backdrop windows */
+
 @define-color theme_unfocused_selected_bg_color alpha(@primary, 0.7);
-/* text/foreground color of selections on backdrop windows */
+
 @define-color theme_unfocused_selected_fg_color @on_primary;
-/* insensitive color on backdrop windows */
+
 @define-color unfocused_insensitive_color alpha(@on_surface, 0.5);
-/* widgets main borders color */
+
 @define-color borders alpha(@on_surface, 0.12);
-/* widgets main borders color on backdrop windows */
+
 @define-color unfocused_borders alpha(@on_surface, 0.08);
-/* semantic colors */
+
 @define-color warning_color @tertiary;
 @define-color error_color @error;
 @define-color success_color @secondary;
-/* window manager colors */
+
 @define-color wm_focused_title @on_surface;
 @define-color wm_unfocused_title alpha(@on_surface, 0.7);
 @define-color wm_highlight alpha(@on_surface, 0.1);
@@ -6208,11 +6206,11 @@ window.background > grid > widget > widget > scrolledwindow > viewport > grid > 
 @define-color wm_button_active_fg @on_primary;
 @define-color wm_button_hover_bg @primary;
 @define-color wm_button_active_bg @primary_container;
-/* content colors */
+
 @define-color content_view_bg @surface_container_low;
 @define-color placeholder_text_color @on_surface_variant;
 @define-color text_view_bg @surface_container_low;
-/* accent colors */
+
 @define-color accent_color @primary;
 @define-color accent_bg_color @primary;
 @define-color accent_fg_color @on_primary;
@@ -6224,7 +6222,6 @@ window.background > grid > widget > widget > scrolledwindow > viewport > grid > 
 @define-color warning_bg_color @tertiary_container;
 @define-color warning_fg_color @on_tertiary_container;
 
-/* Chromium specific */
 @define-color toolbar_bg_color @surface_container;
 @define-color toolbar_fg_color @on_surface;
 @define-color toolbar_highlight_color alpha(@primary, 0.15);
@@ -6233,7 +6230,7 @@ window.background > grid > widget > widget > scrolledwindow > viewport > grid > 
 @define-color ntp_bg @surface;
 @define-color ntp_fg @on_surface;
 @define-color ntp_header @surface_container;
-/* Adwaita compat */
+
 @define-color theme_button_bg_color @surface_container_low;
 @define-color theme_button_fg_color @on_surface;
 @define-color theme_button_decoration_hover @primary;
@@ -6247,4 +6244,3 @@ window.background > grid > widget > widget > scrolledwindow > viewport > grid > 
 
 @define-color theme_header_bg_color @surface;
 @define-color theme_toolbar_bg_color @surface;
-
