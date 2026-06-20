@@ -1,0 +1,256 @@
+{
+  "name": "Coral Reef",
+  "description": "Warm coral/salmon aesthetic",
+  "colors": {
+    "primary": {
+      "default": {
+        "color": "#FF7F6E"
+      }
+    },
+    "on_primary": {
+      "default": {
+        "color": "#4D1A14"
+      }
+    },
+    "primary_container": {
+      "default": {
+        "color": "#A64838"
+      }
+    },
+    "on_primary_container": {
+      "default": {
+        "color": "#FFE0D8"
+      }
+    },
+    "inverse_primary": {
+      "default": {
+        "color": "#FF6651"
+      }
+    },
+    "primary_fixed": {
+      "default": {
+        "color": "#FFE0D8"
+      }
+    },
+    "primary_fixed_dim": {
+      "default": {
+        "color": "#FFB8AA"
+      }
+    },
+    "on_primary_fixed": {
+      "default": {
+        "color": "#330C08"
+      }
+    },
+    "on_primary_fixed_variant": {
+      "default": {
+        "color": "#A64838"
+      }
+    },
+    "secondary": {
+      "default": {
+        "color": "#FF7F6E"
+      }
+    },
+    "on_secondary": {
+      "default": {
+        "color": "#4D1A14"
+      }
+    },
+    "secondary_container": {
+      "default": {
+        "color": "#A64838"
+      }
+    },
+    "on_secondary_container": {
+      "default": {
+        "color": "#FFE0D8"
+      }
+    },
+    "secondary_fixed": {
+      "default": {
+        "color": "#FFE0D8"
+      }
+    },
+    "secondary_fixed_dim": {
+      "default": {
+        "color": "#FFB8AA"
+      }
+    },
+    "on_secondary_fixed": {
+      "default": {
+        "color": "#330C08"
+      }
+    },
+    "on_secondary_fixed_variant": {
+      "default": {
+        "color": "#A64838"
+      }
+    },
+    "tertiary": {
+      "default": {
+        "color": "#FF9980"
+      }
+    },
+    "on_tertiary": {
+      "default": {
+        "color": "#4D2418"
+      }
+    },
+    "tertiary_container": {
+      "default": {
+        "color": "#A65540"
+      }
+    },
+    "on_tertiary_container": {
+      "default": {
+        "color": "#FFE8E0"
+      }
+    },
+    "tertiary_fixed": {
+      "default": {
+        "color": "#FFE8E0"
+      }
+    },
+    "tertiary_fixed_dim": {
+      "default": {
+        "color": "#FFCCBB"
+      }
+    },
+    "on_tertiary_fixed": {
+      "default": {
+        "color": "#33100A"
+      }
+    },
+    "on_tertiary_fixed_variant": {
+      "default": {
+        "color": "#A65540"
+      }
+    },
+    "error": {
+      "default": {
+        "color": "#FFB4AB"
+      }
+    },
+    "on_error": {
+      "default": {
+        "color": "#FFFFFF"
+      }
+    },
+    "error_container": {
+      "default": {
+        "color": "#B82020"
+      }
+    },
+    "on_error_container": {
+      "default": {
+        "color": "#FFE5E0"
+      }
+    },
+    "surface_dim": {
+      "default": {
+        "color": "#0C0A08"
+      }
+    },
+    "surface": {
+      "default": {
+        "color": "#14100E"
+      }
+    },
+    "surface_tint": {
+      "default": {
+        "color": "#FF7F6E"
+      }
+    },
+    "surface_bright": {
+      "default": {
+        "color": "#34302E"
+      }
+    },
+    "surface_container_lowest": {
+      "default": {
+        "color": "#080605"
+      }
+    },
+    "surface_container_low": {
+      "default": {
+        "color": "#100C0A"
+      }
+    },
+    "surface_container": {
+      "default": {
+        "color": "#181412"
+      }
+    },
+    "surface_container_high": {
+      "default": {
+        "color": "#221E1C"
+      }
+    },
+    "surface_container_highest": {
+      "default": {
+        "color": "#2C2826"
+      }
+    },
+    "on_surface": {
+      "default": {
+        "color": "#FFE0D8"
+      }
+    },
+    "on_surface_variant": {
+      "default": {
+        "color": "#E8C8C0"
+      }
+    },
+    "outline": {
+      "default": {
+        "color": "#907068"
+      }
+    },
+    "outline_variant": {
+      "default": {
+        "color": "#3D3028"
+      }
+    },
+    "inverse_surface": {
+      "default": {
+        "color": "#FFE0D8"
+      }
+    },
+    "inverse_on_surface": {
+      "default": {
+        "color": "#2C2826"
+      }
+    },
+    "surface_variant": {
+      "default": {
+        "color": "#3D3028"
+      }
+    },
+    "background": {
+      "default": {
+        "color": "#14100E"
+      }
+    },
+    "on_background": {
+      "default": {
+        "color": "#FFE0D8"
+      }
+    },
+    "shadow": {
+      "default": {
+        "color": "#000000"
+      }
+    },
+    "scrim": {
+      "default": {
+        "color": "#000000"
+      }
+    },
+    "source_color": {
+      "default": {
+        "color": "#FF7F6E"
+      }
+    }
+  }
+}

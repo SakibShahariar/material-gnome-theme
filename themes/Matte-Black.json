@@ -1,0 +1,254 @@
+{
+  "colors": {
+    "primary": {
+      "default": {
+        "color": "#9E9E9E"
+      }
+    },
+    "on_primary": {
+      "default": {
+        "color": "#1F2022"
+      }
+    },
+    "primary_container": {
+      "default": {
+        "color": "#7A7A7A"
+      }
+    },
+    "on_primary_container": {
+      "default": {
+        "color": "#E0E0E0"
+      }
+    },
+    "inverse_primary": {
+      "default": {
+        "color": "#7A7A7A"
+      }
+    },
+    "primary_fixed": {
+      "default": {
+        "color": "#E0E0E0"
+      }
+    },
+    "primary_fixed_dim": {
+      "default": {
+        "color": "#B8B8B8"
+      }
+    },
+    "on_primary_fixed": {
+      "default": {
+        "color": "#1A1A1A"
+      }
+    },
+    "on_primary_fixed_variant": {
+      "default": {
+        "color": "#7A7A7A"
+      }
+    },
+    "secondary": {
+      "default": {
+        "color": "#909090"
+      }
+    },
+    "on_secondary": {
+      "default": {
+        "color": "#1A1A1A"
+      }
+    },
+    "secondary_container": {
+      "default": {
+        "color": "#606060"
+      }
+    },
+    "on_secondary_container": {
+      "default": {
+        "color": "#D8D8D8"
+      }
+    },
+    "secondary_fixed": {
+      "default": {
+        "color": "#D8D8D8"
+      }
+    },
+    "secondary_fixed_dim": {
+      "default": {
+        "color": "#A8A8A8"
+      }
+    },
+    "on_secondary_fixed": {
+      "default": {
+        "color": "#202020"
+      }
+    },
+    "on_secondary_fixed_variant": {
+      "default": {
+        "color": "#606060"
+      }
+    },
+    "tertiary": {
+      "default": {
+        "color": "#5A7A8A"
+      }
+    },
+    "on_tertiary": {
+      "default": {
+        "color": "#FFFFFF"
+      }
+    },
+    "tertiary_container": {
+      "default": {
+        "color": "#445D6A"
+      }
+    },
+    "on_tertiary_container": {
+      "default": {
+        "color": "#C0D8E8"
+      }
+    },
+    "tertiary_fixed": {
+      "default": {
+        "color": "#C0D8E8"
+      }
+    },
+    "tertiary_fixed_dim": {
+      "default": {
+        "color": "#8AA0B0"
+      }
+    },
+    "on_tertiary_fixed": {
+      "default": {
+        "color": "#1A252A"
+      }
+    },
+    "on_tertiary_fixed_variant": {
+      "default": {
+        "color": "#445D6A"
+      }
+    },
+    "error": {
+      "default": {
+        "color": "#FFB4AB"
+      }
+    },
+    "on_error": {
+      "default": {
+        "color": "#FFFFFF"
+      }
+    },
+    "error_container": {
+      "default": {
+        "color": "#B82020"
+      }
+    },
+    "on_error_container": {
+      "default": {
+        "color": "#FFE5E0"
+      }
+    },
+    "surface_dim": {
+      "default": {
+        "color": "#000000"
+      }
+    },
+    "surface": {
+      "default": {
+        "color": "#0A0A0A"
+      }
+    },
+    "surface_tint": {
+      "default": {
+        "color": "#7A7A7A"
+      }
+    },
+    "surface_bright": {
+      "default": {
+        "color": "#2A2A2A"
+      }
+    },
+    "surface_container_lowest": {
+      "default": {
+        "color": "#000000"
+      }
+    },
+    "surface_container_low": {
+      "default": {
+        "color": "#121212"
+      }
+    },
+    "surface_container": {
+      "default": {
+        "color": "#1A1A1A"
+      }
+    },
+    "surface_container_high": {
+      "default": {
+        "color": "#222222"
+      }
+    },
+    "surface_container_highest": {
+      "default": {
+        "color": "#2A2A2A"
+      }
+    },
+    "on_surface": {
+      "default": {
+        "color": "#E0E0E0"
+      }
+    },
+    "on_surface_variant": {
+      "default": {
+        "color": "#C0C0C0"
+      }
+    },
+    "outline": {
+      "default": {
+        "color": "#606060"
+      }
+    },
+    "outline_variant": {
+      "default": {
+        "color": "#404040"
+      }
+    },
+    "inverse_surface": {
+      "default": {
+        "color": "#E0E0E0"
+      }
+    },
+    "inverse_on_surface": {
+      "default": {
+        "color": "#2A2A2A"
+      }
+    },
+    "surface_variant": {
+      "default": {
+        "color": "#404040"
+      }
+    },
+    "background": {
+      "default": {
+        "color": "#0A0A0A"
+      }
+    },
+    "on_background": {
+      "default": {
+        "color": "#E0E0E0"
+      }
+    },
+    "shadow": {
+      "default": {
+        "color": "#000000"
+      }
+    },
+    "scrim": {
+      "default": {
+        "color": "#000000"
+      }
+    },
+    "source_color": {
+      "default": {
+        "color": "#7A7A7A"
+      }
+    }
+  }
+}
