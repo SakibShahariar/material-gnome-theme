@@ -1,12 +1,10 @@
-Type=X-GNOME-Metatheme
 [Desktop Entry]
+Type=X-GNOME-Metatheme
 Name=Material-Gnome
-Comment=An Flat Gtk+ theme based on Matugen color generator
+Comment=A Material You/Material 3 Expressive Gtk+ theme based on Matugen color generator
 Encoding=UTF-8
 
 [X-GNOME-Metatheme]
 GtkTheme=Material-Gnome
 MetacityTheme=Material-Gnome
-IconTheme=Tela-circle-Dark
-CursorTheme=Tokyonight-cursors
 ButtonLayout=close,minimize,maximize:menu
