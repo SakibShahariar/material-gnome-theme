@@ -4555,7 +4555,7 @@ StWidget.focused .app-grid-running-dot {
 #dashtodockContainer #dash .dash-background,
 #dashtodockContainer:overview #dash .dash-background {
   background-color: {{colors.background.default.hex}};
-  border: 1px solid rgba({{colors.primary.default.red}}, {{colors.primary.default.green}}, {{colors.primary.default.blue}}, 0.5);
+  border: 2px solid rgba({{colors.primary.default.red}}, {{colors.primary.default.green}}, {{colors.primary.default.blue}}, 1.0);
 }
 
 #dashtodockContainer .app-well-app-running-dot {
