@@ -8,14 +8,19 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    
+    # ─── ADD THIS PERMISSIONS BLOCK ───
+    permissions:
+      contents: write # Allows the action to create and edit releases
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          path: material-gnome-theme
 
       - name: Build release zip
         run: |
-          cd ..
           zip -r Material-Gnome.zip material-gnome-theme/ \
             -x "material-gnome-theme/.git/*" \
             -x "material-gnome-theme/.github/*" \
@@ -25,5 +30,5 @@ jobs:
       - name: Publish release
         uses: softprops/action-gh-release@v2
         with:
-          files: ../Material-Gnome.zip
+          files: Material-Gnome.zip
           generate_release_notes: true
