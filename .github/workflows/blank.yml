@@ -1,0 +1,29 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Build release zip
+        run: |
+          cd ..
+          zip -r Material-Gnome.zip material-gnome-theme/ \
+            -x "material-gnome-theme/.git/*" \
+            -x "material-gnome-theme/.github/*" \
+            -x "material-gnome-theme/.gitignore" \
+            -x "material-gnome-theme/screenshots/*"
+
+      - name: Publish release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: ../Material-Gnome.zip
+          generate_release_notes: true
