@@ -5017,7 +5017,7 @@ StWidget.focused .app-grid-running-dot {
 #panel.lock-screen .panel-button:focus,
 #panel.lock-screen .panel-button:checked {
   color: {{colors.on_primary.default.hex}};
-  background-color: {{colors.primary.default.hex}};
+  background-color: rgba({{colors.primary.default.red}}, {{colors.primary.default.green}}, {{colors.primary.default.blue}}, 0.2);
 }
 
 #panel:overview .panel-button:active.clock-display .clock,

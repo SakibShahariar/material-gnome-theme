@@ -6,7 +6,7 @@
   width: calc(100% - 60px);
   height: 32px;
   transition-duration: 250ms;
-  color: #e1e2ec;
+  color: #e8e1dd;
   font-weight: bold;
   font-feature-settings: 'tnum';
   font-size: 10pt;
@@ -27,9 +27,9 @@
 #panel #panelLeft,
 #panel #panelCenter,
 #panel #panelRight {
-  background-color: rgba(29, 31, 39, 0.75);
+  background-color: rgba(34, 31, 29, 0.75);
   border-radius: 999px;
-  border: 1.5px solid rgba(177, 197, 255, 0.25);
+  border: 1.5px solid rgba(223, 194, 163, 0.25);
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.35),
               0 1px 0 rgba(255, 255, 255, 0.06) inset;
   padding: 0 10px;
@@ -46,7 +46,7 @@
   -natural-hpadding: 8px;
   -minimum-hpadding: 8px;
   font-weight: bold;
-  color: #b1c5ff;
+  color: #dfc2a3;
   background-color: transparent;
   border: none;
   box-shadow: none;
@@ -70,9 +70,9 @@
 /* ── HOVER ─────────────────────────────── */
 
 #panel .panel-button:hover {
-  background-color: rgba(177, 197, 255, 0.12);
+  background-color: rgba(223, 194, 163, 0.12);
   border-radius: 999px;
-  color: #b1c5ff;
+  color: #dfc2a3;
   box-shadow: none;
 }
 
@@ -86,8 +86,8 @@
 #panel .panel-button:focus:hover,
 #panel .panel-button:checked,
 #panel .panel-button:checked:hover {
-  color: #002c71;
-  background-color: #b1c5ff;
+  color: #3f2d17;
+  background-color: #dfc2a3;
   border-radius: 999px;
   box-shadow: none;
 }
@@ -103,8 +103,8 @@
 .lock-screen   #panel #panelLeft,
 .lock-screen   #panel #panelCenter,
 .lock-screen   #panel #panelRight {
-  background-color: rgba(29, 31, 39, 0.85);
-  border: 1.5px solid rgba(177, 197, 255, 0.3);
+  background-color: rgba(34, 31, 29, 0.85);
+  border: 1.5px solid rgba(223, 194, 163, 0.3);
   border-radius: 999px;
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
 }
@@ -112,7 +112,7 @@
 .unlock-screen #panel .panel-button,
 .login-screen  #panel .panel-button,
 .lock-screen   #panel .panel-button {
-  color: #b1c5ff;
+  color: #dfc2a3;
   background-color: transparent;
   border: none;
 }
@@ -126,8 +126,8 @@
 .lock-screen   #panel .panel-button:focus,
 .lock-screen   #panel .panel-button:hover,
 .lock-screen   #panel .panel-button:active {
-  color: #002c71;
-  background-color: #b1c5ff;
+  color: #3f2d17;
+  background-color: #dfc2a3;
   border-radius: 999px;
   box-shadow: none;
 }
@@ -164,7 +164,7 @@
   border-radius: 9999px;
   min-width: 6px;
   min-height: 6px;
-  background-color: #b1c5ff;
+  background-color: #dfc2a3;
 }
 
 /* ── OVERVIEW / LOCK PANEL STATES ──────── */
@@ -203,15 +203,15 @@
 #panel.login-screen StIcon,
 #panel.lock-screen StLabel,
 #panel.lock-screen StIcon {
-  color: #b1c5ff;
+  color: #dfc2a3;
 }
 
 #panel:overview .panel-button:hover,
 #panel.unlock-screen .panel-button:hover,
 #panel.login-screen .panel-button:hover,
 #panel.lock-screen .panel-button:hover {
-  color: #b1c5ff;
-  background-color: rgba(177, 197, 255, 0.08);
+  color: #dfc2a3;
+  background-color: rgba(223, 194, 163, 0.08);
   border-radius: 999px;
 }
 
@@ -228,8 +228,8 @@
 #panel.lock-screen .panel-button:active,
 #panel.lock-screen .panel-button:focus,
 #panel.lock-screen .panel-button:checked {
-  color: #002c71;
-  background-color: #b1c5ff;
+  color: #3f2d17;
+  background-color: rgba(223, 194, 163, 0.2);
   border-radius: 999px;
 }
 
