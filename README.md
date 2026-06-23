@@ -208,9 +208,6 @@ gnome-shell/layouts/
 1. Open `gnome-shell/gnome-shell.css` and locate the top bar section.
 2. Open your chosen layout file from `gnome-shell/layouts/` (e.g. `unified-pill.css`).
 3. Replace the existing top bar block in `gnome-shell.css` with the contents of the layout file.
-4. Reload GNOME Shell (`Alt+F2` → `r` → `Enter` on X11, or log out/in on Wayland) to see the change.
-
-> 💡 **Tip:** Keep a backup of the default top bar block before swapping, so you can easily revert.
 
 ---
 
