@@ -3,7 +3,6 @@
 /***************************
  * Keyframes & Interpolators
  **************************/
-
 @keyframes expressive-pop-in {
   0%   { opacity: 0; transform: scale(0.92) translateY(4px); }
   60%  { opacity: 1; transform: scale(1.03) translateY(-1px); }
@@ -79,7 +78,6 @@
 /***************
  * Base States *
  ***************/
-
 .background {
   background-color: var(--background);
   color: var(--primary);
@@ -170,7 +168,6 @@ flowbox > rubberband {
 /******************************************
  * Container Flow: Grid, Lists, Flowboxes *
  ******************************************/
-
 flowbox > flowboxchild {
   padding: 6px;
   border-radius: 16px;
@@ -265,7 +262,6 @@ coverflow cover {
 /******************
  * Labels & Text  *
  ******************/
-
 label.separator { color: color-mix(in srgb, var(--outline) 50%, transparent); }
 label:disabled  { opacity: 1; color: color-mix(in srgb, var(--on_surface_variant) 38%, transparent); }
 headerbar label:disabled,
@@ -293,7 +289,6 @@ row label.subtitle {
 .warning { color: var(--warning);   transition: color 0.3s cubic-bezier(0.2, 0, 0, 1); }
 .error   { color: var(--error);     transition: color 0.3s cubic-bezier(0.2, 0, 0, 1); }
 
-/* Typography Scale Hierarchy */
 .large-title     { font-weight: 300; font-size: 26pt; letter-spacing: -0.5px; }
 .title-1         { font-weight: 800; font-size: 22pt; letter-spacing: -0.2px; }
 .title-2         { font-weight: 800; font-size: 17pt; }
@@ -324,7 +319,6 @@ window.assistant .sidebar label.highlight {
 /************************
  * Overlays & OSD Popups*
  ************************/
-
 .osd .scale-popup > arrow,
 .osd .scale-popup > contents,
 .osd popover > arrow,
@@ -380,7 +374,6 @@ spinner:checked:disabled {
 /******************************************
  * Text Entries *
  ******************************************/
-
 entry headerbar popover.background entry,
 headerbar popover.background entry entry,
 entry {
@@ -447,7 +440,6 @@ entry > image:disabled {
 /************************
  * Entry Status Alerts  *
  ************************/
-
 entry.error {
   background-color: var(--error_container);
   color: var(--on_error_container);
@@ -482,7 +474,6 @@ entry.success:focus-within {
 /******************************************
  * Progress Indicators & Selection Tags   *
  ******************************************/
-
 entry > progress {
   margin: 0 -4px;
   border-bottom: 3px solid var(--primary);
@@ -644,7 +635,6 @@ button:checked:disabled {
   color: color-mix(in srgb, var(--on_primary) 38%, transparent);
 }
 
-/* ── non-destructive variant ── */
 headerbar popover.background button:not(.suggested-action):not(.destructive-action):not(.flat),
 button:not(.destructive-action) {
   border-radius: 12px;
@@ -690,7 +680,7 @@ button:focus:not(.destructive-action) {
 */
 
 headerbar popover.background button:checked:not(.suggested-action):not(.destructive-action):not(.flat),
-button:checked:not(.image-button):not(.flat):not(row button) {
+button:checked:not(.image-button):not(.flat) {
   border-radius: 999px;
   background-color: var(--primary);
   color: var(--on_primary);
@@ -698,6 +688,10 @@ button:checked:not(.image-button):not(.flat):not(row button) {
   transition: background-color 0.3s cubic-bezier(0.2, 0, 0, 1),
               border-radius    0.3s cubic-bezier(0.2, 0, 0, 1),
               color            0.2s cubic-bezier(0.2, 0, 0, 1);
+}
+
+row button:checked {
+  animation: none;
 }
 
 headerbar popover.background button:checked:hover:not(.suggested-action):not(.destructive-action):not(.flat),
@@ -801,7 +795,6 @@ placessidebar > viewport > list > row:selected {
   animation: pill-pop 0.6s cubic-bezier(0.2, 0, 0, 1) forwards;
 }
 
-/* Static color per state — no transitions on children */
 placessidebar list.navigation-sidebar > row label,
 placessidebar list.navigation-sidebar > row image,
 placessidebar > viewport > list > row label,
@@ -2240,7 +2233,6 @@ headerbar button:hover:not(.suggested-action):not(.destructive-action) {
 headerbar button:active:not(.suggested-action):not(.destructive-action) {
   background-color: color-mix(in srgb, var(--primary) 12%, transparent);
   border-radius: 999px;
-  will-change: transform;
   animation: pill-pop 0.6s cubic-bezier(0.2, 0, 0, 1) forwards;
   transition: background-color 0.1s cubic-bezier(0, 0, 0.2, 1);
 }
@@ -2253,7 +2245,6 @@ headerbar button:focus:not(.suggested-action):not(.destructive-action) {
 headerbar button:disabled:not(.suggested-action):not(.destructive-action) {
   color: color-mix(in srgb, var(--primary) 38%, transparent);
   animation: none;
-  will-change: auto;
 }
 
 headerbar button:checked:not(.suggested-action):not(.destructive-action) {
@@ -2261,7 +2252,6 @@ headerbar button:checked:not(.suggested-action):not(.destructive-action) {
   color: var(--on_primary);
   border-radius: 999px;
   outline: none;
-  will-change: transform;
   animation: pill-pop 0.6s cubic-bezier(0.2, 0, 0, 1) forwards;
   transition: background-color 0.2s cubic-bezier(0.2, 0, 0, 1),
               border-radius    0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275),
@@ -2557,11 +2547,6 @@ headerbar separator:not(.sidebar) {
   background-color: var(--outline_variant);
 }
 
-headerbar switch {
-  margin-top: auto;
-  margin-bottom: auto;
-}
-
 headerbar.selection-mode {
   transition: background-color 0.1ms 225ms,
               color            75ms cubic-bezier(0, 0, 0.2, 1);
@@ -2668,7 +2653,6 @@ window.devel headerbar:backdrop {
 /************
  * Pathbars *
  ************/
-
 pathbar > button {
   padding-left: 5px;
   padding-right: 5px;
