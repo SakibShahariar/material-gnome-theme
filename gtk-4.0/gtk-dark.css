@@ -831,7 +831,7 @@ tabbar tab:not(:selected) button.image-button.tab-close-button,
 dnd tab:not(:selected) button.image-button.tab-close-button,
 notebook > header > tabs > tab:not(:checked):not(:selected) button.small-button,
 notebook > header menubutton > button.flat {
-  color: color-mix(in srgb, var(--on_surface) 60%, transparent);
+  color: color-mix(in srgb, var(--primary) 60%, transparent);
 }
 
 tabbar tab:not(:selected) button.image-button.tab-close-button:hover,
@@ -3368,7 +3368,7 @@ tabbar tab:checked:not(:active),
 notebook > header > tabs > tab:checked:not(:active),
 tabbar tab:selected:not(:active),
 notebook > header > tabs > tab:selected:not(:active) {
-  background-color: var(--surface_container_highest);
+  background-color: color-mix(in srgb, var(--primary) 14%, transparent);
   color: var(--primary);
   box-shadow: none;
   border-radius: 999px;
@@ -3793,10 +3793,6 @@ tabbar tab button.image-button,
 dnd tab button.image-button {
   padding: 0;
   margin: 0;
-  min-width: 24px;
-  min-height: 24px;
-  max-width: 24px;
-  max-height: 24px;
   border-radius: 9999px;
   transition: none; 
 }
@@ -6794,7 +6790,7 @@ popover.entry-completion > contents {
 
 .nautilus-window tabbox > tabboxchild > tab:checked,
 .nautilus-window tabbox > tabboxchild > tab:selected {
-  background-color: var(--surface_container_low);
+  background-color: color-mix(in srgb, var(--primary) 12%, transparent);;
   color: var(--primary);
   box-shadow: none;
   border-radius: 999px;
@@ -6808,16 +6804,16 @@ popover.entry-completion > contents {
 }
 
 .nautilus-window tabbox > tabboxchild > tab button.tab-close-button {
-  color: var(--on_surface);
+  color: var(--primary);
 }
 
 .nautilus-window tabbox > tabboxchild > tab button.tab-close-button:hover,
 .nautilus-window tabbox > tabboxchild > tab button.tab-close-button:active {
-  color: var(--on_surface);
+  color: var(--primary);
 }
 
 .nautilus-window tabbox > tabboxchild > tab button.tab-close-button:disabled {
-  color: var(--on_surface);
+  color: var(--primary);
 }
 
 .nautilus-window .floating-bar {
