@@ -3795,7 +3795,10 @@ dnd tab button.image-button {
   margin: 0;
   min-width: 24px;
   min-height: 24px;
+  max-width: 24px;
+  max-height: 24px;
   border-radius: 9999px;
+  transition: none; 
 }
 
 tabbar tab button.image-button.tab-close-button,
