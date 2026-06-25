@@ -283,6 +283,10 @@ label.osd {
   transition: background-color 0.3s cubic-bezier(0.2, 0, 0, 1);
 }
 
+label.panel-title {
+  color: var(--primary);
+}
+
 .dim-label,
 row.expander image.expander-row-arrow,
 row.property > box.header > box.title > .title,
@@ -1345,6 +1349,12 @@ button.image-text-button.flat label:last-child {
 button.text-button.image-button image:not(:only-child),
 button.image-text-button image:not(:only-child) {
   margin: 0 4px;
+}
+
+button.image-text-button.pill:focus {
+  outline: none;
+  background: var(--primary);
+  color: var(--background);
 }
 
 button.arrow-button {
@@ -2470,6 +2480,10 @@ headerbar headerbar + separator {
 
 headerbar > windowhandle > box {
   padding: 0 12px;
+}
+
+headerbar windowhandle button {
+  color: var(--on_primary) !important;
 }
 
 headerbar > windowhandle > box,
@@ -6830,7 +6844,7 @@ popover.entry-completion > contents {
 
 .nautilus-window tabbox > tabboxchild > tab:checked,
 .nautilus-window tabbox > tabboxchild > tab:selected {
-  background-color: color-mix(in srgb, var(--primary) 12%, transparent);;
+  background-color: color-mix(in srgb, var(--primary) 12%, transparent);
   color: var(--primary);
   box-shadow: none;
   border-radius: 999px;
@@ -6902,6 +6916,11 @@ popover.entry-completion > contents {
   border-radius: 999px;
   animation: pill-pop 0.6s cubic-bezier(0.2, 0, 0, 1) forwards;
   transition: background-color 0.1s cubic-bezier(0, 0, 0.2, 1);
+}
+
+banner > revealer > widget {
+  background-color: color-mix(in srgb, var(--primary_container) 10%, transparent);
+  color: var(--primary);
 }
 
 #NautilusQueryEditor > menubutton > button.image-button {
@@ -8845,7 +8864,6 @@ viewswitcher button.toggle > stack > box.wide {
   border-spacing: 6px;
 }
 
-/* Target the text and indicator inside a checked viewswitcher button */
 viewswitcher > button:checked label,
 viewswitcher > button:checked indicatorbin {
   color: var(--on_primary) !important;
@@ -9270,6 +9288,10 @@ overlay-split-view > shadow.down {
       color-mix(in srgb, var(--background) 8%, transparent),
       color-mix(in srgb, var(--background) 3%, transparent) 7px,
       transparent 24px);
+}
+
+navigation-view-page > navigation-view {
+  color: var(--primary);
 }
 
 .sidebar-pane .sidebar > scrolledwindow,
@@ -9938,35 +9960,16 @@ windowtitle > label.title {
   color: var(--primary);
 }
 
-navigation-view-page > navigation-view {
-  color: var(--primary);
-}
-
-label.panel-title {
-  color: var(--primary);
-}
-
-button.image-text-button.pill:focus {
-  outline: none;
-  background: var(--primary);
-  color: var(--background);
-}
-
-banner > revealer > widget {
-  background-color: color-mix(in srgb, var(--primary_container) 10%, transparent);
-  color: var(--primary);
-}
-
-headerbar windowhandle button {
-  color: var(--on_primary) !important;
-}
-
 window.chromium headerbar,
 window.chromium headerbar.titlebar {
   background-color: var(--surface);
   background-image: none;
 }
-.content-pane scrolledwindow,
-.content-pane scrolledwindow > viewport {
-  background-color: var(--surface);
+
+toggle-group toggle:checked {
+  background-color: var(--primary);
+}
+
+toggle-group toggle:checked label {
+  color: var(--on_primary);
 }
