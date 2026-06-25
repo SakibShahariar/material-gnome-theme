@@ -10013,3 +10013,7 @@ box.numeric entry {
 button.pill:checked label {
   color: var(--on_primary);
 }
+
+box.linked button.toggle:checked label {
+  color: var(--on_primary);
+}
