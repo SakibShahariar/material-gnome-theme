@@ -10009,3 +10009,7 @@ box.numeric label {
 box.numeric entry {
   background-color: color-mix(in srgb, var(--primary) 8%, transparent);
 }
+
+button.pill:checked label {
+  color: var(--on_primary);
+}
