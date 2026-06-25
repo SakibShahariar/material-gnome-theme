@@ -9085,39 +9085,44 @@ preferencesgroup > box button.accent-button.slate  { --accent-bg-color: var(--ac
 
 preferencesgroup > box box > list.boxed-list-separate {
   background-color: transparent;
-  border-radius: 12px;
-  border: 1px solid rgba(251, 241, 199, 0.12);
+  margin-left: 12px;
+  margin-right: 12px;
+  border: none;
 }
 
 preferencesgroup > box box > list.boxed-list-separate row {
   color: var(--on_surface);
   background-color: var(--surface_container_low);
-  border-radius: 12px 12px 0 0;
-  margin-top: 0;
-  margin-bottom: 2px;
-  transition: background-color 0.2s cubic-bezier(0.2, 0, 0, 1);
+  border-radius: 3px;
+  margin: 0;
+  transition: background-color 0.2s cubic-bezier(0.2, 0, 0, 1),
+              border-radius    0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+preferencesgroup > box box > list.boxed-list-separate row:not(:first-child) {
+  margin-top: 12px;
 }
 
 preferencesgroup > box box > list.boxed-list-separate row:first-child {
-  border-radius: 12px 12px 0 0;
-  box-shadow: 0 1px rgba(251, 241, 199, 0.12);
+  border-radius: 12px 12px 3px 3px;
 }
 
 preferencesgroup > box box > list.boxed-list-separate row:last-child {
-  border-radius: 0 0 12px 12px;
-  margin-bottom: 0;
+  border-radius: 3px 3px 12px 12px;
 }
 
-preferencesgroup > box box > list.boxed-list-separate row + row {
-  margin-top: 2px;
+preferencesgroup > box box > list.boxed-list-separate row:only-child {
+  border-radius: 12px;
 }
 
-preferencesgroup > box box > list.boxed-list-separate row:hover,
-preferencesgroup > box box > list.boxed-list-separate row:focus {
-  color: color-mix(in srgb, var(--on_surface_variant) 70%, transparent);
-  background-color: var(--surface_container_low);
+preferencesgroup > box box > list.boxed-list-separate row:hover {
+  background-color: color-mix(in srgb, var(--primary) 5%, transparent);
 }
 
+preferencesgroup > box box > list.boxed-list-separate row:active {
+  background-color: color-mix(in srgb, var(--primary) 12%, transparent);
+  transition: background-color 0.1s cubic-bezier(0, 0, 0.2, 1);
+}
 window.about .main-page > viewport > clamp > box {
   margin: 12px;
   border-spacing: 6px;
