@@ -607,6 +607,10 @@ button:active {
   outline: 0 solid transparent;
 }
 
+button.text-button:active label {
+  color: var(--on_primary);
+}
+
 button:checked {
   border-radius: 999px;
   background-color: var(--primary);
@@ -9962,4 +9966,7 @@ window.chromium headerbar.titlebar {
   background-color: var(--surface);
   background-image: none;
 }
-
+.content-pane scrolledwindow,
+.content-pane scrolledwindow > viewport {
+  background-color: var(--surface);
+}
