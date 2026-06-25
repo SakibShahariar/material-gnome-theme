@@ -700,7 +700,7 @@ button:focus:not(.destructive-action) {
 */
 
 headerbar popover.background button:checked:not(.suggested-action):not(.destructive-action):not(.flat),
-button:checked:not(.image-button):not(.flat) {
+button:checked:not(.image-button):not(.flat):not(.background-preview-button):not(.accent-button) {
   border-radius: 999px;
   background-color: var(--primary);
   color: var(--on_primary);
@@ -715,7 +715,7 @@ row button:checked {
 }
 
 headerbar popover.background button:checked:hover:not(.suggested-action):not(.destructive-action):not(.flat),
-button:checked:hover {
+button:checked:hover:not(.image-button):not(.flat):not(.background-preview-button):not(.accent-button) {
   border-radius: 999px;
   background-color: color-mix(in srgb, var(--primary) 90%, var(--on_primary) 10%);
   color: var(--on_primary);
@@ -7691,7 +7691,7 @@ gs-summary-tile image.loading-icon {
   transition: background-color 0.1s cubic-bezier(0, 0, 0.2, 1);
 }
 
-clamp {
+preferencespage > scrolledwindow > viewport > clamp {
   background-color: var(--background);
 }
 
@@ -9047,6 +9047,7 @@ preferencesgroup > box button.accent-button {
 preferencesgroup > box button.accent-button:hover {
   outline: 3px solid color-mix(in srgb, currentColor 8%, transparent);
   outline-offset: -3px;
+  background: var(--accent-bg-color);
   transform: scale(1.1);
 }
 
@@ -10022,3 +10023,4 @@ button.pill:checked label {
 box.linked button.toggle:checked label {
   color: var(--on_primary);
 }
+
