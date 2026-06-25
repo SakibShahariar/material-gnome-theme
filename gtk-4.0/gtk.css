@@ -262,11 +262,19 @@ coverflow cover {
 /******************
  * Labels & Text  *
  ******************/
-label.separator { color: color-mix(in srgb, var(--outline) 50%, transparent); }
-label:disabled  { opacity: 1; color: color-mix(in srgb, var(--on_surface_variant) 38%, transparent); }
+label.separator { 
+  color: color-mix(in srgb, var(--outline) 50%, transparent);
+}
+
+label:disabled { 
+  opacity: 1; color: color-mix(in srgb, var(--on_surface_variant) 38%, transparent);
+}
+
 headerbar label:disabled,
 tab label:disabled,
-button label:disabled { color: inherit; opacity: 1; }
+button label:disabled { 
+  color: inherit; opacity: 1;
+}
 
 label.osd {
   border-radius: 16px;
@@ -2304,7 +2312,11 @@ headerbar button:backdrop:disabled:not(.suggested-action):not(.destructive-actio
 }
 
 headerbar button:backdrop:checked:not(.suggested-action):not(.destructive-action) {
-  color: color-mix(in srgb, var(--on_surface) 60%, transparent);
+  color: color-mix(in srgb, var(--on_primary) 60%, transparent);
+}
+
+headerbar viewswitcher button:backdrop:checked:not(.suggested-action):not(.destructive-action) {
+  color: color-mix(in srgb, var(--primary) 60%, transparent);     /* Legible backdrop text */
 }
 
 headerbar button:backdrop:checked:disabled:not(.suggested-action):not(.destructive-action) {
