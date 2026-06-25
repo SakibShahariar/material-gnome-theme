@@ -617,6 +617,10 @@ button:checked {
               color            0.2s cubic-bezier(0.2, 0, 0, 1);
 }
 
+button:checked label {
+  color: var(--on_primary);
+}
+
 button:checked:hover {
   border-radius: 999px;
   background-color: color-mix(in srgb, var(--primary) 90%, var(--on_primary) 10%);
@@ -2316,7 +2320,7 @@ headerbar button:backdrop:checked:not(.suggested-action):not(.destructive-action
 }
 
 headerbar viewswitcher button:backdrop:checked:not(.suggested-action):not(.destructive-action) {
-  color: color-mix(in srgb, var(--primary) 60%, transparent);     /* Legible backdrop text */
+  color: color-mix(in srgb, var(--primary) 60%, transparent);
 }
 
 headerbar button:backdrop:checked:disabled:not(.suggested-action):not(.destructive-action) {
@@ -2489,6 +2493,26 @@ headerbar .linked > menubutton,
 headerbar entry > menubutton {
   margin-top: 0;
   margin-bottom: 0;
+}
+
+headerbar menubutton.suggested-action button.toggle {
+  background-color: var(--primary);
+  color: var(--on_primary);
+}
+
+headerbar menubutton.suggested-action button.toggle:hover {
+  background-color: color-mix(in srgb, var(--primary) 92%, var(--on_primary));
+  color: var(--on_primary);
+}
+
+headerbar menubutton.suggested-action button.toggle:checked,
+headerbar menubutton.suggested-action button.toggle:focus {
+  background-color: var(--primary);
+  color: var(--on_primary);
+}
+
+headerbar menubutton.suggested-action button.toggle:checked label {
+  color: var(--on_primary);
 }
 
 headerbar button.star {
