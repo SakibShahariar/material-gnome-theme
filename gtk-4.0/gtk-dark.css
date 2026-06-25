@@ -9973,3 +9973,39 @@ toggle-group toggle:checked {
 toggle-group toggle:checked label {
   color: var(--on_primary);
 }
+
+inline-view-switcher toggle-group toggle:checked {
+  background-color: color-mix(in srgb, var(--primary) 12%, transparent);
+}
+
+inline-view-switcher toggle-group toggle:checked label,
+inline-view-switcher toggle-group toggle:checked image {
+  color: var(--primary);
+}
+
+inline-view-switcher toggle-group toggle label,
+inline-view-switcher toggle-group toggle image {
+  color: var(--primary);
+}
+
+button.circular.osd {
+  background-color: color-mix(in srgb, var(--surface_container_highest) 62%, transparent);
+  color: var(--primary);
+}
+
+button.circular.osd image {
+  color: var(--primary);
+}
+
+button.circular.osd:hover {
+  background-color: var(--surface_container_highest);
+}
+
+box.numeric entry,
+box.numeric label {
+  color: var(--primary);
+}
+
+box.numeric entry {
+  background-color: color-mix(in srgb, var(--primary) 8%, transparent);
+}
