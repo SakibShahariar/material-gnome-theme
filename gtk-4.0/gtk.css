@@ -8940,12 +8940,12 @@ indicatorbin > mask {
 
 indicatorbin > indicator {
   margin: 1px;
-  background-color: color-mix(in srgb, currentColor 40%, transparent);
+  background-color: var(--primary_variant);
   transition: background-color 0.2s cubic-bezier(0.2, 0, 0, 1);
 }
 
 indicatorbin > indicator > label {
-  font-size: 0.6rem;
+  font-size: 0.8rem;
   font-weight: bold;
   padding: 1px 4px;
   color: var(--on_surface);
@@ -8963,7 +8963,7 @@ indicatorbin.needs-attention > indicator {
 }
 
 indicatorbin.needs-attention > indicator > label {
-  color: var(--on_surface);
+  color: var(--on_primary);
 }
 
 preferencespage > scrolledwindow > viewport > clamp > box {
