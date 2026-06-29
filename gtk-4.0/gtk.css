@@ -5102,7 +5102,6 @@ columnview.view > header > button:focus,
 treeview.view > header > button:focus,
 row.activatable:focus {
   color: var(--on_surface);
-  background-color: transparent;
   box-shadow: none;
   outline: none;
 }
