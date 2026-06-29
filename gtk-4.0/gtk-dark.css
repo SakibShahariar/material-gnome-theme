@@ -5505,7 +5505,7 @@ expander-widget > box > title:hover {
 expander-widget > box > title:active {
   background-color: color-mix(in srgb, var(--primary) 12%, transparent);
   border-radius: 999px;
-  animation: pill-pop 0.6s cubic-bezier(0.2, 0, 0, 1) forwards;
+  animation: pill-pop-row 0.6s cubic-bezier(0.2, 0, 0, 1) forwards;
   transition: background-color 0.1s cubic-bezier(0, 0, 0.2, 1);
 }
 
