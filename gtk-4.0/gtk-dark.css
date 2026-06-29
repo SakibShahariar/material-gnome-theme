@@ -4660,7 +4660,7 @@ progressbar progress {
   transition: background-color 0.3s cubic-bezier(0.2, 0, 0, 1);
 }
 
-progressbar .osd {
+progressbar.osd {
   min-width: 6px;
   min-height: 6px;
   background-color: transparent;
@@ -4669,11 +4669,11 @@ progressbar .osd {
   padding: 0;
 }
 
-progressbar .osd trough {
+progressbar.osd trough {
   background-color: transparent;
 }
 
-progressbar .osd progress {
+progressbar.osd progress {
   background-color: var(--primary);
 }
 
@@ -10023,3 +10023,10 @@ box.linked button.toggle:checked label {
   color: var(--on_primary);
 }
 
+@define-color progress_track_bg_color #2d2d2d;
+@define-color template_trough_bg #2d2d2d;
+
+/* Force standard system variable fallbacks */
+progressbar trough {
+    background-color: @theme_bg_color !important;
+}
