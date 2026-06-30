@@ -690,17 +690,8 @@ button:active:not(.destructive-action) {
   outline: 0 solid transparent;
 }
 
-/* causing some problem in "Extensions" about page
-headerbar popover.background button:focus:not(.suggested-action):not(.destructive-action):not(.flat),
-button:focus:not(.destructive-action) {
-  outline: 2px solid var(--primary);
-  outline-offset: 0;
-}
-*/
-
 headerbar popover.background button:checked:not(.suggested-action):not(.destructive-action):not(.flat),
 button:checked:not(.image-button):not(.flat):not(.background-preview-button):not(.accent-button) {
-  border-radius: 999px;
   background-color: var(--primary);
   color: var(--on_primary);
   animation: pill-pop 0.6s cubic-bezier(0.2, 0, 0, 1) forwards;
@@ -715,7 +706,6 @@ row button:checked {
 
 headerbar popover.background button:checked:hover:not(.suggested-action):not(.destructive-action):not(.flat),
 button:checked:hover:not(.image-button):not(.flat):not(.background-preview-button):not(.accent-button) {
-  border-radius: 999px;
   background-color: color-mix(in srgb, var(--primary) 90%, var(--on_primary) 10%);
   color: var(--on_primary);
   outline-color: transparent;
@@ -1279,8 +1269,7 @@ button separator {
 }
 
 button.opaque {
-  background-color: var(--surface_container);
-  color: var(--on_surface);
+  color: var(--primary);
 }
 
 button.text-button {
@@ -1292,10 +1281,6 @@ button.text-button {
 button.text-button:checked:hover {
   background-color: var(--primary);
   color: var(--on_primary);
-}
-
-button.text-button:checked label {
-  color: var(--primary);
 }
 
 button.image-button {
@@ -2510,26 +2495,6 @@ headerbar .linked > menubutton,
 headerbar entry > menubutton {
   margin-top: 0;
   margin-bottom: 0;
-}
-
-headerbar menubutton.suggested-action button.toggle {
-  background-color: var(--primary);
-  color: var(--on_primary);
-}
-
-headerbar menubutton.suggested-action button.toggle:hover {
-  background-color: color-mix(in srgb, var(--primary) 92%, var(--on_primary));
-  color: var(--on_primary);
-}
-
-headerbar menubutton.suggested-action button.toggle:checked,
-headerbar menubutton.suggested-action button.toggle:focus {
-  background-color: var(--primary);
-  color: var(--on_primary);
-}
-
-headerbar menubutton.suggested-action button.toggle:checked label {
-  color: var(--on_primary);
 }
 
 headerbar button.star {
@@ -5033,7 +4998,6 @@ listview.view {
   color: var(--on_surface);
   background-color: transparent;
 }
-
 
 popover.menu listview.view {
   padding: 0;
@@ -9983,27 +9947,9 @@ inline-view-switcher toggle-group toggle:checked {
   background-color: color-mix(in srgb, var(--primary) 12%, transparent);
 }
 
-inline-view-switcher toggle-group toggle:checked label,
-inline-view-switcher toggle-group toggle:checked image {
-  color: var(--primary);
-}
-
 inline-view-switcher toggle-group toggle label,
 inline-view-switcher toggle-group toggle image {
   color: var(--primary);
-}
-
-button.circular.osd {
-  background-color: color-mix(in srgb, var(--surface_container_highest) 62%, transparent);
-  color: var(--primary);
-}
-
-button.circular.osd image {
-  color: var(--primary);
-}
-
-button.circular.osd:hover {
-  background-color: var(--surface_container_highest);
 }
 
 box.numeric entry,
@@ -10013,20 +9959,4 @@ box.numeric label {
 
 box.numeric entry {
   background-color: color-mix(in srgb, var(--primary) 8%, transparent);
-}
-
-button.pill:checked label {
-  color: var(--on_primary);
-}
-
-box.linked button.toggle:checked label {
-  color: var(--on_primary);
-}
-
-@define-color progress_track_bg_color #2d2d2d;
-@define-color template_trough_bg #2d2d2d;
-
-/* Force standard system variable fallbacks */
-progressbar trough {
-    background-color: @theme_bg_color !important;
 }
