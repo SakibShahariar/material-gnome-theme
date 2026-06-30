@@ -4,62 +4,144 @@
 */
 
 :root {
-  --primary: #abccd5;
-  --on_primary: #14353c;
-  --primary_container: #76969e;
-  --on_primary_container: #000000;
-  --inverse_primary: #44636b;
-  --primary_fixed: #c7e8f1;
-  --primary_fixed_dim: #abccd5;
-  --on_primary_fixed: #001f25;
-  --on_primary_fixed_variant: #2c4b53;
+  --primary: #ffb4a9;
+  --on_primary: #690002;
+  --primary_container: #c33126;
+  --on_primary_container: #ffffff;
+  --inverse_primary: #b5261d;
+  --primary_fixed: #ffdad5;
+  --primary_fixed_dim: #ffb4a9;
+  --on_primary_fixed: #410001;
+  --on_primary_fixed_variant: #920707;
 
-  --secondary: #bcc9cc;
-  --on_secondary: #273235;
-  --secondary_container: #3d494c;
-  --on_secondary_container: #d6e2e6;
-  --secondary_fixed: #d8e5e8;
-  --secondary_fixed_dim: #bcc9cc;
-  --on_secondary_fixed: #121d20;
-  --on_secondary_fixed_variant: #3d494c;
+  --secondary: #ffb4a9;
+  --on_secondary: #5d1711;
+  --secondary_container: #7b2d25;
+  --on_secondary_container: #ffd7d1;
+  --secondary_fixed: #ffdad5;
+  --secondary_fixed_dim: #ffb4a9;
+  --on_secondary_fixed: #3f0202;
+  --on_secondary_fixed_variant: #7b2d25;
 
-  --tertiary: #ebbda2;
-  --on_tertiary: #462a17;
-  --tertiary_container: #b1886f;
-  --on_tertiary_container: #000000;
-  --tertiary_fixed: #ffdbc8;
-  --tertiary_fixed_dim: #ebbda2;
-  --on_tertiary_fixed: #2e1505;
-  --on_tertiary_fixed_variant: #603f2b;
+  --tertiary: #8dcdff;
+  --on_tertiary: #00344f;
+  --tertiary_container: #006fa3;
+  --on_tertiary_container: #ffffff;
+  --tertiary_fixed: #cae6ff;
+  --tertiary_fixed_dim: #8dcdff;
+  --on_tertiary_fixed: #001e30;
+  --on_tertiary_fixed_variant: #004b70;
 
   --error: #ffb4ab;
   --on_error: #690005;
   --error_container: #93000a;
   --on_error_container: #ffdad6;
 
-  --surface_dim: #121414;
-  --surface: #121414;
-  --surface_tint: #abccd5;
-  --surface_bright: #38393a;
-  --surface_container_lowest: #0d0e0f;
-  --surface_container_low: #1a1c1c;
-  --surface_container: #1e2020;
-  --surface_container_high: #292a2b;
-  --surface_container_highest: #333535;
-  --surface_variant: #41484a;
-  --on_surface: #e3e2e2;
-  --on_surface_variant: #c1c8ca;
+  --surface_dim: #1d100e;
+  --surface: #1d100e;
+  --surface_tint: #ffb4a9;
+  --surface_bright: #463533;
+  --surface_container_lowest: #180b09;
+  --surface_container_low: #261816;
+  --surface_container: #2b1c1a;
+  --surface_container_high: #362624;
+  --surface_container_highest: #42312e;
+  --surface_variant: #5a403d;
+  --on_surface: #f8dcd8;
+  --on_surface_variant: #e3beb9;
 
-  --outline: #8b9294;
-  --outline_variant: #41484a;
+  --outline: #aa8985;
+  --outline_variant: #5a403d;
 
-  --inverse_surface: #e3e2e2;
-  --inverse_on_surface: #2f3131;
+  --inverse_surface: #f8dcd8;
+  --inverse_on_surface: #3d2c2a;
 
-  --background: #121414;
-  --on_background: #e3e2e2;
+  --background: #1d100e;
+  --on_background: #f8dcd8;
 
   --shadow: #000000;
   --scrim: #000000;
-  --source_color: #6a8a92;
+  --source_color: #c33126;
 }
+
+/* Core Theme Colors */
+@define-color theme_fg_color #f8dcd8;
+@define-color theme_text_color #f8dcd8;
+@define-color theme_bg_color #1d100e;
+@define-color theme_base_color #2b1c1a;
+@define-color theme_selected_bg_color #ffb4a9;
+@define-color theme_selected_fg_color #690002;
+@define-color insensitive_bg_color #261816;
+@define-color insensitive_fg_color #e3beb9;
+@define-color insensitive_base_color #1d100e;
+
+/* Backdrop / Unfocused Windows */
+@define-color theme_unfocused_fg_color #e3beb9;
+@define-color theme_unfocused_text_color #e3beb9;
+@define-color theme_unfocused_bg_color #1d100e;
+@define-color theme_unfocused_base_color #261816;
+@define-color theme_unfocused_selected_bg_color #7b2d25;
+@define-color theme_unfocused_selected_fg_color #ffd7d1;
+@define-color unfocused_insensitive_color #e3beb9;
+@define-color borders #5a403d;
+@define-color unfocused_borders #5a403d;
+
+/* Status Colors */
+@define-color warning_color #8dcdff;
+@define-color error_color #ffb4ab;
+@define-color success_color #ffb4a9;
+
+/* Window Manager */
+@define-color wm_focused_title #ffb4a9; /* Primary text for the active window title */
+@define-color wm_unfocused_title #e3beb9;
+@define-color wm_highlight #ffb4a9;
+@define-color wm_border #000000;
+@define-color wm_focused_bg #1d100e;
+@define-color wm_unfocused_bg #1d100e;
+@define-color wm_button_icon #f8dcd8;
+@define-color wm_button_focused_bg #2b1c1a;
+@define-color wm_button_unfocused_bg #261816;
+@define-color wm_button_hover_fg #ffffff;
+@define-color wm_button_active_fg #ffffff;
+@define-color wm_button_hover_bg #c33126;
+@define-color wm_button_active_bg #c33126;
+
+/* Content & Text Views */
+@define-color content_view_bg #2b1c1a;
+@define-color placeholder_text_color #ffb4a9; /* Primary text for empty state hints/placeholders */
+@define-color text_view_bg #2b1c1a;
+
+/* GTK4 / Libadwaita Named Colors */
+@define-color accent_bg_color #c33126;
+@define-color accent_fg_color #ffffff;
+@define-color accent_color #ffb4a9;
+@define-color destructive_bg_color #93000a;
+@define-color destructive_fg_color #ffdad6;
+@define-color destructive_color #ffb4ab;
+@define-color success_bg_color #7b2d25;
+@define-color success_fg_color #ffd7d1;
+@define-color success_color #ffb4a9;
+@define-color warning_bg_color #006fa3;
+@define-color warning_fg_color #ffffff;
+@define-color warning_color #8dcdff;
+@define-color error_bg_color #93000a;
+@define-color error_fg_color #ffdad6;
+@define-color error_color #ffb4ab;
+@define-color window_bg_color #1d100e;
+@define-color window_fg_color #f8dcd8;
+@define-color view_bg_color #2b1c1a;
+@define-color view_fg_color #f8dcd8;
+@define-color headerbar_bg_color #1d100e;
+@define-color headerbar_fg_color #ffb4a9; /* Primary text for the active header title */
+@define-color headerbar_border_color #5a403d;
+@define-color headerbar_backdrop_color #1d100e;
+@define-color headerbar_shade_color #000000;
+@define-color card_bg_color #2b1c1a;
+@define-color card_fg_color #f8dcd8;
+@define-color card_shade_color #000000;
+@define-color dialog_bg_color #362624;
+@define-color dialog_fg_color #f8dcd8;
+@define-color popover_bg_color #362624;
+@define-color popover_fg_color #f8dcd8;
+@define-color shade_color #000000;
+@define-color scrollbar_outline_color #5a403d;
