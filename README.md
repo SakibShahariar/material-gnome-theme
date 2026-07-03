@@ -1,4 +1,16 @@
-# Material GNOME
+<h1 align="center"> Material GNOME </h3>
+
+<p align="center">
+  <a href="https://github.com/SakibShahariar/material-gnome-theme/stargazers">
+    <img src="https://img.shields.io/github/stars/SakibShahariar/material-gnome-theme?style=for-the-badge&logo=starship&color=FF9800&logoColor=white&labelColor=1F1F1F">
+  </a>
+  <a href="https://github.com/SakibShahariar/material-gnome-theme/issues">
+    <img src="https://img.shields.io/github/issues/SakibShahariar/material-gnome-theme?style=for-the-badge&logo=gitbook&color=FFC107&logoColor=white&labelColor=1F1F1F">
+  </a>
+  <a href="https://github.com/SakibShahariar/material-gnome-theme/graphs/contributors">
+    <img src="https://img.shields.io/github/contributors/SakibShahariar/material-gnome-theme?style=for-the-badge&logo=github&color=FF5722&logoColor=white&labelColor=1F1F1F">
+  </a>
+</p>
 
 A modern, cohesive theme for the GNOME desktop environment inspired by Google's Material You and Material 3 design languages. It provides a unified visual experience across GTK3, GTK4, and GNOME Shell with a focus on deep container colors, expressive active states, and minimal visual clutter.
 
