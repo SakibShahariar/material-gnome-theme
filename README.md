@@ -273,3 +273,6 @@ If you run into any bugs, visual glitches, or have suggestions, please [open an 
 ## 📜 License
 
 This project is licensed under the **GPL-3.0 License** - see the [LICENSE](LICENSE) file for details.
+
+## Star History
+[![Star History Chart](https://api.star-history.com/svg?repos=SakibShahariar/material-gnome-theme&type=Date)](https://star-history.com/#SakibShahariar/material-gnome-theme&Date)
