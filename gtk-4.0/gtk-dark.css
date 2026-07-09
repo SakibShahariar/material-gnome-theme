@@ -9955,3 +9955,27 @@ box.numeric label {
 box.numeric entry {
   background-color: color-mix(in srgb, var(--primary) 8%, transparent);
 }
+
+/**********
+ * Clapper *
+ **********/
+
+window,
+clapper-app-window,
+.clapper-window,
+viewport,
+stack,
+window > stack > box {
+  background-color: var(--surface);
+  box-shadow: none;
+  border: none;
+}
+
+window > stack > box > box {
+  background-color: var(--surface);
+  background-image: none;
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-shadow: none;
+}
