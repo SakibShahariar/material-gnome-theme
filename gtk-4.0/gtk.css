@@ -605,10 +605,6 @@ button:active {
   outline: 0 solid transparent;
 }
 
-button.text-button:active label {
-  color: var(--on_primary);
-}
-
 button:checked {
   border-radius: 999px;
   background-color: var(--primary);
@@ -8930,10 +8926,6 @@ preferencespage > scrolledwindow > viewport > clamp > box {
   border-spacing: 24px;
 }
 
-preferencespage label {
-  color: var(--primary);
-}
-
 preferencesgroup > box background-preview widget.sidebar,
 preferencesgroup > box widget.header-bar:not(.editable-area) {
   background-color: var(--background);
@@ -9960,22 +9952,11 @@ box.numeric entry {
  * Clapper *
  **********/
 
-window,
 clapper-app-window,
 .clapper-window,
-viewport,
-stack,
 window > stack > box {
   background-color: var(--surface);
   box-shadow: none;
   border: none;
 }
 
-window > stack > box > box {
-  background-color: var(--surface);
-  background-image: none;
-  margin: 0;
-  padding: 0;
-  border: none;
-  box-shadow: none;
-}
