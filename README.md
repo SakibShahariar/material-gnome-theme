@@ -275,4 +275,11 @@ If you run into any bugs, visual glitches, or have suggestions, please [open an 
 This project is licensed under the **GPL-3.0 License** - see the [LICENSE](LICENSE) file for details.
 
 ## Star History
-[![Star History Chart](https://api.star-history.com/svg?repos=SakibShahariar/material-gnome-theme&type=Date)](https://star-history.com/#SakibShahariar/material-gnome-theme&Date)
+
+<a href="https://www.star-history.com/?repos=SakibShahariar%2Fmaterial-gnome-theme&type=date&legend=top-left">
+ <picture>
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=SakibShahariar/material-gnome-theme&type=date&theme=dark&legend=top-left&sealed_token=FzIxZkiD1N-CtDfCfqIIEQ8ZsEPAkie4A15IyPfdtWCPqFuOjplStisTYVgCw2TNHqXt_iIz5GDi05sp4Z0JKFTq27jUtW1rXseVZSdDeMLNp10IRyXaSn93R-NgRJy3Pf0qa7qJWDqt8985J8k91jtjfwnyuKF6q7x3p2sWPj6gua2ZfMOHHKYgNo8U" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=SakibShahariar/material-gnome-theme&type=date&legend=top-left&sealed_token=FzIxZkiD1N-CtDfCfqIIEQ8ZsEPAkie4A15IyPfdtWCPqFuOjplStisTYVgCw2TNHqXt_iIz5GDi05sp4Z0JKFTq27jUtW1rXseVZSdDeMLNp10IRyXaSn93R-NgRJy3Pf0qa7qJWDqt8985J8k91jtjfwnyuKF6q7x3p2sWPj6gua2ZfMOHHKYgNo8U" />
+   <img alt="Star History Chart" src="https://api.star-history.com/chart?repos=SakibShahariar/material-gnome-theme&type=date&legend=top-left&sealed_token=FzIxZkiD1N-CtDfCfqIIEQ8ZsEPAkie4A15IyPfdtWCPqFuOjplStisTYVgCw2TNHqXt_iIz5GDi05sp4Z0JKFTq27jUtW1rXseVZSdDeMLNp10IRyXaSn93R-NgRJy3Pf0qa7qJWDqt8985J8k91jtjfwnyuKF6q7x3p2sWPj6gua2ZfMOHHKYgNo8U" />
+ </picture>
+</a>
