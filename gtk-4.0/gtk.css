@@ -76,6 +76,21 @@
   100% { background-color: transparent;    opacity: 0; }
 }
 
+@keyframes install-progress-unknown-move {
+  0%   { background-position: 0%; }
+  50%  { background-position: 100%; }
+  100% { background-position: 0%; }
+}
+
+@keyframes pre-delay {
+  from { opacity: 0; }
+  to   { opacity: 0; }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+}
+
 /***************
  * Base States *
  ***************/
@@ -7848,12 +7863,6 @@ flowboxchild.card:not(.category-tile) {
   padding: 12px;
 }
 
-@keyframes install-progress-unknown-move {
-  0%   { background-position: 0%; }
-  50%  { background-position: 100%; }
-  100% { background-position: 0%; }
-}
-
 .application-details-description .button {
   padding-left: 24px;
   padding-right: 24px;
@@ -8246,15 +8255,6 @@ row.app > box.header > image {
 
 row.app label.warning {
   color: var(--error);
-}
-
-@keyframes pre-delay {
-  from { opacity: 0; }
-  to   { opacity: 0; }
-}
-
-@keyframes fade-in {
-  from { opacity: 0; }
 }
 
 spinner.fade-in:checked {
