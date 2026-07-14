@@ -2155,11 +2155,13 @@ StScrollBar StButton#hhandle:active {
 }
 
 .workspace-switcher {
-  background: transparent;
-  border: none;
-  border-radius: 0;
-  padding: 0;
-  spacing: 12px;
+  background: rgba(34, 31, 29, 0.95);
+  border-radius: 18px;
+  padding: 12px;
+}
+
+.workspace-switcher StBin {
+    background-color: #dfc2a3;
 }
 
 .ws-switcher-box {
