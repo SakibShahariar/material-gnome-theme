@@ -6840,17 +6840,15 @@ popover.entry-completion > contents {
 }
 
 .nautilus-window banner > revealer > widget {
-  color: var(--on_primary);
-  background-color: color-mix(in srgb, var(--primary_container) 10%, transparent);
+  color: var(--primary);
+  background-color: var(--surface_container);
   border-radius: 9px;
   margin: 9px;
   transition: background-color 0.3s cubic-bezier(0.2, 0, 0, 1);
 }
 
 .nautilus-window banner > revealer > widget:hover {
-  background-color: var(--background);
-  border-radius: 9px;
-  margin: 9px;
+  background-color: var(--surface_container_high);
 }
 
 .nautilus-window banner > revealer > widget button {
