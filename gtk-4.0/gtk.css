@@ -2467,39 +2467,8 @@ headerbar headerbar + separator {
   background-color: var(--outline_variant);
 }
 
-headerbar > windowhandle > box {
-  padding: 0 12px;
-}
-
 headerbar windowhandle button {
   color: var(--on_primary) !important;
-}
-
-headerbar > windowhandle > box,
-headerbar > windowhandle > box > box.start,
-headerbar > windowhandle > box > box.end {
-  border-spacing: 6px;
-}
-
-headerbar entry,
-headerbar spinbutton,
-headerbar splitbutton,
-headerbar button,
-headerbar menubutton,
-headerbar stackswitcher,
-headerbar separator:not(.sidebar) {
-  margin-top: 6px;
-  margin-bottom: 6px;
-}
-
-headerbar menubutton > button,
-headerbar spinbutton > button,
-headerbar splitbutton > button,
-headerbar splitbutton > menubutton,
-headerbar .linked > menubutton,
-headerbar entry > menubutton {
-  margin-top: 0;
-  margin-bottom: 0;
 }
 
 headerbar button.star {
