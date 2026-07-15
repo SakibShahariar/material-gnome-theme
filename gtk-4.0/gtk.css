@@ -1259,7 +1259,6 @@ spinbutton > button {
 button {
   min-height: 24px;
   min-width: 16px;
-  padding: 5px 9px;
   border-radius: 9px;
   font-weight: 500;
 }
@@ -9921,7 +9920,8 @@ window.chromium headerbar.titlebar {
 }
 
 toggle-group toggle:checked {
-  background-color: var(--primary);
+  background-color: color-mix(in srgb, var(--primary) 70%, transparent);
+  color: var(--on_primary);
 }
 
 toggle-group toggle:checked label {
