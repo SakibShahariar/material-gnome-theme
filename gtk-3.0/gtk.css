@@ -2428,8 +2428,14 @@ modelbutton.flat,
   min-height: 28px;
   padding: 0 8px;
   border-radius: 12px;
-  color: @on_surface;
+  color: @on_surface_variant;
   transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+modelbutton.flat:hover,
+.menuitem.button.flat:hover {
+  background-color: alpha(@primary, 0.58);
+  color: @on_primary;
 }
 
 modelbutton.flat arrow.left {
