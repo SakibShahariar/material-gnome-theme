@@ -145,3 +145,9 @@
 @define-color popover_fg_color #f8dcd8;
 @define-color shade_color #000000;
 @define-color scrollbar_outline_color #5a403d;
+
+/* Libadwaita 1.8+ uses this CSS variable for Adw.Dialog dimming. Keep it
+ * translucent: floating sheets apply the shade twice while they are open. */
+:root {
+  --shade-color: rgb(0 0 0 / 25%);
+}
