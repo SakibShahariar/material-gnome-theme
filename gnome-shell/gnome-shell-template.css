@@ -4822,20 +4822,19 @@ StWidget.focused .app-grid-running-dot {
   background-color: {{colors.primary.default.hex}};
 }
 
-/* GNOME Default Shell Style */
+/* Top Bar — Floating Capsule */
 #panel {
-  background-color: rgba({{colors.surface.default.red}}, {{colors.surface.default.green}}, {{colors.surface.default.blue}}, 0.75);
+  background-color: transparent;
   border: none;
-  border-radius: 0px;
-  width: 100%;
-  height: 32px;
+  box-shadow: none;
+  width: calc(100% - 60px);
+  height: 30px;
   transition: background-color 250ms ease-in-out;
-  color: {{colors.primary.default.hex}};
+  color: {{colors.on_surface.default.hex}};
   font-weight: bold;
   font-feature-settings: 'tnum';
   font-size: 10pt;
-  margin: 0px;
-  box-shadow: none;
+  margin: 2px 2px 0px;
 }
 
 #panel .panel-corner {
@@ -4844,35 +4843,38 @@ StWidget.focused .app-grid-running-dot {
   -panel-corner-border-width: 0;
   -panel-corner-border-color: transparent;
   -panel-corner-opacity: 0;
+  transition-duration: 250ms;
 }
 
 #panel .panel-button {
-  -natural-hpadding: 12px;
-  -minimum-hpadding: 12px;
+  -natural-hpadding: 10px;
+  -minimum-hpadding: 10px;
   font-weight: bold;
   color: {{colors.primary.default.hex}};
-  background-color: transparent;
+  background-color: rgba({{colors.surface_container.default.red}}, {{colors.surface_container.default.green}}, {{colors.surface_container.default.blue}}, 0.9);
   transition: all 150ms ease-in-out;
-  border-radius: 0px;
-  margin: 0px;
-  padding: 0 12px;
-  border: none;
-  box-shadow: none;
+  border-radius: 10px;
+  margin: 0 4px;
+  padding: 4px 10px;
+  border: 2px solid rgba({{colors.primary.default.red}}, {{colors.primary.default.green}}, {{colors.primary.default.blue}}, 0.3);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
   text-shadow: none;
 }
 
 .panel-button.clock-display .clock {
-  color: {{colors.primary.default.hex}} !important;
+  color: inherit !important;
   text-shadow: none !important;
-  background-color: transparent !important;
-  border: none !important;
-  border-radius: 0px !important;
+  background-color: rgba({{colors.surface_container.default.red}}, {{colors.surface_container.default.green}}, {{colors.surface_container.default.blue}}, 0.9) !important;
+  border: 2px solid rgba({{colors.primary.default.red}}, {{colors.primary.default.green}}, {{colors.primary.default.blue}}, 0.3) !important;
+  border-radius: 10px !important;
   transition: all 150ms ease-in-out !important;
 }
 
 #panel .panel-button:hover {
-  background-color: rgba({{colors.primary.default.red}}, {{colors.primary.default.green}}, {{colors.primary.default.blue}}, 0.15);
+  background-color: rgba({{colors.surface_container_high.default.red}}, {{colors.surface_container_high.default.green}}, {{colors.surface_container_high.default.blue}}, 0.95);
   color: {{colors.primary.default.hex}};
+  border: 2px solid {{colors.primary.default.hex}};
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
 }
 
 /* ── ACTIVE / CHECKED / FOCUS — bg=primary, fg=on_primary ── */
@@ -4887,6 +4889,8 @@ StWidget.focused .app-grid-running-dot {
 #panel .panel-button:checked:hover {
   color: {{colors.on_primary.default.hex}};
   background-color: {{colors.primary.default.hex}};
+  border: 2px solid {{colors.primary.default.hex}} !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 .panel-button.clock-display:active .clock,
@@ -4895,6 +4899,7 @@ StWidget.focused .app-grid-running-dot {
 .panel-button.clock-display:checked .clock {
   color: {{colors.on_primary.default.hex}} !important;
   background-color: {{colors.primary.default.hex}} !important;
+  border: 2px solid {{colors.primary.default.hex}} !important;
 }
 
 /* ── LOCK / LOGIN SCREENS ──────────────── */
@@ -4903,9 +4908,11 @@ StWidget.focused .app-grid-running-dot {
 .login-screen #panel .panel-button,
 .lock-screen #panel .panel-button {
   color: {{colors.primary.default.hex}};
-  background-color: transparent;
-  border-radius: 0px;
-  margin: 0px;
+  background-color: {{colors.surface_container.default.hex}};
+  border: 2px solid rgba({{colors.primary.default.red}}, {{colors.primary.default.green}}, {{colors.primary.default.blue}}, 0.3);
+  border-radius: 16px;
+  margin: 0 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 .unlock-screen #panel .panel-button:focus,
@@ -4919,14 +4926,16 @@ StWidget.focused .app-grid-running-dot {
 .lock-screen #panel .panel-button:active {
   color: {{colors.on_primary.default.hex}};
   background-color: {{colors.primary.default.hex}};
+  border-color: {{colors.primary.default.hex}};
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 /* ── ICONS ─────────────────────────────── */
 
 #panel .panel-button .system-status-icon {
   icon-size: 16px;
-  padding: 0;
-  margin: 0 4px;
+  padding: 6px;
+  margin: 0;
   -st-icon-style: symbolic;
 }
 
@@ -4941,18 +4950,18 @@ StWidget.focused .app-grid-running-dot {
 /* ── ACTIVITIES BUTTON ─────────────────── */
 
 #panel .panel-button#panelActivities {
-  -natural-hpadding: 12px;
+  -natural-hpadding: 18px;
 }
 
 #panel .panel-button#panelActivities StBoxLayout {
-  padding: 0 4px;
-  spacing: 4px;
+  padding: 0 3px;
+  spacing: 6px;
 }
 
 #panel .panel-button#panelActivities .workspace-dot {
   border-radius: 9999px;
-  min-width: 6px;
-  min-height: 6px;
+  min-width: 8px;
+  min-height: 8px;
   background-color: {{colors.primary.default.hex}};
 }
 
@@ -4964,7 +4973,7 @@ StWidget.focused .app-grid-running-dot {
 #panel.lock-screen {
   background-color: transparent;
   box-shadow: none;
-  border: none;
+  border: 2px solid transparent;
 }
 
 #panel:overview StLabel,
@@ -4984,6 +4993,7 @@ StWidget.focused .app-grid-running-dot {
 #panel.lock-screen .panel-button:hover {
   color: {{colors.primary.default.hex}};
   background-color: rgba({{colors.primary.default.red}}, {{colors.primary.default.green}}, {{colors.primary.default.blue}}, 0.08);
+  border-color: rgba({{colors.primary.default.red}}, {{colors.primary.default.green}}, {{colors.primary.default.blue}}, 0.3);
 }
 
 #panel:overview .panel-button:hover.clock-display,
@@ -5020,6 +5030,27 @@ StWidget.focused .app-grid-running-dot {
 #panel.lock-screen .panel-button:checked {
   color: {{colors.on_primary.default.hex}};
   background-color: rgba({{colors.primary.default.red}}, {{colors.primary.default.green}}, {{colors.primary.default.blue}}, 0.2);
+  border-color: {{colors.primary.default.hex}};
+}
+
+#panel:overview .panel-button:active.clock-display,
+#panel:overview .panel-button:overview.clock-display,
+#panel:overview .panel-button:focus.clock-display,
+#panel:overview .panel-button:checked.clock-display,
+#panel.unlock-screen .panel-button:active.clock-display,
+#panel.unlock-screen .panel-button:overview.clock-display,
+#panel.unlock-screen .panel-button:focus.clock-display,
+#panel.unlock-screen .panel-button:checked.clock-display,
+#panel.login-screen .panel-button:active.clock-display,
+#panel.login-screen .panel-button:overview.clock-display,
+#panel.login-screen .panel-button:focus.clock-display,
+#panel.login-screen .panel-button:checked.clock-display,
+#panel.lock-screen .panel-button:active.clock-display,
+#panel.lock-screen .panel-button:overview.clock-display,
+#panel.lock-screen .panel-button:focus.clock-display,
+#panel.lock-screen .panel-button:checked.clock-display {
+  box-shadow: none;
+  background-color: {{colors.primary.default.hex}};
 }
 
 #panel:overview .panel-button:active.clock-display .clock,
@@ -5063,8 +5094,8 @@ StWidget.focused .app-grid-running-dot {
 #panel Gjs_status_keyboard_InputSourceIndicator.panel-button,
 #panel Gjs_appindicatorsupport_rgcjonas_gmail_com_indicatorStatusIcon_IndicatorStatusIcon.panel-button,
 #panel Gjs_appindicatorsupport_rgcjonas_gmail_com_indicatorStatusIcon_AppIndicatorsIndicatorStatusIcon.panel-button {
-  -natural-hpadding: 12px !important;
-  -minimum-hpadding: 12px !important;
+  -natural-hpadding: 18px !important;
+  -minimum-hpadding: 18px !important;
 }
 
 #panel .screencast-indicator,
