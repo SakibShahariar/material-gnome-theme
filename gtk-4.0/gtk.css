@@ -5059,8 +5059,7 @@ row.activatable.has-open-popup {
 
 .nautilus-window .nautilus-grid-view child.activatable:active,
 columnview.view > header > button:active,
-treeview.view > header > button:active,
-row.activatable:active {
+treeview.view > header > button:active {
   background-color: color-mix(in srgb, var(--primary) 15%, transparent);
   color: var(--primary);
   box-shadow: none;
@@ -5136,6 +5135,10 @@ row:selected button label {
 row:selected:disabled image,
 row:selected:disabled label {
   color: color-mix(in srgb, var(--on_surface_variant) 70%, transparent);
+}
+
+row.activatable:active {
+  color: var(--on_primary);
 }
 
 .rich-list > row {
