@@ -398,7 +398,7 @@ spinner:checked:disabled {
 entry headerbar popover.background entry,
 headerbar popover.background entry entry,
 entry {
-  min-height: 40px;
+
   padding: 0 14px;
   border-spacing: 8px;
   border-radius: 20px;
@@ -1286,11 +1286,6 @@ button.text-button {
 button.text-button:checked:hover {
   background-color: var(--primary);
   color: var(--on_primary);
-}
-
-button.image-button {
-  min-width: 24px;
-  padding: 5px;
 }
 
 button.text-button.image-button,
@@ -2397,11 +2392,16 @@ headerbar {
               color            75ms cubic-bezier(0, 0, 0.2, 1);
   background-color: transparent;
   color: var(--primary);
-  min-height: 46px;
   border: none;
   box-shadow: none;
-  padding: 0;
+  padding-top: 3px; 
+  padding-bottom: 0px;
   margin: 0;
+}
+
+headerbar button {
+  margin-top: 2px;
+  margin-bottom: 2px;  
 }
 
 headerbar:disabled {
@@ -6896,7 +6896,6 @@ banner > revealer > widget {
 .nautilus-pathbar {
   background-color: var(--surface_container_low);
   border-radius: 12px;
-  margin: 6px 0;
 }
 
 #NautilusPathButton {
