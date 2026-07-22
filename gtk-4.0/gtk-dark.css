@@ -123,7 +123,7 @@ treeview.expander:disabled {
 iconview,
 .view {
   background-color: var(--surface_container_low);
-  color: var(--primary);
+  color: var(--on_primary_container);
   transition: background-color 0.4s cubic-bezier(0.2, 0, 0, 1),
               color            0.4s cubic-bezier(0.2, 0, 0, 1);
 }
@@ -6418,6 +6418,11 @@ headerbar popover.background entry entry > text > selection,
 calendar > grid > label.today:selected {
   color: var(--on_primary);
   background-color: var(--primary);
+}
+
+textview text selection:focus,
+textview text selection {
+    background: var(--inverse_primary);
 }
 
 .monospace {
