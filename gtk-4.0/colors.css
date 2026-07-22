@@ -4,146 +4,146 @@
 */
 
 :root {
-  --primary: #ffb4a9;
-  --on_primary: #690002;
-  --primary_container: #c33126;
+  --primary: #9ad596;
+  --on_primary: #00390d;
+  --primary_container: #396f3b;
   --on_primary_container: #ffffff;
-  --inverse_primary: #b5261d;
-  --primary_fixed: #ffdad5;
-  --primary_fixed_dim: #ffb4a9;
-  --on_primary_fixed: #410001;
-  --on_primary_fixed_variant: #920707;
+  --inverse_primary: #346a36;
+  --primary_fixed: #b5f2b1;
+  --primary_fixed_dim: #9ad596;
+  --on_primary_fixed: #002105;
+  --on_primary_fixed_variant: #1b5121;
 
-  --secondary: #ffb4a9;
-  --on_secondary: #5d1711;
-  --secondary_container: #7b2d25;
-  --on_secondary_container: #ffd7d1;
-  --secondary_fixed: #ffdad5;
-  --secondary_fixed_dim: #ffb4a9;
-  --on_secondary_fixed: #3f0202;
-  --on_secondary_fixed_variant: #7b2d25;
+  --secondary: #b5cdaf;
+  --on_secondary: #213520;
+  --secondary_container: #394e37;
+  --on_secondary_container: #d2ebcc;
+  --secondary_fixed: #d0eaca;
+  --secondary_fixed_dim: #b5cdaf;
+  --on_secondary_fixed: #0c200d;
+  --on_secondary_fixed_variant: #374c35;
 
-  --tertiary: #8dcdff;
-  --on_tertiary: #00344f;
-  --tertiary_container: #006fa3;
+  --tertiary: #ffb0ca;
+  --on_tertiary: #571a34;
+  --tertiary_container: #954c67;
   --on_tertiary_container: #ffffff;
-  --tertiary_fixed: #cae6ff;
-  --tertiary_fixed_dim: #8dcdff;
-  --on_tertiary_fixed: #001e30;
-  --on_tertiary_fixed_variant: #004b70;
+  --tertiary_fixed: #ffd9e3;
+  --tertiary_fixed_dim: #ffb0ca;
+  --on_tertiary_fixed: #3c031e;
+  --on_tertiary_fixed_variant: #73304a;
 
   --error: #ffb4ab;
   --on_error: #690005;
   --error_container: #93000a;
   --on_error_container: #ffdad6;
 
-  --surface_dim: #1d100e;
-  --surface: #1d100e;
-  --surface_tint: #ffb4a9;
-  --surface_bright: #463533;
-  --surface_container_lowest: #180b09;
-  --surface_container_low: #261816;
-  --surface_container: #2b1c1a;
-  --surface_container_high: #362624;
-  --surface_container_highest: #42312e;
-  --surface_variant: #5a403d;
-  --on_surface: #f8dcd8;
-  --on_surface_variant: #e3beb9;
+  --surface_dim: #111410;
+  --surface: #111410;
+  --surface_tint: #9ad596;
+  --surface_bright: #373a35;
+  --surface_container_lowest: #0c0f0b;
+  --surface_container_low: #191c18;
+  --surface_container: #1d201c;
+  --surface_container_high: #282b26;
+  --surface_container_highest: #323631;
+  --surface_variant: #41493f;
+  --on_surface: #e1e3dc;
+  --on_surface_variant: #c1c9bc;
 
-  --outline: #aa8985;
-  --outline_variant: #5a403d;
+  --outline: #8b9387;
+  --outline_variant: #41493f;
 
-  --inverse_surface: #f8dcd8;
-  --inverse_on_surface: #3d2c2a;
+  --inverse_surface: #e1e3dc;
+  --inverse_on_surface: #2e312c;
 
-  --background: #1d100e;
-  --on_background: #f8dcd8;
+  --background: #111410;
+  --on_background: #e1e3dc;
 
   --shadow: #000000;
   --scrim: #000000;
-  /* Libadwaita floating sheets use this for their dimming layer. */
-  --shade-color: rgb(0 0 0 / 25%);
-  --source_color: #c33126;
+  --source_color: #396f3b;
+  
+  --shade-color: rgb(17 20 16 / 25%);
 }
 
 /* Core Theme Colors */
-@define-color theme_fg_color #f8dcd8;
-@define-color theme_text_color #f8dcd8;
-@define-color theme_bg_color #1d100e;
-@define-color theme_base_color #2b1c1a;
-@define-color theme_selected_bg_color #ffb4a9;
-@define-color theme_selected_fg_color #690002;
-@define-color insensitive_bg_color #261816;
-@define-color insensitive_fg_color #e3beb9;
-@define-color insensitive_base_color #1d100e;
+@define-color theme_fg_color #e1e3dc;
+@define-color theme_text_color #e1e3dc;
+@define-color theme_bg_color #111410;
+@define-color theme_base_color #1d201c;
+@define-color theme_selected_bg_color #9ad596;
+@define-color theme_selected_fg_color #00390d;
+@define-color insensitive_bg_color #191c18;
+@define-color insensitive_fg_color #c1c9bc;
+@define-color insensitive_base_color #111410;
 
 /* Backdrop / Unfocused Windows */
-@define-color theme_unfocused_fg_color #e3beb9;
-@define-color theme_unfocused_text_color #e3beb9;
-@define-color theme_unfocused_bg_color #1d100e;
-@define-color theme_unfocused_base_color #261816;
-@define-color theme_unfocused_selected_bg_color #7b2d25;
-@define-color theme_unfocused_selected_fg_color #ffd7d1;
-@define-color unfocused_insensitive_color #e3beb9;
-@define-color borders #5a403d;
-@define-color unfocused_borders #5a403d;
+@define-color theme_unfocused_fg_color #c1c9bc;
+@define-color theme_unfocused_text_color #c1c9bc;
+@define-color theme_unfocused_bg_color #111410;
+@define-color theme_unfocused_base_color #191c18;
+@define-color theme_unfocused_selected_bg_color #394e37;
+@define-color theme_unfocused_selected_fg_color #d2ebcc;
+@define-color unfocused_insensitive_color #c1c9bc;
+@define-color borders #41493f;
+@define-color unfocused_borders #41493f;
 
 /* Status Colors */
-@define-color warning_color #8dcdff;
+@define-color warning_color #ffb0ca;
 @define-color error_color #ffb4ab;
-@define-color success_color #ffb4a9;
+@define-color success_color #b5cdaf;
 
 /* Window Manager */
-@define-color wm_focused_title #ffb4a9; /* Primary text for the active window title */
-@define-color wm_unfocused_title #e3beb9;
-@define-color wm_highlight #ffb4a9;
+@define-color wm_focused_title #9ad596;
+@define-color wm_unfocused_title #c1c9bc;
+@define-color wm_highlight #9ad596;
 @define-color wm_border #000000;
-@define-color wm_focused_bg #1d100e;
-@define-color wm_unfocused_bg #1d100e;
-@define-color wm_button_icon #f8dcd8;
-@define-color wm_button_focused_bg #2b1c1a;
-@define-color wm_button_unfocused_bg #261816;
+@define-color wm_focused_bg #111410;
+@define-color wm_unfocused_bg #111410;
+@define-color wm_button_icon #e1e3dc;
+@define-color wm_button_focused_bg #1d201c;
+@define-color wm_button_unfocused_bg #191c18;
 @define-color wm_button_hover_fg #ffffff;
 @define-color wm_button_active_fg #ffffff;
-@define-color wm_button_hover_bg #c33126;
-@define-color wm_button_active_bg #c33126;
+@define-color wm_button_hover_bg #396f3b;
+@define-color wm_button_active_bg #396f3b;
 
 /* Content & Text Views */
-@define-color content_view_bg #2b1c1a;
-@define-color placeholder_text_color #ffb4a9; /* Primary text for empty state hints/placeholders */
-@define-color text_view_bg #2b1c1a;
+@define-color content_view_bg #1d201c;
+@define-color placeholder_text_color #9ad596;
+@define-color text_view_bg #1d201c;
 
 /* GTK4 / Libadwaita Named Colors */
-@define-color accent_bg_color #c33126;
+@define-color accent_bg_color #396f3b;
 @define-color accent_fg_color #ffffff;
-@define-color accent_color #ffb4a9;
+@define-color accent_color #9ad596;
 @define-color destructive_bg_color #93000a;
 @define-color destructive_fg_color #ffdad6;
 @define-color destructive_color #ffb4ab;
-@define-color success_bg_color #7b2d25;
-@define-color success_fg_color #ffd7d1;
-@define-color success_color #ffb4a9;
-@define-color warning_bg_color #006fa3;
+@define-color success_bg_color #394e37;
+@define-color success_fg_color #d2ebcc;
+@define-color success_color #b5cdaf;
+@define-color warning_bg_color #954c67;
 @define-color warning_fg_color #ffffff;
-@define-color warning_color #8dcdff;
+@define-color warning_color #ffb0ca;
 @define-color error_bg_color #93000a;
 @define-color error_fg_color #ffdad6;
 @define-color error_color #ffb4ab;
-@define-color window_bg_color #1d100e;
-@define-color window_fg_color #f8dcd8;
-@define-color view_bg_color #2b1c1a;
-@define-color view_fg_color #f8dcd8;
-@define-color headerbar_bg_color #1d100e;
-@define-color headerbar_fg_color #ffb4a9; /* Primary text for the active header title */
-@define-color headerbar_border_color #5a403d;
-@define-color headerbar_backdrop_color #1d100e;
+@define-color window_bg_color #111410;
+@define-color window_fg_color #e1e3dc;
+@define-color view_bg_color #1d201c;
+@define-color view_fg_color #e1e3dc;
+@define-color headerbar_bg_color #111410;
+@define-color headerbar_fg_color #9ad596;
+@define-color headerbar_border_color #41493f;
+@define-color headerbar_backdrop_color #111410;
 @define-color headerbar_shade_color #000000;
-@define-color card_bg_color #2b1c1a;
-@define-color card_fg_color #f8dcd8;
+@define-color card_bg_color #1d201c;
+@define-color card_fg_color #e1e3dc;
 @define-color card_shade_color #000000;
-@define-color dialog_bg_color #362624;
-@define-color dialog_fg_color #f8dcd8;
-@define-color popover_bg_color #362624;
-@define-color popover_fg_color #f8dcd8;
+@define-color dialog_bg_color #282b26;
+@define-color dialog_fg_color #e1e3dc;
+@define-color popover_bg_color #282b26;
+@define-color popover_fg_color #e1e3dc;
 @define-color shade_color #000000;
-@define-color scrollbar_outline_color #5a403d;
+@define-color scrollbar_outline_color #41493f;
