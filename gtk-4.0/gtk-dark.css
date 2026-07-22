@@ -123,7 +123,7 @@ treeview.expander:disabled {
 iconview,
 .view {
   background-color: var(--surface_container_low);
-  color: var(--on_primary_container);
+  color: var(--primary);
   transition: background-color 0.4s cubic-bezier(0.2, 0, 0, 1),
               color            0.4s cubic-bezier(0.2, 0, 0, 1);
 }
