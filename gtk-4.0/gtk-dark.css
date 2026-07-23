@@ -682,12 +682,6 @@ button:hover:not(.destructive-action) {
   -gtk-icon-filter: brightness(1.2);
 }
 
-:root {
-  /* Force focused state to use theme background */
-  --headerbar-bg-color: red;
-
-}
-
 headerbar popover.background button.keyboard-activating:not(.suggested-action):not(.destructive-action):not(.flat),
 button.keyboard-activating:not(.destructive-action),
 headerbar popover.background button:active:not(.suggested-action):not(.destructive-action):not(.flat),
@@ -993,8 +987,8 @@ button.flat {
 }
 
 button.destructive-action {
-  color: var(--error) !important;
-  background-color: transparent;
+  color: var(--on_error);
+  background-color: var(--error);
 }
 
 button.destructive-action:hover {
@@ -1036,7 +1030,7 @@ button .badge.needs-attention.numeric {
 .destructive-action.flat label,
 splitbutton.destructive-action > button,
 menubutton.destructive-action > button {
-  color: var(--error) !important;
+  color: var(--error);
   background-color: transparent;
 }
 
@@ -1044,16 +1038,16 @@ menubutton.destructive-action > button {
 .destructive-action.flat:hover label,
 splitbutton.destructive-action > button:hover,
 menubutton.destructive-action > button:hover {
-  color: var(--error) !important;
-  background-color: color-mix(in srgb, var(--error) 8%, transparent) !important;
+  color: var(--error);
+  background-color: color-mix(in srgb, var(--error) 8%, transparent);
 }
 
 .destructive-action.flat:active,
 .destructive-action.flat:active label,
 splitbutton.destructive-action > button:active,
 menubutton.destructive-action > button:active {
-  color: var(--error) !important;
-  background-color: color-mix(in srgb, var(--error) 12%, transparent) !important;
+  color: var(--error);
+  background-color: color-mix(in srgb, var(--error) 12%, transparent);
   animation: pill-pop 0.6s cubic-bezier(0.2, 0, 0, 1) forwards;
 }
 
@@ -1061,9 +1055,9 @@ menubutton.destructive-action > button:active {
 .destructive-action.flat:focus label,
 splitbutton.destructive-action > button:focus,
 menubutton.destructive-action > button:focus {
-  color: var(--error) !important;
-  border-color: var(--error) !important;
-  outline-color: var(--error) !important;
+  color: var(--error);
+  border-color: var(--error);
+  outline-color: var(--error);
   background-color: transparent;
 }
 
@@ -2473,7 +2467,7 @@ headerbar headerbar + separator {
 }
 
 headerbar windowhandle button {
-  color: var(--on_primary) !important;
+  color: var(--on_primary);
 }
 
 headerbar button.star {
@@ -4893,7 +4887,7 @@ list.boxed-list > row {
 }
 
 list.boxed-list > row:hover > box {
-  color: var(--primary) !important;
+  color: var(--primary);
 }
 
 list.content > row:hover,
@@ -8793,7 +8787,7 @@ viewswitcher button.toggle > stack > box.wide {
 
 viewswitcher > button:checked label,
 viewswitcher > button:checked indicatorbin {
-  color: var(--on_primary) !important;
+  color: var(--on_primary);
 }
 
 viewswitcherbar actionbar > revealer > box {
