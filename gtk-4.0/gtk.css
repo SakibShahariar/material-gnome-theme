@@ -8256,10 +8256,6 @@ window > contents > leaflet > box > stack.background {
   margin-left: 9px;
 }
 
-#conditions-grid *:backdrop {
-  color: color-mix(in srgb, var(--on_surface_variant) 70%, transparent);
-}
-
 .content-view.cell {
   font-weight: bold;
 }
