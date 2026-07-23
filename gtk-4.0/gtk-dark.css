@@ -682,11 +682,16 @@ button:hover:not(.destructive-action) {
   -gtk-icon-filter: brightness(1.2);
 }
 
+:root {
+  /* Force focused state to use theme background */
+  --headerbar-bg-color: red;
+
+}
+
 headerbar popover.background button.keyboard-activating:not(.suggested-action):not(.destructive-action):not(.flat),
 button.keyboard-activating:not(.destructive-action),
 headerbar popover.background button:active:not(.suggested-action):not(.destructive-action):not(.flat),
 button:active:not(.destructive-action) {
-  border-radius: 999px;
   background-color: var(--primary);
   color: var(--on_primary);
   transition: background-color 0.1s cubic-bezier(0, 0, 0.2, 1),
