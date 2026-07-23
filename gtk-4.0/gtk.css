@@ -6856,7 +6856,6 @@ popover.entry-completion > contents {
 }
 
 .nautilus-window banner > revealer > widget button:active {
-  border-radius: 999px;
   animation: pill-pop 0.6s cubic-bezier(0.2, 0, 0, 1) forwards;
   transition: background-color 0.1s cubic-bezier(0, 0, 0.2, 1);
 }
