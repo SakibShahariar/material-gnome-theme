@@ -4925,7 +4925,7 @@ list.boxed-list > row:only-child {
 listview,
 list {
   border-color: color-mix(in srgb, var(--on_surface_variant) 12%, transparent);
-  background-color: var(--surface_container_low);
+  background-color: var(--surface_container);
   background-clip: padding-box;
 }
 
@@ -9246,7 +9246,6 @@ leaflet.unfolded .contacts-contact-list > scrolledwindow,
 .sidebar-pane toolbarview > scrolledwindow .dim-label,
 .sidebar-pane navigation-view-page stack > scrolledwindow .dim-label,
 .sidebar-pane .dim-label,
-.toolbar .dim-label,
 filechooser paned > box .dim-label,
 placessidebar > scrolledwindow .dim-label,
 agenda-view list.background .dim-label,
@@ -9286,6 +9285,10 @@ row.expander leaflet.unfolded > box > scrolledwindow image.expander-row-arrow,
 leaflet.unfolded .contacts-contact-list > scrolledwindow row.expander image.expander-row-arrow,
 row.expander leaflet.unfolded .contacts-contact-list > scrolledwindow image.expander-row-arrow {
   color: color-mix(in srgb, var(--on_primary_container) 38%, transparent);
+}
+
+.toolbar .dim-label {
+  color: var(--on_surface_variant);
 }
 
 .nautilus-window placessidebar > scrolledwindow {
