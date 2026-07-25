@@ -5137,7 +5137,6 @@ row:selected:disabled label {
 }
 
 row.activatable:active {
-  color: var(--on_primary);
 }
 
 .rich-list > row {
