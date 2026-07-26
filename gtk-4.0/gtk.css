@@ -398,7 +398,7 @@ spinner:checked:disabled {
 entry headerbar popover.background entry,
 headerbar popover.background entry entry,
 entry {
-
+  min-height: 40px;
   padding: 0 14px;
   border-spacing: 8px;
   border-radius: 20px;
@@ -991,11 +991,6 @@ button.destructive-action {
   background-color: var(--error);
 }
 
-button.destructive-action:hover {
-  color: var(--error);
-  background-color: color-mix(in srgb, var(--error) 8%, transparent);
-}
-
 button.destructive-action:active {
   color: var(--error);
   background-color: color-mix(in srgb, var(--error) 12%, transparent);
@@ -1011,8 +1006,13 @@ button.destructive-action:disabled {
 button.destructive-action:focus {
   outline: 2px solid var(--error);
   outline-offset: 2px;
-  color: var(--error);
-  background-color: transparent;
+  color: var(--on_error);
+  background-color: var(--error);
+}
+
+button.destructive-action:hover {
+  background-color: color-mix(in srgb, var(--error), var(--on_error) 12%);
+  color: var(--on_error);
 }
 
 button .badge.needs-attention.numeric {
@@ -8786,7 +8786,16 @@ viewswitcher button.toggle > stack > box.wide {
 
 viewswitcher > button:checked label,
 viewswitcher > button:checked indicatorbin {
+  color: var(--primary);
+}
+
+viewswitcher > button:checked:hover label,
+viewswitcher > button:checked:hover indicatorbin {
   color: var(--on_primary);
+}
+
+viewswitcher > button:checked:hover {
+  background-color: color-mix(in srgb, var(--primary_container, var(--primary)) 12%, transparent);
 }
 
 viewswitcherbar actionbar > revealer > box {
@@ -9921,7 +9930,6 @@ box.numeric entry {
 /**********
  * Clapper *
  **********/
-
 clapper-app-window,
 .clapper-window,
 window > stack > box {
