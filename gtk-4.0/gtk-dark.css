@@ -595,8 +595,6 @@ arrow:active {
  ***********/
 button {
   border-radius: 12px;
-  background-color: var(--surface_container_highest);
-  color: var(--primary);
   transition: background-color 0.3s cubic-bezier(0.2, 0, 0, 1),
               border-radius    0.3s cubic-bezier(0.2, 0, 0, 1),
               color            0.2s cubic-bezier(0.2, 0, 0, 1),
@@ -976,7 +974,6 @@ button.flat {
               border-radius    0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275),
               color            0.2s cubic-bezier(0.2, 0, 0, 1),
               outline-color    0.3s cubic-bezier(0.2, 0, 0, 1);
-  background-image: radial-gradient(circle, transparent 10%, transparent 0%);
   background-repeat: no-repeat;
   background-position: center;
   background-size: 1000% 1000%;
@@ -984,11 +981,6 @@ button.flat {
   outline: 0 solid transparent;
   outline-offset: 2px;
   color: var(--primary);
-}
-
-button.destructive-action {
-  color: var(--on_error);
-  background-color: var(--error);
 }
 
 button.destructive-action:active {
@@ -1285,6 +1277,12 @@ button.text-button {
 button.text-button:checked:hover {
   background-color: var(--primary);
   color: var(--on_primary);
+}
+
+/* Applies to image buttons EXCEPT those inside MyComputerToggleButton */
+button.image-button:not(MyComputerToggleButton *) {
+  min-width: 24px;
+  padding: 5px;
 }
 
 button.text-button.image-button,
@@ -2467,7 +2465,7 @@ headerbar headerbar + separator {
 }
 
 headerbar windowhandle button {
-  color: var(--on_primary);
+  color: var(--primary);
 }
 
 headerbar button.star {
