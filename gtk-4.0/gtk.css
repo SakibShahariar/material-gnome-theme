@@ -398,7 +398,6 @@ spinner:checked:disabled {
 entry headerbar popover.background entry,
 headerbar popover.background entry entry,
 entry {
-  min-height: 40px;
   padding: 0 14px;
   border-spacing: 8px;
   border-radius: 20px;
@@ -465,10 +464,12 @@ entry.error {
   background-color: var(--error_container);
   color: var(--on_error_container);
 }
+
 entry.error:focus-within {
   outline: 2px solid var(--error);
   color: var(--error);
 }
+
 entry.error > text > selection {
   background-color: var(--error);
   color: var(--on_error);
@@ -478,6 +479,7 @@ entry.warning {
   background-color: color-mix(in srgb, #f59e0b 12%, transparent);
   color: #d97706;
 }
+
 entry.warning:focus-within {
   outline: 2px solid #d97706;
   color: #d97706;
@@ -487,6 +489,7 @@ entry.success {
   background-color: var(--primary_container);
   color: var(--on_primary_container);
 }
+
 entry.success:focus-within {
   outline: 2px solid var(--primary);
   color: var(--primary);
@@ -1279,8 +1282,12 @@ button.text-button:checked:hover {
   color: var(--on_primary);
 }
 
-/* Applies to image buttons EXCEPT those inside MyComputerToggleButton */
 button.image-button:not(MyComputerToggleButton *) {
+  min-width: 24px;
+  padding: 5px;
+}
+
+button.image-button {
   min-width: 24px;
   padding: 5px;
 }
@@ -2255,8 +2262,8 @@ headerbar button:disabled:not(.suggested-action):not(.destructive-action) {
 }
 
 headerbar button:checked:not(.suggested-action):not(.destructive-action) {
-  background-color: var(--primary);
-  color: var(--on_primary);
+  background-color: color-mix(in srgb, var(--primary) 15%, transparent);
+  color: var(--primary);
   border-radius: 999px;
   outline: none;
   animation: pill-pop 0.6s cubic-bezier(0.2, 0, 0, 1) forwards;
@@ -9935,4 +9942,3 @@ window > stack > box {
   box-shadow: none;
   border: none;
 }
-
