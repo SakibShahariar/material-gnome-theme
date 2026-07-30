@@ -398,6 +398,7 @@ spinner:checked:disabled {
 entry headerbar popover.background entry,
 headerbar popover.background entry entry,
 entry {
+  min-height: 40px;
   padding: 0 14px;
   border-spacing: 8px;
   border-radius: 20px;
