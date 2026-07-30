@@ -9930,6 +9930,21 @@ box.numeric entry {
   background-color: color-mix(in srgb, var(--primary) 8%, transparent);
 }
 
+dialog > widget > floating-sheet > sheet navigation-view-page > toolbarview {
+  background-color: var(--surface_container);
+  border-radius: 12px;
+}
+
+sidebar list.navigation-sidebar > row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+sidebar list.navigation-sidebar > row > box.horizontal {
+  border-spacing: 12px;
+  padding: 4px 8px;
+}
+
 /**********
  * Clapper *
  **********/
