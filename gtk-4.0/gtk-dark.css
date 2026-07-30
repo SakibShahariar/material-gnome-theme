@@ -9945,6 +9945,12 @@ sidebar list.navigation-sidebar > row > box.horizontal {
   padding: 4px 8px;
 }
 
+dialog button.suggested-action {
+  min-height: 40px;
+  margin-top: 12px;
+  margin-bottom: 8px;
+}
+
 /**********
  * Clapper *
  **********/
@@ -9955,3 +9961,4 @@ window > stack > box {
   box-shadow: none;
   border: none;
 }
+
