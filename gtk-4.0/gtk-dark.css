@@ -1179,7 +1179,7 @@ menubutton.destructive-action > button:checked:hover,
 menubutton.opaque > button:checked:hover,
 menubutton.flat > button:checked:hover,
 button.flat:checked:hover {
-  background-color: color-mix(in srgb, var(--primary) 20%, transparent);
+  background-color: var(--primary);
 }
 
 #NautilusPathButton:checked:disabled,
@@ -8799,7 +8799,7 @@ viewswitcher > button:checked:hover indicatorbin {
 }
 
 viewswitcher > button:checked:hover {
-  background-color: color-mix(in srgb, var(--primary_container, var(--primary)) 12%, transparent);
+  background-color: var(--primary);
 }
 
 viewswitcherbar actionbar > revealer > box {
