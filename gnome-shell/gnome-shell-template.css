@@ -91,17 +91,17 @@
 
 .shell-link {
   border-radius: 12px;
-  color: {{colors.on_surface.default.hex}};
+  color: {{colors.on_surface_variant.default.hex}};
   transition: background-color 150ms ease;
 }
 
 .shell-link:hover {
-  color: {{colors.on_surface.default.hex}};
+  color: {{colors.on_surface_variant.default.hex}};
   background-color: rgba({{colors.primary.default.red}}, {{colors.primary.default.green}}, {{colors.primary.default.blue}}, 0.08);
 }
 
 .shell-link:active {
-  color: {{colors.on_surface.default.hex}};
+  color: {{colors.on_surface_variant.default.hex}};
   background-color: rgba({{colors.primary.default.red}}, {{colors.primary.default.green}}, {{colors.primary.default.blue}}, 0.12);
 }
 
@@ -158,7 +158,7 @@
 .notification-message-group .quick-settings-system-item .message-collapse-button:hover,
 .hotplug-notification-item:hover,
 .button:hover {
-  color: {{colors.on_surface.default.hex}};
+  color: {{colors.on_surface_variant.default.hex}};
   background-color: rgba({{colors.primary.default.red}}, {{colors.primary.default.green}}, {{colors.primary.default.blue}}, 0.08);
   box-shadow: none !important;
 }
@@ -174,7 +174,7 @@
 .notification-message-group .quick-settings-system-item .message-collapse-button:active,
 .hotplug-notification-item:active,
 .button:active {
-  color: {{colors.on_surface.default.hex}};
+  color: {{colors.on_surface_variant.default.hex}};
   background-color: rgba({{colors.on_surface_variant.default.red}}, {{colors.on_surface_variant.default.green}}, {{colors.on_surface_variant.default.blue}}, 0.12);
   box-shadow: none !important;
 }
@@ -190,8 +190,8 @@
 .notification-message-group .quick-settings-system-item .message-collapse-button:insensitive,
 .hotplug-notification-item:insensitive,
 .button:insensitive {
-  color: rgba({{colors.on_surface.default.red}}, {{colors.on_surface.default.green}}, {{colors.on_surface.default.blue}}, 0.38);
-  background-color: rgba({{colors.on_surface.default.red}}, {{colors.on_surface.default.green}}, {{colors.on_surface.default.blue}}, 0.12);
+  color: rgba({{colors.on_surface_variant.default.red}}, {{colors.on_surface_variant.default.green}}, {{colors.on_surface_variant.default.blue}}, 0.38);
+  background-color: rgba({{colors.on_surface_variant.default.red}}, {{colors.on_surface_variant.default.green}}, {{colors.on_surface_variant.default.blue}}, 0.12);
   box-shadow: none !important;
 }
 
@@ -271,7 +271,7 @@
 .button.flat:insensitive,
 .popup-menu .button:insensitive {
   background-color: transparent;
-  color: rgba({{colors.on_surface.default.red}}, {{colors.on_surface.default.green}}, {{colors.on_surface.default.blue}}, 0.38);
+  color: rgba({{colors.on_surface_variant.default.red}}, {{colors.on_surface_variant.default.green}}, {{colors.on_surface_variant.default.blue}}, 0.38);
   box-shadow: none !important;
 }
 
@@ -315,8 +315,8 @@
 .message .message-header .default.message-expand-button:insensitive,
 .message .message-header .default.message-close-button:insensitive,
 .button.default:insensitive {
-  color: rgba({{colors.on_surface.default.red}}, {{colors.on_surface.default.green}}, {{colors.on_surface.default.blue}}, 0.38);
-  background-color: rgba({{colors.on_surface.default.red}}, {{colors.on_surface.default.green}}, {{colors.on_surface.default.blue}}, 0.12);
+  color: rgba({{colors.on_surface_variant.default.red}}, {{colors.on_surface_variant.default.green}}, {{colors.on_surface_variant.default.blue}}, 0.38);
+  background-color: rgba({{colors.on_surface_variant.default.red}}, {{colors.on_surface_variant.default.green}}, {{colors.on_surface_variant.default.blue}}, 0.12);
   box-shadow: none !important;
 }
 
@@ -367,7 +367,7 @@
 
 .screenshot-ui-show-pointer-button:insensitive,
 .screenshot-ui-type-button:insensitive {
-  color: rgba({{colors.on_surface.default.red}}, {{colors.on_surface.default.green}}, {{colors.on_surface.default.blue}}, 0.38);
+  color: rgba({{colors.on_surface_variant.default.red}}, {{colors.on_surface_variant.default.green}}, {{colors.on_surface_variant.default.blue}}, 0.38);
   background-color: transparent;
   box-shadow: none !important;
 }
@@ -381,14 +381,14 @@
 
 .screenshot-ui-show-pointer-button:hover,
 .screenshot-ui-type-button:hover {
-  color: {{colors.on_surface.default.hex}};
+  color: {{colors.on_surface_variant.default.hex}};
   background-color: rgba({{colors.on_surface_variant.default.red}}, {{colors.on_surface_variant.default.green}}, {{colors.on_surface_variant.default.blue}}, 0.08);
   box-shadow: none !important;
 }
 
 .screenshot-ui-show-pointer-button:active,
 .screenshot-ui-type-button:active {
-  color: {{colors.on_surface.default.hex}};
+  color: {{colors.on_surface_variant.default.hex}};
   background-color: rgba({{colors.on_surface_variant.default.red}}, {{colors.on_surface_variant.default.green}}, {{colors.on_surface_variant.default.blue}}, 0.12);
   box-shadow: none !important;
 }
@@ -502,24 +502,24 @@
 }
 
 .modal-dialog-linked-button:first-child {
-  color: {{colors.on_surface.default.hex}};
+  color: {{colors.on_surface_variant.default.hex}};
   background-color: transparent;
 }
 
 .modal-dialog-linked-button:first-child:focus {
-  color: {{colors.on_surface.default.hex}};
-  background-color: rgba({{colors.on_surface.default.red}}, {{colors.on_surface.default.green}}, {{colors.on_surface.default.blue}}, 0.08);
+  color: {{colors.on_surface_variant.default.hex}};
+  background-color: rgba({{colors.on_surface_variant.default.red}}, {{colors.on_surface_variant.default.green}}, {{colors.on_surface_variant.default.blue}}, 0.08);
   box-shadow: inset 0 0 0 2px {{colors.primary.default.hex}} !important;
 }
 
 .modal-dialog-linked-button:first-child:hover {
-  color: {{colors.on_surface.default.hex}};
-  background-color: rgba({{colors.on_surface.default.red}}, {{colors.on_surface.default.green}}, {{colors.on_surface.default.blue}}, 0.08);
+  color: {{colors.on_surface_variant.default.hex}};
+  background-color: rgba({{colors.on_surface_variant.default.red}}, {{colors.on_surface_variant.default.green}}, {{colors.on_surface_variant.default.blue}}, 0.08);
 }
 
 .modal-dialog-linked-button:first-child:active {
-  color: {{colors.on_surface.default.hex}};
-  background-color: rgba({{colors.on_surface.default.red}}, {{colors.on_surface.default.green}}, {{colors.on_surface.default.blue}}, 0.12);
+  color: {{colors.on_surface_variant.default.hex}};
+  background-color: rgba({{colors.on_surface_variant.default.red}}, {{colors.on_surface_variant.default.green}}, {{colors.on_surface_variant.default.blue}}, 0.12);
   box-shadow: none !important;
 }
 
@@ -711,7 +711,7 @@ StEntry,
   padding: 6px 12px;
   margin: 2px;
   border-radius: 12px;
-  color: {{colors.on_surface.default.hex}};
+  color: {{colors.on_surface_variant.default.hex}};
   caret-color: {{colors.primary.default.hex}};
   selection-background-color: {{colors.primary.default.hex}};
   selected-color: {{colors.on_primary.default.hex}};
@@ -723,7 +723,7 @@ StEntry,
 
 StEntry:hover,
 .popup-menu .search-entry:hover {
-  color: {{colors.on_surface.default.hex}};
+  color: {{colors.on_surface_variant.default.hex}};
   background-color: {{colors.surface_container_highest.default.hex}};
   border: 2px solid {{colors.outline.default.hex}} !important;
   box-shadow: none !important;
@@ -740,7 +740,7 @@ StEntry:focus,
 StEntry:insensitive,
 .popup-menu .search-entry:insensitive {
   background-color: {{colors.surface_container_highest.default.hex}};
-  color: rgba({{colors.on_surface.default.red}}, {{colors.on_surface.default.green}}, {{colors.on_surface.default.blue}}, 0.38);
+  color: rgba({{colors.on_surface_variant.default.red}}, {{colors.on_surface_variant.default.green}}, {{colors.on_surface_variant.default.blue}}, 0.38);
   box-shadow: none !important;
 }
 
@@ -799,7 +799,7 @@ StEntry StLabel.hint-text,
 }
 
 .candidate-popup-content {
-  color: {{colors.on_surface.default.hex}};
+  color: {{colors.on_surface_variant.default.hex}};
   background-color: {{colors.surface_container_high.default.hex}};
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.24);
   border: 1px solid {{colors.outline_variant.default.hex}};
@@ -822,7 +822,7 @@ StEntry StLabel.hint-text,
   padding: 0.3em 0.5em 0.3em 0.5em;
   margin-right: 2px;
   border-radius: 6px;
-  color: {{colors.on_surface.default.hex}};
+  color: {{colors.on_surface_variant.default.hex}};
   transition: all 150ms ease;
 }
 
@@ -891,7 +891,7 @@ StEntry StLabel.hint-text,
   padding: 0 !important;
   border-radius: 12px;
   border: none;
-  color: {{colors.on_surface.default.hex}};
+  color: {{colors.on_surface_variant.default.hex}};
   background-color: {{colors.surface_container_highest.default.hex}};
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   transition: background-color 150ms ease, color 150ms ease, box-shadow 150ms ease;
@@ -913,7 +913,7 @@ StEntry StLabel.hint-text,
 
 .keyboard-key:insensitive {
   background-color: {{colors.surface_container_low.default.hex}};
-  color: rgba({{colors.on_surface.default.red}}, {{colors.on_surface.default.green}}, {{colors.on_surface.default.blue}}, 0.38);
+  color: rgba({{colors.on_surface_variant.default.red}}, {{colors.on_surface_variant.default.green}}, {{colors.on_surface_variant.default.blue}}, 0.38);
 }
 
 .keyboard-key.default-key {
@@ -1023,8 +1023,8 @@ StEntry StLabel.hint-text,
   background-color: {{colors.surface_container_highest.default.hex}};
   border-radius: 0;
   border: none !important;
-  box-shadow: inset 0 -1px rgba({{colors.on_surface.default.red}}, {{colors.on_surface.default.green}}, {{colors.on_surface.default.blue}}, 0.3) !important;
-  color: {{colors.on_surface.default.hex}};
+  box-shadow: inset 0 -1px rgba({{colors.on_surface_variant.default.red}}, {{colors.on_surface_variant.default.green}}, {{colors.on_surface_variant.default.blue}}, 0.3) !important;
+  color: {{colors.on_surface_variant.default.hex}};
   transition: all 150ms ease;
 }
 
@@ -1040,7 +1040,7 @@ StEntry StLabel.hint-text,
 .unlock-dialog StEntry:insensitive {
   border: none !important;
   background-color: {{colors.surface_container_highest.default.hex}};
-  color: rgba({{colors.on_surface.default.red}}, {{colors.on_surface.default.green}}, {{colors.on_surface.default.blue}}, 0.38);
+  color: rgba({{colors.on_surface_variant.default.red}}, {{colors.on_surface_variant.default.green}}, {{colors.on_surface_variant.default.blue}}, 0.38);
 }
 
 .login-dialog StEntry StLabel.hint-text,
@@ -1081,7 +1081,7 @@ StEntry StLabel.hint-text,
 .login-dialog .modal-dialog-button:insensitive,
 .unlock-dialog .modal-dialog-button:insensitive {
   background-color: transparent;
-  color: rgba({{colors.on_surface.default.red}}, {{colors.on_surface.default.green}}, {{colors.on_surface.default.blue}}, 0.38);
+  color: rgba({{colors.on_surface_variant.default.red}}, {{colors.on_surface_variant.default.green}}, {{colors.on_surface_variant.default.blue}}, 0.38);
   box-shadow: none !important;
 }
 
@@ -1097,7 +1097,7 @@ StEntry StLabel.hint-text,
   height: 32px;
   border: none;
   background-color: {{colors.surface_container_high.default.hex}};
-  color: {{colors.on_surface.default.hex}};
+  color: {{colors.on_surface_variant.default.hex}};
   transition: all 150ms ease;
 }
 
@@ -1122,7 +1122,7 @@ StEntry StLabel.hint-text,
 
 .login-dialog .login-dialog-message-warning,
 .unlock-dialog .login-dialog-message-warning {
-  color: {{colors.on_surface.default.hex}};
+  color: {{colors.on_surface_variant.default.hex}};
 }
 
 .login-dialog-logo-bin {
@@ -1130,7 +1130,7 @@ StEntry StLabel.hint-text,
 }
 
 .login-dialog-banner {
-  color: {{colors.on_surface.default.hex}};
+  color: {{colors.on_surface_variant.default.hex}};
 }
 
 .login-dialog-button-box {
@@ -1188,7 +1188,7 @@ StEntry StLabel.hint-text,
 .login-dialog-user-list:expanded .login-dialog-user-list-item:hover,
 .login-dialog-user-list:expanded .login-dialog-user-list-item:active {
   background-color: {{colors.surface_container_high.default.hex}};
-  color: {{colors.on_surface.default.hex}};
+  color: {{colors.on_surface_variant.default.hex}};
 }
 
 .login-dialog-user-list:expanded .login-dialog-user-list-item:logged-in {
@@ -1198,7 +1198,7 @@ StEntry StLabel.hint-text,
 .login-dialog-user-list-item {
   border-radius: 18px;
   padding: 6px;
-  color: {{colors.on_surface.default.hex}};
+  color: {{colors.on_surface_variant.default.hex}};
   transition: all 150ms ease;
 }
 
@@ -1216,12 +1216,12 @@ StEntry StLabel.hint-text,
 
 .login-dialog-user-list-item:hover {
   background-color: rgba({{colors.primary.default.red}}, {{colors.primary.default.green}}, {{colors.primary.default.blue}}, 0.08) !important;
-  color: {{colors.on_surface.default.hex}};
+  color: {{colors.on_surface_variant.default.hex}};
 }
 
 .login-dialog-user-list-item:active {
   background-color: rgba({{colors.primary.default.red}}, {{colors.primary.default.green}}, {{colors.primary.default.blue}}, 0.12) !important;
-  color: {{colors.on_surface.default.hex}};
+  color: {{colors.on_surface_variant.default.hex}};
 }
 
 .login-dialog-user-list-item .login-dialog-timed-login-indicator {
@@ -1231,7 +1231,7 @@ StEntry StLabel.hint-text,
 }
 
 .user-widget-label {
-  color: {{colors.on_surface.default.hex}};
+  color: {{colors.on_surface_variant.default.hex}};
   font-size: 15pt;
   text-align: center;
   font-weight: normal;
@@ -1250,7 +1250,7 @@ StEntry StLabel.hint-text,
 }
 
 .login-dialog-prompt-label {
-  color: {{colors.on_surface.default.hex}};
+  color: {{colors.on_surface_variant.default.hex}};
   font-size: 11pt;
   padding-top: 1em;
 }
@@ -1263,7 +1263,7 @@ StEntry StLabel.hint-text,
   margin: 6px;
   border-radius: 20px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-  color: {{colors.on_surface.default.hex}};
+  color: {{colors.on_surface_variant.default.hex}};
   border: 1px solid {{colors.outline_variant.default.hex}};
 }
 
@@ -1363,7 +1363,7 @@ StEntry StLabel.hint-text,
 
 .lg-obj-inspector-title {
   spacing: 6px;
-  color: {{colors.on_surface.default.hex}};
+  color: {{colors.on_surface_variant.default.hex}};
 }
 
 .lg-obj-inspector-button {
@@ -1374,31 +1374,31 @@ StEntry StLabel.hint-text,
 
 #lookingGlassExtensions {
   padding: 6px;
-  color: {{colors.on_surface.default.hex}};
+  color: {{colors.on_surface_variant.default.hex}};
 }
 
 .lg-extensions-list {
   padding: 6px;
   spacing: 6px;
-  color: {{colors.on_surface.default.hex}};
+  color: {{colors.on_surface_variant.default.hex}};
 }
 
 .lg-extension {
   border: none;
   border-radius: 12px;
   background-color: {{colors.surface_container_high.default.hex}};
-  color: {{colors.on_surface.default.hex}};
+  color: {{colors.on_surface_variant.default.hex}};
   padding: 12px;
   transition: all 150ms ease;
 }
 
 .lg-extension:hover {
-  color: {{colors.on_surface.default.hex}};
+  color: {{colors.on_surface_variant.default.hex}};
   background-color: rgba({{colors.primary.default.red}}, {{colors.primary.default.green}}, {{colors.primary.default.blue}}, 0.08);
 }
 
 .lg-extension:active {
-  color: {{colors.on_surface.default.hex}};
+  color: {{colors.on_surface_variant.default.hex}};
   background-color: rgba({{colors.primary.default.red}}, {{colors.primary.default.green}}, {{colors.primary.default.blue}}, 0.12);
 }
 
@@ -1408,7 +1408,7 @@ StEntry StLabel.hint-text,
 }
 
 #LookingGlassPropertyInspector {
-  color: {{colors.on_surface.default.hex}};
+  color: {{colors.on_surface_variant.default.hex}};
   background: {{colors.surface_container_high.default.hex}};
   border: 1px solid {{colors.outline_variant.default.hex}};
   border-radius: 12px;
@@ -1418,7 +1418,7 @@ StEntry StLabel.hint-text,
 }
 
 .lg-debug-flag-button {
-  color: {{colors.on_surface.default.hex}};
+  color: {{colors.on_surface_variant.default.hex}};
   transition: all 150ms ease;
 }
 
@@ -1448,7 +1448,7 @@ StEntry StLabel.hint-text,
 
 .user-icon {
   background-size: contain;
-  color: {{colors.on_surface.default.hex}};
+  color: {{colors.on_surface_variant.default.hex}};
   border-radius: 9999px;
   border: none;
   box-shadow: none;
@@ -1558,12 +1558,12 @@ StEntry StLabel.hint-text,
 
 .nm-dialog-item:hover,
 .nm-dialog-item:focus {
-  color: {{colors.on_surface.default.hex}};
+  color: {{colors.on_surface_variant.default.hex}};
   background-color: rgba({{colors.primary.default.red}}, {{colors.primary.default.green}}, {{colors.primary.default.blue}}, 0.08);
 }
 
 .nm-dialog-item:active {
-  color: {{colors.on_surface.default.hex}};
+  color: {{colors.on_surface_variant.default.hex}};
   background-color: rgba({{colors.primary.default.red}}, {{colors.primary.default.green}}, {{colors.primary.default.blue}}, 0.12);
 }
 
@@ -1589,7 +1589,7 @@ StEntry StLabel.hint-text,
 .switcher-list,
 .resize-popup,
 .osd-window {
-  color: {{colors.on_surface.default.hex}};
+  color: {{colors.on_surface_variant.default.hex}};
   background-color: {{colors.surface_container.default.hex}};
   border: 1px solid {{colors.outline_variant.default.hex}};
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
@@ -1685,7 +1685,7 @@ StEntry StLabel.hint-text,
 
 .popup-menu {
   min-width: 12em;
-  color: {{colors.on_surface.default.hex}} !important;
+  color: {{colors.on_surface_variant.default.hex}} !important;
   padding: 0;
   font-weight: normal;
   border-radius: 18px;
@@ -1706,7 +1706,7 @@ StEntry StLabel.hint-text,
 
 .popup-menu .popup-menu-item {
   spacing: 6px;
-  color: {{colors.primary.default.hex}} !important;
+  color: st-transparentize({{colors.on_surface_variant.default.hex}}, 0.10);
   text-shadow: none;
   border-radius: 12px;
   margin: 0 2px;
@@ -1736,24 +1736,24 @@ StEntry StLabel.hint-text,
 .popup-menu .popup-menu-item:focus,
 .popup-menu .popup-menu-item:hover,
 .popup-menu .popup-menu-item.selected {
-  color: {{colors.on_surface.default.hex}} !important;
+  color: {{colors.primary.default.hex}} !important;
   background-color: rgba({{colors.primary.default.red}}, {{colors.primary.default.green}}, {{colors.primary.default.blue}}, 0.24) !important;
   transition-duration: 0;
 }
 
 .popup-menu .popup-menu-item:active,
 .popup-menu .popup-menu-item.selected:active {
-  color: {{colors.on_surface.default.hex}} !important;
+  color: {{colors.on_surface_variant.default.hex}} !important;
   background-color: rgba({{colors.primary.default.red}}, {{colors.primary.default.green}}, {{colors.primary.default.blue}}, 0.24) !important;
 }
 
 .popup-menu .popup-menu-item:insensitive {
-  color: rgba({{colors.on_surface.default.red}}, {{colors.on_surface.default.green}}, {{colors.on_surface.default.blue}}, 0.38) !important;
+  color: rgba({{colors.on_surface_variant.default.red}}, {{colors.on_surface_variant.default.green}}, {{colors.on_surface_variant.default.blue}}, 0.38) !important;
 }
 
 .popup-menu .popup-sub-menu {
   background-color: {{colors.surface_container_highest.default.hex}} !important;
-  color: {{colors.on_surface.default.hex}} !important;
+  color: {{colors.on_surface_variant.default.hex}} !important;
   border: none;
   box-shadow: none;
   margin: 0;
@@ -1782,15 +1782,15 @@ StEntry StLabel.hint-text,
 }
 
 .popup-menu .popup-sub-menu .popup-menu-item:insensitive {
-  color: rgba({{colors.on_surface.default.red}}, {{colors.on_surface.default.green}}, {{colors.on_surface.default.blue}}, 0.38) !important;
+  color: rgba({{colors.on_surface_variant.default.red}}, {{colors.on_surface_variant.default.green}}, {{colors.on_surface_variant.default.blue}}, 0.38) !important;
 }
 
 .popup-menu .popup-inactive-menu-item {
-  color: {{colors.on_surface.default.hex}} !important;
+  color: {{colors.on_surface_variant.default.hex}} !important;
 }
 
 .popup-menu .popup-inactive-menu-item:insensitive {
-  color: rgba({{colors.on_surface.default.red}}, {{colors.on_surface.default.green}}, {{colors.on_surface.default.blue}}, 0.38) !important;
+  color: rgba({{colors.on_surface_variant.default.red}}, {{colors.on_surface_variant.default.green}}, {{colors.on_surface_variant.default.blue}}, 0.38) !important;
 }
 
 .popup-menu.panel-menu {
@@ -1844,7 +1844,7 @@ StEntry StLabel.hint-text,
 
 /* Screen Shield */
 .unlock-dialog-clock {
-  color: {{colors.on_surface.default.hex}};
+  color: {{colors.on_surface_variant.default.hex}};
   font-weight: 300;
   text-align: center;
   spacing: 24px;
@@ -1884,7 +1884,7 @@ StEntry StLabel.hint-text,
   padding: 12px 6px;
   border: none;
   background-color: {{colors.surface_container.default.hex}};
-  color: {{colors.on_surface.default.hex}};
+  color: {{colors.on_surface_variant.default.hex}};
   border-radius: 18px;
 }
 
@@ -1914,14 +1914,14 @@ StEntry StLabel.hint-text,
 
 #unlockDialogNotifications StButton#vhandle,
 #unlockDialogNotifications StButton#hhandle {
-  background-color: rgba({{colors.on_surface.default.red}}, {{colors.on_surface.default.green}}, {{colors.on_surface.default.blue}}, 0.3);
+  background-color: rgba({{colors.on_surface_variant.default.red}}, {{colors.on_surface_variant.default.green}}, {{colors.on_surface_variant.default.blue}}, 0.3);
 }
 
 #unlockDialogNotifications StButton#vhandle:hover,
 #unlockDialogNotifications StButton#vhandle:focus,
 #unlockDialogNotifications StButton#hhandle:hover,
 #unlockDialogNotifications StButton#hhandle:focus {
-  background-color: rgba({{colors.on_surface.default.red}}, {{colors.on_surface.default.green}}, {{colors.on_surface.default.blue}}, 0.5);
+  background-color: rgba({{colors.on_surface_variant.default.red}}, {{colors.on_surface_variant.default.green}}, {{colors.on_surface_variant.default.blue}}, 0.5);
 }
 
 #unlockDialogNotifications StButton#vhandle:active,
@@ -2010,7 +2010,7 @@ StScrollBar StButton#hhandle:active {
 }
 
 .search-entry:hover .search-entry-icon {
-  color: {{colors.on_surface.default.hex}};
+  color: {{colors.on_surface_variant.default.hex}};
 }
 
 .search-entry:focus .search-entry-icon {
@@ -2019,7 +2019,7 @@ StScrollBar StButton#hhandle:active {
 
 .search-entry:insensitive {
   border: none;
-  color: rgba({{colors.on_surface.default.red}}, {{colors.on_surface.default.green}}, {{colors.on_surface.default.blue}}, 0.38);
+  color: rgba({{colors.on_surface_variant.default.red}}, {{colors.on_surface_variant.default.green}}, {{colors.on_surface_variant.default.blue}}, 0.38);
 }
 
 .search-entry StLabel.hint-text {
@@ -2067,7 +2067,7 @@ StScrollBar StButton#hhandle:active {
 .switcher-list .item-box:hover,
 .switcher-list .item-box:focus {
   background-color: {{colors.surface_container_high.default.hex}};
-  color: {{colors.on_surface.default.hex}};
+  color: {{colors.on_surface_variant.default.hex}};
   border-color: {{colors.outline.default.hex}};
 }
 
@@ -2161,7 +2161,7 @@ StScrollBar StButton#hhandle:active {
 }
 
 .workspace-switcher StBin {
-  background-color: {{colors.primary.default.hex}};
+    background-color: {{colors.primary.default.hex}};
 }
 
 .ws-switcher-box {
@@ -2196,7 +2196,7 @@ StScrollBar StButton#hhandle:active {
 
 .overview-tile,
 .grid-search-result {
-  color: {{colors.on_surface.default.hex}};
+  color: {{colors.on_surface_variant.default.hex}};
   border-radius: 20px;
   padding: 15px;
   border: none;
@@ -2227,7 +2227,7 @@ StScrollBar StButton#hhandle:active {
 .app-folder {
   background-color: rgba({{colors.primary.default.red}}, {{colors.primary.default.green}}, {{colors.primary.default.blue}}, 0.15);
   border-radius: 30px;
-  color: {{colors.on_surface.default.hex}};
+  color: {{colors.on_surface_variant.default.hex}};
 }
 
 .app-folder .overview-icon {
@@ -2237,17 +2237,17 @@ StScrollBar StButton#hhandle:active {
 
 .app-folder:hover {
   background-color: rgba({{colors.primary.default.red}}, {{colors.primary.default.green}}, {{colors.primary.default.blue}}, 0.2);
-  color: {{colors.on_surface.default.hex}};
+  color: {{colors.on_surface_variant.default.hex}};
 }
 
 .app-folder:active {
   background-color: rgba({{colors.primary.default.red}}, {{colors.primary.default.green}}, {{colors.primary.default.blue}}, 0.25);
-  color: {{colors.on_surface.default.hex}};
+  color: {{colors.on_surface_variant.default.hex}};
 }
 
 .app-folder:focus {
   background-color: rgba({{colors.primary.default.red}}, {{colors.primary.default.green}}, {{colors.primary.default.blue}}, 0.2) !important;
-  color: {{colors.on_surface.default.hex}} !important;
+  color: {{colors.on_surface_variant.default.hex}} !important;
 }
 
 .app-grid-running-dot {
@@ -2303,7 +2303,7 @@ StWidget.focused .app-grid-running-dot {
 .app-folder-dialog .message .message-header .message-close-button,
 .message .message-header .app-folder-dialog .message-close-button {
   background-color: {{colors.surface_container_high.default.hex}};
-  color: {{colors.on_surface.default.hex}};
+  color: {{colors.on_surface_variant.default.hex}};
   border: none;
   padding: 0;
   width: 36px;
@@ -2334,7 +2334,7 @@ StWidget.focused .app-grid-running-dot {
 .app-folder-dialog .message .message-header .message-close-button:hover,
 .message .message-header .app-folder-dialog .message-close-button:hover {
   background-color: {{colors.surface_container_highest.default.hex}};
-  color: {{colors.on_surface.default.hex}};
+  color: {{colors.on_surface_variant.default.hex}};
 }
 
 .app-folder-dialog .icon-button:checked,
@@ -2422,12 +2422,12 @@ StWidget.focused .app-grid-running-dot {
 
 .page-navigation-arrow:hover {
   background-color: rgba({{colors.primary.default.red}}, {{colors.primary.default.green}}, {{colors.primary.default.blue}}, 0.08);
-  color: {{colors.on_surface.default.hex}};
+  color: {{colors.on_surface_variant.default.hex}};
 }
 
 .page-navigation-arrow:active {
   background-color: rgba({{colors.primary.default.red}}, {{colors.primary.default.green}}, {{colors.primary.default.blue}}, 0.12);
-  color: {{colors.on_surface.default.hex}};
+  color: {{colors.on_surface_variant.default.hex}};
 }
 
 /* Date/Time Menu */
@@ -2435,7 +2435,7 @@ StWidget.focused .app-grid-running-dot {
 .world-clocks-button,
 .weather-button,
 .events-button {
-  color: {{colors.on_surface.default.hex}};
+  color: {{colors.on_surface_variant.default.hex}};
   background-color: {{colors.surface_container_high.default.hex}};
   border-radius: 12px;
   border: none;
@@ -2452,7 +2452,7 @@ StWidget.focused .app-grid-running-dot {
 .world-clocks-button:focus,
 .weather-button:focus,
 .events-button:focus {
-  color: {{colors.on_surface.default.hex}};
+  color: {{colors.on_surface_variant.default.hex}};
   background-color: rgba({{colors.primary.default.red}}, {{colors.primary.default.green}}, {{colors.primary.default.blue}}, 0.08);
   box-shadow: none;
 }
@@ -2461,7 +2461,7 @@ StWidget.focused .app-grid-running-dot {
 .world-clocks-button:active,
 .weather-button:active,
 .events-button:active {
-  color: {{colors.on_surface.default.hex}};
+  color: {{colors.on_surface_variant.default.hex}};
   background-color: rgba({{colors.primary.default.red}}, {{colors.primary.default.green}}, {{colors.primary.default.blue}}, 0.12);
   box-shadow: none;
 }
@@ -2555,7 +2555,7 @@ StWidget.focused .app-grid-running-dot {
   margin: 4px !important;
   text-shadow: none;
   border-radius: 18px;
-  color: {{colors.on_surface.default.hex}};
+  color: {{colors.on_surface_variant.default.hex}};
 }
 
 .calendar .calendar-month-label {
@@ -2584,7 +2584,7 @@ StWidget.focused .app-grid-running-dot {
   margin: 2px !important;
   border-radius: 9999px;
   background-color: transparent;
-  color: {{colors.on_surface.default.hex}};
+  color: {{colors.on_surface_variant.default.hex}};
   box-shadow: none !important;
   transition: all 150ms ease;
 }
@@ -2608,7 +2608,7 @@ StWidget.focused .app-grid-running-dot {
   padding: 0 !important;
   margin: 2px !important;
   border-radius: 9999px;
-  color: {{colors.on_surface.default.hex}} !important;
+  color: {{colors.on_surface_variant.default.hex}} !important;
   border: none;
   border-width: 0;
   font-feature-settings: 'tnum';
@@ -2624,7 +2624,7 @@ StWidget.focused .app-grid-running-dot {
 
 .calendar .calendar-day:active,
 .calendar .calendar-day:selected {
-  color: {{colors.on_surface.default.hex}} !important;
+  color: {{colors.on_surface_variant.default.hex}} !important;
   background-color: rgba({{colors.primary.default.red}}, {{colors.primary.default.green}}, {{colors.primary.default.blue}}, 0.12);
   border-color: transparent !important;
   box-shadow: none !important;
@@ -2725,7 +2725,7 @@ StWidget.focused .app-grid-running-dot {
 .events-button .events-list {
   spacing: 12px;
   text-shadow: none;
-  color: {{colors.on_surface.default.hex}};
+  color: {{colors.on_surface_variant.default.hex}};
 }
 
 .events-button .events-title {
@@ -2748,7 +2748,7 @@ StWidget.focused .app-grid-running-dot {
 .world-clocks-button .world-clocks-city {
   font-weight: bold;
   font-size: 10pt;
-  color: {{colors.on_surface.default.hex}};
+  color: {{colors.on_surface_variant.default.hex}};
 }
 
 .world-clocks-button .world-clocks-time {
@@ -2811,7 +2811,7 @@ StWidget.focused .app-grid-running-dot {
 
 .weather-button .weather-forecast-temp {
   font-weight: bold;
-  color: {{colors.on_surface.default.hex}};
+  color: {{colors.on_surface_variant.default.hex}};
 }
 
 /* Check Boxes */
@@ -2915,7 +2915,7 @@ StWidget.focused .app-grid-running-dot {
 #dash .dash-item-container .grid-search-result:hover .overview-icon {
   background-color: rgba({{colors.primary.default.red}}, {{colors.primary.default.green}}, {{colors.primary.default.blue}}, 0.15);
   box-shadow: inset 0 0 0 1px rgba({{colors.primary.default.red}}, {{colors.primary.default.green}}, {{colors.primary.default.blue}}, 0.15);
-  color: {{colors.on_surface.default.hex}};
+  color: {{colors.on_surface_variant.default.hex}};
 }
 
 #dash .dash-item-container .show-apps:active .overview-icon,
@@ -3142,7 +3142,7 @@ StWidget.focused .app-grid-running-dot {
 .audio-device-selection-dialog .audio-selection-box .audio-selection-device:hover,
 .audio-device-selection-dialog .audio-selection-box .audio-selection-device:focus {
   background-color: {{colors.surface_container_high.default.hex}};
-  color: {{colors.on_surface.default.hex}};
+  color: {{colors.on_surface_variant.default.hex}};
 }
 
 .audio-device-selection-dialog .audio-selection-box .audio-selection-device:active {
@@ -3334,7 +3334,7 @@ StWidget.focused .app-grid-running-dot {
 .message .message-header .message-expand-button:insensitive,
 .message .message-header .message-close-button:insensitive {
   background-color: {{colors.surface_container.default.hex}};
-  color: rgba({{colors.on_surface.default.red}}, {{colors.on_surface.default.green}}, {{colors.on_surface.default.blue}}, 0.38);
+  color: rgba({{colors.on_surface_variant.default.red}}, {{colors.on_surface_variant.default.green}}, {{colors.on_surface_variant.default.blue}}, 0.38);
 }
 
 .message .message-header .message-expand-button:ltr {
@@ -3410,7 +3410,7 @@ StWidget.focused .app-grid-running-dot {
 }
 
 .message-media-control:insensitive {
-  color: rgba({{colors.on_surface.default.red}}, {{colors.on_surface.default.green}}, {{colors.on_surface.default.blue}}, 0.38);
+  color: rgba({{colors.on_surface_variant.default.red}}, {{colors.on_surface_variant.default.green}}, {{colors.on_surface_variant.default.blue}}, 0.38);
 }
 
 .message-media-control StIcon {
@@ -3429,7 +3429,7 @@ StWidget.focused .app-grid-running-dot {
   border-radius: 12px;
   padding: 6px;
   margin: 4px;
-  color: {{colors.on_surface.default.hex}};
+  color: {{colors.on_surface_variant.default.hex}};
   background-color: {{colors.surface_container.default.hex}};
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.04);
   border: 1px solid {{colors.outline_variant.default.hex}};
@@ -3437,20 +3437,20 @@ StWidget.focused .app-grid-running-dot {
 
 .popup-menu .message:hover,
 .popup-menu .message:focus {
-  color: {{colors.on_surface.default.hex}};
+  color: {{colors.on_surface_variant.default.hex}};
   background-color: {{colors.surface_container_high.default.hex}};
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.05) !important;
   border: 1px solid {{colors.outline.default.hex}};
 }
 
 .popup-menu .message:active {
-  color: {{colors.on_surface.default.hex}};
+  color: {{colors.on_surface_variant.default.hex}};
   background-color: {{colors.surface_container.default.hex}};
   box-shadow: none !important;
 }
 
 .popup-menu .message:insensitive {
-  color: rgba({{colors.on_surface.default.red}}, {{colors.on_surface.default.green}}, {{colors.on_surface.default.blue}}, 0.38);
+  color: rgba({{colors.on_surface_variant.default.red}}, {{colors.on_surface_variant.default.green}}, {{colors.on_surface_variant.default.blue}}, 0.38);
   background-color: {{colors.surface_container.default.hex}};
   box-shadow: none !important;
 }
@@ -3685,12 +3685,12 @@ StWidget.focused .app-grid-running-dot {
 
 .quick-toggle {
   background-color: {{colors.surface_container_high.default.hex}} !important;
-  color: {{colors.on_surface.default.hex}};
+  color: {{colors.on_surface_variant.default.hex}};
 }
 
 .quick-toggle:hover {
   background-color: {{colors.surface_container_highest.default.hex}} !important;
-  color: {{colors.on_surface.default.hex}};
+  color: {{colors.on_surface_variant.default.hex}};
 }
 
 .quick-toggle:active {
@@ -3926,7 +3926,7 @@ StWidget.focused .app-grid-running-dot {
 
 .quick-toggle-menu {
   background-color: {{colors.surface_container_high.default.hex}} !important;
-  color: {{colors.on_surface.default.hex}} !important;
+  color: {{colors.primary.default.hex}} !important;
   border-radius: 24px !important;
   padding: 12px;
   margin: 12px 18px 0;
@@ -3934,6 +3934,7 @@ StWidget.focused .app-grid-running-dot {
 
 .quick-toggle-menu .popup-menu-item {
   border-radius: 12px !important;
+  color: {{colors.on_surface_variant.default.hex}};
 }
 
 .quick-toggle-menu .popup-menu-item:focus,
@@ -4008,7 +4009,7 @@ StWidget.focused .app-grid-running-dot {
 }
 
 .quick-settings-system-item .power-item:insensitive {
-  color: rgba({{colors.on_surface.default.red}}, {{colors.on_surface.default.green}}, {{colors.on_surface.default.blue}}, 0.38);
+  color: rgba({{colors.on_surface_variant.default.red}}, {{colors.on_surface_variant.default.green}}, {{colors.on_surface_variant.default.blue}}, 0.38);
   background-color: transparent;
   box-shadow: none !important;
 }
@@ -4068,7 +4069,7 @@ StWidget.focused .app-grid-running-dot {
 .search-provider-icon:hover,
 .list-search-result:selected,
 .search-provider-icon:selected {
-  color: {{colors.on_surface.default.hex}};
+  color: {{colors.on_surface_variant.default.hex}};
   background-color: {{colors.surface_container_high.default.hex}};
   transition-duration: 0;
 }
@@ -4102,11 +4103,11 @@ StWidget.focused .app-grid-running-dot {
   border-radius: 24px;
   padding: 14px;
   margin: 0 12px;
-  border: 1px solid rgba({{colors.on_surface.default.red}}, {{colors.on_surface.default.green}}, {{colors.on_surface.default.blue}}, 0.05);
+  border: 1px solid rgba({{colors.on_surface_variant.default.red}}, {{colors.on_surface_variant.default.green}}, {{colors.on_surface_variant.default.blue}}, 0.05);
   box-shadow: none;
   background: none;
   text-shadow: none;
-  color: {{colors.on_surface.default.hex}};
+  color: {{colors.on_surface_variant.default.hex}};
   background-color: rgba({{colors.surface_container.default.red}}, {{colors.surface_container.default.green}}, {{colors.surface_container.default.blue}}, 0.4) !important;
 }
 
@@ -4167,7 +4168,7 @@ StWidget.focused .app-grid-running-dot {
   margin-bottom: 4em;
   spacing: 12px;
   background-color: {{colors.surface_container.default.hex}};
-  border: 1px solid rgba({{colors.on_surface.default.red}}, {{colors.on_surface.default.green}}, {{colors.on_surface.default.blue}}, 0.05);
+  border: 1px solid rgba({{colors.on_surface_variant.default.red}}, {{colors.on_surface_variant.default.green}}, {{colors.on_surface_variant.default.blue}}, 0.05);
 }
 
 .screenshot-ui-close-button {
@@ -4255,7 +4256,7 @@ StWidget.focused .app-grid-running-dot {
 }
 
 .screenshot-ui-shot-cast-button:insensitive {
-  color: rgba({{colors.on_surface.default.red}}, {{colors.on_surface.default.green}}, {{colors.on_surface.default.blue}}, 0.38);
+  color: rgba({{colors.on_surface_variant.default.red}}, {{colors.on_surface_variant.default.green}}, {{colors.on_surface_variant.default.blue}}, 0.38);
 }
 
 .screenshot-ui-shot-cast-button StIcon {
@@ -4358,7 +4359,7 @@ StWidget.focused .app-grid-running-dot {
   padding: 6px 14px;
   text-align: center;
   -y-offset: 24px;
-  border: 1px solid rgba({{colors.on_surface.default.red}}, {{colors.on_surface.default.green}}, {{colors.on_surface.default.blue}}, 0.05);
+  border: 1px solid rgba({{colors.on_surface_variant.default.red}}, {{colors.on_surface_variant.default.green}}, {{colors.on_surface_variant.default.blue}}, 0.05);
 }
 
 /* Switches */
@@ -4377,7 +4378,7 @@ StWidget.focused .app-grid-running-dot {
 .toggle-switch .handle {
   width: 20px !important;
   height: 20px !important;
-  background: {{colors.on_surface.default.hex}} !important;
+  background: {{colors.on_surface_variant.default.hex}} !important;
   border-radius: 50%;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   margin: 2px !important;
@@ -4400,7 +4401,7 @@ StWidget.focused .app-grid-running-dot {
   background-color: {{colors.background.default.hex}};
   border-radius: 12px;
   padding: 6px 14px;
-  border: 1px solid rgba({{colors.on_surface.default.red}}, {{colors.on_surface.default.green}}, {{colors.on_surface.default.blue}}, 0.05);
+  border: 1px solid rgba({{colors.on_surface_variant.default.red}}, {{colors.on_surface_variant.default.green}}, {{colors.on_surface_variant.default.blue}}, 0.05);
 }
 
 .window-close,
@@ -4441,7 +4442,7 @@ StWidget.focused .app-grid-running-dot {
 }
 
 .workspace-thumbnails .workspace-thumbnail {
-  color: {{colors.on_surface.default.hex}};
+  color: {{colors.on_surface_variant.default.hex}};
   background-color: {{colors.surface_container_high.default.hex}};
   border: none;
   border-radius: 12px;
@@ -4557,7 +4558,7 @@ StWidget.focused .app-grid-running-dot {
 #dashtodockContainer #dash .dash-background,
 #dashtodockContainer:overview #dash .dash-background {
   background-color: {{colors.background.default.hex}};
-  border: 2px solid rgba({{colors.primary.default.red}}, {{colors.primary.default.green}}, {{colors.primary.default.blue}}, 1.0);
+  border: 2px solid rgba({{colors.primary.default.red}}, {{colors.primary.default.green}}, {{colors.primary.default.blue}}, 1);
 }
 
 #dashtodockContainer .app-well-app-running-dot {
@@ -4672,19 +4673,19 @@ StWidget.focused .app-grid-running-dot {
 #panel.light-panel .panel-button,
 #panel.dark-panel .panel-button,
 #panel.transparent-panel .panel-button {
-  color: {{colors.on_surface.default.hex}} !important;
+  color: {{colors.on_surface_variant.default.hex}} !important;
 }
 
 #panel.light-panel .panel-button.clock-display .clock,
 #panel.dark-panel .panel-button.clock-display .clock,
 #panel.transparent-panel .panel-button.clock-display .clock {
-  color: {{colors.on_surface.default.hex}} !important;
+  color: {{colors.on_surface_variant.default.hex}} !important;
 }
 
 #panel.light-panel .panel-button:hover,
 #panel.dark-panel .panel-button:hover,
 #panel.transparent-panel .panel-button:hover {
-  color: {{colors.on_surface.default.hex}} !important;
+  color: {{colors.on_surface_variant.default.hex}} !important;
   background-color: {{colors.surface_container_high.default.hex}} !important;
 }
 
@@ -4759,15 +4760,15 @@ StWidget.focused .app-grid-running-dot {
 .overview-components-light .search-entry,
 .overview-components-dark .search-entry {
   caret-color: {{colors.primary.default.hex}} !important;
-  background-color: rgba({{colors.on_surface.default.red}}, {{colors.on_surface.default.green}}, {{colors.on_surface.default.blue}}, 0.06) !important;
-  border: 1px solid rgba({{colors.on_surface.default.red}}, {{colors.on_surface.default.green}}, {{colors.on_surface.default.blue}}, 0.08) !important;
+  background-color: rgba({{colors.on_surface_variant.default.red}}, {{colors.on_surface_variant.default.green}}, {{colors.on_surface_variant.default.blue}}, 0.06) !important;
+  border: 1px solid rgba({{colors.on_surface_variant.default.red}}, {{colors.on_surface_variant.default.green}}, {{colors.on_surface_variant.default.blue}}, 0.08) !important;
   box-shadow: none !important;
 }
 
 .overview-components-transparent .search-entry:focus,
 .overview-components-light .search-entry:focus,
 .overview-components-dark .search-entry:focus {
-  background-color: rgba({{colors.on_surface.default.red}}, {{colors.on_surface.default.green}}, {{colors.on_surface.default.blue}}, 0.1) !important;
+  background-color: rgba({{colors.on_surface_variant.default.red}}, {{colors.on_surface_variant.default.green}}, {{colors.on_surface_variant.default.blue}}, 0.1) !important;
   border: 1px solid rgba({{colors.primary.default.red}}, {{colors.primary.default.green}}, {{colors.primary.default.blue}}, 0.3) !important;
 }
 
@@ -4787,7 +4788,7 @@ StWidget.focused .app-grid-running-dot {
 .overview-components-light .search-section-content,
 .overview-components-dark .search-section-content {
   border-radius: 16px;
-  background-color: rgba({{colors.on_surface.default.red}}, {{colors.on_surface.default.green}}, {{colors.on_surface.default.blue}}, 0.04) !important;
+  background-color: rgba({{colors.on_surface_variant.default.red}}, {{colors.on_surface_variant.default.green}}, {{colors.on_surface_variant.default.blue}}, 0.04) !important;
 }
 
 .overview-components-transparent .search-section-separator,
@@ -4802,16 +4803,16 @@ StWidget.focused .app-grid-running-dot {
 }
 
 .page-indicator .page-indicator-icon {
-  color: {{colors.on_surface.default.hex}};
+  color: {{colors.on_surface_variant.default.hex}};
   width: 8px;
   height: 8px;
   border-radius: 999px;
-  background-color: rgba({{colors.on_surface.default.red}}, {{colors.on_surface.default.green}}, {{colors.on_surface.default.blue}}, 0.6);
+  background-color: {{colors.primary.default.hex}};
   transition-duration: 200ms;
 }
 
 .page-indicator:hover .page-indicator-icon {
-  background-color: rgba({{colors.on_surface.default.red}}, {{colors.on_surface.default.green}}, {{colors.on_surface.default.blue}}, 0.9);
+  background-color: rgba({{colors.on_surface_variant.default.red}}, {{colors.on_surface_variant.default.green}}, {{colors.on_surface_variant.default.blue}}, 0.9);
 }
 
 .page-indicator .page-indicator-icon:active,
@@ -4821,7 +4822,6 @@ StWidget.focused .app-grid-running-dot {
   width: 20px;
   background-color: {{colors.primary.default.hex}};
 }
-
 /* Top Bar — Floating Capsule */
 #panel {
   background-color: transparent;
@@ -4864,6 +4864,7 @@ StWidget.focused .app-grid-running-dot {
 .panel-button.clock-display .clock {
   color: inherit !important;
   text-shadow: none !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2) !important;
   background-color: rgba({{colors.surface_container.default.red}}, {{colors.surface_container.default.green}}, {{colors.surface_container.default.blue}}, 0.9) !important;
   border: 2px solid rgba({{colors.primary.default.red}}, {{colors.primary.default.green}}, {{colors.primary.default.blue}}, 0.3) !important;
   border-radius: 10px !important;
@@ -4875,6 +4876,13 @@ StWidget.focused .app-grid-running-dot {
   color: {{colors.primary.default.hex}};
   border: 2px solid {{colors.primary.default.hex}};
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.panel-button.clock-display:hover .clock {
+  background-color: rgba({{colors.surface_container_high.default.red}}, {{colors.surface_container_high.default.green}}, {{colors.surface_container_high.default.blue}}, 0.95) !important;
+  color: {{colors.primary.default.hex}} !important;
+  border: 2px solid {{colors.primary.default.hex}} !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25) !important;
 }
 
 /* ── ACTIVE / CHECKED / FOCUS — bg=primary, fg=on_primary ── */
@@ -4889,7 +4897,7 @@ StWidget.focused .app-grid-running-dot {
 #panel .panel-button:checked:hover {
   color: {{colors.on_primary.default.hex}};
   background-color: {{colors.primary.default.hex}};
-  border: 2px solid {{colors.primary.default.hex}} !important;
+  border: 2px solid {{colors.primary.default.hex}};
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 

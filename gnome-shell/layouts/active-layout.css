@@ -1,17 +1,16 @@
-/* GNOME Default Shell Style */
+/* Top Bar — Floating Capsule Glass */
 #panel {
-  background-color: rgba(21, 19, 17, 0.75);
+  background-color: transparent;
   border: none;
-  border-radius: 0px;
-  width: 100%;
-  height: 32px;
+  box-shadow: none;
+  width: calc(100% - 60px);
+  height: 30px;
   transition: background-color 250ms ease-in-out;
-  color: #dfc2a3;
+  color: #f8bb71;
   font-weight: bold;
   font-feature-settings: 'tnum';
   font-size: 10pt;
-  margin: 0px;
-  box-shadow: none;
+  margin: 2px 2px 0px;
 }
 
 #panel .panel-corner {
@@ -20,35 +19,47 @@
   -panel-corner-border-width: 0;
   -panel-corner-border-color: transparent;
   -panel-corner-opacity: 0;
+  transition-duration: 250ms;
 }
 
 #panel .panel-button {
-  -natural-hpadding: 12px;
-  -minimum-hpadding: 12px;
+  -natural-hpadding: 10px;
+  -minimum-hpadding: 10px;
   font-weight: bold;
-  color: #dfc2a3;
-  background-color: transparent;
+  color: #f8bb71;
+  background-color: rgba(37, 30, 23, 0.8);
   transition: all 150ms ease-in-out;
-  border-radius: 0px;
-  margin: 0px;
-  padding: 0 12px;
-  border: none;
-  box-shadow: none;
+  border-radius: 6px;
+  margin: 0 4px;
+  padding: 4px 10px;
+  border: 2px solid #f8bb71;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   text-shadow: none;
 }
 
 .panel-button.clock-display .clock {
-  color: #dfc2a3 !important;
+  color: inherit !important;
   text-shadow: none !important;
-  background-color: transparent !important;
-  border: none !important;
-  border-radius: 0px !important;
+  background-color: rgba(37, 30, 23, 0.8) !important;
+  border: 2px solid #f8bb71 !important;
+  border-radius: 6px !important;
   transition: all 150ms ease-in-out !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+  text-shadow: none !important;
 }
 
 #panel .panel-button:hover {
-  background-color: rgba(223, 194, 163, 0.15);
-  color: #dfc2a3;
+  background-color: rgba(248, 187, 113, 0.55);
+  color: #472a00;
+  border: 2px solid #472a00;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+}
+
+.panel-button.clock-display:hover .clock {
+  background-color: rgba(248, 187, 113, 0.55) !important;
+  color: #472a00 !important;
+  border: 2px solid #472a00 !important;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25) !important;
 }
 
 /* ── ACTIVE / CHECKED / FOCUS — bg=primary, fg=on_primary ── */
@@ -61,16 +72,18 @@
 #panel .panel-button:focus:hover,
 #panel .panel-button:checked,
 #panel .panel-button:checked:hover {
-  color: #3f2d17;
-  background-color: #dfc2a3;
+  color: #472a00;
+  background-color: #f8bb71;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 .panel-button.clock-display:active .clock,
 .panel-button.clock-display:overview .clock,
 .panel-button.clock-display:focus .clock,
 .panel-button.clock-display:checked .clock {
-  color: #3f2d17 !important;
-  background-color: #dfc2a3 !important;
+  color: #472a00 !important;
+  background-color: #f8bb71 !important;
+  border: 2px solid #f8bb71 !important;
 }
 
 /* ── LOCK / LOGIN SCREENS ──────────────── */
@@ -78,10 +91,12 @@
 .unlock-screen #panel .panel-button,
 .login-screen #panel .panel-button,
 .lock-screen #panel .panel-button {
-  color: #dfc2a3;
-  background-color: transparent;
-  border-radius: 0px;
-  margin: 0px;
+  color: #f8bb71;
+  background-color: rgba(37, 30, 23, 0.60);
+  border: 2px solid #f8bb71;
+  border-radius: 8px;
+  margin: 0 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 .unlock-screen #panel .panel-button:focus,
@@ -93,16 +108,18 @@
 .lock-screen #panel .panel-button:focus,
 .lock-screen #panel .panel-button:hover,
 .lock-screen #panel .panel-button:active {
-  color: #3f2d17;
-  background-color: #dfc2a3;
+  color: #472a00;
+  background-color: #f8bb71;
+  border-color: #f8bb71;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 /* ── ICONS ─────────────────────────────── */
 
 #panel .panel-button .system-status-icon {
   icon-size: 16px;
-  padding: 0;
-  margin: 0 4px;
+  padding: 6px;
+  margin: 0;
   -st-icon-style: symbolic;
 }
 
@@ -117,19 +134,19 @@
 /* ── ACTIVITIES BUTTON ─────────────────── */
 
 #panel .panel-button#panelActivities {
-  -natural-hpadding: 12px;
+  -natural-hpadding: 18px;
 }
 
 #panel .panel-button#panelActivities StBoxLayout {
-  padding: 0 4px;
-  spacing: 4px;
+  padding: 0 3px;
+  spacing: 6px;
 }
 
 #panel .panel-button#panelActivities .workspace-dot {
   border-radius: 9999px;
-  min-width: 6px;
-  min-height: 6px;
-  background-color: #dfc2a3;
+  min-width: 8px;
+  min-height: 8px;
+  background-color: #f8bb71;
 }
 
 /* ── OVERVIEW / LOCK PANEL STATES ──────── */
@@ -140,7 +157,7 @@
 #panel.lock-screen {
   background-color: transparent;
   box-shadow: none;
-  border: none;
+  border: 2px solid transparent;
 }
 
 #panel:overview StLabel,
@@ -151,15 +168,16 @@
 #panel.login-screen StIcon,
 #panel.lock-screen StLabel,
 #panel.lock-screen StIcon {
-  color: #dfc2a3;
+  color: #f8bb71;
 }
 
 #panel:overview .panel-button:hover,
 #panel.unlock-screen .panel-button:hover,
 #panel.login-screen .panel-button:hover,
 #panel.lock-screen .panel-button:hover {
-  color: #dfc2a3;
-  background-color: rgba(223, 194, 163, 0.08);
+  color: #f8bb71;
+  background-color: rgba(248, 187, 113, 0.20);
+  border-color: #f8bb71;
 }
 
 #panel:overview .panel-button:hover.clock-display,
@@ -167,15 +185,15 @@
 #panel.login-screen .panel-button:hover.clock-display,
 #panel.lock-screen .panel-button:hover.clock-display {
   box-shadow: none;
-  color: #dfc2a3;
+  color: #f8bb71;
 }
 
 #panel:overview .panel-button:hover.clock-display .clock,
 #panel.unlock-screen .panel-button:hover.clock-display .clock,
 #panel.login-screen .panel-button:hover.clock-display .clock,
 #panel.lock-screen .panel-button:hover.clock-display .clock {
-  color: #dfc2a3;
-  background-color: rgba(223, 194, 163, 0.08);
+  color: #f8bb71;
+  background-color: rgba(248, 187, 113, 0.20);
 }
 
 #panel:overview .panel-button:active,
@@ -194,8 +212,29 @@
 #panel.lock-screen .panel-button:overview,
 #panel.lock-screen .panel-button:focus,
 #panel.lock-screen .panel-button:checked {
-  color: #3f2d17;
-  background-color: rgba(223, 194, 163, 0.2);
+  color: #472a00;
+  background-color: rgba(248, 187, 113, 0.2);
+  border-color: #f8bb71;
+}
+
+#panel:overview .panel-button:active.clock-display,
+#panel:overview .panel-button:overview.clock-display,
+#panel:overview .panel-button:focus.clock-display,
+#panel:overview .panel-button:checked.clock-display,
+#panel.unlock-screen .panel-button:active.clock-display,
+#panel.unlock-screen .panel-button:overview.clock-display,
+#panel.unlock-screen .panel-button:focus.clock-display,
+#panel.unlock-screen .panel-button:checked.clock-display,
+#panel.login-screen .panel-button:active.clock-display,
+#panel.login-screen .panel-button:overview.clock-display,
+#panel.login-screen .panel-button:focus.clock-display,
+#panel.login-screen .panel-button:checked.clock-display,
+#panel.lock-screen .panel-button:active.clock-display,
+#panel.lock-screen .panel-button:overview.clock-display,
+#panel.lock-screen .panel-button:focus.clock-display,
+#panel.lock-screen .panel-button:checked.clock-display {
+  box-shadow: none;
+  background-color: #f8bb71;
 }
 
 #panel:overview .panel-button:active.clock-display .clock,
@@ -214,15 +253,15 @@
 #panel.lock-screen .panel-button:overview.clock-display .clock,
 #panel.lock-screen .panel-button:focus.clock-display .clock,
 #panel.lock-screen .panel-button:checked.clock-display .clock {
-  background-color: #dfc2a3;
-  color: #3f2d17;
+  background-color: #f8bb71;
+  color: #472a00;
 }
 
 #panel:overview .panel-button#panelActivities .workspace-dot,
 #panel.unlock-screen .panel-button#panelActivities .workspace-dot,
 #panel.login-screen .panel-button#panelActivities .workspace-dot,
 #panel.lock-screen .panel-button#panelActivities .workspace-dot {
-  background-color: #dfc2a3;
+  background-color: #f8bb71;
 }
 
 #panel:overview .panel-corner,
@@ -239,8 +278,8 @@
 #panel Gjs_status_keyboard_InputSourceIndicator.panel-button,
 #panel Gjs_appindicatorsupport_rgcjonas_gmail_com_indicatorStatusIcon_IndicatorStatusIcon.panel-button,
 #panel Gjs_appindicatorsupport_rgcjonas_gmail_com_indicatorStatusIcon_AppIndicatorsIndicatorStatusIcon.panel-button {
-  -natural-hpadding: 12px !important;
-  -minimum-hpadding: 12px !important;
+  -natural-hpadding: 18px !important;
+  -minimum-hpadding: 18px !important;
 }
 
 #panel .screencast-indicator,
