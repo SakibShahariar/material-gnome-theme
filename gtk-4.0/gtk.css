@@ -981,7 +981,6 @@ button.flat {
   background-repeat: no-repeat;
   background-position: center;
   background-size: 1000% 1000%;
-  background-color: transparent;
   outline: 0 solid transparent;
   outline-offset: 2px;
   color: var(--primary);
@@ -8818,13 +8817,11 @@ viewswitcherbar actionbar > revealer > box viewswitcher.narrow button.toggle:hov
 }
 
 viewswitcherbar actionbar > revealer > box viewswitcher.narrow button.toggle:active {
-  border-radius: 999px;
   animation: pill-pop 0.6s cubic-bezier(0.2, 0, 0, 1) forwards;
   transition: background-color 0.1s cubic-bezier(0, 0, 0.2, 1);
 }
 
 viewswitcherbar actionbar > revealer > box viewswitcher.narrow button.toggle:checked {
-  border-radius: 999px;
   animation: pill-pop 0.6s cubic-bezier(0.2, 0, 0, 1) forwards;
 }
 
