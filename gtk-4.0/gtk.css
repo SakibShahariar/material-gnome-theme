@@ -632,10 +632,7 @@ button:checked {
               color            0.2s cubic-bezier(0.2, 0, 0, 1);
 }
 
-button:checked label {
-  color: var(--on_primary);
-}
-
+button:checked label,
 button:checked image,
 button:checked .icon {
   color: var(--on_primary);
@@ -2291,6 +2288,11 @@ headerbar button:checked:not(.suggested-action):not(.destructive-action) {
   transition: background-color 0.2s cubic-bezier(0.2, 0, 0, 1),
               border-radius    0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275),
               color            0.15s cubic-bezier(0.2, 0, 0, 1);
+}
+
+headerbar button:checked:not(.suggested-action):not(.destructive-action) image,
+headerbar button:checked:not(.suggested-action):not(.destructive-action) .icon {
+  color: var(--primary);
 }
 
 headerbar button:checked:active:not(.suggested-action):not(.destructive-action) {
