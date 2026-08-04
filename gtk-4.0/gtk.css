@@ -636,6 +636,11 @@ button:checked label {
   color: var(--on_primary);
 }
 
+button:checked image,
+button:checked .icon {
+  color: var(--on_primary);
+}
+
 button:checked:hover {
   border-radius: 999px;
   background-color: color-mix(in srgb, var(--primary) 90%, var(--on_primary) 10%);
@@ -981,8 +986,26 @@ button.flat {
   background-repeat: no-repeat;
   background-position: center;
   background-size: 1000% 1000%;
+  background-color: transparent;
   outline: 0 solid transparent;
   outline-offset: 2px;
+  color: var(--primary);
+}
+
+#NautilusPathButton,
+filechooser #pathbarbox > stack > box > button,
+window.messagedialog .response-area button:not(.destructive-action),
+window.dialog.message .dialog-action-area > button:not(.destructive-action),
+.app-notification button,
+headerbar button:not(.suggested-action):not(.destructive-action),
+.toolbar button:not(.destructive-action),
+splitbutton.suggested-action > button,
+splitbutton.suggested-action > menubutton > button,
+splitbutton.opaque > button,
+splitbutton.opaque > menubutton > button,
+menubutton.suggested-action > button,
+menubutton.opaque > button,
+menubutton.flat > button {
   color: var(--primary);
 }
 
