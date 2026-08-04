@@ -3007,12 +3007,7 @@ columnview.view cell {
   transition: background-color 0.2s cubic-bezier(0.2, 0, 0, 1);
 }
 
-columnview.view cell:hover {
-  background-color: color-mix(in srgb, var(--primary) 4%, transparent);
-}
-
 columnview.view cell:active {
-  background-color: color-mix(in srgb, var(--primary) 10%, transparent);
   animation: cell-flash 0.3s cubic-bezier(0.2, 0, 0, 1) forwards;
   transition: background-color 0.1s cubic-bezier(0, 0, 0.2, 1);
 }
