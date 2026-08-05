@@ -5050,7 +5050,6 @@ treeview.view > header > button,
 row.activatable {
   transition: background-color 0.2s cubic-bezier(0.2, 0, 0, 1),
               border-radius 0.2s ease-out;
-  outline: none;
   box-shadow: none;
   background-color: transparent;
   border-radius: 12px;
@@ -5062,7 +5061,6 @@ treeview.view > header > button:focus,
 row.activatable:focus {
   color: color-mix(in srgb, var(--on_surface_variant) 90%, transparent);
   box-shadow: none;
-  outline: none;
 }
 
 .nautilus-window .nautilus-grid-view child.activatable:hover,
@@ -5133,7 +5131,6 @@ row:selected:hover {
 
 row:selected:focus,
 row:selected:focus-visible:focus-within {
-  outline: none;
   background-color: color-mix(in srgb, var(--primary) 30%, transparent);
   border-radius: 8px;
 }
