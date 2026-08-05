@@ -5059,7 +5059,7 @@ row.activatable {
 columnview.view > header > button:focus,
 treeview.view > header > button:focus,
 row.activatable:focus {
-  color: color-mix(in srgb, var(--on_surface_variant) 90%, transparent);
+  color: var(--primary);
   box-shadow: none;
 }
 
