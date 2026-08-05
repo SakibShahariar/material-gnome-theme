@@ -6438,11 +6438,6 @@ calendar > grid > label.today:selected {
   background-color: var(--primary);
 }
 
-textview text selection:focus,
-textview text selection {
-    background: var(--inverse_primary);
-}
-
 .monospace {
   font-family: monospace;
 }
