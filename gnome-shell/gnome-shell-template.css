@@ -2029,8 +2029,8 @@ StScrollBar StButton#hhandle:active {
 /* Slider */
 .slider {
   height: 20px;
-  color: {{colors.surface_variant.default.hex}};
-  -slider-height: 4px;
+  color: {{colors.on_primary_container.default.hex}};
+  -slider-height: 16px;
   -slider-background-color: {{colors.surface_container_highest.default.hex}};
   -slider-border-color: transparent;
   -slider-active-background-color: {{colors.primary.default.hex}};
@@ -2039,7 +2039,7 @@ StScrollBar StButton#hhandle:active {
   -slider-handle-radius: 10px;
   -slider-handle-border-width: 0;
   -slider-handle-border-color: transparent;
-  -barlevel-height: 4px;
+  -barlevel-height: 16px;
   -barlevel-background-color: {{colors.surface_container_highest.default.hex}};
   -barlevel-border-color: transparent;
   -barlevel-active-background-color: {{colors.primary.default.hex}};
