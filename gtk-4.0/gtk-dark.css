@@ -709,6 +709,15 @@ button:checked:not(.image-button):not(.flat):not(.background-preview-button):not
               color            0.2s cubic-bezier(0.2, 0, 0, 1);
 }
 
+headerbar popover.background button:checked:not(.suggested-action):not(.destructive-action):not(.flat) label,
+headerbar popover.background button:checked:not(.suggested-action):not(.destructive-action):not(.flat) image,
+headerbar popover.background button:checked:not(.suggested-action):not(.destructive-action):not(.flat) .icon,
+button:checked:not(.image-button):not(.flat):not(.background-preview-button):not(.accent-button) label,
+button:checked:not(.image-button):not(.flat):not(.background-preview-button):not(.accent-button) image,
+button:checked:not(.image-button):not(.flat):not(.background-preview-button):not(.accent-button) .icon {
+  color: var(--on_primary);
+}
+
 row button:checked {
   animation: none;
 }
@@ -1180,6 +1189,86 @@ button.flat:checked {
               color            0.15s cubic-bezier(0.2, 0, 0, 1);
 }
 
+/* 1. Define the parent button background and color */
+#NautilusPathButton:checked,
+filechooser #pathbarbox > stack > box > button:checked,
+window.messagedialog .response-area button:checked,
+window.dialog.message .dialog-action-area > button:checked,
+.app-notification button:checked,
+.toolbar button:checked,
+splitbutton.suggested-action > button:checked,
+splitbutton.suggested-action > menubutton > button:checked,
+splitbutton.destructive-action > button:checked,
+splitbutton.destructive-action > menubutton > button:checked,
+splitbutton.opaque > button:checked,
+splitbutton.opaque > menubutton > button:checked,
+menubutton.suggested-action > button:checked,
+menubutton.destructive-action > button:checked,
+menubutton.opaque > button:checked,
+menubutton.flat > button:checked,
+button.flat:checked {
+  background-color: color-mix(in srgb, var(--primary) 15%, transparent);
+  color: var(--primary);
+  animation: pill-pop 0.6s cubic-bezier(0.2, 0, 0, 1) forwards;
+  transition: background-color 0.2s cubic-bezier(0.2, 0, 0, 1),
+              color             0.15s cubic-bezier(0.2, 0, 0, 1);
+}
+
+/* 2. Force inner text and icons to inherit color from the checked parent */
+#NautilusPathButton:checked label,
+#NautilusPathButton:checked image,
+#NautilusPathButton:checked .icon,
+filechooser #pathbarbox > stack > box > button:checked label,
+filechooser #pathbarbox > stack > box > button:checked image,
+filechooser #pathbarbox > stack > box > button:checked .icon,
+window.messagedialog .response-area button:checked label,
+window.messagedialog .response-area button:checked image,
+window.messagedialog .response-area button:checked .icon,
+window.dialog.message .dialog-action-area > button:checked label,
+window.dialog.message .dialog-action-area > button:checked image,
+window.dialog.message .dialog-action-area > button:checked .icon,
+.app-notification button:checked label,
+.app-notification button:checked image,
+.app-notification button:checked .icon,
+.toolbar button:checked label,
+.toolbar button:checked image,
+.toolbar button:checked .icon,
+splitbutton.suggested-action > button:checked label,
+splitbutton.suggested-action > button:checked image,
+splitbutton.suggested-action > button:checked .icon,
+splitbutton.suggested-action > menubutton > button:checked label,
+splitbutton.suggested-action > menubutton > button:checked image,
+splitbutton.suggested-action > menubutton > button:checked .icon,
+splitbutton.destructive-action > button:checked label,
+splitbutton.destructive-action > button:checked image,
+splitbutton.destructive-action > button:checked .icon,
+splitbutton.destructive-action > menubutton > button:checked label,
+splitbutton.destructive-action > menubutton > button:checked image,
+splitbutton.destructive-action > menubutton > button:checked .icon,
+splitbutton.opaque > button:checked label,
+splitbutton.opaque > button:checked image,
+splitbutton.opaque > button:checked .icon,
+splitbutton.opaque > menubutton > button:checked label,
+splitbutton.opaque > menubutton > button:checked image,
+splitbutton.opaque > menubutton > button:checked .icon,
+menubutton.suggested-action > button:checked label,
+menubutton.suggested-action > button:checked image,
+menubutton.suggested-action > button:checked .icon,
+menubutton.destructive-action > button:checked label,
+menubutton.destructive-action > button:checked image,
+menubutton.destructive-action > button:checked .icon,
+menubutton.opaque > button:checked label,
+menubutton.opaque > button:checked image,
+menubutton.opaque > button:checked .icon,
+menubutton.flat > button:checked label,
+menubutton.flat > button:checked image,
+menubutton.flat > button:checked .icon,
+button.flat:checked label,
+button.flat:checked image,
+button.flat:checked .icon {
+  color: var(--primary);
+}
+
 #NautilusPathButton:checked:hover,
 filechooser #pathbarbox > stack > box > button:checked:hover,
 window.messagedialog .response-area button:checked:hover,
@@ -1199,6 +1288,23 @@ menubutton.opaque > button:checked:hover,
 menubutton.flat > button:checked:hover,
 button.flat:checked:hover {
   background-color: var(--primary);
+  color: var(--on_primary);
+}
+
+/* Direct targeting beats Libadwaita's specificity */
+#NautilusPathButton:checked:hover label,
+#NautilusPathButton:checked:hover image,
+#NautilusPathButton:checked:hover .icon,
+filechooser #pathbarbox > stack > box > button:checked:hover label,
+filechooser #pathbarbox > stack > box > button:checked:hover image,
+filechooser #pathbarbox > stack > box > button:checked:hover .icon,
+.toolbar button:checked:hover label,
+.toolbar button:checked:hover image,
+.toolbar button:checked:hover .icon,
+button.flat:checked:hover label,
+button.flat:checked:hover image,
+button.flat:checked:hover .icon {
+  color: var(--on_primary);
 }
 
 #NautilusPathButton:checked:disabled,
@@ -2295,6 +2401,11 @@ headerbar button:checked:not(.suggested-action):not(.destructive-action) .icon {
   color: var(--primary);
 }
 
+headerbar button:checked:not(.suggested-action):not(.destructive-action):hover image,
+headerbar button:checked:not(.suggested-action):not(.destructive-action):hover .icon {
+  color: var(--on_primary);
+}
+
 headerbar button:checked:active:not(.suggested-action):not(.destructive-action) {
   animation: none;
   transform: scale(0.97);
@@ -2318,6 +2429,10 @@ headerbar button:checked:focus:not(.suggested-action):not(.destructive-action) {
   color: var(--on_primary);
   border-radius: 999px;
   outline: none;
+}
+
+headerbar button:checked:focus:not(:hover):not(.suggested-action):not(.destructive-action) {
+  background-color: color-mix(in srgb, var(--primary) 8%, transparent);
 }
 
 headerbar button:checked:disabled:not(.suggested-action):not(.destructive-action) {
