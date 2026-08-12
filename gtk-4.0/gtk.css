@@ -1406,11 +1406,6 @@ button.text-button:checked:hover {
   color: var(--on_primary);
 }
 
-button.image-button:not(MyComputerToggleButton *) {
-  min-width: 24px;
-  padding: 5px;
-}
-
 button.image-button {
   min-width: 24px;
   padding: 5px;
