@@ -4094,19 +4094,23 @@ scrollbar.horizontal button.up {
  * Switch *
  **********/
 switch {
-  padding: 4px;
-  border: none;
-  border-radius: 16px;
+  padding: 2px;
+  min-width: 36px;
+  min-height: 20px;
+  border-radius: 9999px;
+  border: 2px solid var(--outline);
   background-color: var(--surface_container_highest);
-  transition: background-color 0.2s cubic-bezier(0.2, 0, 0, 1);
+  transition: background-color 0.2s cubic-bezier(0.2, 0, 0, 1),
+              border-color 0.2s cubic-bezier(0.2, 0, 0, 1);
 }
 
 switch:checked {
+  border-color: var(--primary);
   background-color: var(--primary);
 }
 
 switch:disabled {
-  opacity: 0.5;
+  opacity: 0.38;
 }
 
 switch > image {
@@ -4114,25 +4118,32 @@ switch > image {
 }
 
 switch > slider {
-  min-width: 20px;
-  min-height: 20px;
+  /* Smaller thumb size for OFF state */
+  min-width: 12px;
+  min-height: 12px;
+  margin: 2px;
   border-radius: 9999px;
   outline: none;
-  background-color: var(--outline);
   border: none;
-  transition: background-color 0.2s cubic-bezier(0.2, 0, 0, 1),
-              outline-color    0.2s cubic-bezier(0.2, 0, 0, 1);
+  
+  /* OFF thumb color */
+  background-color: var(--outline);
+  
+  /* Smooth M3 transition for morphing size and color */
+  transition: min-width 0.2s cubic-bezier(0.2, 0, 0, 1),
+              min-height 0.2s cubic-bezier(0.2, 0, 0, 1),
+              background-color 0.2s cubic-bezier(0.2, 0, 0, 1),
+              outline 0.2s cubic-bezier(0.2, 0, 0, 1);
 }
 
 switch:checked > slider {
+  /* Larger thumb size for ON state */
+  min-width: 20px;
+  min-height: 20px;
+  margin: 0;
+  
+  /* Contrast thumb over primary background */
   background-color: var(--on_primary);
-}
-
-switch:focus slider,
-switch:hover slider,
-switch:focus:hover slider {
-  outline: 6px solid color-mix(in srgb, var(--primary) 20%, transparent);
-  outline-offset: -6px;
 }
 
 /*************************
@@ -4548,8 +4559,8 @@ checkbutton.selection-mode label:dir(rtl) {
  * GtkScale *
  ************/
 scale {
-  min-height: 2px;
-  min-width: 2px;
+  min-height: 16px;
+  min-width: 16px;
 }
 
 scale.horizontal {
@@ -4562,6 +4573,8 @@ scale.vertical {
 
 scale > trough {
   outline: none;
+  min-height: 16px;
+  border-radius: 9999px;
   background-color: var(--surface_container_highest);
   transition: background-color 0.2s cubic-bezier(0.2, 0, 0, 1);
 }
@@ -4572,6 +4585,8 @@ scale > trough:disabled {
 }
 
 scale > trough > highlight {
+  min-height: 16px;
+  border-radius: 9999px;
   background-image: image(var(--primary));
   transition: background-image 0.2s cubic-bezier(0.2, 0, 0, 1);
 }
@@ -4591,31 +4606,28 @@ scale > trough > fill:disabled {
 }
 
 scale > trough > slider {
-  min-height: 18px;
-  min-width: 18px;
-  margin: -8px;
+  min-height: 28px;
+  min-width: 8px;
+  margin: -6px 0;
   border-radius: 9999px;
-  color: var(--primary);
-  background-color: var(--primary);
-  box-shadow: none;
-  transition: background-color  0.2s cubic-bezier(0.2, 0, 0, 1),
-              outline-color     0.2s cubic-bezier(0.2, 0, 0, 1),
-              min-width         0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
-              min-height        0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  background-color: color-mix(in srgb, var(--primary) 50%, var(--on_surface));
+  color: color-mix(in srgb, var(--primary) 50%, var(--on_surface));
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
+  transition: background-color 0.2s cubic-bezier(0.2, 0, 0, 1),
+              outline 0.2s cubic-bezier(0.2, 0, 0, 1),
+              min-width 0.2s cubic-bezier(0.34, 1.56, 0.64, 1),
+              min-height 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 scale > trough > slider:hover {
-  outline: 8px solid color-mix(in srgb, var(--primary) 12%, transparent);
-  outline-offset: -8px;
-  min-width: 22px;
-  min-height: 22px;
+  outline: 8px solid color-mix(in srgb, var(--primary) 15%, transparent);
+  outline-offset: -2px;
 }
 
 scale > trough > slider:active {
-  outline: 8px solid color-mix(in srgb, var(--primary) 20%, transparent);
-  outline-offset: -8px;
-  min-width: 26px;
-  min-height: 26px;
+  outline: 12px solid color-mix(in srgb, var(--primary) 25%, transparent);
+  outline-offset: -2px;
+  min-width: 12px;
   transition: min-width  0.1s cubic-bezier(0, 0, 0.2, 1),
               min-height 0.1s cubic-bezier(0, 0, 0.2, 1);
 }
@@ -4623,23 +4635,23 @@ scale > trough > slider:active {
 scale > trough > slider:disabled {
   background-color: color-mix(in srgb, var(--on_surface) 38%, transparent);
   outline: none;
-  animation: none;
+  box-shadow: none;
 }
 
 scale.fine-tune.horizontal {
-  min-height: 4px;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  min-height: 16px;
+  padding-top: 12px;
+  padding-bottom: 12px;
 }
 
 scale.fine-tune.vertical {
-  min-width: 4px;
-  padding-left: 15px;
-  padding-right: 15px;
+  min-width: 16px;
+  padding-left: 12px;
+  padding-right: 12px;
 }
 
 scale.fine-tune > trough > slider {
-  margin: -7px;
+  margin: -4px 0;
 }
 
 scale > marks,
@@ -4650,22 +4662,25 @@ scale > value {
 scale indicator {
   background-color: var(--on_surface_variant);
   color: transparent;
+  opacity: 0.38;
 }
 
 scale.marks-before:not(.marks-after) > trough > slider,
 scale.marks-after:not(.marks-before) > trough > slider {
-  transform: rotate(45deg);
-  border-bottom-right-radius: 0;
+  transform: none;
+  border-radius: 9999px;
 }
 
 scale.horizontal indicator {
-  min-height: 8px;
-  min-width: 1px;
+  min-height: 4px;
+  min-width: 2px;
+  margin-top: 4px;
 }
 
 scale.vertical indicator {
-  min-height: 1px;
-  min-width: 8px;
+  min-height: 2px;
+  min-width: 4px;
+  margin-left: 4px;
 }
 
 scale.color {
