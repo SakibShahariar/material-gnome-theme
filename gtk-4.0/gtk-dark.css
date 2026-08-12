@@ -393,42 +393,55 @@ spinner:checked:disabled {
 }
 
 /******************************************
- * Text Entries *
+ * Text Entries (M3 Filled Text Fields)   *
  ******************************************/
 entry headerbar popover.background entry,
 headerbar popover.background entry entry,
 entry {
-  min-height: 40px;
-  padding: 0 14px;
-  border-spacing: 8px;
-  border-radius: 20px;
+  min-height: 48px;
+  padding: 0 16px;
+  border-spacing: 12px;
+  border-radius: 4px 4px 0 0;
   caret-color: var(--primary);
   background-color: var(--surface_container_highest);
-  color: color-mix(in srgb, var(--on_surface_variant) 90%, transparent);
-  outline: 2px solid transparent;
-  outline-offset: -2px;
-  transition: background-color 0.3s cubic-bezier(0.2, 0, 0, 1),
-              outline-color    0.3s cubic-bezier(0.2, 0, 0, 1),
-              color            0.3s cubic-bezier(0.2, 0, 0, 1),
-              border-radius    0.3s cubic-bezier(0.2, 0, 0, 1);
+  color: var(--on_surface);
+  border: none;
+  border-bottom: 1px solid var(--on_surface_variant);
+  outline: none;
+  transition: background-color 0.2s cubic-bezier(0.2, 0, 0, 1),
+              border-color     0.2s cubic-bezier(0.2, 0, 0, 1),
+              color            0.2s cubic-bezier(0.2, 0, 0, 1);
 }
 
 entry:hover:not(:focus-within):not(:disabled) {
-  background-color: color-mix(in srgb, var(--surface_container_highest) 85%, transparent);
-  border-radius: 22px;
+  background-color: color-mix(in srgb, var(--on_surface) 8%, var(--surface_container_highest));
+  border-bottom-color: var(--on_surface);
 }
 
 entry:focus-within {
+  background-color: var(--surface_container_highest);
+  color: var(--on_surface);
+  border-bottom: 2px solid var(--primary);
+}
+
+entry.search,
+searchentry {
+  border-radius: 9999px;
+  border-bottom: none;
   background-color: var(--surface_container_high);
-  color: var(--primary);
+}
+
+entry.search:focus-within,
+searchentry:focus-within {
+  border-bottom: none;
   outline: 2px solid var(--primary);
-  border-radius: 16px;
-  animation: entry-focus-pop 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+  outline-offset: -2px;
 }
 
 entry:disabled {
-  background-color: color-mix(in srgb, var(--surface_container_highest) 50%, transparent);
+  background-color: color-mix(in srgb, var(--on_surface) 4%, var(--surface_container_highest));
   color: color-mix(in srgb, var(--on_surface) 38%, transparent);
+  border-bottom-color: color-mix(in srgb, var(--on_surface) 38%, transparent);
 }
 
 entry.flat,
@@ -438,20 +451,24 @@ entry.flat:hover {
   min-height: 0;
   padding: 4px;
   background-color: transparent;
+  border-bottom: none;
   box-shadow: none;
   border-radius: 0;
   outline: none;
-  animation: none;
 }
 
 entry > image {
   color: var(--on_surface_variant);
-  transition: color 0.3s cubic-bezier(0.2, 0, 0, 1);
+  transition: color 0.2s cubic-bezier(0.2, 0, 0, 1);
+}
+
+entry:focus-within > image {
+  color: var(--primary);
 }
 
 entry > image:hover,
 entry > image:active {
-  color: var(--primary);
+  color: var(--on_surface);
 }
 
 entry > image:disabled {
@@ -464,11 +481,12 @@ entry > image:disabled {
 entry.error {
   background-color: var(--error_container);
   color: var(--on_error_container);
+  border-bottom-color: var(--error);
 }
 
 entry.error:focus-within {
-  outline: 2px solid var(--error);
-  color: var(--error);
+  border-bottom: 2px solid var(--error);
+  color: var(--on_error_container);
 }
 
 entry.error > text > selection {
@@ -477,23 +495,23 @@ entry.error > text > selection {
 }
 
 entry.warning {
-  background-color: color-mix(in srgb, #f59e0b 12%, transparent);
-  color: #d97706;
+  background-color: color-mix(in srgb, var(--tertiary_container) 80%, transparent);
+  color: var(--on_tertiary_container);
+  border-bottom-color: var(--tertiary);
 }
 
 entry.warning:focus-within {
-  outline: 2px solid #d97706;
-  color: #d97706;
+  border-bottom: 2px solid var(--tertiary);
 }
 
 entry.success {
   background-color: var(--primary_container);
   color: var(--on_primary_container);
+  border-bottom-color: var(--primary);
 }
 
 entry.success:focus-within {
-  outline: 2px solid var(--primary);
-  color: var(--primary);
+  border-bottom: 2px solid var(--primary);
 }
 
 /******************************************
@@ -501,31 +519,24 @@ entry.success:focus-within {
  ******************************************/
 entry > progress {
   margin: 0 -4px;
-  border-bottom: 3px solid var(--primary);
+  border-bottom: 2px solid var(--primary);
   background-color: transparent;
-  animation: progress-pulse 1.6s cubic-bezier(0.4, 0, 0.2, 1) infinite;
 }
 
 .entry-tag {
   margin: 3px;
-  border-radius: 12px;
-  background-color: color-mix(in srgb, var(--surface_variant) 24%, transparent);
-  color: color-mix(in srgb, var(--on_surface_variant) 90%, transparent);
-  transition: background-color 0.3s cubic-bezier(0.2, 0, 0, 1),
-              border-radius    0.3s cubic-bezier(0.2, 0, 0, 1),
-              transform        0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border-radius: 8px;
+  background-color: var(--secondary_container);
+  color: var(--on_secondary_container);
+  transition: background-color 0.2s cubic-bezier(0.2, 0, 0, 1);
 }
 
 .entry-tag:hover {
-  background-color: color-mix(in srgb, var(--primary) 12%, transparent);
-  border-radius: 16px;
+  background-color: color-mix(in srgb, var(--on_secondary_container) 8%, var(--secondary_container));
 }
 
 .entry-tag:active {
-  background-color: color-mix(in srgb, var(--primary) 20%, transparent);
-  transform: scaleX(1.04) scaleY(0.93);
-  transition: background-color 0.1s cubic-bezier(0, 0, 0.2, 1),
-              transform        0.1s cubic-bezier(0, 0, 0.2, 1);
+  background-color: color-mix(in srgb, var(--on_secondary_container) 12%, var(--secondary_container));
 }
 
 .entry-tag.button {
@@ -4663,33 +4674,34 @@ scale.color.vertical:dir(rtl) > trough > slider {
 progressbar {
   color: var(--on_surface_variant);
   font-size: smaller;
+  border-radius: 9999px;
 }
 
 progressbar.horizontal trough,
 progressbar.horizontal progress {
-  min-height: 6px;
+  min-height: 4px;
 }
 
 progressbar.vertical trough,
 progressbar.vertical progress {
-  min-width: 6px;
+  min-width: 4px;
 }
 
 progressbar trough {
-  border-radius: 12px;
-  background-color: var(--surface_container_highest);
-  transition: background-color 0.3s cubic-bezier(0.2, 0, 0, 1);
+  border-radius: 9999px;
+  background-color: var(--secondary_container);
+  transition: background-color 0.2s cubic-bezier(0.2, 0, 0, 1);
 }
 
 progressbar progress {
-  border-radius: 12px;
+  border-radius: 9999px;
   background-color: var(--primary);
-  transition: background-color 0.3s cubic-bezier(0.2, 0, 0, 1);
+  transition: background-color 0.2s cubic-bezier(0.2, 0, 0, 1);
 }
 
 progressbar.osd {
-  min-width: 6px;
-  min-height: 6px;
+  min-width: 4px;
+  min-height: 4px;
   background-color: transparent;
   box-shadow: none;
   margin: 0;
@@ -4697,7 +4709,7 @@ progressbar.osd {
 }
 
 progressbar.osd trough {
-  background-color: transparent;
+  background-color: color-mix(in srgb, var(--on_surface) 16%, transparent);
 }
 
 progressbar.osd progress {
@@ -4711,53 +4723,57 @@ progressbar trough.empty progress {
 /*************
  * Level Bar *
  *************/
+levelbar trough {
+  padding: 2px;
+  border-radius: 9999px;
+  background-color: var(--surface_container_highest);
+}
+
 levelbar.horizontal block {
-  min-height: 6px;
+  min-height: 4px;
+  border-radius: 9999px;
 }
 
 levelbar.horizontal.discrete block {
-  min-width: 34px;
+  min-width: 24px;
 }
 
 levelbar.horizontal.discrete block:not(:last-child) {
-  margin-right: 2px;
+  margin-right: 4px;
 }
 
 levelbar.vertical block {
-  min-width: 6px;
+  min-width: 4px;
+  border-radius: 9999px;
 }
 
 levelbar.vertical.discrete block {
-  min-height: 34px;
+  min-height: 24px;
 }
 
 levelbar.vertical.discrete block:not(:last-child) {
-  margin-bottom: 2px;
-}
-
-levelbar trough {
-  border-radius: 12px;
+  margin-bottom: 4px;
 }
 
 levelbar block.low {
-  background-color: var(--on_primary);
-  transition: background-color 0.3s cubic-bezier(0.2, 0, 0, 1);
+  background-color: var(--error);
+  transition: background-color 0.2s cubic-bezier(0.2, 0, 0, 1);
 }
 
 levelbar block.high,
 levelbar block:not(.empty) {
   background-color: var(--primary);
-  transition: background-color 0.3s cubic-bezier(0.2, 0, 0, 1);
+  transition: background-color 0.2s cubic-bezier(0.2, 0, 0, 1);
 }
 
 levelbar block.full {
   background-color: var(--tertiary);
-  transition: background-color 0.3s cubic-bezier(0.2, 0, 0, 1);
+  transition: background-color 0.2s cubic-bezier(0.2, 0, 0, 1);
 }
 
 levelbar block.empty {
-  background-color: color-mix(in srgb, var(--surface_variant) 12%, transparent);
-  transition: background-color 0.3s cubic-bezier(0.2, 0, 0, 1);
+  background-color: var(--secondary_container);
+  transition: background-color 0.2s cubic-bezier(0.2, 0, 0, 1);
 }
 
 /****************
