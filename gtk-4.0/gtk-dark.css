@@ -4118,18 +4118,13 @@ switch > image {
 }
 
 switch > slider {
-  /* Smaller thumb size for OFF state */
   min-width: 12px;
   min-height: 12px;
   margin: 2px;
   border-radius: 9999px;
   outline: none;
   border: none;
-  
-  /* OFF thumb color */
   background-color: var(--outline);
-  
-  /* Smooth M3 transition for morphing size and color */
   transition: min-width 0.2s cubic-bezier(0.2, 0, 0, 1),
               min-height 0.2s cubic-bezier(0.2, 0, 0, 1),
               background-color 0.2s cubic-bezier(0.2, 0, 0, 1),
@@ -4137,12 +4132,9 @@ switch > slider {
 }
 
 switch:checked > slider {
-  /* Larger thumb size for ON state */
   min-width: 20px;
   min-height: 20px;
   margin: 0;
-  
-  /* Contrast thumb over primary background */
   background-color: var(--on_primary);
 }
 
@@ -4155,78 +4147,153 @@ radiobutton {
   border-spacing: 3px;
 }
 
-check,
-radio {
+check {
+  -gtk-icon-size: 20px;
   min-height: 20px;
   min-width: 20px;
   margin: 3px;
   padding: 0;
-  border-radius: 9999px;
-  border: none;
+  border-radius: 4px;
+  border: 2px solid var(--outline);
+  background: transparent;
   color: transparent;
-  background-color: var(--surface_container_highest);
   transition: background-color 0.2s cubic-bezier(0.2, 0, 0, 1),
-              transform        0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
-              outline-color    0.2s cubic-bezier(0.2, 0, 0, 1);
-}
-
-check:hover,
-radio:hover {
-  outline: 6px solid color-mix(in srgb, var(--primary) 8%, transparent);
-  outline-offset: -6px;
-  background-color: var(--surface_container_highest);
-}
-
-check:active,
-radio:active {
-  outline: 6px solid color-mix(in srgb, var(--primary) 12%, transparent);
-  outline-offset: -6px;
-  background-color: var(--surface_container_highest);
-  transform: scale(0.88);
-  transition: transform 0.1s cubic-bezier(0, 0, 0.2, 1);
-}
-
-check:disabled,
-radio:disabled {
-  background-color: var(--surface_container_low);
-  animation: none;
+              border-color     0.2s cubic-bezier(0.2, 0, 0, 1),
+              transform        0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 check:checked,
-check:indeterminate,
-radio:checked,
-radio:indeterminate {
-  color: var(--on_primary);
+check:indeterminate {
+  -gtk-icon-source: none;
   background-color: var(--primary);
+  border-color: var(--primary);
+  box-shadow: 0 0 0 1px var(--primary),
+              inset 0 0 0 2px var(--on_primary);
   animation: check-pop 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
 }
 
-check:checked:hover,
-check:indeterminate:hover,
-radio:checked:hover,
-radio:indeterminate:hover {
-  outline: 6px solid color-mix(in srgb, var(--primary) 15%, transparent);
-  outline-offset: -6px;
-  background-color: var(--primary);
+check:focus {
+  outline: 1px solid var(--primary);
+  outline-offset: 2px;
 }
 
-check:checked:active,
-check:indeterminate:active,
-radio:checked:active,
-radio:indeterminate:active {
-  outline: 6px solid color-mix(in srgb, var(--primary) 20%, transparent);
-  outline-offset: -6px;
-  background-color: var(--primary);
+check:hover {
+  background-color: color-mix(in srgb, var(--on_surface) 8%, transparent);
+  border-color: var(--on_surface);
+}
+
+check:active {
+  background-color: color-mix(in srgb, var(--on_surface) 12%, transparent);
   transform: scale(0.88);
   transition: transform 0.1s cubic-bezier(0, 0, 0.2, 1);
 }
 
-check:checked:disabled,
-check:indeterminate:disabled,
-radio:checked:disabled,
-radio:indeterminate:disabled {
-  color: color-mix(in srgb, var(--on_primary) 38%, transparent);
+check:checked:hover,
+check:indeterminate:hover {
+  background-color: var(--primary);
+  outline: 6px solid color-mix(in srgb, var(--primary) 15%, transparent);
+  outline-offset: -6px;
+}
+
+check:checked:active,
+check:indeterminate:active {
+  background-color: var(--primary);
+  outline: 6px solid color-mix(in srgb, var(--primary) 20%, transparent);
+  outline-offset: -6px;
+  transform: scale(0.88);
+}
+
+check:disabled {
+  opacity: 0.38;
+  background-color: transparent;
+  border-color: color-mix(in srgb, var(--outline) 38%, transparent);
+  animation: none;
+}
+
+check:disabled:checked {
   background-color: color-mix(in srgb, var(--primary) 38%, transparent);
+  border-color: color-mix(in srgb, var(--primary) 38%, transparent);
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--primary) 38%, transparent),
+              inset 0 0 0 2px var(--on_primary);
+  animation: none;
+}
+
+radio {
+  -gtk-icon-size: 20px;
+  min-height: 20px;
+  min-width: 20px;
+  margin: 3px;
+  padding: 0;
+  border-radius: 50%;
+  border: 2px solid var(--outline);
+  background: transparent;
+  color: transparent;
+  transition: background-color 0.2s cubic-bezier(0.2, 0, 0, 1),
+              border-color     0.2s cubic-bezier(0.2, 0, 0, 1),
+              transform        0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+radio:checked {
+  -gtk-icon-source: none;
+  background-color: var(--primary);
+  border-color: var(--primary);
+  box-shadow: inset 0 0 0 4px var(--on_primary),
+              0 0 0 1px var(--primary);
+  animation: check-pop 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+radio:indeterminate {
+  -gtk-icon-source: none;
+  background-color: transparent;
+  border-color: var(--primary);
+  box-shadow: inset 0 0 0 2px var(--primary),
+              0 0 0 1px var(--primary);
+  animation: check-pop 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+radio:focus {
+  outline: 1px solid var(--primary);
+  outline-offset: 2px;
+}
+
+radio:hover {
+  background-color: color-mix(in srgb, var(--on_surface) 8%, transparent);
+  border-color: var(--on_surface);
+}
+
+radio:active {
+  background-color: color-mix(in srgb, var(--on_surface) 12%, transparent);
+  transform: scale(0.88);
+  transition: transform 0.1s cubic-bezier(0, 0, 0.2, 1);
+}
+
+radio:checked:hover,
+radio:indeterminate:hover {
+  background-color: var(--primary);
+  outline: 6px solid color-mix(in srgb, var(--primary) 15%, transparent);
+  outline-offset: -6px;
+}
+
+radio:checked:active,
+radio:indeterminate:active {
+  background-color: var(--primary);
+  outline: 6px solid color-mix(in srgb, var(--primary) 20%, transparent);
+  outline-offset: -6px;
+  transform: scale(0.88);
+}
+
+radio:disabled {
+  opacity: 0.38;
+  background-color: transparent;
+  border-color: color-mix(in srgb, var(--outline) 38%, transparent);
+  animation: none;
+}
+
+radio:disabled:checked {
+  background-color: color-mix(in srgb, var(--primary) 38%, transparent);
+  border-color: color-mix(in srgb, var(--primary) 38%, transparent);
+  box-shadow: inset 0 0 0 4px var(--on_primary),
+              0 0 0 1px color-mix(in srgb, var(--primary) 38%, transparent);
   animation: none;
 }
 
@@ -4293,94 +4360,20 @@ popover.menu radio:indeterminate:hover {
   box-shadow: none;
 }
 
-check {
-  -gtk-icon-size: 20px;
-  min-height: 20px;
-  min-width: 20px;
-  background: transparent;
-  border: 2px solid var(--outline);
-  border-radius: 3px;
-  transition: background-color 0.2s cubic-bezier(0.2, 0, 0, 1),
-              border-color     0.2s cubic-bezier(0.2, 0, 0, 1),
-              transform        0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+popover.menu check {
+  min-height: 16px;
+  min-width: 16px;
+  -gtk-icon-size: 16px;
+  border-radius: 2px;
 }
 
-check:checked {
+popover.menu check:checked,
+popover.menu check:indeterminate {
   -gtk-icon-source: none;
   background-color: var(--primary);
   border-color: var(--primary);
   box-shadow: 0 0 0 1px var(--primary),
               inset 0 0 0 2px var(--on_primary);
-  animation: check-pop 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
-}
-
-check:indeterminate {
-  -gtk-icon-source: none;
-  background-color: var(--primary);
-  border-color: var(--primary);
-  box-shadow: 0 0 0 1px var(--primary),
-              inset 0 0 0 2px var(--on_primary);
-  animation: check-pop 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
-}
-
-check:focus {
-  outline: 1px solid var(--primary);
-  outline-offset: 2px;
-}
-
-check:hover {
-  background-color: color-mix(in srgb, var(--primary) 8%, transparent);
-}
-
-check:active {
-  background-color: color-mix(in srgb, var(--primary) 12%, transparent);
-  transform: scale(0.88);
-  transition: transform 0.1s cubic-bezier(0, 0, 0.2, 1);
-}
-
-check:disabled {
-  opacity: 0.5;
-  background-color: transparent;
-  border-color: color-mix(in srgb, var(--outline) 38%, transparent);
-  animation: none;
-}
-
-check:disabled:checked {
-  background-color: color-mix(in srgb, var(--primary) 38%, transparent);
-  border-color: color-mix(in srgb, var(--primary) 38%, transparent);
-  box-shadow: 0 0 0 1px color-mix(in srgb, var(--primary) 38%, transparent),
-              inset 0 0 0 2px var(--on_primary);
-  animation: none;
-}
-
-radio {
-  -gtk-icon-size: 20px;
-  min-height: 20px;
-  min-width: 20px;
-  background: transparent;
-  border: 2px solid var(--outline);
-  border-radius: 50%;
-  transition: background-color 0.2s cubic-bezier(0.2, 0, 0, 1),
-              border-color     0.2s cubic-bezier(0.2, 0, 0, 1),
-              transform        0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-}
-
-radio:checked {
-  -gtk-icon-source: none;
-  background-color: var(--primary);
-  border-color: var(--primary);
-  box-shadow: inset 0 0 0 4px var(--on_primary),
-              0 0 0 1px var(--primary);
-  animation: check-pop 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
-}
-
-radio:indeterminate {
-  -gtk-icon-source: none;
-  background-color: transparent;
-  border-color: var(--primary);
-  box-shadow: inset 0 0 0 2px var(--primary),
-              0 0 0 1px var(--primary);
-  animation: check-pop 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
 }
 
 popover.menu radio {
@@ -4403,59 +4396,6 @@ popover.menu radio:indeterminate {
   border-color: var(--primary);
   box-shadow: inset 0 0 0 1.5px var(--primary),
               0 0 0 1px var(--primary);
-}
-
-radio:focus {
-  outline: 1px solid var(--primary);
-  outline-offset: 2px;
-}
-
-radio:hover {
-  background-color: color-mix(in srgb, var(--primary) 8%, transparent);
-}
-
-radio:active {
-  background-color: color-mix(in srgb, var(--primary) 12%, transparent);
-  transform: scale(0.88);
-  transition: transform 0.1s cubic-bezier(0, 0, 0.2, 1);
-}
-
-radio:disabled {
-  opacity: 0.5;
-  background-color: transparent;
-  border-color: color-mix(in srgb, var(--outline) 38%, transparent);
-  animation: none;
-}
-
-radio:disabled:checked {
-  background-color: color-mix(in srgb, var(--primary) 38%, transparent);
-  border-color: color-mix(in srgb, var(--primary) 38%, transparent);
-  box-shadow: inset 0 0 0 4px var(--on_primary),
-              0 0 0 1px color-mix(in srgb, var(--primary) 38%, transparent);
-  animation: none;
-}
-
-popover.menu check {
-  min-height: 16px;
-  min-width: 16px;
-  -gtk-icon-size: 16px;
-  border-radius: 2px;
-}
-
-popover.menu check:checked {
-  -gtk-icon-source: none;
-  background-color: var(--primary);
-  border-color: var(--primary);
-  box-shadow: 0 0 0 1px var(--primary),
-              inset 0 0 0 2px var(--on_primary);
-}
-
-popover.menu check:indeterminate {
-  -gtk-icon-source: none;
-  background-color: var(--primary);
-  border-color: var(--primary);
-  box-shadow: 0 0 0 1px var(--primary),
-              inset 0 0 0 2px var(--on_primary);
 }
 
 check:not(:checked):active {
@@ -4526,6 +4466,7 @@ columnview.view:focus radio:checked {
   background-color: var(--primary);
 }
 
+/* Selection Mode */
 checkbutton.selection-mode {
   border-radius: 9999px;
 }
