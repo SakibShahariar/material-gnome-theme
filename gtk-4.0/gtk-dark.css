@@ -2497,8 +2497,7 @@ headerbar entry {
   background-color: var(--surface_container_highest);
   color: color-mix(in srgb, var(--on_surface_variant) 90%, transparent);
   border-radius: 12px;
-  transition: background-color 0.2s cubic-bezier(0.2, 0, 0, 1),
-              border-radius    0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: background-color 0.2s cubic-bezier(0.2, 0, 0, 1);
 }
 
 headerbar entry:focus-within {
