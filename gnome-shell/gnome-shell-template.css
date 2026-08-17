@@ -2608,7 +2608,7 @@ StWidget.focused .app-grid-running-dot {
   padding: 0 !important;
   margin: 2px !important;
   border-radius: 9999px;
-  color: {{colors.on_surface_variant.default.hex}} !important;
+  color: {{colors.on_surface_variant.default.hex}};
   border: none;
   border-width: 0;
   font-feature-settings: 'tnum';
@@ -2619,13 +2619,14 @@ StWidget.focused .app-grid-running-dot {
 .calendar .calendar-day:hover,
 .calendar .calendar-day:focus {
   background-color: rgba({{colors.primary.default.red}}, {{colors.primary.default.green}}, {{colors.primary.default.blue}}, 0.08);
+  color: {{colors.primary.default.hex}} !important;
   box-shadow: none !important;
 }
 
 .calendar .calendar-day:active,
 .calendar .calendar-day:selected {
-  color: {{colors.on_surface_variant.default.hex}} !important;
-  background-color: rgba({{colors.primary.default.red}}, {{colors.primary.default.green}}, {{colors.primary.default.blue}}, 0.12);
+  color: {{colors.primary.default.hex}} !important;
+  background-color: rgba({{colors.primary.default.red}}, {{colors.primary.default.green}}, {{colors.primary.default.blue}}, 0.22);
   border-color: transparent !important;
   box-shadow: none !important;
 }
@@ -2648,8 +2649,8 @@ StWidget.focused .app-grid-running-dot {
 
 .calendar .calendar-today {
   font-weight: bold;
-  color: {{colors.on_primary.default.hex}} !important;
-  background-color: {{colors.primary.default.hex}};
+  background-color: {{colors.primary_container.default.hex}};
+  border-radius: 99px;
   border: none;
 }
 
@@ -2659,16 +2660,10 @@ StWidget.focused .app-grid-running-dot {
   color: {{colors.on_primary_container.default.hex}} !important;
 }
 
-.calendar .calendar-today:active {
-  background-color: {{colors.primary_container.default.hex}};
-  color: {{colors.on_primary_container.default.hex}} !important;
-}
-
 .calendar .calendar-today:selected {
   background-color: {{colors.primary.default.hex}};
   color: {{colors.on_primary.default.hex}} !important;
 }
-
 .calendar .calendar-day-with-events {
   color: {{colors.primary.default.hex}};
   background-image: url("assets/calendar-today.svg");

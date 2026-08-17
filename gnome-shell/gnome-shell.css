@@ -2608,7 +2608,7 @@ StWidget.focused .app-grid-running-dot {
   padding: 0 !important;
   margin: 2px !important;
   border-radius: 9999px;
-  color: #d4c4b5 !important;
+  color: #d4c4b5;
   border: none;
   border-width: 0;
   font-feature-settings: 'tnum';
@@ -2619,13 +2619,14 @@ StWidget.focused .app-grid-running-dot {
 .calendar .calendar-day:hover,
 .calendar .calendar-day:focus {
   background-color: rgba(248, 187, 113, 0.08);
+  color: #f8bb71 !important;
   box-shadow: none !important;
 }
 
 .calendar .calendar-day:active,
 .calendar .calendar-day:selected {
-  color: #d4c4b5 !important;
-  background-color: rgba(248, 187, 113, 0.12);
+  color: #f8bb71 !important;
+  background-color: rgba(248, 187, 113, 0.22);
   border-color: transparent !important;
   box-shadow: none !important;
 }
@@ -2648,8 +2649,8 @@ StWidget.focused .app-grid-running-dot {
 
 .calendar .calendar-today {
   font-weight: bold;
-  color: #472a00 !important;
-  background-color: #f8bb71;
+  background-color: #663e00;
+  border-radius: 99px;
   border: none;
 }
 
@@ -2659,16 +2660,10 @@ StWidget.focused .app-grid-running-dot {
   color: #ffddb9 !important;
 }
 
-.calendar .calendar-today:active {
-  background-color: #663e00;
-  color: #ffddb9 !important;
-}
-
 .calendar .calendar-today:selected {
   background-color: #f8bb71;
   color: #472a00 !important;
 }
-
 .calendar .calendar-day-with-events {
   color: #f8bb71;
   background-image: url("assets/calendar-today.svg");
