@@ -679,9 +679,19 @@ button:checked:disabled {
 headerbar popover.background button:not(.suggested-action):not(.destructive-action):not(.flat),
 button:not(.destructive-action) {
   padding: 3px 10px;
-  background-color: var(--surface_container_highest);
   color: var(--primary);
-  outline: 0 solid transparent;
+  outline-offset: 2px;
+  transition: background-color 0.3s cubic-bezier(0.2, 0, 0, 1),
+              border-radius    0.3s cubic-bezier(0.2, 0, 0, 1),
+              color            0.2s cubic-bezier(0.2, 0, 0, 1),
+              outline-color    0.3s cubic-bezier(0.2, 0, 0, 1);
+}
+
+headerbar popover.background button:focus:not(.suggested-action):not(.destructive-action):not(.flat),
+button:focus:not(.destructive-action) {
+  padding: 3px 10px;
+  background-color: var(--primary);
+  color: var(--on_primary);
   outline-offset: 2px;
   transition: background-color 0.3s cubic-bezier(0.2, 0, 0, 1),
               border-radius    0.3s cubic-bezier(0.2, 0, 0, 1),
@@ -692,8 +702,8 @@ button:not(.destructive-action) {
 headerbar popover.background button:hover:not(.suggested-action):not(.destructive-action):not(.flat),
 button:hover:not(.destructive-action) {
   border-radius: 16px;
-  background-color: color-mix(in srgb, var(--surface_container_highest) 90%, var(--primary) 10%);
-  color: var(--primary);
+  background-color: var(--primary);
+  color: var(--on_primary);
   outline: 0 solid transparent;
   -gtk-icon-filter: brightness(1.2);
 }
@@ -702,13 +712,14 @@ headerbar popover.background button.keyboard-activating:not(.suggested-action):n
 button.keyboard-activating:not(.destructive-action),
 headerbar popover.background button:active:not(.suggested-action):not(.destructive-action):not(.flat),
 button:active:not(.destructive-action) {
-  background-color: color-mix(in srgb, var(--primary) 38%, transparent);
+  background-color: var(--primary);
   color: var(--on_primary);
   transition: background-color 0.1s cubic-bezier(0, 0, 0.2, 1),
               border-radius    0.3s cubic-bezier(0.2, 0, 0, 1),
               color            0.1s cubic-bezier(0, 0, 0.2, 1);
   animation: pill-pop 0.6s cubic-bezier(0.2, 0, 0, 1) forwards;
-  outline: 0 solid transparent;
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
 }
 
 headerbar popover.background button:checked:not(.suggested-action):not(.destructive-action):not(.flat),
