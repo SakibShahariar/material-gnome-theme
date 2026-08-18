@@ -702,7 +702,7 @@ headerbar popover.background button.keyboard-activating:not(.suggested-action):n
 button.keyboard-activating:not(.destructive-action),
 headerbar popover.background button:active:not(.suggested-action):not(.destructive-action):not(.flat),
 button:active:not(.destructive-action) {
-  background-color: var(--primary);
+  background-color: color-mix(in srgb, var(--primary) 38%, transparent);
   color: var(--on_primary);
   transition: background-color 0.1s cubic-bezier(0, 0, 0.2, 1),
               border-radius    0.3s cubic-bezier(0.2, 0, 0, 1),
