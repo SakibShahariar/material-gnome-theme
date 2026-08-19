@@ -5225,7 +5225,6 @@ row:selected:hover {
 row:selected:focus,
 row:selected:focus-visible:focus-within {
   background-color: color-mix(in srgb, var(--primary) 30%, transparent);
-  border-radius: 8px;
 }
 
 row:selected:focus:hover,
