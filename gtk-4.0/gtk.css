@@ -664,6 +664,18 @@ button:checked:disabled {
   animation: none;
 }
 
+box.horizontal button.toggle label {
+    color: var(--primary);
+}
+
+box.horizontal button.toggle:hover label {
+    color: var(--on_primary);
+}
+
+box.horizontal button.toggle:focus label {
+    color: var(--on_primary);
+}
+
 button:disabled {
   border-radius: 12px;
   background-color: var(--surface_container_low);
