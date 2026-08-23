@@ -282,7 +282,7 @@ label.separator {
 }
 
 label:disabled {
-  opacity: 1; 
+  opacity: 1;
   color: color-mix(in srgb, var(--on_surface_variant) 38%, transparent);
 }
 
@@ -664,16 +664,13 @@ button:checked:disabled {
   animation: none;
 }
 
-box.horizontal button.toggle label {
-    color: var(--primary);
+box.search box.horizontal button.toggle label {
+  color: var(--primary);
 }
 
-box.horizontal button.toggle:hover label {
-    color: var(--on_primary);
-}
-
-box.horizontal button.toggle:focus label {
-    color: var(--on_primary);
+box.search box.horizontal button.toggle:hover label,
+box.search box.horizontal button.toggle:focus label {
+  color: var(--on_primary);
 }
 
 button:disabled {
