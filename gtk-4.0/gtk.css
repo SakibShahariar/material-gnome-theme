@@ -687,7 +687,6 @@ button:checked:disabled {
 
 headerbar popover.background button:not(.suggested-action):not(.destructive-action):not(.flat),
 button:not(.destructive-action) {
-  padding: 3px 10px;
   color: var(--primary);
   outline-offset: 2px;
   transition: background-color 0.3s cubic-bezier(0.2, 0, 0, 1),
@@ -696,9 +695,8 @@ button:not(.destructive-action) {
               outline-color    0.3s cubic-bezier(0.2, 0, 0, 1);
 }
 
-headerbar popover.background button:focus:not(.suggested-action):not(.destructive-action):not(.flat),
-button:focus:not(.destructive-action) {
-  padding: 3px 10px;
+headerbar popover.background button:focus:not(.suggested-action):not(.destructive-action):not(.flat) {
+  padding: 3px 5px;
   background-color: var(--primary);
   color: var(--on_primary);
   outline-offset: 2px;
