@@ -226,6 +226,7 @@
   color: #f8bb71;
   background-color: rgba(248, 187, 113, 0.08);
   box-shadow: none !important;
+  border: 1px solid #f8bb71;
 }
 
 .modal-dialog-button:hover,
@@ -415,7 +416,18 @@
   width: 24px;
   height: 24px;
   padding: 3px;
+  border-radius: 9999px;
   transition: all 150ms ease;
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.check-box StIcon {
+  icon-size: 0;
+  padding: 0;
+  color: transparent !important;
+  border: none !important;
+  background-color: transparent !important;
 }
 
 .check-box StBin,
@@ -425,6 +437,7 @@
 
 .check-box:hover StBin {
   background-image: url("assets/checkbox-off-hover.svg");
+  box-shadow: 0 0 0 6px #302921;
 }
 
 .check-box:active StBin {
@@ -434,6 +447,10 @@
 .check-box:checked StBin,
 .check-box:focus:checked StBin {
   background-image: url("assets/checkbox-dark.svg");
+}
+
+.check-box:checked:hover StBin {
+  box-shadow: 0 0 0 6px #302921;
 }
 
 /* Activities Ripple */
@@ -453,25 +470,75 @@
 .candidate-popup-content,
 .modal-dialog {
   background-color: #302921;
-  border-radius: 28px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.24);
-  border: 1px solid #504539;
+  border-radius: 18px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.24), inset 0 0.5px rgba(248, 187, 113, 0.1);
+  border: 2px solid #f8bb71;
+  color: #f8bb71;
+  padding: 12px;
+  margin: 0;
 }
 
-.modal-dialog-button:last-child,
-.modal-dialog-linked-button:last-child {
-  color: #472a00;
-  background-color: #f8bb71;
+.headline {
+  font-size: 11pt;
 }
 
-.modal-dialog-button:last-child:hover,
-.modal-dialog-linked-button:last-child:hover {
+.modal-dialog .modal-dialog-button-box {
+  padding-top: 6px;
+}
+
+.modal-dialog .modal-dialog-content-box {
+  margin: 6px;
+  spacing: 6px;
+  max-width: 28em;
+}
+
+/* Modal Dialog Buttons */
+.modal-dialog-button,
+.modal-dialog-linked-button {
+  min-height: 32px !important;
+  padding: 6px 16px !important;
+  margin: 0 !important;
+  border-radius: 12px;
+  transition: all 200ms cubic-bezier(0.2, 0, 0, 1);
+}
+
+.modal-dialog-button:first-child,
+.modal-dialog-linked-button:first-child {
+  color: #f8bb71;
+  background-color: rgba(248, 187, 113, 0.08);
+}
+
+.modal-dialog-button:first-child:hover,
+.modal-dialog-linked-button:first-child:hover {
+  border-radius: 16px;
   color: #ffddb9;
   background-color: #663e00;
 }
 
-.modal-dialog-button:last-child:active,
-.modal-dialog-linked-button:last-child:active {
+.modal-dialog-button:first-child:focus,
+.modal-dialog-linked-button:first-child:focus {
+  color: #472a00;
+  background-color: #f8bb71;
+  box-shadow: inset 0 0 0 2px #472a00 !important;
+}
+
+.modal-dialog-button:first-child:active,
+.modal-dialog-linked-button:first-child:active {
+  border-radius: 999px;
+  color: #472a00;
+  background-color: #f8bb71;
+  transition: all 100ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.modal-dialog-button:last-child,
+.modal-dialog-linked-button:last-child {
+  color: #f8bb71;
+  background-color: rgba(248, 187, 113, 0.08);
+}
+
+.modal-dialog-button:last-child:hover,
+.modal-dialog-linked-button:last-child:hover {
+  border-radius: 16px;
   color: #ffddb9;
   background-color: #663e00;
 }
@@ -483,61 +550,29 @@
   box-shadow: inset 0 0 0 2px #472a00 !important;
 }
 
-.headline {
-  font-size: 11pt;
+.modal-dialog-button:last-child:active,
+.modal-dialog-linked-button:last-child:active {
+  border-radius: 999px;
+  color: #ffddb9;
+  background-color: #663e00;
+  transition: all 100ms cubic-bezier(0, 0, 0.2, 1);
 }
 
-.modal-dialog {
-  color: #f8bb71;
-  padding: 0 6px 6px 6px;
-}
-
-.modal-dialog-linked-button {
-  min-height: 32px !important;
-  padding: 6px 16px !important;
-  margin: 3px !important;
-  border: none !important;
-  border-radius: 12px;
-  transition: all 150ms ease;
-}
-
-.modal-dialog-linked-button:first-child {
-  color: #d4c4b5;
-  background-color: transparent;
-}
-
-.modal-dialog-linked-button:first-child:focus {
-  color: #d4c4b5;
-  background-color: rgba(212, 196, 181, 0.08);
-  box-shadow: inset 0 0 0 2px #f8bb71 !important;
-}
-
-.modal-dialog-linked-button:first-child:hover {
-  color: #d4c4b5;
-  background-color: rgba(212, 196, 181, 0.08);
-}
-
-.modal-dialog-linked-button:first-child:active {
-  color: #d4c4b5;
-  background-color: rgba(212, 196, 181, 0.12);
-  box-shadow: none !important;
-}
-
-.modal-dialog .modal-dialog-content-box {
-  margin: 30px 42px;
-  spacing: 30px;
-  max-width: 28em;
-}
-
+/* End Session Dialog */
 .end-session-dialog {
-  width: 30em;
+  width: 26em;
 }
 
 .end-session-dialog .end-session-dialog-battery-warning,
 .end-session-dialog .dialog-list-title {
-  color: #ffb4ab;
+  color: #ffdad6;
+  background-color: #93000a;
+  padding: 9px;
+  border-radius: 12px;
+  margin: 4px 0;
 }
 
+/* Message Dialog */
 .message-dialog-content {
   spacing: 18px;
 }
@@ -557,6 +592,7 @@
   text-align: center;
 }
 
+/* Dialog Lists */
 .dialog-list {
   spacing: 18px;
 }
@@ -587,6 +623,12 @@
   font-size: 9pt;
 }
 
+/* Run Dialog */
+.run-dialog {
+  width: 26em;
+  padding-bottom: 6px;
+}
+
 .run-dialog .modal-dialog-content-box {
   margin-top: 24px;
   margin-bottom: 12px;
@@ -594,6 +636,7 @@
 
 .run-dialog .run-dialog-entry {
   width: 20em;
+  padding: 12px 9px;
 }
 
 .run-dialog .run-dialog-description {
@@ -602,6 +645,7 @@
   font-size: 9pt;
 }
 
+/* Prompt Dialog & Password Grid */
 .prompt-dialog {
   width: 28em;
 }
@@ -610,48 +654,50 @@
   margin-bottom: 24px;
 }
 
-.prompt-dialog-password-grid {
+.prompt-dialog .prompt-dialog-password-grid {
   spacing-rows: 8px;
   spacing-columns: 4px;
 }
 
-.prompt-dialog-password-grid .prompt-dialog-password-entry {
+.prompt-dialog .prompt-dialog-password-grid .prompt-dialog-password-entry {
   width: auto;
 }
 
-.prompt-dialog-password-grid .prompt-dialog-password-entry:ltr {
+.prompt-dialog .prompt-dialog-password-grid .prompt-dialog-password-entry:ltr {
   margin-left: 20px;
 }
 
-.prompt-dialog-password-grid .prompt-dialog-password-entry:rtl {
+.prompt-dialog .prompt-dialog-password-grid .prompt-dialog-password-entry:rtl {
   margin-right: 20px;
 }
 
-.prompt-dialog-password-layout {
+.prompt-dialog .prompt-dialog-password-layout {
   spacing: 8px;
 }
 
-.prompt-dialog-password-entry {
+.prompt-dialog .prompt-dialog-password-entry {
   width: 20em;
+  padding: 12px 9px;
 }
 
-.prompt-dialog-error-label,
-.prompt-dialog-info-label,
-.prompt-dialog-null-label {
+.prompt-dialog .prompt-dialog-error-label,
+.prompt-dialog .prompt-dialog-info-label,
+.prompt-dialog .prompt-dialog-null-label {
   text-align: center;
   font-size: 9pt;
   margin: 6px;
 }
 
-.prompt-dialog-error-label {
+.prompt-dialog .prompt-dialog-error-label {
   color: #ffb4ab;
 }
 
-.prompt-dialog-info-label,
-.prompt-dialog-null-label {
+.prompt-dialog .prompt-dialog-info-label,
+.prompt-dialog .prompt-dialog-null-label {
   color: #d4c4b5;
 }
 
+/* Polkit Dialog */
 .polkit-dialog-user-layout {
   text-align: center;
   spacing: 8px;
@@ -662,41 +708,48 @@
   color: #ffb4ab;
 }
 
+/* Audio Device Selection Dialog */
+.audio-device-selection-dialog {
+  min-width: 24em;
+}
+
 .audio-device-selection-dialog .modal-dialog-content-box {
   margin-bottom: 28px;
 }
 
 .audio-device-selection-dialog .audio-selection-box {
-  spacing: 20px;
+  spacing: 12px;
 }
 
-.audio-selection-device {
+.audio-device-selection-dialog .audio-selection-box .audio-selection-device {
   border: 1px solid #9c8e81;
   border-radius: 12px;
   transition: all 150ms ease;
 }
 
-.audio-selection-device:hover,
-.audio-selection-device:focus {
+.audio-device-selection-dialog .audio-selection-box .audio-selection-device:hover,
+.audio-device-selection-dialog .audio-selection-box .audio-selection-device:focus {
   background-color: rgba(248, 187, 113, 0.08);
   border-color: #f8bb71;
+  color: #d4c4b5;
 }
 
-.audio-selection-device:active {
+.audio-device-selection-dialog .audio-selection-box .audio-selection-device:active {
   background-color: #663e00;
   color: #ffddb9;
   border-color: #f8bb71;
 }
 
-.audio-selection-device-box {
-  padding: 18px;
-  spacing: 18px;
+.audio-device-selection-dialog .audio-selection-box .audio-selection-device .audio-selection-device-box {
+  padding: 12px;
+  spacing: 12px;
 }
 
-.audio-selection-device-icon {
+.audio-device-selection-dialog .audio-selection-box .audio-selection-device .audio-selection-device-icon {
   icon-size: 64px;
 }
 
+/* Welcome Dialog */
 .welcome-dialog-image {
   background-image: url("resource:///org/gnome/shell/theme/gnome-shell-start.svg");
   background-size: contain;
@@ -2809,47 +2862,6 @@ StWidget.focused .app-grid-running-dot {
   color: #d4c4b5;
 }
 
-/* Check Boxes */
-.check-box StBoxLayout {
-  spacing: 0.8em;
-}
-
-.check-box StBin {
-  width: 24px;
-  height: 24px;
-  padding: 3px;
-  border-radius: 9999px;
-}
-
-.check-box StIcon {
-  icon-size: 0;
-  padding: 0;
-  color: transparent !important;
-  border: none !important;
-  background-color: transparent !important;
-}
-
-.check-box StBin,
-.check-box:focus StBin {
-  background-image: url("assets/checkbox-off.svg");
-  background-color: transparent;
-  box-shadow: none;
-}
-
-.check-box:hover StBin {
-  background-image: url("assets/checkbox-off-hover.svg");
-  box-shadow: 0 0 0 6px #302921;
-}
-
-.check-box:active StBin {
-  background-image: url("assets/checkbox-off-active.svg");
-}
-
-.check-box:checked StBin,
-.check-box:focus:checked StBin {
-  background-image: url("assets/checkbox.svg");
-}
-
 /* Dash */
 #dash {
   margin-top: 8px;
@@ -2957,208 +2969,6 @@ StWidget.focused .app-grid-running-dot {
   text-align: center;
   -y-offset: 12px;
   -x-offset: 8px;
-}
-
-/* Modal Dialogs */
-
-.modal-dialog,
-.candidate-popup-content {
-  background-color: #302921;
-  border-radius: 18px;
-  box-shadow: inset 0 0.5px rgba(248, 187, 113, 0.1);
-  border: 2px solid #f8bb71;
-}
-
-.modal-dialog-button:last-child,
-.modal-dialog-linked-button:last-child {
-  background-color: #f8bb71;
-  color: #472a00;
-}
-
-.headline {
-  font-size: 11pt;
-}
-
-.modal-dialog {
-  color: #f8bb71;
-  padding: 12px;
-  margin: 0;
-}
-
-.modal-dialog-button,
-.modal-dialog-linked-button {
-  min-height: 32px !important;
-  padding: 6px !important;
-  margin: 0 !important;
-  border: none;
-  border-radius: 12px;
-}
-
-.modal-dialog .modal-dialog-button-box {
-  padding-top: 6px;
-}
-
-.modal-dialog .modal-dialog-content-box {
-  margin: 6px;
-  spacing: 6px;
-  max-width: 28em;
-}
-
-.end-session-dialog {
-  width: 26em;
-}
-
-.end-session-dialog .end-session-dialog-battery-warning,
-.end-session-dialog .dialog-list-title {
-  color: #ffdad6;
-  background-color: #93000a;
-  padding: 9px;
-  border-radius: 12px;
-  margin: 4px 0;
-}
-
-.message-dialog-content {
-  spacing: 18px;
-}
-
-.message-dialog-content .message-dialog-title {
-  text-align: center;
-}
-
-.message-dialog-content .message-dialog-description {
-  text-align: center;
-}
-
-.dialog-list {
-  spacing: 18px;
-}
-
-.dialog-list .dialog-list-title {
-  text-align: center;
-}
-
-.dialog-list .dialog-list-scrollview {
-  max-height: 200px;
-}
-
-.dialog-list .dialog-list-box {
-  spacing: 1em;
-}
-
-.dialog-list .dialog-list-box .dialog-list-item {
-  spacing: 1em;
-}
-
-.dialog-list .dialog-list-box .dialog-list-item .dialog-list-item-title {
-  font-weight: bold;
-}
-
-.dialog-list .dialog-list-box .dialog-list-item .dialog-list-item-description {
-  color: #d4c4b5;
-}
-
-.run-dialog {
-  width: 26em;
-  padding-bottom: 6px;
-}
-
-.run-dialog .run-dialog-entry {
-  padding: 12px 9px;
-}
-
-.run-dialog .run-dialog-description {
-  text-align: center;
-  color: #d4c4b5;
-}
-
-.prompt-dialog {
-  width: 28em;
-}
-
-.prompt-dialog .prompt-dialog-password-grid {
-  spacing-rows: 8px;
-  spacing-columns: 4px;
-}
-
-.prompt-dialog .prompt-dialog-password-grid .prompt-dialog-password-entry {
-  width: auto;
-}
-
-.prompt-dialog .prompt-dialog-password-grid .prompt-dialog-password-entry:ltr {
-  margin-left: 20px;
-}
-
-.prompt-dialog .prompt-dialog-password-grid .prompt-dialog-password-entry:rtl {
-  margin-right: 20px;
-}
-
-.prompt-dialog .prompt-dialog-password-layout {
-  spacing: 8px;
-}
-
-.prompt-dialog .prompt-dialog-password-entry {
-  width: 20em;
-  padding: 12px 9px;
-}
-
-.prompt-dialog .prompt-dialog-error-label,
-.prompt-dialog .prompt-dialog-info-label,
-.prompt-dialog .prompt-dialog-null-label {
-  text-align: center;
-}
-
-.prompt-dialog .prompt-dialog-error-label {
-  color: #ffb4ab;
-}
-
-.polkit-dialog-user-layout {
-  text-align: center;
-  spacing: 8px;
-  margin-bottom: 6px;
-}
-
-.polkit-dialog-user-layout .polkit-dialog-user-root-label {
-  color: #ffb4ab;
-}
-
-.audio-device-selection-dialog {
-  min-width: 24em;
-}
-
-.audio-device-selection-dialog .audio-selection-box {
-  spacing: 12px;
-}
-
-.audio-device-selection-dialog .audio-selection-box .audio-selection-device {
-  border: 1px solid #9c8e81;
-  border-radius: 12px;
-}
-
-.audio-device-selection-dialog .audio-selection-box .audio-selection-device:hover,
-.audio-device-selection-dialog .audio-selection-box .audio-selection-device:focus {
-  background-color: #302921;
-  color: #d4c4b5;
-}
-
-.audio-device-selection-dialog .audio-selection-box .audio-selection-device:active {
-  background-color: #f8bb71;
-  color: #472a00;
-}
-
-.audio-device-selection-dialog .audio-selection-box .audio-selection-device .audio-selection-device-box {
-  padding: 12px;
-  spacing: 12px;
-}
-
-.audio-device-selection-dialog .audio-selection-box .audio-selection-device .audio-selection-device-icon {
-  icon-size: 64px;
-}
-
-.welcome-dialog-image {
-  background-image: url("resource:///org/gnome/shell/theme/gnome-shell-start.svg");
-  background-size: contain;
-  height: 300px;
-  width: 300px;
 }
 
 /* Access portal dialog */

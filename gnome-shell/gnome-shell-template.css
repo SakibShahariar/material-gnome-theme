@@ -226,6 +226,7 @@
   color: {{colors.primary.default.hex}};
   background-color: rgba({{colors.primary.default.red}}, {{colors.primary.default.green}}, {{colors.primary.default.blue}}, 0.08);
   box-shadow: none !important;
+  border: 1px solid {{colors.primary.default.hex}};
 }
 
 .modal-dialog-button:hover,
@@ -415,7 +416,18 @@
   width: 24px;
   height: 24px;
   padding: 3px;
+  border-radius: 9999px;
   transition: all 150ms ease;
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.check-box StIcon {
+  icon-size: 0;
+  padding: 0;
+  color: transparent !important;
+  border: none !important;
+  background-color: transparent !important;
 }
 
 .check-box StBin,
@@ -425,6 +437,7 @@
 
 .check-box:hover StBin {
   background-image: url("assets/checkbox-off-hover.svg");
+  box-shadow: 0 0 0 6px {{colors.surface_container_high.default.hex}};
 }
 
 .check-box:active StBin {
@@ -434,6 +447,10 @@
 .check-box:checked StBin,
 .check-box:focus:checked StBin {
   background-image: url("assets/checkbox-dark.svg");
+}
+
+.check-box:checked:hover StBin {
+  box-shadow: 0 0 0 6px {{colors.surface_container_high.default.hex}};
 }
 
 /* Activities Ripple */
@@ -453,25 +470,75 @@
 .candidate-popup-content,
 .modal-dialog {
   background-color: {{colors.surface_container_high.default.hex}};
-  border-radius: 28px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.24);
-  border: 1px solid {{colors.outline_variant.default.hex}};
+  border-radius: 18px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.24), inset 0 0.5px rgba({{colors.primary.default.red}}, {{colors.primary.default.green}}, {{colors.primary.default.blue}}, 0.1);
+  border: 2px solid {{colors.primary.default.hex}};
+  color: {{colors.primary.default.hex}};
+  padding: 12px;
+  margin: 0;
 }
 
-.modal-dialog-button:last-child,
-.modal-dialog-linked-button:last-child {
-  color: {{colors.on_primary.default.hex}};
-  background-color: {{colors.primary.default.hex}};
+.headline {
+  font-size: 11pt;
 }
 
-.modal-dialog-button:last-child:hover,
-.modal-dialog-linked-button:last-child:hover {
+.modal-dialog .modal-dialog-button-box {
+  padding-top: 6px;
+}
+
+.modal-dialog .modal-dialog-content-box {
+  margin: 6px;
+  spacing: 6px;
+  max-width: 28em;
+}
+
+/* Modal Dialog Buttons */
+.modal-dialog-button,
+.modal-dialog-linked-button {
+  min-height: 32px !important;
+  padding: 6px 16px !important;
+  margin: 0 !important;
+  border-radius: 12px;
+  transition: all 200ms cubic-bezier(0.2, 0, 0, 1);
+}
+
+.modal-dialog-button:first-child,
+.modal-dialog-linked-button:first-child {
+  color: {{colors.primary.default.hex}};
+  background-color: rgba({{colors.primary.default.red}}, {{colors.primary.default.green}}, {{colors.primary.default.blue}}, 0.08);
+}
+
+.modal-dialog-button:first-child:hover,
+.modal-dialog-linked-button:first-child:hover {
+  border-radius: 16px;
   color: {{colors.on_primary_container.default.hex}};
   background-color: {{colors.primary_container.default.hex}};
 }
 
-.modal-dialog-button:last-child:active,
-.modal-dialog-linked-button:last-child:active {
+.modal-dialog-button:first-child:focus,
+.modal-dialog-linked-button:first-child:focus {
+  color: {{colors.on_primary.default.hex}};
+  background-color: {{colors.primary.default.hex}};
+  box-shadow: inset 0 0 0 2px {{colors.on_primary.default.hex}} !important;
+}
+
+.modal-dialog-button:first-child:active,
+.modal-dialog-linked-button:first-child:active {
+  border-radius: 999px;
+  color: {{colors.on_primary.default.hex}};
+  background-color: {{colors.primary.default.hex}};
+  transition: all 100ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.modal-dialog-button:last-child,
+.modal-dialog-linked-button:last-child {
+  color: {{colors.primary.default.hex}};
+  background-color: rgba({{colors.primary.default.red}}, {{colors.primary.default.green}}, {{colors.primary.default.blue}}, 0.08);
+}
+
+.modal-dialog-button:last-child:hover,
+.modal-dialog-linked-button:last-child:hover {
+  border-radius: 16px;
   color: {{colors.on_primary_container.default.hex}};
   background-color: {{colors.primary_container.default.hex}};
 }
@@ -483,61 +550,29 @@
   box-shadow: inset 0 0 0 2px {{colors.on_primary.default.hex}} !important;
 }
 
-.headline {
-  font-size: 11pt;
+.modal-dialog-button:last-child:active,
+.modal-dialog-linked-button:last-child:active {
+  border-radius: 999px;
+  color: {{colors.on_primary_container.default.hex}};
+  background-color: {{colors.primary_container.default.hex}};
+  transition: all 100ms cubic-bezier(0, 0, 0.2, 1);
 }
 
-.modal-dialog {
-  color: {{colors.primary.default.hex}};
-  padding: 0 6px 6px 6px;
-}
-
-.modal-dialog-linked-button {
-  min-height: 32px !important;
-  padding: 6px 16px !important;
-  margin: 3px !important;
-  border: none !important;
-  border-radius: 12px;
-  transition: all 150ms ease;
-}
-
-.modal-dialog-linked-button:first-child {
-  color: {{colors.on_surface_variant.default.hex}};
-  background-color: transparent;
-}
-
-.modal-dialog-linked-button:first-child:focus {
-  color: {{colors.on_surface_variant.default.hex}};
-  background-color: rgba({{colors.on_surface_variant.default.red}}, {{colors.on_surface_variant.default.green}}, {{colors.on_surface_variant.default.blue}}, 0.08);
-  box-shadow: inset 0 0 0 2px {{colors.primary.default.hex}} !important;
-}
-
-.modal-dialog-linked-button:first-child:hover {
-  color: {{colors.on_surface_variant.default.hex}};
-  background-color: rgba({{colors.on_surface_variant.default.red}}, {{colors.on_surface_variant.default.green}}, {{colors.on_surface_variant.default.blue}}, 0.08);
-}
-
-.modal-dialog-linked-button:first-child:active {
-  color: {{colors.on_surface_variant.default.hex}};
-  background-color: rgba({{colors.on_surface_variant.default.red}}, {{colors.on_surface_variant.default.green}}, {{colors.on_surface_variant.default.blue}}, 0.12);
-  box-shadow: none !important;
-}
-
-.modal-dialog .modal-dialog-content-box {
-  margin: 30px 42px;
-  spacing: 30px;
-  max-width: 28em;
-}
-
+/* End Session Dialog */
 .end-session-dialog {
-  width: 30em;
+  width: 26em;
 }
 
 .end-session-dialog .end-session-dialog-battery-warning,
 .end-session-dialog .dialog-list-title {
-  color: {{colors.error.default.hex}};
+  color: {{colors.on_error_container.default.hex}};
+  background-color: {{colors.error_container.default.hex}};
+  padding: 9px;
+  border-radius: 12px;
+  margin: 4px 0;
 }
 
+/* Message Dialog */
 .message-dialog-content {
   spacing: 18px;
 }
@@ -557,6 +592,7 @@
   text-align: center;
 }
 
+/* Dialog Lists */
 .dialog-list {
   spacing: 18px;
 }
@@ -587,6 +623,12 @@
   font-size: 9pt;
 }
 
+/* Run Dialog */
+.run-dialog {
+  width: 26em;
+  padding-bottom: 6px;
+}
+
 .run-dialog .modal-dialog-content-box {
   margin-top: 24px;
   margin-bottom: 12px;
@@ -594,6 +636,7 @@
 
 .run-dialog .run-dialog-entry {
   width: 20em;
+  padding: 12px 9px;
 }
 
 .run-dialog .run-dialog-description {
@@ -602,6 +645,7 @@
   font-size: 9pt;
 }
 
+/* Prompt Dialog & Password Grid */
 .prompt-dialog {
   width: 28em;
 }
@@ -610,48 +654,50 @@
   margin-bottom: 24px;
 }
 
-.prompt-dialog-password-grid {
+.prompt-dialog .prompt-dialog-password-grid {
   spacing-rows: 8px;
   spacing-columns: 4px;
 }
 
-.prompt-dialog-password-grid .prompt-dialog-password-entry {
+.prompt-dialog .prompt-dialog-password-grid .prompt-dialog-password-entry {
   width: auto;
 }
 
-.prompt-dialog-password-grid .prompt-dialog-password-entry:ltr {
+.prompt-dialog .prompt-dialog-password-grid .prompt-dialog-password-entry:ltr {
   margin-left: 20px;
 }
 
-.prompt-dialog-password-grid .prompt-dialog-password-entry:rtl {
+.prompt-dialog .prompt-dialog-password-grid .prompt-dialog-password-entry:rtl {
   margin-right: 20px;
 }
 
-.prompt-dialog-password-layout {
+.prompt-dialog .prompt-dialog-password-layout {
   spacing: 8px;
 }
 
-.prompt-dialog-password-entry {
+.prompt-dialog .prompt-dialog-password-entry {
   width: 20em;
+  padding: 12px 9px;
 }
 
-.prompt-dialog-error-label,
-.prompt-dialog-info-label,
-.prompt-dialog-null-label {
+.prompt-dialog .prompt-dialog-error-label,
+.prompt-dialog .prompt-dialog-info-label,
+.prompt-dialog .prompt-dialog-null-label {
   text-align: center;
   font-size: 9pt;
   margin: 6px;
 }
 
-.prompt-dialog-error-label {
+.prompt-dialog .prompt-dialog-error-label {
   color: {{colors.error.default.hex}};
 }
 
-.prompt-dialog-info-label,
-.prompt-dialog-null-label {
+.prompt-dialog .prompt-dialog-info-label,
+.prompt-dialog .prompt-dialog-null-label {
   color: {{colors.on_surface_variant.default.hex}};
 }
 
+/* Polkit Dialog */
 .polkit-dialog-user-layout {
   text-align: center;
   spacing: 8px;
@@ -662,41 +708,48 @@
   color: {{colors.error.default.hex}};
 }
 
+/* Audio Device Selection Dialog */
+.audio-device-selection-dialog {
+  min-width: 24em;
+}
+
 .audio-device-selection-dialog .modal-dialog-content-box {
   margin-bottom: 28px;
 }
 
 .audio-device-selection-dialog .audio-selection-box {
-  spacing: 20px;
+  spacing: 12px;
 }
 
-.audio-selection-device {
+.audio-device-selection-dialog .audio-selection-box .audio-selection-device {
   border: 1px solid {{colors.outline.default.hex}};
   border-radius: 12px;
   transition: all 150ms ease;
 }
 
-.audio-selection-device:hover,
-.audio-selection-device:focus {
+.audio-device-selection-dialog .audio-selection-box .audio-selection-device:hover,
+.audio-device-selection-dialog .audio-selection-box .audio-selection-device:focus {
   background-color: rgba({{colors.primary.default.red}}, {{colors.primary.default.green}}, {{colors.primary.default.blue}}, 0.08);
   border-color: {{colors.primary.default.hex}};
+  color: {{colors.on_surface_variant.default.hex}};
 }
 
-.audio-selection-device:active {
+.audio-device-selection-dialog .audio-selection-box .audio-selection-device:active {
   background-color: {{colors.primary_container.default.hex}};
   color: {{colors.on_primary_container.default.hex}};
   border-color: {{colors.primary.default.hex}};
 }
 
-.audio-selection-device-box {
-  padding: 18px;
-  spacing: 18px;
+.audio-device-selection-dialog .audio-selection-box .audio-selection-device .audio-selection-device-box {
+  padding: 12px;
+  spacing: 12px;
 }
 
-.audio-selection-device-icon {
+.audio-device-selection-dialog .audio-selection-box .audio-selection-device .audio-selection-device-icon {
   icon-size: 64px;
 }
 
+/* Welcome Dialog */
 .welcome-dialog-image {
   background-image: url("resource:///org/gnome/shell/theme/gnome-shell-start.svg");
   background-size: contain;
@@ -2809,47 +2862,6 @@ StWidget.focused .app-grid-running-dot {
   color: {{colors.on_surface_variant.default.hex}};
 }
 
-/* Check Boxes */
-.check-box StBoxLayout {
-  spacing: 0.8em;
-}
-
-.check-box StBin {
-  width: 24px;
-  height: 24px;
-  padding: 3px;
-  border-radius: 9999px;
-}
-
-.check-box StIcon {
-  icon-size: 0;
-  padding: 0;
-  color: transparent !important;
-  border: none !important;
-  background-color: transparent !important;
-}
-
-.check-box StBin,
-.check-box:focus StBin {
-  background-image: url("assets/checkbox-off.svg");
-  background-color: transparent;
-  box-shadow: none;
-}
-
-.check-box:hover StBin {
-  background-image: url("assets/checkbox-off-hover.svg");
-  box-shadow: 0 0 0 6px {{colors.surface_container_high.default.hex}};
-}
-
-.check-box:active StBin {
-  background-image: url("assets/checkbox-off-active.svg");
-}
-
-.check-box:checked StBin,
-.check-box:focus:checked StBin {
-  background-image: url("assets/checkbox.svg");
-}
-
 /* Dash */
 #dash {
   margin-top: 8px;
@@ -2957,208 +2969,6 @@ StWidget.focused .app-grid-running-dot {
   text-align: center;
   -y-offset: 12px;
   -x-offset: 8px;
-}
-
-/* Modal Dialogs */
-
-.modal-dialog,
-.candidate-popup-content {
-  background-color: {{colors.surface_container_high.default.hex}};
-  border-radius: 18px;
-  box-shadow: inset 0 0.5px rgba({{colors.primary.default.red}}, {{colors.primary.default.green}}, {{colors.primary.default.blue}}, 0.1);
-  border: 2px solid {{colors.primary.default.hex}};
-}
-
-.modal-dialog-button:last-child,
-.modal-dialog-linked-button:last-child {
-  background-color: {{colors.primary.default.hex}};
-  color: {{colors.on_primary.default.hex}};
-}
-
-.headline {
-  font-size: 11pt;
-}
-
-.modal-dialog {
-  color: {{colors.primary.default.hex}};
-  padding: 12px;
-  margin: 0;
-}
-
-.modal-dialog-button,
-.modal-dialog-linked-button {
-  min-height: 32px !important;
-  padding: 6px !important;
-  margin: 0 !important;
-  border: none;
-  border-radius: 12px;
-}
-
-.modal-dialog .modal-dialog-button-box {
-  padding-top: 6px;
-}
-
-.modal-dialog .modal-dialog-content-box {
-  margin: 6px;
-  spacing: 6px;
-  max-width: 28em;
-}
-
-.end-session-dialog {
-  width: 26em;
-}
-
-.end-session-dialog .end-session-dialog-battery-warning,
-.end-session-dialog .dialog-list-title {
-  color: {{colors.on_error_container.default.hex}};
-  background-color: {{colors.error_container.default.hex}};
-  padding: 9px;
-  border-radius: 12px;
-  margin: 4px 0;
-}
-
-.message-dialog-content {
-  spacing: 18px;
-}
-
-.message-dialog-content .message-dialog-title {
-  text-align: center;
-}
-
-.message-dialog-content .message-dialog-description {
-  text-align: center;
-}
-
-.dialog-list {
-  spacing: 18px;
-}
-
-.dialog-list .dialog-list-title {
-  text-align: center;
-}
-
-.dialog-list .dialog-list-scrollview {
-  max-height: 200px;
-}
-
-.dialog-list .dialog-list-box {
-  spacing: 1em;
-}
-
-.dialog-list .dialog-list-box .dialog-list-item {
-  spacing: 1em;
-}
-
-.dialog-list .dialog-list-box .dialog-list-item .dialog-list-item-title {
-  font-weight: bold;
-}
-
-.dialog-list .dialog-list-box .dialog-list-item .dialog-list-item-description {
-  color: {{colors.on_surface_variant.default.hex}};
-}
-
-.run-dialog {
-  width: 26em;
-  padding-bottom: 6px;
-}
-
-.run-dialog .run-dialog-entry {
-  padding: 12px 9px;
-}
-
-.run-dialog .run-dialog-description {
-  text-align: center;
-  color: {{colors.on_surface_variant.default.hex}};
-}
-
-.prompt-dialog {
-  width: 28em;
-}
-
-.prompt-dialog .prompt-dialog-password-grid {
-  spacing-rows: 8px;
-  spacing-columns: 4px;
-}
-
-.prompt-dialog .prompt-dialog-password-grid .prompt-dialog-password-entry {
-  width: auto;
-}
-
-.prompt-dialog .prompt-dialog-password-grid .prompt-dialog-password-entry:ltr {
-  margin-left: 20px;
-}
-
-.prompt-dialog .prompt-dialog-password-grid .prompt-dialog-password-entry:rtl {
-  margin-right: 20px;
-}
-
-.prompt-dialog .prompt-dialog-password-layout {
-  spacing: 8px;
-}
-
-.prompt-dialog .prompt-dialog-password-entry {
-  width: 20em;
-  padding: 12px 9px;
-}
-
-.prompt-dialog .prompt-dialog-error-label,
-.prompt-dialog .prompt-dialog-info-label,
-.prompt-dialog .prompt-dialog-null-label {
-  text-align: center;
-}
-
-.prompt-dialog .prompt-dialog-error-label {
-  color: {{colors.error.default.hex}};
-}
-
-.polkit-dialog-user-layout {
-  text-align: center;
-  spacing: 8px;
-  margin-bottom: 6px;
-}
-
-.polkit-dialog-user-layout .polkit-dialog-user-root-label {
-  color: {{colors.error.default.hex}};
-}
-
-.audio-device-selection-dialog {
-  min-width: 24em;
-}
-
-.audio-device-selection-dialog .audio-selection-box {
-  spacing: 12px;
-}
-
-.audio-device-selection-dialog .audio-selection-box .audio-selection-device {
-  border: 1px solid {{colors.outline.default.hex}};
-  border-radius: 12px;
-}
-
-.audio-device-selection-dialog .audio-selection-box .audio-selection-device:hover,
-.audio-device-selection-dialog .audio-selection-box .audio-selection-device:focus {
-  background-color: {{colors.surface_container_high.default.hex}};
-  color: {{colors.on_surface_variant.default.hex}};
-}
-
-.audio-device-selection-dialog .audio-selection-box .audio-selection-device:active {
-  background-color: {{colors.primary.default.hex}};
-  color: {{colors.on_primary.default.hex}};
-}
-
-.audio-device-selection-dialog .audio-selection-box .audio-selection-device .audio-selection-device-box {
-  padding: 12px;
-  spacing: 12px;
-}
-
-.audio-device-selection-dialog .audio-selection-box .audio-selection-device .audio-selection-device-icon {
-  icon-size: 64px;
-}
-
-.welcome-dialog-image {
-  background-image: url("resource:///org/gnome/shell/theme/gnome-shell-start.svg");
-  background-size: contain;
-  height: 300px;
-  width: 300px;
 }
 
 /* Access portal dialog */
