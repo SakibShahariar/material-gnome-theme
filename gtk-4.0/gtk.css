@@ -237,6 +237,11 @@ list > row checkbutton {
   box-shadow: none;
 }
 
+list.boxed-list row button.suggested-action {
+  background-color: var(--primary);
+  color: var(--on_primary);
+}
+
 .content-view .tile:selected {
   background-color: transparent;
 }
@@ -688,11 +693,16 @@ button:checked:disabled {
 headerbar popover.background button:not(.suggested-action):not(.destructive-action):not(.flat),
 button:not(.destructive-action) {
   color: var(--primary);
+  background-color: var(--surface_container_highest);
   outline-offset: 2px;
   transition: background-color 0.3s cubic-bezier(0.2, 0, 0, 1),
               border-radius    0.3s cubic-bezier(0.2, 0, 0, 1),
               color            0.2s cubic-bezier(0.2, 0, 0, 1),
               outline-color    0.3s cubic-bezier(0.2, 0, 0, 1);
+}
+
+headerbar popover.background button:not(.suggested-action):not(.destructive-action):not(.flat) {
+  background-color: var(--primary);
 }
 
 headerbar popover.background button:focus:not(.suggested-action):not(.destructive-action):not(.flat) {
