@@ -1828,8 +1828,6 @@ list > row button.image-button:not(.flat) {
   background-color: transparent;
   box-shadow: none;
   border: none;
-  transition: background-color 0.3s cubic-bezier(0.2, 0, 0, 1),
-              border-radius    0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 list > row button.image-button:not(.flat):hover {
