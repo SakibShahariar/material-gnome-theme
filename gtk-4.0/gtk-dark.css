@@ -1448,7 +1448,7 @@ button.text-button:checked:hover {
 
 button.image-button {
   min-width: 24px;
-  padding: 5px;
+  /*padding: 5px;*/
 }
 
 button.text-button.image-button,
