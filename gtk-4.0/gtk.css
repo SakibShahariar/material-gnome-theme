@@ -5892,7 +5892,6 @@ separator.sidebar.selection-mode,
   background-color: color-mix(in srgb, var(--primary) 8%, transparent);
   box-shadow: none;
   color: var(--primary);
-  border-radius: 999px;
   animation: pill-pop 0.6s cubic-bezier(0.2, 0, 0, 1) forwards;
 }
 
@@ -5907,7 +5906,7 @@ separator.sidebar.selection-mode,
   outline: none;
   background-color: color-mix(in srgb, var(--primary) 8%, transparent);
   color: var(--primary);
-  border-radius: 999px;
+  border-radius: 20px;
 }
 
 .navigation-sidebar > row:selected:focus-visible:focus-within:hover {
