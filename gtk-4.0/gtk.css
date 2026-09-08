@@ -5906,7 +5906,7 @@ separator.sidebar.selection-mode,
   outline: none;
   background-color: color-mix(in srgb, var(--primary) 8%, transparent);
   color: var(--primary);
-  border-radius: 20px;
+  border-radius: 16px;
 }
 
 .navigation-sidebar > row:selected:focus-visible:focus-within:hover {
