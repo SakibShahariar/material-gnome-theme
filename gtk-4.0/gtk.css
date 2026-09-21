@@ -8138,12 +8138,12 @@ clamp.status-page .icon:hover {
   transform: scale(1.08);
 }
 
-clamp.status-page .icon:not(:last-child) {
-  margin-bottom: 36px;
+clamp.status-page > box {
+  border-spacing: 36px;
 }
 
-clamp.status-page .title:not(:last-child) {
-  margin-bottom: 12px;
+clamp.status-page > box > box {
+  border-spacing: 12px;
 }
 
 app-context-bar .context-tile {
@@ -8303,9 +8303,8 @@ scrolledwindow.fake-adw-status-page
 > viewport
 > box
 > clamp
-> box
-> .icon:not(:last-child) {
-  margin-bottom: 36px;
+> box {
+  border-spacing: 36px;
 }
 
 scrolledwindow.fake-adw-status-page
@@ -8313,8 +8312,8 @@ scrolledwindow.fake-adw-status-page
 > box
 > clamp
 > box
-> .title:not(:last-child) {
-  margin-bottom: 12px;
+> box {
+  border-spacing: 12px;
 }
 
 statuspage.icon-dropshadow image.icon {
@@ -9236,8 +9235,8 @@ statuspage > scrolledwindow > viewport > box > clamp > box > .icon:disabled {
   opacity: 0.35;
 }
 
-statuspage > scrolledwindow > viewport > box > clamp > box > .icon:not(:last-child) {
-  margin-bottom: 24px;
+statuspage > scrolledwindow > viewport > box > clamp > box {
+  border-spacing: 24px;
 }
 
 statuspage.compact > scrolledwindow > viewport > box {
@@ -9249,8 +9248,8 @@ statuspage.compact > scrolledwindow > viewport > box > clamp > box > .icon {
   -gtk-icon-size: 96px;
 }
 
-statuspage.compact > scrolledwindow > viewport > box > clamp > box > .icon:not(:last-child) {
-  margin-bottom: 12px;
+statuspage.compact > scrolledwindow > viewport > box > clamp > box {
+  border-spacing: 12px;
 }
 
 statuspage.compact > scrolledwindow > viewport > box > clamp > box > .title {
