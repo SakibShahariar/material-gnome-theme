@@ -1,4 +1,4 @@
-<h1 align="center"> Material GNOME </h3>
+# Material GNOME
 
 <p align="center">
   <a href="https://github.com/SakibShahariar/material-gnome-theme/stargazers">
@@ -14,7 +14,13 @@
 
 A modern, cohesive theme for the GNOME desktop environment inspired by Google's Material You and Material 3 design languages. It provides a unified visual experience across GTK3, GTK4, and GNOME Shell with a focus on deep container colors, expressive active states, and minimal visual clutter.
 
+This theme is the base layer of the [Material-Gnome (Dotfiles)](https://github.com/SakibShahariar/Material-Gnome) wallpaper-driven theming pipeline.
+
 ![Showcase](screenshots/01-desktop.png)
+
+## 📑 Contents
+
+[Screenshots](#screenshots) · [Repository Structure](#repository-structure) · [Features](#features) · [Installation](#installation) · [Flatpak Application Support](#flatpak-application-support) · [Color Themes](#color-themes) · [Top Bar Layouts](#top-bar-layouts) · [Reducing Animations](#reducing-animations) · [Configuration & Tweaks](#configuration--tweaks) · [Acknowledgements](#acknowledgements) · [Feedback & Bug Reports](#feedback--bug-reports) · [License](#license) · [Star History](#star-history)
 
 ---
 
@@ -43,6 +49,7 @@ Material-Gnome/
 ├── gnome-shell/     # GNOME Shell Desktop Theme
 │   └── layouts/     # Swappable top bar layout styles
 ├── themes/          # Premade color themes (applied via Matugen)
+├── screenshots/     # Screenshots used in this README
 └── index.theme      # Desktop Theme Metadata
 ```
 
@@ -95,8 +102,8 @@ GNOME Shell requires the **User Themes** extension to load custom desktop styles
 
 Open **GNOME Tweaks** and navigate to the **Appearance** tab:
 
-* Set **Legacy Applications** (or Applications) to `Material GNOME`.
-* Set **Shell** to `Material GNOME`.
+* Set **Legacy Applications** (or Applications) to `Material-Gnome`.
+* Set **Shell** to `Material-Gnome`.
 
 #### GTK4 / Libadwaita Applications
 
@@ -144,11 +151,11 @@ The `themes/` folder contains a set of premade color themes as JSON files (Mater
 
 | Aqua Abyss | Arctic Blood | Forgotten Atelier |
 |---|---|---|
-| ![Aqua Abyss](screenshots/themes/Aqua-Abyss.png) | ![Arctic Blood](screenshots/themes/Arctic-Blood.png) | ![Burgundy Nights](screenshots/themes/Forgotten-Atelier.png) |
+| ![Aqua Abyss](screenshots/themes/Aqua-Abyss.png) | ![Arctic Blood](screenshots/themes/Arctic-Blood.png) | ![Forgotten Atelier](screenshots/themes/Forgotten-Atelier.png) |
 
 | Desert Stone | Jade Vineyard |
 |---|---|
-| ![Desert Stone](screenshots/themes/Desert-Stone.png) | ![Electric Lime](screenshots/themes/Jade-Vineyard.png) |
+| ![Desert Stone](screenshots/themes/Desert-Stone.png) | ![Jade Vineyard](screenshots/themes/Jade-Vineyard.png) |
 
 There are two ways to apply one:
 
