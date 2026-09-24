@@ -129,19 +129,19 @@ yay -S material-gnome-manager-git
 
 ## 📦 Flatpak Application Support
 
-Flatpak applications run in isolated sandboxes and cannot access your local theme directories by default. To make them follow your theme, run the following commands:
-
-1. **Grant filesystem permission:**
+Flatpak applications run in isolated sandboxes and cannot access your local theme directories by default. Instead of forcing the theme with an environment variable, grant the sandbox read-only access to your theme configs and folders so apps resolve the theme the normal way:
 
 ```bash
-flatpak override --user --filesystem=$HOME/.themes:ro
+flatpak override --user --unset-env=GTK_THEME
+flatpak override --user --filesystem=xdg-config/gtk-4.0:ro --filesystem=xdg-config/gtk-3.0:ro --filesystem=xdg-data/themes:ro --filesystem=~/.themes:ro
 ```
 
-2. **Force the theme environment variable:**
+The first command clears any previous `GTK_THEME` override so apps fall back to their standard theme resolution. The read-only filesystem grants expose your `gtk-4.0`/`gtk-3.0` configs and installed theme directories, which means:
 
-```bash
-flatpak override --user --env=GTK_THEME=Material-Gnome
-```
+* **GTK4 / Libadwaita apps** follow the `gtk-4.0` files symlinked above.
+* **GTK3 apps** pick up the theme installed in `~/.themes`.
+
+> 💡 **Note:** `--filesystem=xdg-config/...` only works when `XDG_CONFIG_HOME` is the default (`~/.config`).
 
 ---
 
