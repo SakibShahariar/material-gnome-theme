@@ -678,10 +678,8 @@ box.search box.horizontal button.toggle:focus label {
   color: var(--on_primary);
 }
 
-button:disabled {
-  border-radius: 12px;
-  background-color: var(--surface_container_low);
-  color: color-mix(in srgb, var(--on_surface) 38%, transparent);
+dropdown button.toggle:is(:hover, :checked) label {
+  color: var(--on_primary);
 }
 
 button:checked:disabled {
