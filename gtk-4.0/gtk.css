@@ -629,7 +629,7 @@ button:hover {
 
 button.keyboard-activating,
 button:active {
-  border-radius: 999px;
+  border-radius: 16px;
   background-color: var(--primary);
   color: var(--on_primary);
   transition: background-color 0.1s cubic-bezier(0, 0, 0.2, 1),
@@ -640,13 +640,10 @@ button:active {
 }
 
 button:checked {
-  border-radius: 999px;
+  border-radius: 16px;
   background-color: var(--primary);
   color: var(--on_primary);
-  animation: pill-pop 0.6s cubic-bezier(0.2, 0, 0, 1) forwards;
-  transition: background-color 0.3s cubic-bezier(0.2, 0, 0, 1),
-              border-radius    0.3s cubic-bezier(0.2, 0, 0, 1),
-              color            0.2s cubic-bezier(0.2, 0, 0, 1);
+  
 }
 
 button:checked label,
@@ -656,7 +653,7 @@ button:checked .icon {
 }
 
 button:checked:hover {
-  border-radius: 999px;
+  border-radius: 22px;
   background-color: color-mix(in srgb, var(--primary) 90%, var(--on_primary) 10%);
   color: var(--on_primary);
   outline-color: transparent;
@@ -685,7 +682,7 @@ button:disabled {
 }
 
 button:checked:disabled {
-  border-radius: 999px;
+  border-radius: 22px;
   background-color: color-mix(in srgb, var(--primary) 38%, transparent);
   color: color-mix(in srgb, var(--on_primary) 38%, transparent);
 }
@@ -695,10 +692,7 @@ button:not(.destructive-action) {
   color: var(--primary);
   background-color: var(--surface_container_highest);
   outline-offset: 2px;
-  transition: background-color 0.3s cubic-bezier(0.2, 0, 0, 1),
-              border-radius    0.3s cubic-bezier(0.2, 0, 0, 1),
-              color            0.2s cubic-bezier(0.2, 0, 0, 1),
-              outline-color    0.3s cubic-bezier(0.2, 0, 0, 1);
+  
 }
 
 headerbar popover.background button:not(.suggested-action):not(.destructive-action):not(.flat) {
@@ -710,10 +704,7 @@ headerbar popover.background button:focus:not(.suggested-action):not(.destructiv
   background-color: var(--primary);
   color: var(--on_primary);
   outline-offset: 2px;
-  transition: background-color 0.3s cubic-bezier(0.2, 0, 0, 1),
-              border-radius    0.3s cubic-bezier(0.2, 0, 0, 1),
-              color            0.2s cubic-bezier(0.2, 0, 0, 1),
-              outline-color    0.3s cubic-bezier(0.2, 0, 0, 1);
+  
 }
 
 headerbar popover.background button:hover:not(.suggested-action):not(.destructive-action):not(.flat),
@@ -731,10 +722,7 @@ headerbar popover.background button:active:not(.suggested-action):not(.destructi
 button:active:not(.destructive-action) {
   background-color: var(--primary);
   color: var(--on_primary);
-  transition: background-color 0.1s cubic-bezier(0, 0, 0.2, 1),
-              border-radius    0.3s cubic-bezier(0.2, 0, 0, 1),
-              color            0.1s cubic-bezier(0, 0, 0.2, 1);
-  animation: pill-pop 0.6s cubic-bezier(0.2, 0, 0, 1) forwards;
+  
   outline: 2px solid var(--primary);
   outline-offset: 2px;
 }
@@ -743,10 +731,7 @@ headerbar popover.background button:checked:not(.suggested-action):not(.destruct
 button:checked:not(.image-button):not(.flat):not(.background-preview-button):not(.accent-button) {
   background-color: var(--primary);
   color: var(--on_primary);
-  animation: pill-pop 0.6s cubic-bezier(0.2, 0, 0, 1) forwards;
-  transition: background-color 0.3s cubic-bezier(0.2, 0, 0, 1),
-              border-radius    0.3s cubic-bezier(0.2, 0, 0, 1),
-              color            0.2s cubic-bezier(0.2, 0, 0, 1);
+  
 }
 
 headerbar popover.background button:checked:not(.suggested-action):not(.destructive-action):not(.flat) label,
