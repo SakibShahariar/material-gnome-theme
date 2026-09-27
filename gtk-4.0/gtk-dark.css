@@ -5858,7 +5858,7 @@ separator.sidebar.selection-mode,
 .navigation-sidebar,
 .navigation-sidebar.view,
 .navigation-sidebar.background {
-  background-color: transparent;
+  background-color: var(--surface);
   color: inherit;
 }
 
