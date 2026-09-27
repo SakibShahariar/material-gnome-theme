@@ -794,10 +794,6 @@ button:checked:disabled {
   animation: none;
 }
 
-infobar > revealer > box {
-  background-color: var(--background);
-}
-
 infobar.warning > revealer > box button,
 infobar.warning:backdrop > revealer > box button,
 popover.touch-selection button,
