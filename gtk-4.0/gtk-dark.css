@@ -10076,3 +10076,9 @@ window > stack > box {
   box-shadow: none;
   border: none;
 }
+
+revealer.bottom-bar_raised {
+    background: transparent;
+}
+
+
