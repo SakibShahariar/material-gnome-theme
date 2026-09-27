@@ -803,7 +803,6 @@ headerbar.selection-mode button:not(.suggested-action):not(.destructive-action) 
 }
 
 infobar.warning > revealer > box button:focus,
-infobar.warning > revealer > box button:hover,
 infobar.warning > revealer > box button:active,
 infobar.warning > revealer > box button:checked,
 popover.touch-selection button:focus,
@@ -818,7 +817,7 @@ headerbar.selection-mode button:focus:not(.suggested-action):not(.destructive-ac
 headerbar.selection-mode button:hover:not(.suggested-action):not(.destructive-action),
 headerbar.selection-mode button:active:not(.suggested-action):not(.destructive-action),
 headerbar.selection-mode button:checked:not(.suggested-action):not(.destructive-action) {
-  color: color-mix(in srgb, var(--on_surface_variant) 90%, transparent);
+  color: color-mix(in srgb, var(--on_primary) 90%, transparent);
 }
 
 infobar.warning > revealer > box button:disabled,
@@ -6188,18 +6187,16 @@ infobar.warning:backdrop > revealer > box {
 }
 
 infobar.warning > revealer > box button,
-infobar.warning > revealer > box button:hover,
 infobar.warning > revealer > box button:focus,
 infobar.warning > revealer > box button:active,
 infobar.warning > revealer > box button:checked,
-infobar.warning > revealer > box button.text-button:not(:disabled),
 infobar.warning:backdrop > revealer > box button,
 infobar.warning:backdrop > revealer > box button:hover,
 infobar.warning:backdrop > revealer > box button:focus,
 infobar.warning:backdrop > revealer > box button:active,
 infobar.warning:backdrop > revealer > box button:checked,
 infobar.warning:backdrop > revealer > box button.text-button:not(:disabled) {
-  color: color-mix(in srgb, var(--on_surface_variant) 90%, transparent);
+  color: color-mix(in srgb, on_surface_variant 90%, transparent);
 }
 
 infobar.warning > revealer > box *:link,
