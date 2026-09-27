@@ -709,6 +709,7 @@ button:not(.destructive-action) {
 
 headerbar popover.background button:not(.suggested-action):not(.destructive-action):not(.flat) {
   background-color: var(--primary);
+  color: var(--on_primary);
 }
 
 headerbar popover.background button:focus:not(.suggested-action):not(.destructive-action):not(.flat) {
