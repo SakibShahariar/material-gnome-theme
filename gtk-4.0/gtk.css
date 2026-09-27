@@ -10081,7 +10081,6 @@ revealer.bottom-bar_raised {
     background: transparent;
 }
 
-gutterrenderer {
-    color: var(--on_urface);
+gutter {
     background-color: var(--surface);
 }
