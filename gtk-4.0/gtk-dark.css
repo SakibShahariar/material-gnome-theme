@@ -8809,7 +8809,6 @@ avatar.image {
 .card.activatable:active {
   background-color: color-mix(in srgb, var(--primary) 12%, transparent);
   color: var(--primary);
-  border-radius: 999px;
   outline: 0 solid transparent;
   animation: pill-pop 0.6s cubic-bezier(0.2, 0, 0, 1) forwards;
   transition: background-color 0.1s cubic-bezier(0, 0, 0.2, 1);
