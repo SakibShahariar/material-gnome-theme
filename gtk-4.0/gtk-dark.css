@@ -608,10 +608,10 @@ arrow:active {
  ***********/
 button {
   border-radius: 12px;
-  transition: background-color 0.3s cubic-bezier(0.2, 0, 0, 1),
-              border-radius    0.3s cubic-bezier(0.2, 0, 0, 1),
-              color            0.2s cubic-bezier(0.2, 0, 0, 1),
-              outline-color    0.3s cubic-bezier(0.2, 0, 0, 1);
+  transition: background-color 0.3s cubic-bezier(0.2, 0, 0, 1), border-radius 0.3s cubic-bezier(0.2, 0, 0, 1), color 0.2s cubic-bezier(0.2, 0, 0, 1), outline-color 0.3s cubic-bezier(0.2, 0, 0, 1);
+  min-height: 24px;
+  min-width: 16px;
+  font-weight: 500;
 }
 
 button:hover {
@@ -1326,6 +1326,7 @@ button.flat:checked:disabled {
 
 button.opaque {
   box-shadow: none;
+  color: var(--primary);
 }
 
 .osd button.opaque:focus:focus-visible {
@@ -1368,12 +1369,6 @@ spinbutton > button {
   border-radius: 9999px;
 }
 
-button {
-  min-height: 24px;
-  min-width: 16px;
-  font-weight: 500;
-}
-
 button:drop(active) {
   background-color: color-mix(in srgb, var(--primary) 8%, transparent);
   color: color-mix(in srgb, var(--on_surface_variant) 90%, transparent);
@@ -1382,10 +1377,6 @@ button:drop(active) {
 
 button separator {
   margin: 4px 1px;
-}
-
-button.opaque {
-  color: var(--primary);
 }
 
 button.text-button {
@@ -1598,116 +1589,35 @@ button.card:drop(active) {
 }
 
 .linked:not(.vertical) > button:dir(ltr):not(:last-child),
-.linked:not(.vertical) > button:dir(rtl):not(:first-child) {
-  border-top-right-radius: 3px;
-  border-bottom-right-radius: 3px;
-}
-
-
-.linked.vertical button:not(:last-child) {
-  border-bottom-left-radius: 3px;
-  border-bottom-right-radius: 3px;
-}
-
-
+.linked:not(.vertical) > button:dir(rtl):not(:first-child),
 .linked:not(.vertical) > menubutton:dir(ltr):not(:last-child) > button,
-.linked:not(.vertical) > menubutton:dir(rtl):not(:first-child) > button {
-  border-top-right-radius: 3px;
-  border-bottom-right-radius: 3px;
-}
-
-
-.linked.vertical menubutton:not(:last-child) > button {
-  border-bottom-left-radius: 3px;
-  border-bottom-right-radius: 3px;
-}
-
-
+.linked:not(.vertical) > menubutton:dir(rtl):not(:first-child) > button,
 .linked:not(.vertical) > dropdown:dir(ltr):not(:last-child) > button,
-.linked:not(.vertical) > dropdown:dir(rtl):not(:first-child) > button {
-  border-top-right-radius: 3px;
-  border-bottom-right-radius: 3px;
-}
-
-
-.linked.vertical dropdown:not(:last-child) > button {
-  border-bottom-left-radius: 3px;
-  border-bottom-right-radius: 3px;
-}
-
-
+.linked:not(.vertical) > dropdown:dir(rtl):not(:first-child) > button,
 .linked:not(.vertical) > colorbutton:dir(ltr):not(:last-child) > button,
-.linked:not(.vertical) > colorbutton:dir(rtl):not(:first-child) > button {
-  border-top-right-radius: 3px;
-  border-bottom-right-radius: 3px;
-}
-
-
-.linked.vertical colorbutton:not(:last-child) > button {
-  border-bottom-left-radius: 3px;
-  border-bottom-right-radius: 3px;
-}
-
-
+.linked:not(.vertical) > colorbutton:dir(rtl):not(:first-child) > button,
 .linked:not(.vertical) > fontbutton:dir(ltr):not(:last-child) > button,
-.linked:not(.vertical) > fontbutton:dir(rtl):not(:first-child) > button {
-  border-top-right-radius: 3px;
-  border-bottom-right-radius: 3px;
-}
-
-
-.linked.vertical fontbutton:not(:last-child) > button {
-  border-bottom-left-radius: 3px;
-  border-bottom-right-radius: 3px;
-}
-
-
+.linked:not(.vertical) > fontbutton:dir(rtl):not(:first-child) > button,
 .linked:not(.vertical) > tabbutton:dir(ltr):not(:last-child) > button,
-.linked:not(.vertical) > tabbutton:dir(rtl):not(:first-child) > button {
-  border-top-right-radius: 3px;
-  border-bottom-right-radius: 3px;
-}
-
-
-.linked.vertical tabbutton:not(:last-child) > button {
-  border-bottom-left-radius: 3px;
-  border-bottom-right-radius: 3px;
-}
-
-
+.linked:not(.vertical) > tabbutton:dir(rtl):not(:first-child) > button,
 .linked:not(.vertical) > entry:dir(ltr):not(:last-child),
-.linked:not(.vertical) > entry:dir(rtl):not(:first-child) {
-  border-top-right-radius: 3px;
-  border-bottom-right-radius: 3px;
-}
-
-
-.linked.vertical entry:not(:last-child) {
-  border-bottom-left-radius: 3px;
-  border-bottom-right-radius: 3px;
-}
-
-
+.linked:not(.vertical) > entry:dir(rtl):not(:first-child),
 .linked:not(.vertical) > combobox:dir(ltr):not(:last-child) > box > button.combo,
-.linked:not(.vertical) > combobox:dir(rtl):not(:first-child) > box > button.combo {
-  border-top-right-radius: 3px;
-  border-bottom-right-radius: 3px;
-}
-
-
-.linked.vertical combobox:not(:last-child) > box > button.combo {
-  border-bottom-left-radius: 3px;
-  border-bottom-right-radius: 3px;
-}
-
-
+.linked:not(.vertical) > combobox:dir(rtl):not(:first-child) > box > button.combo,
 .linked:not(.vertical) > appchooserbutton:dir(ltr):not(:last-child) > combobox > box > button.combo,
 .linked:not(.vertical) > appchooserbutton:dir(rtl):not(:first-child) > combobox > box > button.combo {
   border-top-right-radius: 3px;
   border-bottom-right-radius: 3px;
 }
 
-
+.linked.vertical button:not(:last-child),
+.linked.vertical menubutton:not(:last-child) > button,
+.linked.vertical dropdown:not(:last-child) > button,
+.linked.vertical colorbutton:not(:last-child) > button,
+.linked.vertical fontbutton:not(:last-child) > button,
+.linked.vertical tabbutton:not(:last-child) > button,
+.linked.vertical entry:not(:last-child),
+.linked.vertical combobox:not(:last-child) > box > button.combo,
 .linked.vertical appchooserbutton:not(:last-child) > combobox > box > button.combo {
   border-bottom-left-radius: 3px;
   border-bottom-right-radius: 3px;
@@ -2253,15 +2163,7 @@ headerbar button:not(.suggested-action):not(.destructive-action) {
   border-radius: 12px;
   border: none;
   outline: none;
-  transition: background-color 0.2s cubic-bezier(0.2, 0, 0, 1),
-              border-radius    0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275),
-              color            0.2s cubic-bezier(0.2, 0, 0, 1);
-}
-
-headerbar button:not(.suggested-action):not(.destructive-action) {
-  transition: border-radius    0.3s cubic-bezier(0.2, 0, 0, 1),
-              background-color 0.2s cubic-bezier(0.2, 0, 0, 1),
-              color            0.15s cubic-bezier(0.2, 0, 0, 1);
+  transition: border-radius 0.3s cubic-bezier(0.2, 0, 0, 1), background-color 0.2s cubic-bezier(0.2, 0, 0, 1), color 0.15s cubic-bezier(0.2, 0, 0, 1);
 }
 
 headerbar .linked > button:not(.suggested-action):not(.destructive-action) {
@@ -7065,6 +6967,7 @@ toast-overlay toast {
 
 calendar-view {
   font-size: 10pt;
+  margin: 6px;
 }
 
 calendar-view:selected {
@@ -9371,10 +9274,6 @@ placessidebar > scrolledwindow > scrollbar.overlay-indicator:not(.dragging):not(
 leaflet.unfolded > box > scrolledwindow > scrollbar.overlay-indicator:not(.dragging):not(.hovering) button:disabled,
 leaflet.unfolded .contacts-contact-list > scrolledwindow > scrollbar.overlay-indicator:not(.dragging):not(.hovering) button:disabled {
   background-color: color-mix(in srgb, var(--background) 30%, transparent);
-}
-
-calendar-view {
-  margin: 6px;
 }
 
 .nautilus-window .nautilus-grid-view,
