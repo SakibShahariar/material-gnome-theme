@@ -315,8 +315,8 @@ row label.subtitle {
 }
 
 .accent  { color: var(--primary);   transition: color 0.3s cubic-bezier(0.2, 0, 0, 1); }
-.success { color: var(--tertiary);  transition: color 0.3s cubic-bezier(0.2, 0, 0, 1); }
-.warning { color: var(--warning);   transition: color 0.3s cubic-bezier(0.2, 0, 0, 1); }
+.success { color: var(--secondary); transition: color 0.3s cubic-bezier(0.2, 0, 0, 1); }
+.warning { color: var(--tertiary);  transition: color 0.3s cubic-bezier(0.2, 0, 0, 1); }
 .error   { color: var(--error);     transition: color 0.3s cubic-bezier(0.2, 0, 0, 1); }
 
 .large-title     { font-weight: 300; font-size: 26pt; letter-spacing: -0.5px; }
@@ -1561,10 +1561,40 @@ button.card:drop(active) {
 }
 
 .linked:not(.vertical) > button:dir(ltr):not(:first-child),
-.linked:not(.vertical) > button:dir(rtl):not(:last-child) {
+.linked:not(.vertical) > button:dir(rtl):not(:last-child),
+.linked:not(.vertical) > menubutton:dir(ltr):not(:first-child) > button,
+.linked:not(.vertical) > menubutton:dir(rtl):not(:last-child) > button,
+.linked:not(.vertical) > dropdown:dir(ltr):not(:first-child) > button,
+.linked:not(.vertical) > dropdown:dir(rtl):not(:last-child) > button,
+.linked:not(.vertical) > colorbutton:dir(ltr):not(:first-child) > button,
+.linked:not(.vertical) > colorbutton:dir(rtl):not(:last-child) > button,
+.linked:not(.vertical) > fontbutton:dir(ltr):not(:first-child) > button,
+.linked:not(.vertical) > fontbutton:dir(rtl):not(:last-child) > button,
+.linked:not(.vertical) > tabbutton:dir(ltr):not(:first-child) > button,
+.linked:not(.vertical) > tabbutton:dir(rtl):not(:last-child) > button,
+.linked:not(.vertical) > entry:dir(ltr):not(:first-child),
+.linked:not(.vertical) > entry:dir(rtl):not(:last-child),
+.linked:not(.vertical) > combobox:dir(ltr):not(:first-child) > box > button.combo,
+.linked:not(.vertical) > combobox:dir(rtl):not(:last-child) > box > button.combo,
+.linked:not(.vertical) > appchooserbutton:dir(ltr):not(:first-child) > combobox > box > button.combo,
+.linked:not(.vertical) > appchooserbutton:dir(rtl):not(:last-child) > combobox > box > button.combo {
   border-top-left-radius: 3px;
   border-bottom-left-radius: 3px;
   margin-left: 1px;
+}
+
+.linked.vertical button:not(:first-child),
+.linked.vertical menubutton:not(:first-child) > button,
+.linked.vertical dropdown:not(:first-child) > button,
+.linked.vertical colorbutton:not(:first-child) > button,
+.linked.vertical fontbutton:not(:first-child) > button,
+.linked.vertical tabbutton:not(:first-child) > button,
+.linked.vertical entry:not(:first-child),
+.linked.vertical combobox:not(:first-child) > box > button.combo,
+.linked.vertical appchooserbutton:not(:first-child) > combobox > box > button.combo {
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  margin-top: 1px;
 }
 
 .linked:not(.vertical) > button:dir(ltr):not(:last-child),
@@ -1573,23 +1603,12 @@ button.card:drop(active) {
   border-bottom-right-radius: 3px;
 }
 
-.linked.vertical button:not(:first-child) {
-  border-top-left-radius: 3px;
-  border-top-right-radius: 3px;
-  margin-top: 1px;
-}
 
 .linked.vertical button:not(:last-child) {
   border-bottom-left-radius: 3px;
   border-bottom-right-radius: 3px;
 }
 
-.linked:not(.vertical) > menubutton:dir(ltr):not(:first-child) > button,
-.linked:not(.vertical) > menubutton:dir(rtl):not(:last-child) > button {
-  border-top-left-radius: 3px;
-  border-bottom-left-radius: 3px;
-  margin-left: 1px;
-}
 
 .linked:not(.vertical) > menubutton:dir(ltr):not(:last-child) > button,
 .linked:not(.vertical) > menubutton:dir(rtl):not(:first-child) > button {
@@ -1597,23 +1616,12 @@ button.card:drop(active) {
   border-bottom-right-radius: 3px;
 }
 
-.linked.vertical menubutton:not(:first-child) > button {
-  border-top-left-radius: 3px;
-  border-top-right-radius: 3px;
-  margin-top: 1px;
-}
 
 .linked.vertical menubutton:not(:last-child) > button {
   border-bottom-left-radius: 3px;
   border-bottom-right-radius: 3px;
 }
 
-.linked:not(.vertical) > dropdown:dir(ltr):not(:first-child) > button,
-.linked:not(.vertical) > dropdown:dir(rtl):not(:last-child) > button {
-  border-top-left-radius: 3px;
-  border-bottom-left-radius: 3px;
-  margin-left: 1px;
-}
 
 .linked:not(.vertical) > dropdown:dir(ltr):not(:last-child) > button,
 .linked:not(.vertical) > dropdown:dir(rtl):not(:first-child) > button {
@@ -1621,23 +1629,12 @@ button.card:drop(active) {
   border-bottom-right-radius: 3px;
 }
 
-.linked.vertical dropdown:not(:first-child) > button {
-  border-top-left-radius: 3px;
-  border-top-right-radius: 3px;
-  margin-top: 1px;
-}
 
 .linked.vertical dropdown:not(:last-child) > button {
   border-bottom-left-radius: 3px;
   border-bottom-right-radius: 3px;
 }
 
-.linked:not(.vertical) > colorbutton:dir(ltr):not(:first-child) > button,
-.linked:not(.vertical) > colorbutton:dir(rtl):not(:last-child) > button {
-  border-top-left-radius: 3px;
-  border-bottom-left-radius: 3px;
-  margin-left: 1px;
-}
 
 .linked:not(.vertical) > colorbutton:dir(ltr):not(:last-child) > button,
 .linked:not(.vertical) > colorbutton:dir(rtl):not(:first-child) > button {
@@ -1645,23 +1642,12 @@ button.card:drop(active) {
   border-bottom-right-radius: 3px;
 }
 
-.linked.vertical colorbutton:not(:first-child) > button {
-  border-top-left-radius: 3px;
-  border-top-right-radius: 3px;
-  margin-top: 1px;
-}
 
 .linked.vertical colorbutton:not(:last-child) > button {
   border-bottom-left-radius: 3px;
   border-bottom-right-radius: 3px;
 }
 
-.linked:not(.vertical) > fontbutton:dir(ltr):not(:first-child) > button,
-.linked:not(.vertical) > fontbutton:dir(rtl):not(:last-child) > button {
-  border-top-left-radius: 3px;
-  border-bottom-left-radius: 3px;
-  margin-left: 1px;
-}
 
 .linked:not(.vertical) > fontbutton:dir(ltr):not(:last-child) > button,
 .linked:not(.vertical) > fontbutton:dir(rtl):not(:first-child) > button {
@@ -1669,23 +1655,12 @@ button.card:drop(active) {
   border-bottom-right-radius: 3px;
 }
 
-.linked.vertical fontbutton:not(:first-child) > button {
-  border-top-left-radius: 3px;
-  border-top-right-radius: 3px;
-  margin-top: 1px;
-}
 
 .linked.vertical fontbutton:not(:last-child) > button {
   border-bottom-left-radius: 3px;
   border-bottom-right-radius: 3px;
 }
 
-.linked:not(.vertical) > tabbutton:dir(ltr):not(:first-child) > button,
-.linked:not(.vertical) > tabbutton:dir(rtl):not(:last-child) > button {
-  border-top-left-radius: 3px;
-  border-bottom-left-radius: 3px;
-  margin-left: 1px;
-}
 
 .linked:not(.vertical) > tabbutton:dir(ltr):not(:last-child) > button,
 .linked:not(.vertical) > tabbutton:dir(rtl):not(:first-child) > button {
@@ -1693,23 +1668,12 @@ button.card:drop(active) {
   border-bottom-right-radius: 3px;
 }
 
-.linked.vertical tabbutton:not(:first-child) > button {
-  border-top-left-radius: 3px;
-  border-top-right-radius: 3px;
-  margin-top: 1px;
-}
 
 .linked.vertical tabbutton:not(:last-child) > button {
   border-bottom-left-radius: 3px;
   border-bottom-right-radius: 3px;
 }
 
-.linked:not(.vertical) > entry:dir(ltr):not(:first-child),
-.linked:not(.vertical) > entry:dir(rtl):not(:last-child) {
-  border-top-left-radius: 3px;
-  border-bottom-left-radius: 3px;
-  margin-left: 1px;
-}
 
 .linked:not(.vertical) > entry:dir(ltr):not(:last-child),
 .linked:not(.vertical) > entry:dir(rtl):not(:first-child) {
@@ -1717,23 +1681,12 @@ button.card:drop(active) {
   border-bottom-right-radius: 3px;
 }
 
-.linked.vertical entry:not(:first-child) {
-  border-top-left-radius: 3px;
-  border-top-right-radius: 3px;
-  margin-top: 1px;
-}
 
 .linked.vertical entry:not(:last-child) {
   border-bottom-left-radius: 3px;
   border-bottom-right-radius: 3px;
 }
 
-.linked:not(.vertical) > combobox:dir(ltr):not(:first-child) > box > button.combo,
-.linked:not(.vertical) > combobox:dir(rtl):not(:last-child) > box > button.combo {
-  border-top-left-radius: 3px;
-  border-bottom-left-radius: 3px;
-  margin-left: 1px;
-}
 
 .linked:not(.vertical) > combobox:dir(ltr):not(:last-child) > box > button.combo,
 .linked:not(.vertical) > combobox:dir(rtl):not(:first-child) > box > button.combo {
@@ -1741,23 +1694,12 @@ button.card:drop(active) {
   border-bottom-right-radius: 3px;
 }
 
-.linked.vertical combobox:not(:first-child) > box > button.combo {
-  border-top-left-radius: 3px;
-  border-top-right-radius: 3px;
-  margin-top: 1px;
-}
 
 .linked.vertical combobox:not(:last-child) > box > button.combo {
   border-bottom-left-radius: 3px;
   border-bottom-right-radius: 3px;
 }
 
-.linked:not(.vertical) > appchooserbutton:dir(ltr):not(:first-child) > combobox > box > button.combo,
-.linked:not(.vertical) > appchooserbutton:dir(rtl):not(:last-child) > combobox > box > button.combo {
-  border-top-left-radius: 3px;
-  border-bottom-left-radius: 3px;
-  margin-left: 1px;
-}
 
 .linked:not(.vertical) > appchooserbutton:dir(ltr):not(:last-child) > combobox > box > button.combo,
 .linked:not(.vertical) > appchooserbutton:dir(rtl):not(:first-child) > combobox > box > button.combo {
@@ -1765,11 +1707,6 @@ button.card:drop(active) {
   border-bottom-right-radius: 3px;
 }
 
-.linked.vertical appchooserbutton:not(:first-child) > combobox > box > button.combo {
-  border-top-left-radius: 3px;
-  border-top-right-radius: 3px;
-  margin-top: 1px;
-}
 
 .linked.vertical appchooserbutton:not(:last-child) > combobox > box > button.combo {
   border-bottom-left-radius: 3px;
@@ -8928,7 +8865,7 @@ indicatorbin > mask {
 
 indicatorbin > indicator {
   margin: 1px;
-  background-color: var(--primary_variant);
+  background-color: var(--primary_fixed);
   transition: background-color 0.2s cubic-bezier(0.2, 0, 0, 1);
 }
 
