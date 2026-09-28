@@ -79,11 +79,6 @@
   100% { -gtk-icon-transform: scale(1);    }
 }
 
-@keyframes needs-attention {
-  0%   { background-color: var(--primary); opacity: 0.8; }
-  100% { background-color: transparent;    opacity: 0; }
-}
-
 @keyframes pre-delay {
   from { opacity: 0; }
   to   { opacity: 0; }
