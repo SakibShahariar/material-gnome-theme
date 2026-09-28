@@ -1228,35 +1228,9 @@ button.flat:checked {
   color: var(--primary);
   animation: pill-pop 0.6s cubic-bezier(0.2, 0, 0, 1) forwards;
   transition: background-color 0.2s cubic-bezier(0.2, 0, 0, 1),
-              color            0.15s cubic-bezier(0.2, 0, 0, 1);
-}
-
-/* 1. Define the parent button background and color */
-#NautilusPathButton:checked,
-filechooser #pathbarbox > stack > box > button:checked,
-window.messagedialog .response-area button:checked,
-window.dialog.message .dialog-action-area > button:checked,
-.app-notification button:checked,
-.toolbar button:checked,
-splitbutton.suggested-action > button:checked,
-splitbutton.suggested-action > menubutton > button:checked,
-splitbutton.destructive-action > button:checked,
-splitbutton.destructive-action > menubutton > button:checked,
-splitbutton.opaque > button:checked,
-splitbutton.opaque > menubutton > button:checked,
-menubutton.suggested-action > button:checked,
-menubutton.destructive-action > button:checked,
-menubutton.opaque > button:checked,
-menubutton.flat > button:checked,
-button.flat:checked {
-  background-color: color-mix(in srgb, var(--primary) 15%, transparent);
-  color: var(--primary);
-  animation: pill-pop 0.6s cubic-bezier(0.2, 0, 0, 1) forwards;
-  transition: background-color 0.2s cubic-bezier(0.2, 0, 0, 1),
               color             0.15s cubic-bezier(0.2, 0, 0, 1);
 }
 
-/* 2. Force inner text and icons to inherit color from the checked parent */
 #NautilusPathButton:checked label,
 #NautilusPathButton:checked image,
 #NautilusPathButton:checked .icon,
@@ -1333,7 +1307,6 @@ button.flat:checked:hover {
   color: var(--on_primary);
 }
 
-/* Direct targeting beats Libadwaita's specificity */
 #NautilusPathButton:checked:hover label,
 #NautilusPathButton:checked:hover image,
 #NautilusPathButton:checked:hover .icon,
