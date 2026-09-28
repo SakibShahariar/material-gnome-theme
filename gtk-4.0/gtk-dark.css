@@ -5095,22 +5095,6 @@ row label.subtitle {
   font-size: smaller;
 }
 
-row > box.header {
-  margin-left: 12px;
-  margin-right: 12px;
-  min-height: 46px;
-}
-
-row > box.header > .icon:disabled {
-  -gtk-icon-filter: opacity(0.35);
-}
-
-row > box.header > box.title {
-  margin-top: 6px;
-  margin-bottom: 6px;
-  border-spacing: 3px;
-}
-
 .nautilus-window .nautilus-grid-view child.activatable,
 columnview.view > header > button,
 treeview.view > header > button,
@@ -9171,10 +9155,6 @@ window.about .subpage > clamp > textview {
 statuspage > scrolledwindow > viewport > box {
   margin: 36px 12px;
   border-spacing: 36px;
-}
-
-statuspage > scrolledwindow > viewport > box > clamp > box {
-  border-spacing: 12px;
 }
 
 statuspage > scrolledwindow > viewport > box > clamp > box > .icon {
