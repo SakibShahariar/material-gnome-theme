@@ -670,7 +670,8 @@ box.search box.horizontal button.toggle:focus label {
   color: var(--on_primary);
 }
 
-dropdown button.toggle:is(:hover, :checked) label {
+dropdown button.toggle:hover label,
+dropdown button.toggle:checked label {
   color: var(--on_primary);
 }
 
