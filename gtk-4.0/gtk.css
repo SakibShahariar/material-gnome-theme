@@ -5045,9 +5045,6 @@ row:selected:disabled label {
   color: color-mix(in srgb, var(--on_surface_variant) 70%, transparent);
 }
 
-row.activatable:active {
-}
-
 .rich-list > row {
   padding: 9px 12px;
   min-height: 32px;
