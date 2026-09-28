@@ -675,12 +675,6 @@ dropdown button.toggle:checked label {
   color: var(--on_primary);
 }
 
-button:checked:disabled {
-  border-radius: 22px;
-  background-color: color-mix(in srgb, var(--primary) 38%, transparent);
-  color: color-mix(in srgb, var(--on_primary) 38%, transparent);
-}
-
 headerbar popover.background button:not(.suggested-action):not(.destructive-action):not(.flat),
 button:not(.destructive-action) {
   color: var(--primary);
@@ -772,7 +766,7 @@ button:disabled {
 
 headerbar popover.background button:checked:disabled:not(.suggested-action):not(.destructive-action):not(.flat),
 button:checked:disabled {
-  border-radius: 999px;
+  border-radius: 22px;
   background-color: color-mix(in srgb, var(--primary) 38%, transparent);
   color: color-mix(in srgb, var(--on_primary) 38%, transparent);
   outline-color: transparent;
@@ -1377,7 +1371,6 @@ spinbutton > button {
 button {
   min-height: 24px;
   min-width: 16px;
-  border-radius: 9px;
   font-weight: 500;
 }
 
