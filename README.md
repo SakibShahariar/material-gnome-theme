@@ -60,7 +60,7 @@ Material-Gnome/
 * **True System-Wide Consistency:** Unified styling across legacy GTK3 apps, modern GTK4/Libadwaita apps, and the GNOME Shell interface.
 * **Material 3 Container Architecture:** Styled with container shapes, adaptive active states, and expressive focus indicators (like the segmented view-switcher design).
 * **Self-Contained Color System:** Colors are declared natively per toolkit—making the theme independent, lightweight, and incredibly easy to modify without external dependencies.
-* **Dynamic-Ready (Optional):** Completely compatible with color-generation backends like `matugen` or `gradience`.
+* **Dynamic-Ready (Optional):** Completely compatible with color-generation backends like `matugen`.
 * **Dark-First Design:** Optimized specifically for modern dark-mode workflows to minimize eye strain.
 * **Swappable Top Bar Layouts:** Multiple GNOME Shell top bar styles included — pill, capsule, segmented, unified, and more — so you can pick the look that fits you best.
 * **Premade Color Themes:** A set of ready-made color themes is included in `themes/` (JSON color tokens) — apply one by copying values into `colors.css`, no extra tools required.
