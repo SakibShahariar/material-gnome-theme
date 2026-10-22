@@ -113,6 +113,7 @@ Modern Libadwaita apps look into your local user configuration instead of `~/.th
 mkdir -p ~/.config/gtk-4.0
 ln -sf ~/.themes/Material-Gnome/gtk-4.0/gtk.css ~/.config/gtk-4.0/gtk.css
 ln -sf ~/.themes/Material-Gnome/gtk-4.0/gtk-dark.css ~/.config/gtk-4.0/gtk-dark.css
+ln -sf ~/.themes/Material-Gnome/gtk-4.0/colors.css ~/.config/gtk-4.0/colors.css
 ```
 
 ### Optional: Manager App
