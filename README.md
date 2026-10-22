@@ -80,6 +80,16 @@ mkdir -p ~/.themes
 cp -r Material-Gnome ~/.themes/
 ```
 
+**Automated User Installation:**
+
+From the repository checkout, run the installer to copy the theme and link GTK4 stylesheets and their color definitions:
+
+```bash
+./install.sh
+```
+
+Pass `--flatpak` to optionally grant Flatpak applications read-only access to the installed theme and GTK configuration. Existing regular GTK4 config files are preserved by default; use `--force` to back them up and replace them.
+
 **System-Wide Deployment:**
 
 ```bash

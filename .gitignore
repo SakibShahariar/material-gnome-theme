@@ -1,0 +1,15 @@
+# Python tooling
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Build and editor artifacts
+build/
+dist/
+*.swp
+*.swo
+.DS_Store
