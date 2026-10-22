@@ -8,9 +8,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    
+
     permissions:
-      contents: write # Double-ensures the runner can modify releases
+      contents: write
 
     steps:
       - name: Checkout repository
@@ -20,11 +20,14 @@ jobs:
 
       - name: Build release zip
         run: |
-          zip -r Material-Gnome.zip material-gnome-theme/ \
-            -x "material-gnome-theme/.git/*" \
-            -x "material-gnome-theme/.github/*" \
-            -x "material-gnome-theme/.gitignore" \
-            -x "material-gnome-theme/screenshots/*"
+          mkdir -p Material-Gnome
+          rsync -a \
+            --exclude='.git/' \
+            --exclude='.github/' \
+            --exclude='.gitignore' \
+            --exclude='screenshots/' \
+            material-gnome-theme/ Material-Gnome/
+          zip -r Material-Gnome.zip Material-Gnome/
 
       - name: Publish release
         uses: softprops/action-gh-release@v2
