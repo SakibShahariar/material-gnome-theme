@@ -2869,6 +2869,13 @@ treeview.view > header > button:not(:focus):not(:hover):not(:active) {
   color: var(--on_surface_variant);
 }
 
+/* Keep header labels stationary when the sort arrow changes state. */
+columnview.view > header > button > sort-indicator,
+treeview.view > header > button > sort-indicator {
+  min-width: 1em;
+  min-height: 1em;
+}
+
 columnview.view > header > button,
 columnview.view > header > button:disabled,
 treeview.view > header > button,

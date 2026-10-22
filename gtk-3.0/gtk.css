@@ -2127,6 +2127,12 @@ treeview.view header button:not(:focus):not(:hover):not(:active) {
   color: alpha(@on_surface, 0.7);
 }
 
+/* Reserve space for the optional sort arrow to prevent header reflow. */
+treeview.view header button sort-indicator {
+  min-width: 1em;
+  min-height: 1em;
+}
+
 treeview.view header button,
 treeview.view header button:disabled {
   background-color: @surface;
