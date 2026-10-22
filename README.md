@@ -239,9 +239,15 @@ gnome-shell/layouts/
 
 **To apply a layout:**
 
-1. Open `gnome-shell/gnome-shell.css` and locate the top bar section.
-2. Open your chosen layout file from `gnome-shell/layouts/` (e.g. `unified-pill.css`).
-3. Replace the existing top bar block in `gnome-shell.css` with the contents of the layout file.
+1. Copy the layout you want over `gnome-shell/layouts/active-layout.css`. For example:
+
+   ```bash
+   cp gnome-shell/layouts/unified-pill.css gnome-shell/layouts/active-layout.css
+   ```
+
+2. Apply or reinstall the updated theme, then reload GNOME Shell. On Wayland, log out and back in if a shell reload is unavailable.
+
+`gnome-shell/gnome-shell.css` imports `layouts/active-layout.css` at the end, so you no longer need to edit the large generated stylesheet. The checked-in active layout defaults to Floating Capsule (Glass).
 
 ---
 

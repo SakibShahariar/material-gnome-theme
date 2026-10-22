@@ -4915,3 +4915,6 @@ StWidget.focused .app-grid-running-dot {
 #panel .remote-access-indicator {
   color: #ffb4ab;
 }
+
+/* Active top-bar layout; keep this import last so layout rules take precedence. */
+@import url("layouts/active-layout.css");
