@@ -7895,6 +7895,11 @@ scrolledwindow.list-page > viewport > clamp > box {
   margin-top: 18px;
 }
 
+/* Accent Libadwaita preferences section headings without tinting row labels. */
+preferencesgroup > label.title {
+  color: var(--primary);
+}
+
 .section > label:not(:first-child) {
   margin-top: 6px;
 }
