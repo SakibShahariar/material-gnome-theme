@@ -28,9 +28,14 @@ while (($#)); do
   shift
 done
 
+if ((flatpak_support)) && ! command -v flatpak >/dev/null 2>&1; then
+  printf 'The --flatpak option requires the flatpak command.\n' >&2
+  exit 1
+fi
+
 for path in gtk-3.0 gtk-4.0 gnome-shell themes index.theme; do
   if [[ ! -e "$script_dir/$path" ]]; then
-    printf 'Required theme path is missing: %s\n' "$path" >&2
+    printf 'Required theme path is missing: %s\n' "$script_dir/$path" >&2
     exit 1
   fi
 done
@@ -55,7 +60,9 @@ link_config_file() {
       printf 'Refusing to replace existing file: %s (use --force to back it up)\n' "$target" >&2
       return 1
     fi
-    cp -a -- "$target" "$target.bak"
+    backup="$(mktemp "${target}.bak.XXXXXX")"
+    cp -a -- "$target" "$backup"
+    printf 'Backed up %s to %s\n' "$target" "$backup"
   fi
 
   ln -sfn -- "$source" "$target"
@@ -66,10 +73,6 @@ link_config_file gtk-dark.css
 link_config_file colors.css
 
 if ((flatpak_support)); then
-  if ! command -v flatpak >/dev/null 2>&1; then
-    printf 'The --flatpak option requires the flatpak command.\n' >&2
-    exit 1
-  fi
   flatpak override --user --unset-env=GTK_THEME
   flatpak override --user \
     --filesystem=xdg-config/gtk-4.0:ro \

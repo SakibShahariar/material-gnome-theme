@@ -31,6 +31,23 @@ jobs:
       - name: Check installer syntax
         run: bash -n install.sh
 
+      - name: Test installer in an isolated home
+        run: |
+          test_home="$RUNNER_TEMP/material-gnome-install-test"
+          mkdir -p "$test_home"
+          HOME="$test_home" XDG_CONFIG_HOME="$test_home/.config" bash ./install.sh
+          test -L "$test_home/.config/gtk-4.0/gtk.css"
+          test -L "$test_home/.config/gtk-4.0/gtk-dark.css"
+          test -L "$test_home/.config/gtk-4.0/colors.css"
+          test -f "$test_home/.themes/Material-Gnome/index.theme"
+
+          # Existing regular files must be backed up before a forced replacement.
+          rm "$test_home/.config/gtk-4.0/gtk.css"
+          printf 'user-owned config\n' > "$test_home/.config/gtk-4.0/gtk.css"
+          HOME="$test_home" XDG_CONFIG_HOME="$test_home/.config" bash ./install.sh --force
+          grep -Fxq 'user-owned config' "$test_home/.config/gtk-4.0/gtk.css.bak."*
+          test -L "$test_home/.config/gtk-4.0/gtk.css"
+
       - name: Verify release archive layout
         run: |
           stage="$RUNNER_TEMP/material-gnome-release"
