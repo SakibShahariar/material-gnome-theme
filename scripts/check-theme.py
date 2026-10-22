@@ -21,6 +21,9 @@ def report(path: Path, message: str) -> None:
 
 def check_stylesheet(path: Path) -> None:
     source = path.read_text(encoding="utf-8")
+    # Template placeholders are intentionally not valid CSS tokens. Substitute
+    # a valid color only for parsing; placeholder validation runs separately.
+    source = PLACEHOLDER.sub("#000000", source)
     rules = tinycss2.parse_stylesheet(
         source, skip_comments=True, skip_whitespace=True
     )
