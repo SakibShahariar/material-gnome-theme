@@ -9,6 +9,12 @@ There are two supported ways to provide the palette:
 - **Matugen:** use the same Matugen color object for each of the three templates. The supported token shape is `colors.<token>.default.hex`; `red`, `green`, and `blue` channels are also used where an RGB value is needed.
 - **Bundled JSON preset:** choose a file in `themes/` and run `python scripts/apply-theme.py themes/<preset>.json`. The script renders the same three templates without requiring Matugen. Use `--dry-run` to validate output without writing files, or `--check` to detect drift between the selected preset and generated files.
 
+## Matugen configuration
+
+To render all three layers from a single Matugen run, merge the entries in [`matugen-templates.example.toml`](matugen-templates.example.toml) into your existing `~/.config/matugen/config.toml`. Adjust the theme path if needed. Do not replace your existing Matugen configuration; merge these named template entries into its `[templates]` map.
+
+Matugen then renders the GTK3, GTK4, and GNOME Shell outputs from the same palette input. GTK4's `colors.css` must remain available next to the linked GTK4 stylesheets, as described below.
+
 ## Generated outputs
 
 | Layer | Template | Generated output |

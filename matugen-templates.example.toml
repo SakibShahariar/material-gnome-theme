@@ -1,0 +1,14 @@
+# Merge these template entries into ~/.config/matugen/config.toml.
+# Adjust the theme directory if Material GNOME is installed elsewhere.
+
+[templates.material_gnome_gtk3]
+input_path = '~/.themes/Material-Gnome/gtk-3.0/colors-template.css'
+output_path = '~/.themes/Material-Gnome/gtk-3.0/colors.css'
+
+[templates.material_gnome_gtk4]
+input_path = '~/.themes/Material-Gnome/gtk-4.0/colors-template.css'
+output_path = '~/.themes/Material-Gnome/gtk-4.0/colors.css'
+
+[templates.material_gnome_shell]
+input_path = '~/.themes/Material-Gnome/gnome-shell/gnome-shell-template.css'
+output_path = '~/.themes/Material-Gnome/gnome-shell/gnome-shell.css'

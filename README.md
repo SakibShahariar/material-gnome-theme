@@ -173,7 +173,7 @@ For a wallpaper-based palette, use the recommended flow: **choose a wallpaper in
 
 ## 🎨 Color Themes
 
-For the shared palette token names, generated files, and Matugen integration contract, see [COLORS.md](COLORS.md).
+For the shared palette token names, generated files, and Matugen integration contract, see [COLORS.md](COLORS.md) and the [Matugen template example](matugen-templates.example.toml).
 
 The `themes/` folder contains a set of premade color themes as JSON files (Material You–style color tokens). A few examples:
 
