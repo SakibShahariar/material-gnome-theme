@@ -207,7 +207,7 @@ Each layout lives as a separate CSS file in `gnome-shell/layouts/`:
 ```text
 gnome-shell/layouts/
 ├── default.css
-├── default-transparecy.css
+├── default-transparency.css
 ├── active-layout.css
 ├── floating-capsule.css
 ├── floating-capsule-glass.css
