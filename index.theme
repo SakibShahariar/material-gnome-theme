@@ -2,9 +2,7 @@
 Type=X-GNOME-Metatheme
 Name=Material-Gnome
 Comment=A Material You/Material 3 Expressive Gtk+ theme based on Matugen color generator
-Encoding=UTF-8
 
 [X-GNOME-Metatheme]
 GtkTheme=Material-Gnome
-MetacityTheme=Material-Gnome
 ButtonLayout=close,minimize,maximize:menu

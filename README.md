@@ -80,29 +80,31 @@ The GTK4 version requirement is based on the [official GTK CSS documentation](ht
 
 ### 1. Deploy the Theme Files
 
-Clone or extract the theme directory to your local or system themes folder:
+**Recommended: install from a repository checkout**
 
-**Local User Deployment (Recommended):**
-
-```bash
-mkdir -p ~/.themes
-cp -r Material-Gnome ~/.themes/
-```
-
-**Automated User Installation:**
-
-From the repository checkout, run the installer to copy the theme and link GTK4 stylesheets and their color definitions:
+Clone the repository, enter its directory, and run the installer. It copies the theme to `~/.themes/Material-Gnome` and links the GTK4 stylesheets, including `colors.css`.
 
 ```bash
+git clone https://github.com/SakibShahariar/material-gnome-theme.git
+cd material-gnome-theme
 ./install.sh
 ```
 
-Pass `--flatpak` to optionally grant Flatpak applications read-only access to the installed theme and GTK configuration. Existing regular GTK4 config files are preserved by default; use `--force` to back them up and replace them.
+Use `./install.sh --flatpak` if you also want to grant Flatpak applications read-only access to the theme and GTK configuration. Existing regular GTK4 config files are preserved by default; `--force` backs them up before replacing them.
 
-**System-Wide Deployment:**
+**Manual installation from a release ZIP**
+
+The release archive already contains a `Material-Gnome/` directory:
 
 ```bash
-sudo cp -r Material-Gnome /usr/share/themes/
+mkdir -p ~/.themes
+cp -a Material-Gnome ~/.themes/
+```
+
+For a system-wide installation, extract the release ZIP and run:
+
+```bash
+sudo cp -a Material-Gnome /usr/share/themes/
 ```
 
 ### 2. Enable GNOME Shell Theme Support
