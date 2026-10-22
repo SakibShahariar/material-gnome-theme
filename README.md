@@ -156,6 +156,10 @@ The first command clears any previous `GTK_THEME` override so apps fall back to 
 
 ---
 
+## 🌄 Wallpaper-Driven Workflow
+
+For a wallpaper-based palette, use the recommended flow: **choose a wallpaper in [wallmat](https://github.com/SakibShahariar/wallmat/issues/12) → generate colors with [Matugen](https://github.com/InioX/matugen) → render this theme's GTK3, GTK4, and GNOME Shell stylesheets**. Keep all outputs aligned with the [shared color contract (#73)](https://github.com/SakibShahariar/material-gnome-theme/issues/73). This theme does not require wallmat; presets can also be applied directly with `scripts/apply-theme.py`.
+
 ## 🎨 Color Themes
 
 For the shared palette token names, generated files, and Matugen integration contract, see [COLORS.md](COLORS.md).
