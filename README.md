@@ -253,21 +253,14 @@ gnome-shell/layouts/
 
 ## 🎬 Reducing Animations
 
-The theme includes expressive `@keyframes` animations (used for elements like active-state transitions). If you prefer a calmer, more static look, you can disable them:
+The GTK stylesheets define keyframe animations; `gnome-shell/gnome-shell.css` does not contain `@keyframes` blocks.
 
-1. Open `gnome-shell/gnome-shell.css`.
-2. Find the `@keyframes` declarations near the top of the file.
-3. Comment them out:
+To remove the GTK keyframe animations manually, comment out the `@keyframes` blocks in the relevant files:
 
-```css
-/*
-@keyframes example-animation {
-  ...
-}
-*/
-```
+- GTK3: `gtk-3.0/gtk.css` and `gtk-3.0/gtk-dark.css`
+- GTK4 / Libadwaita: `gtk-4.0/gtk.css` and `gtk-4.0/gtk-dark.css`
 
-This removes the expressive motion while keeping all colors and layout intact.
+The paired files are currently identical, so keep both copies in sync. This only removes keyframe animations; other `animation` and `transition` declarations may still animate, and this does not disable GNOME Shell's built-in animations.
 
 ---
 
