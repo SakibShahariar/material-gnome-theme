@@ -30,3 +30,18 @@ jobs:
 
       - name: Check installer syntax
         run: bash -n install.sh
+
+      - name: Verify release archive layout
+        run: |
+          stage="$RUNNER_TEMP/material-gnome-release"
+          mkdir -p "$stage/Material-Gnome"
+          rsync -a \
+            --exclude='.git/' \
+            --exclude='.github/' \
+            --exclude='.gitignore' \
+            --exclude='screenshots/' \
+            ./ "$stage/Material-Gnome/"
+          (cd "$stage" && zip -qr Material-Gnome.zip Material-Gnome/)
+          roots="$(unzip -Z1 "$stage/Material-Gnome.zip" | cut -d/ -f1 | sort -u)"
+          test "$roots" = "Material-Gnome"
+          unzip -Z1 "$stage/Material-Gnome.zip" | grep -Fxq 'Material-Gnome/index.theme'
