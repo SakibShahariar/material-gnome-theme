@@ -1585,10 +1585,6 @@ StEntry StLabel.hint-text,
   icon-size: 32px;
 }
 
-.nm-dialog-header-hbox {
-  spacing: 10px;
-}
-
 .nm-dialog-scroll-view {
   border: none;
   padding: 0;
