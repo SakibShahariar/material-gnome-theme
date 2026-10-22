@@ -158,6 +158,8 @@ The first command clears any previous `GTK_THEME` override so apps fall back to 
 
 ## 🎨 Color Themes
 
+For the shared palette token names, generated files, and Matugen integration contract, see [COLORS.md](COLORS.md).
+
 The `themes/` folder contains a set of premade color themes as JSON files (Material You–style color tokens). A few examples:
 
 | Aqua Abyss | Arctic Blood | Forgotten Atelier |
