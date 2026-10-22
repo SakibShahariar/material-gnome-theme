@@ -170,30 +170,19 @@ The `themes/` folder contains a set of premade color themes as JSON files (Mater
 
 There are two ways to apply one:
 
-### Option A: Manual swap
+### Option A: Apply a preset with the included script
 
-Copy each value from the theme JSON into the matching CSS custom property in `colors.css`.
+Render a preset into the GTK3, GTK4, and GNOME Shell stylesheets without installing Matugen:
 
-**Mapping example:**
+```bash
+# Preview and validate the generated files without changing anything
+python scripts/apply-theme.py --dry-run themes/Aqua-Abyss.json
 
-| JSON key (`themes/*.json`) | CSS variable (`colors.css`) |
-|---|---|
-| `colors.primary.default.color` | `--primary` |
-| `colors.on_primary.default.color` | `--on_primary` |
-| `colors.primary_container.default.color` | `--primary_container` |
-| `colors.surface.default.color` | `--surface` |
-| `colors.on_surface.default.color` | `--on_surface` |
-| ... | ... |
+# Apply the preset to all three theme layers
+python scripts/apply-theme.py themes/Aqua-Abyss.json
+```
 
-Every key in the JSON has a matching `--variable` in `colors.css` with the same name — just take the hex value from `"color"` and paste it in.
-
-1. Open your chosen theme file in `themes/`.
-2. Open the `colors.css` files you want to update:
-   - `gtk-3.0/colors.css`
-   - `gtk-4.0/colors.css`
-   - `gnome-shell/gnome-shell-template.css`
-3. For each `:root` variable, replace the hex value with the matching value from the JSON file (e.g. `--primary: #5c9be4;` from `colors.primary.default.color`).
-4. Save, then reload your GTK apps and GNOME Shell to see the new colors.
+The script updates `gtk-3.0/colors.css`, `gtk-4.0/colors.css`, and `gnome-shell/gnome-shell.css` from their corresponding templates. Applying a preset replaces the current generated color files, so keep a backup or commit local customizations first. Restart GTK apps and reload GNOME Shell after applying it.
 
 ### Option B: Matugen
 

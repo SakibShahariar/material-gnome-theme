@@ -25,5 +25,8 @@ jobs:
       - name: Validate theme assets and stylesheets
         run: python scripts/check-theme.py
 
+      - name: Validate preset rendering
+        run: python scripts/apply-theme.py --dry-run themes/Aqua-Abyss.json
+
       - name: Check installer syntax
         run: bash -n install.sh
