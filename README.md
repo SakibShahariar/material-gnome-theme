@@ -67,6 +67,15 @@ Material-Gnome/
 
 ---
 
+## 🧩 Requirements & Compatibility
+
+- **GTK4 / Libadwaita apps:** GTK **4.16 or newer** is required for the CSS custom properties (`--token` and `var(--token)`) used by this theme. GTK 4.14 and older do not support them and will not render the GTK4 palette correctly. GNOME 47 is the first GNOME release generation with GTK 4.16.
+- **GTK3 apps:** Use a GTK3 version supported by your distribution. The theme uses GTK3-specific `@define-color` declarations and does not require GTK4 CSS variables.
+- **GNOME Shell:** Shell styling relies on St CSS selectors and properties that can change between GNOME releases. GNOME Shell 50.2 has been reported working with this theme; this is not a guarantee for every Shell version. After a GNOME Shell upgrade, verify the panel layout and overview styling.
+- **Libadwaita:** There is no separately enforced minimum libadwaita version. Individual apps may override or ignore parts of a custom GTK stylesheet, and upstream libadwaita does not guarantee compatibility with third-party application theming.
+
+The GTK4 version requirement is based on the [official GTK CSS documentation](https://docs.gtk.org/gtk4/css-properties.html), which documents custom-property support starting with GTK 4.16.
+
 ## 🚀 Installation
 
 ### 1. Deploy the Theme Files
