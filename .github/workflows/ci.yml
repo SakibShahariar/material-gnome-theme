@@ -26,7 +26,7 @@ jobs:
         run: python scripts/check-theme.py
 
       - name: Validate preset rendering
-        run: python scripts/apply-theme.py --dry-run themes/Material-Gnome.json
+        run: python scripts/apply-theme.py --check themes/Material-Gnome.json
 
       - name: Check installer syntax
         run: bash -n install.sh

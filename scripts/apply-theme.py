@@ -71,9 +71,14 @@ def main() -> int:
         "preset", type=Path,
         help="theme JSON file, for example themes/Aqua-Abyss.json",
     )
-    parser.add_argument(
+    mode = parser.add_mutually_exclusive_group()
+    mode.add_argument(
         "--dry-run", action="store_true",
         help="render and validate outputs without changing any files",
+    )
+    mode.add_argument(
+        "--check", action="store_true",
+        help="fail if generated files differ from the selected preset",
     )
     args = parser.parse_args()
 
@@ -102,15 +107,34 @@ def main() -> int:
         print(f"apply-theme: {error}", file=sys.stderr)
         return 1
 
+    mismatches = []
     for output_path, content in rendered_outputs:
-        if args.dry_run:
-            print(f"Validated {output_path.relative_to(ROOT)} ({len(content)} bytes)")
+        relative_path = output_path.relative_to(ROOT)
+        if args.check:
+            try:
+                current = output_path.read_text(encoding="utf-8")
+            except OSError as error:
+                print(f"apply-theme: cannot read {relative_path}: {error}", file=sys.stderr)
+                mismatches.append(relative_path)
+                continue
+            if current != content:
+                print(f"Out of date: {relative_path}", file=sys.stderr)
+                mismatches.append(relative_path)
+            else:
+                print(f"Matches preset: {relative_path}")
+        elif args.dry_run:
+            print(f"Validated {relative_path} ({len(content)} bytes)")
         else:
             atomic_write(output_path, content)
-            print(f"Updated {output_path.relative_to(ROOT)}")
+            print(f"Updated {relative_path}")
 
+    if mismatches:
+        print("Generated files do not match the selected preset.", file=sys.stderr)
+        return 1
     if args.dry_run:
         print("Dry run complete; no files were changed.")
+    if args.check:
+        print("Generated files match the selected preset.")
     return 0
 
 
