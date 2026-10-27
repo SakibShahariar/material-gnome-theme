@@ -6,12 +6,6 @@
   }
 }
 
-@keyframes ripple-on-slider {
-  to {
-    background-size: auto, 1000% 1000%;
-  }
-}
-
 @keyframes ripple-on-headerbar {
   from {
     background-color: @primary;
