@@ -416,7 +416,7 @@
   width: 24px;
   height: 24px;
   padding: 3px;
-  border-radius: 9999px;
+  border-radius: 4px;
   transition: all 150ms ease;
   background-color: transparent;
   box-shadow: none;
