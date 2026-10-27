@@ -1501,16 +1501,28 @@ searchbar > revealer > box {
   border-radius: 0;
 }
 
-.nemo-window .primary-toolbar .linked > button:first-child:not(.text-button),
-.titlebar .linked > button:first-child:not(.suggested-action):not(.destructive-action) {
+.nemo-window .primary-toolbar .linked > button:first-child:not(.text-button):dir(ltr),
+.titlebar .linked > button:first-child:not(.suggested-action):not(.destructive-action):dir(ltr) {
   border-top-left-radius: 9999px;
   border-bottom-left-radius: 9999px;
 }
 
-.nemo-window .primary-toolbar .linked > button:last-child:not(.text-button),
-.titlebar .linked > button:last-child:not(.suggested-action):not(.destructive-action) {
+.nemo-window .primary-toolbar .linked > button:first-child:not(.text-button):dir(rtl),
+.titlebar .linked > button:first-child:not(.suggested-action):not(.destructive-action):dir(rtl) {
   border-top-right-radius: 9999px;
   border-bottom-right-radius: 9999px;
+}
+
+.nemo-window .primary-toolbar .linked > button:last-child:not(.text-button):dir(ltr),
+.titlebar .linked > button:last-child:not(.suggested-action):not(.destructive-action):dir(ltr) {
+  border-top-right-radius: 9999px;
+  border-bottom-right-radius: 9999px;
+}
+
+.nemo-window .primary-toolbar .linked > button:last-child:not(.text-button):dir(rtl),
+.titlebar .linked > button:last-child:not(.suggested-action):not(.destructive-action):dir(rtl) {
+  border-top-left-radius: 9999px;
+  border-bottom-left-radius: 9999px;
 }
 
 .nemo-window .primary-toolbar .linked > button:only-child:not(.text-button),
@@ -1974,16 +1986,28 @@ headerbar.windowhandle viewswitchertitle > squeezer > viewswitcher > box.horizon
   background-color: @surface_container_lowest;
 }
 
-.caja-pathbar button:first-child,
-.path-bar.linked:not(.vertical) > button:first-child {
+.caja-pathbar button:first-child:dir(ltr),
+.path-bar.linked:not(.vertical) > button:first-child:dir(ltr) {
   border-top-left-radius: 12px;
   border-bottom-left-radius: 12px;
 }
 
-.caja-pathbar button:last-child,
-.path-bar.linked:not(.vertical) > button:last-child {
+.caja-pathbar button:first-child:dir(rtl),
+.path-bar.linked:not(.vertical) > button:first-child:dir(rtl) {
   border-top-right-radius: 12px;
   border-bottom-right-radius: 12px;
+}
+
+.caja-pathbar button:last-child:dir(ltr),
+.path-bar.linked:not(.vertical) > button:last-child:dir(ltr) {
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+.caja-pathbar button:last-child:dir(rtl),
+.path-bar.linked:not(.vertical) > button:last-child:dir(rtl) {
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
 }
 
 .caja-pathbar button:checked,
