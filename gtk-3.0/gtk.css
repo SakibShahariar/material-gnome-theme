@@ -92,20 +92,36 @@ treeview.view:selected,
   transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
 }
 
-.linked:not(.vertical) > button:first-child,
-.linked:not(.vertical) > spinbutton.vertical:first-child,
-.linked:not(.vertical) > spinbutton:first-child:not(.vertical),
-.linked:not(.vertical) > entry:first-child {
+.linked:not(.vertical) > button:first-child:dir(ltr),
+.linked:not(.vertical) > spinbutton.vertical:first-child:dir(ltr),
+.linked:not(.vertical) > spinbutton:first-child:not(.vertical):dir(ltr),
+.linked:not(.vertical) > entry:first-child:dir(ltr) {
   border-top-left-radius: 12px;
   border-bottom-left-radius: 12px;
 }
 
-.linked:not(.vertical) > button:last-child,
-.linked:not(.vertical) > spinbutton.vertical:last-child,
-.linked:not(.vertical) > spinbutton:last-child:not(.vertical),
-.linked:not(.vertical) > entry:last-child {
+.linked:not(.vertical) > button:first-child:dir(rtl),
+.linked:not(.vertical) > spinbutton.vertical:first-child:dir(rtl),
+.linked:not(.vertical) > spinbutton:first-child:not(.vertical):dir(rtl),
+.linked:not(.vertical) > entry:first-child:dir(rtl) {
   border-top-right-radius: 12px;
   border-bottom-right-radius: 12px;
+}
+
+.linked:not(.vertical) > button:last-child:dir(ltr),
+.linked:not(.vertical) > spinbutton.vertical:last-child:dir(ltr),
+.linked:not(.vertical) > spinbutton:last-child:not(.vertical):dir(ltr),
+.linked:not(.vertical) > entry:last-child:dir(ltr) {
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+.linked:not(.vertical) > button:last-child:dir(rtl),
+.linked:not(.vertical) > spinbutton.vertical:last-child:dir(rtl),
+.linked:not(.vertical) > spinbutton:last-child:not(.vertical):dir(rtl),
+.linked:not(.vertical) > entry:last-child:dir(rtl) {
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
 }
 
 .linked:not(.vertical) > button:only-child,
