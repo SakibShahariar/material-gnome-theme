@@ -2692,14 +2692,24 @@ notebook > header tab > box:drop(active) {
   color: @on_surface;
 }
 
-notebook > header tab button.flat:last-child {
+notebook > header tab button.flat:last-child:dir(ltr) {
   margin-left: 6px;
   margin-right: -6px;
 }
 
-notebook > header tab button.flat:first-child {
+notebook > header tab button.flat:last-child:dir(rtl) {
+  margin-right: 6px;
+  margin-left: -6px;
+}
+
+notebook > header tab button.flat:first-child:dir(ltr) {
   margin-left: -6px;
   margin-right: 6px;
+}
+
+notebook > header tab button.flat:first-child:dir(rtl) {
+  margin-right: -6px;
+  margin-left: 6px;
 }
 
 notebook > header.top tabs:not(:only-child):first-child,
@@ -2712,11 +2722,18 @@ notebook > header.bottom tabs:not(:only-child):last-child {
   margin-right: 0;
 }
 
-notebook > header.top tabs tab + tab,
-notebook > header.top tabs tab + arrow,
-notebook > header.bottom tabs tab + tab,
-notebook > header.bottom tabs tab + arrow {
+notebook > header.top tabs tab + tab:dir(ltr),
+notebook > header.top tabs tab + arrow:dir(ltr),
+notebook > header.bottom tabs tab + tab:dir(ltr),
+notebook > header.bottom tabs tab + arrow:dir(ltr) {
   margin-left: 3px;
+}
+
+notebook > header.top tabs tab + tab:dir(rtl),
+notebook > header.top tabs tab + arrow:dir(rtl),
+notebook > header.bottom tabs tab + tab:dir(rtl),
+notebook > header.bottom tabs tab + arrow:dir(rtl) {
+  margin-right: 3px;
 }
 
 notebook > header.top tabs tab.reorderable-page,
@@ -3601,8 +3618,12 @@ levelbar.horizontal.discrete block {
   min-width: 34px;
 }
 
-levelbar.horizontal.discrete block:not(:last-child) {
+levelbar.horizontal.discrete block:not(:last-child):dir(ltr) {
   margin-right: 2px;
+}
+
+levelbar.horizontal.discrete block:not(:last-child):dir(rtl) {
+  margin-left: 2px;
 }
 
 levelbar.vertical block {
