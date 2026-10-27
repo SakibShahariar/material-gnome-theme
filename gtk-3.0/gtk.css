@@ -3532,8 +3532,7 @@ levelbar block.low {
   transition: background-color 0.2s ease;
 }
 
-levelbar block.high,
-levelbar block:not(.empty) {
+levelbar block.high {
   background-color: @primary;
   transition: background-color 0.2s ease;
 }
