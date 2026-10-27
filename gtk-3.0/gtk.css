@@ -882,20 +882,36 @@ button.text-button.image-button {
   border-radius: 12px;
 }
 
-button.text-button.image-button label:first-child {
+button.text-button.image-button label:first-child:dir(ltr) {
   margin-left: 11px;
 }
 
-button.text-button.image-button label:last-child {
+button.text-button.image-button label:first-child:dir(rtl) {
   margin-right: 11px;
 }
 
-button.text-button.image-button.flat label:first-child {
+button.text-button.image-button label:last-child:dir(ltr) {
+  margin-right: 11px;
+}
+
+button.text-button.image-button label:last-child:dir(rtl) {
+  margin-left: 11px;
+}
+
+button.text-button.image-button.flat label:first-child:dir(ltr) {
   margin-left: 7px;
 }
 
-button.text-button.image-button.flat label:last-child {
+button.text-button.image-button.flat label:first-child:dir(rtl) {
   margin-right: 7px;
+}
+
+button.text-button.image-button.flat label:last-child:dir(ltr) {
+  margin-right: 7px;
+}
+
+button.text-button.image-button.flat label:last-child:dir(rtl) {
+  margin-left: 7px;
 }
 
 button.text-button.image-button image:not(:only-child) {
@@ -5215,8 +5231,12 @@ button.emoji-section:checked {
   color: @primary;
 }
 
-button.emoji-section:not(:last-child) {
+button.emoji-section:not(:last-child):dir(ltr) {
   margin-right: 0;
+}
+
+button.emoji-section:not(:last-child):dir(rtl) {
+  margin-left: 0;
 }
 
 popover.emoji-picker .emoji {
