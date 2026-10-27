@@ -1370,18 +1370,32 @@ toolbar.osd entry {
   color: @on_surface;
 }
 
-frame.documents-dropdown .linked > button:first-child,
-.osd .scale-popup.background .linked > button:first-child,
-.app-notification .linked > button:first-child,
-toolbar.osd .linked > button:first-child {
+frame.documents-dropdown .linked > button:first-child:dir(ltr),
+.osd .scale-popup.background .linked > button:first-child:dir(ltr),
+.app-notification .linked > button:first-child:dir(ltr),
+toolbar.osd .linked > button:first-child:dir(ltr) {
   border-radius: 12px 0 0 12px;
 }
 
-frame.documents-dropdown .linked > button:last-child,
-.osd .scale-popup.background .linked > button:last-child,
-.app-notification .linked > button:last-child,
-toolbar.osd .linked > button:last-child {
+frame.documents-dropdown .linked > button:first-child:dir(rtl),
+.osd .scale-popup.background .linked > button:first-child:dir(rtl),
+.app-notification .linked > button:first-child:dir(rtl),
+toolbar.osd .linked > button:first-child:dir(rtl) {
   border-radius: 0 12px 12px 0;
+}
+
+frame.documents-dropdown .linked > button:last-child:dir(ltr),
+.osd .scale-popup.background .linked > button:last-child:dir(ltr),
+.app-notification .linked > button:last-child:dir(ltr),
+toolbar.osd .linked > button:last-child:dir(ltr) {
+  border-radius: 0 12px 12px 0;
+}
+
+frame.documents-dropdown .linked > button:last-child:dir(rtl),
+.osd .scale-popup.background .linked > button:last-child:dir(rtl),
+.app-notification .linked > button:last-child:dir(rtl),
+toolbar.osd .linked > button:last-child:dir(rtl) {
+  border-radius: 12px 0 0 12px;
 }
 
 toolbar.horizontal > separator {
