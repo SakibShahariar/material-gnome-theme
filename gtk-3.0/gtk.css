@@ -1696,7 +1696,7 @@ searchbar > revealer > box {
 }
 
 .titlebar stackswitcher:checked:hover {
-  background-color: alpha(@on_primary, 0.85);
+  background-color: alpha(@primary, 0.85);
 }
 
 .titlebar stackswitcher.linked:not(.vertical) > button:not(.suggested-action):not(.destructive-action) {
