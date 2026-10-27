@@ -4173,8 +4173,12 @@ row:selected:disabled {
   color: @primary;
 }
 
-.app-notification > box > label {
+.app-notification > box > label:dir(ltr) {
   margin-left: 9px;
+}
+
+.app-notification > box > label:dir(rtl) {
+  margin-right: 9px;
 }
 
 .app-notification.frame,
