@@ -5387,12 +5387,20 @@ popover.emoji-completion .emoji:hover {
   background-color: @surface_container_lowest;
 }
 
-.path-bar-box .path-bar button label:not(:only-child):first-child {
+.path-bar-box .path-bar button label:not(:only-child):first-child:dir(ltr) {
   margin-left: 0;
 }
 
-.path-bar-box .path-bar button label:not(:only-child):last-child {
+.path-bar-box .path-bar button label:not(:only-child):first-child:dir(rtl) {
   margin-right: 0;
+}
+
+.path-bar-box .path-bar button label:not(:only-child):last-child:dir(ltr) {
+  margin-right: 0;
+}
+
+.path-bar-box .path-bar button label:not(:only-child):last-child:dir(rtl) {
+  margin-left: 0;
 }
 
 .path-bar-box .linked.nautilus-path-bar button:not(.suggested-action):not(.destructive-action) {
@@ -5403,12 +5411,20 @@ popover.emoji-completion .emoji:hover {
   transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-.path-bar-box .linked.nautilus-path-bar button:not(.suggested-action):not(.destructive-action) label:not(:only-child):first-child {
+.path-bar-box .linked.nautilus-path-bar button:not(.suggested-action):not(.destructive-action) label:not(:only-child):first-child:dir(ltr) {
   margin-left: 0;
 }
 
-.path-bar-box .linked.nautilus-path-bar button:not(.suggested-action):not(.destructive-action) label:not(:only-child):last-child {
+.path-bar-box .linked.nautilus-path-bar button:not(.suggested-action):not(.destructive-action) label:not(:only-child):first-child:dir(rtl) {
   margin-right: 0;
+}
+
+.path-bar-box .linked.nautilus-path-bar button:not(.suggested-action):not(.destructive-action) label:not(:only-child):last-child:dir(ltr) {
+  margin-right: 0;
+}
+
+.path-bar-box .linked.nautilus-path-bar button:not(.suggested-action):not(.destructive-action) label:not(:only-child):last-child:dir(rtl) {
+  margin-left: 0;
 }
 
 .path-bar-box .linked.nautilus-path-bar button:not(.suggested-action):not(.destructive-action).text-button {
