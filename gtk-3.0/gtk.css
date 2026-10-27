@@ -1439,16 +1439,28 @@ toolbar:not(.inline-toolbar):not(.osd) button {
   margin: 2px 1px;
 }
 
-toolbar:not(.inline-toolbar):not(.osd) .linked entry:not(:first-child),
-toolbar:not(.inline-toolbar):not(.osd) .linked spinbutton:not(:first-child),
-toolbar:not(.inline-toolbar):not(.osd) .linked button:not(:first-child) {
+toolbar:not(.inline-toolbar):not(.osd) .linked:dir(ltr) entry:not(:first-child),
+toolbar:not(.inline-toolbar):not(.osd) .linked:dir(ltr) spinbutton:not(:first-child),
+toolbar:not(.inline-toolbar):not(.osd) .linked:dir(ltr) button:not(:first-child) {
   margin-left: 0;
 }
 
-toolbar:not(.inline-toolbar):not(.osd) .linked entry:not(:last-child),
-toolbar:not(.inline-toolbar):not(.osd) .linked spinbutton:not(:last-child),
-toolbar:not(.inline-toolbar):not(.osd) .linked button:not(:last-child) {
+toolbar:not(.inline-toolbar):not(.osd) .linked:dir(ltr) entry:not(:last-child),
+toolbar:not(.inline-toolbar):not(.osd) .linked:dir(ltr) spinbutton:not(:last-child),
+toolbar:not(.inline-toolbar):not(.osd) .linked:dir(ltr) button:not(:last-child) {
   margin-right: 0;
+}
+
+toolbar:not(.inline-toolbar):not(.osd) .linked:dir(rtl) entry:not(:first-child),
+toolbar:not(.inline-toolbar):not(.osd) .linked:dir(rtl) spinbutton:not(:first-child),
+toolbar:not(.inline-toolbar):not(.osd) .linked:dir(rtl) button:not(:first-child) {
+  margin-right: 0;
+}
+
+toolbar:not(.inline-toolbar):not(.osd) .linked:dir(rtl) entry:not(:last-child),
+toolbar:not(.inline-toolbar):not(.osd) .linked:dir(rtl) spinbutton:not(:last-child),
+toolbar:not(.inline-toolbar):not(.osd) .linked:dir(rtl) button:not(:last-child) {
+  margin-left: 0;
 }
 
 toolbar:not(.inline-toolbar):not(.osd) spinbutton entry,
