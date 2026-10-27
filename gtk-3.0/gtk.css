@@ -2434,7 +2434,7 @@ modelbutton.flat,
 
 modelbutton.flat:hover,
 .menuitem.button.flat:hover {
-  background-color: alpha(@primary, 0.58);
+  background-color: alpha(@primary, 0.85);
   color: @on_primary;
 }
 
