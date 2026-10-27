@@ -13,6 +13,7 @@ import tinycss2
 ROOT = Path(__file__).resolve().parents[1]
 ERRORS: list[str] = []
 PLACEHOLDER = re.compile(r"\{\{.*?\}\}", re.DOTALL)
+CSS_URL = re.compile(r"url\(\s*(?:[\'\"]([^\'\"]*)[\'\"]|([^)]*))\s*\)", re.IGNORECASE)
 
 
 def report(path: Path, message: str) -> None:
@@ -38,6 +39,29 @@ def check_stylesheet(path: Path) -> None:
             for declaration in declarations:
                 if declaration.type == "error":
                     report(path, f"declaration parse error: {declaration.message}")
+
+
+def check_local_asset_references(stylesheets: list[Path]) -> None:
+    """Ensure relative url(...) references resolve to files in the repository."""
+    for stylesheet in stylesheets:
+        source = stylesheet.read_text(encoding="utf-8")
+        for match in CSS_URL.finditer(source):
+            target = (match.group(1) or match.group(2) or "").strip()
+            if (
+                not target
+                or target.startswith(("#", "/", "//"))
+                or "{{" in target
+                or target.startswith("var(")
+                or re.match(r"^[a-zA-Z][a-zA-Z0-9+.-]*:", target)
+            ):
+                continue
+
+            target = target.split("#", 1)[0].split("?", 1)[0].strip()
+            if not target:
+                continue
+            resolved = (stylesheet.parent / target).resolve()
+            if not resolved.is_file():
+                report(stylesheet, f"local url() target does not exist: {target}")
 
 
 def check_theme_presets() -> None:
@@ -83,6 +107,7 @@ def main() -> int:
     )
     for stylesheet in stylesheets:
         check_stylesheet(stylesheet)
+    check_local_asset_references(stylesheets)
     check_theme_presets()
     check_placeholders()
 
