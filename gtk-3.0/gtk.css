@@ -4324,19 +4324,31 @@ filechooser stack.view frame > border {
   border: none;
 }
 
-.csd filechooser placessidebar {
+.csd filechooser placessidebar:dir(ltr) {
   background: none;
   border-bottom-left-radius: 12px;
+}
+
+.csd filechooser placessidebar:dir(rtl) {
+  background: none;
+  border-bottom-right-radius: 12px;
 }
 
 filechooser paned > separator {
   background: none;
 }
 
-filechooser paned box.vertical {
+filechooser paned box.vertical:dir(ltr) {
   background-color: @surface;
   border-radius: 12px;
   margin: 0 6px 0 1px;
+  transition: background-color 0.2s ease;
+}
+
+filechooser paned box.vertical:dir(rtl) {
+  background-color: @surface;
+  border-radius: 12px;
+  margin: 0 1px 0 6px;
   transition: background-color 0.2s ease;
 }
 
@@ -4423,8 +4435,14 @@ stacksidebar.sidebar row:hover {
 /****************
  * File chooser *
  ****************/
-placessidebar.sidebar {
+placessidebar.sidebar:dir(ltr) {
   margin: 0 0 0 4px;
+  padding: 0;
+  transition: background-color 0.2s ease;
+}
+
+placessidebar.sidebar:dir(rtl) {
+  margin: 0 4px 0 0;
   padding: 0;
   transition: background-color 0.2s ease;
 }
@@ -4453,8 +4471,12 @@ placessidebar.sidebar row:active {
   color: @primary;
 }
 
-placessidebar.sidebar row > revealer {
+placessidebar.sidebar row > revealer:dir(ltr) {
   padding: 0 8px 0 16px;
+}
+
+placessidebar.sidebar row > revealer:dir(rtl) {
+  padding: 0 16px 0 8px;
 }
 
 placessidebar.sidebar row:selected {
