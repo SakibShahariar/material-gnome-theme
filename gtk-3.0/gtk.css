@@ -2569,16 +2569,28 @@ notebook > header.top > tabs > arrow {
   transition: color 0.2s ease;
 }
 
-notebook > header.bottom > tabs > arrow.down,
-notebook > header.top > tabs > arrow.down {
+notebook > header.bottom > tabs > arrow.down:dir(ltr),
+notebook > header.top > tabs > arrow.down:dir(ltr) {
   margin-left: 0;
   -gtk-icon-source: -gtk-icontheme("pan-start-symbolic");
 }
 
-notebook > header.bottom > tabs > arrow.up,
-notebook > header.top > tabs > arrow.up {
+notebook > header.bottom > tabs > arrow.down:dir(rtl),
+notebook > header.top > tabs > arrow.down:dir(rtl) {
+  margin-right: 0;
+  -gtk-icon-source: -gtk-icontheme("pan-start-symbolic-rtl");
+}
+
+notebook > header.bottom > tabs > arrow.up:dir(ltr),
+notebook > header.top > tabs > arrow.up:dir(ltr) {
   margin-right: 0;
   -gtk-icon-source: -gtk-icontheme("pan-end-symbolic");
+}
+
+notebook > header.bottom > tabs > arrow.up:dir(rtl),
+notebook > header.top > tabs > arrow.up:dir(rtl) {
+  margin-left: 0;
+  -gtk-icon-source: -gtk-icontheme("pan-end-symbolic-rtl");
 }
 
 notebook > header.right > tabs > arrow,
@@ -2886,12 +2898,20 @@ scrollbar.vertical button.up {
   -gtk-icon-source: -gtk-icontheme("pan-up-symbolic");
 }
 
-scrollbar.horizontal button.down {
+scrollbar.horizontal button.down:dir(ltr) {
   -gtk-icon-source: -gtk-icontheme("pan-end-symbolic");
 }
 
-scrollbar.horizontal button.up {
+scrollbar.horizontal button.down:dir(rtl) {
+  -gtk-icon-source: -gtk-icontheme("pan-end-symbolic-rtl");
+}
+
+scrollbar.horizontal button.up:dir(ltr) {
   -gtk-icon-source: -gtk-icontheme("pan-start-symbolic");
+}
+
+scrollbar.horizontal button.up:dir(rtl) {
+  -gtk-icon-source: -gtk-icontheme("pan-start-symbolic-rtl");
 }
 
 /**********
