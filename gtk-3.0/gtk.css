@@ -1230,14 +1230,24 @@ combobox > .linked:not(.vertical) > entry:not(:only-child) {
   border-radius: 12px;
 }
 
-combobox > .linked:not(.vertical) > entry:not(:only-child):first-child {
+combobox > .linked:not(.vertical) > entry:not(:only-child):first-child:dir(ltr) {
   margin-right: -34px;
   padding-right: 34px;
 }
 
-combobox > .linked:not(.vertical) > entry:not(:only-child):last-child {
+combobox > .linked:not(.vertical) > entry:not(:only-child):first-child:dir(rtl) {
   margin-left: -34px;
   padding-left: 34px;
+}
+
+combobox > .linked:not(.vertical) > entry:not(:only-child):last-child:dir(ltr) {
+  margin-left: -34px;
+  padding-left: 34px;
+}
+
+combobox > .linked:not(.vertical) > entry:not(:only-child):last-child:dir(rtl) {
+  margin-right: -34px;
+  padding-right: 34px;
 }
 
 combobox > .linked:not(.vertical) > button:not(:only-child) {
