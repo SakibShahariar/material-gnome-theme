@@ -4257,9 +4257,14 @@ messagedialog .dialog-action-box .linked:not(.vertical) > button:last-child {
   border-radius: 12px;
 }
 
-messagedialog .dialog-action-box button:not(:last-child),
-messagedialog .dialog-action-box .linked:not(.vertical) > button:not(:last-child) {
+messagedialog .dialog-action-box:dir(ltr) button:not(:last-child),
+messagedialog .dialog-action-box:dir(ltr) .linked:not(.vertical) > button:not(:last-child) {
   margin-right: 6px;
+}
+
+messagedialog .dialog-action-box:dir(rtl) button:not(:last-child),
+messagedialog .dialog-action-box:dir(rtl) .linked:not(.vertical) > button:not(:last-child) {
+  margin-left: 6px;
 }
 
 messagedialog .dialog-action-box button.suggested-action:not(:disabled),
