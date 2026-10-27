@@ -6185,14 +6185,24 @@ window.background > grid > widget > widget > scrolledwindow > viewport > grid > 
   border-radius: 6px;
 }
 
-.nemo-window .primary-toolbar .path-bar.linked:not(.vertical) > button.slider-button:first-child {
+.nemo-window .primary-toolbar .path-bar.linked:not(.vertical) > button.slider-button:first-child:dir(ltr) {
   border-top-left-radius: 12px;
   border-bottom-left-radius: 12px;
 }
 
-.nemo-window .primary-toolbar .path-bar.linked:not(.vertical) > button.slider-button:last-child {
+.nemo-window .primary-toolbar .path-bar.linked:not(.vertical) > button.slider-button:first-child:dir(rtl) {
   border-top-right-radius: 12px;
   border-bottom-right-radius: 12px;
+}
+
+.nemo-window .primary-toolbar .path-bar.linked:not(.vertical) > button.slider-button:last-child:dir(ltr) {
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+.nemo-window .primary-toolbar .path-bar.linked:not(.vertical) > button.slider-button:last-child:dir(rtl) {
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
 }
 
 .nemo-window .primary-toolbar button:not(.text-button):not(.image-button) {
