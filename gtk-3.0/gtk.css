@@ -4820,28 +4820,64 @@ colorswatch.bottom overlay {
   border-bottom-right-radius: 12px;
 }
 
-colorswatch.left,
-colorswatch:first-child:not(.top) {
+colorswatch.left {
   border-top-left-radius: 12px;
   border-bottom-left-radius: 12px;
 }
 
-colorswatch.left overlay,
-colorswatch:first-child:not(.top) overlay {
+colorswatch:first-child:not(.top):dir(ltr) {
   border-top-left-radius: 12px;
   border-bottom-left-radius: 12px;
 }
 
-colorswatch.right,
-colorswatch:last-child:not(.bottom) {
+colorswatch:first-child:not(.top):dir(rtl) {
   border-top-right-radius: 12px;
   border-bottom-right-radius: 12px;
 }
 
-colorswatch.right overlay,
-colorswatch:last-child:not(.bottom) overlay {
+colorswatch.left overlay {
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+}
+
+colorswatch:first-child:not(.top):dir(ltr) overlay {
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+}
+
+colorswatch:first-child:not(.top):dir(rtl) overlay {
   border-top-right-radius: 12px;
   border-bottom-right-radius: 12px;
+}
+
+colorswatch.right {
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+colorswatch:last-child:not(.bottom):dir(ltr) {
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+colorswatch:last-child:not(.bottom):dir(rtl) {
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+}
+
+colorswatch.right overlay {
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+colorswatch:last-child:not(.bottom):dir(ltr) overlay {
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+colorswatch:last-child:not(.bottom):dir(rtl) overlay {
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
 }
 
 colorswatch.dark {
@@ -4862,8 +4898,12 @@ colorswatch overlay:hover {
   box-shadow: 0 0 0 2px @primary;
 }
 
-colorswatch#add-color-button {
+colorswatch#add-color-button:dir(ltr) {
   border-radius: 12px 0 0 12px;
+}
+
+colorswatch#add-color-button:dir(rtl) {
+  border-radius: 0 12px 12px 0;
 }
 
 colorswatch#add-color-button:only-child {
