@@ -103,7 +103,7 @@ def main() -> int:
             rendered_outputs.append(
                 (output_path, render(source, palette, template_path))
             )
-    except (OSError, json.JSONDecodeError, KeyError, ValueError) as error:
+    except (OSError, UnicodeError, json.JSONDecodeError, KeyError, ValueError) as error:
         print(f"apply-theme: {error}", file=sys.stderr)
         return 1
 
@@ -113,7 +113,7 @@ def main() -> int:
         if args.check:
             try:
                 current = output_path.read_text(encoding="utf-8")
-            except OSError as error:
+            except (OSError, UnicodeError) as error:
                 print(f"apply-theme: cannot read {relative_path}: {error}", file=sys.stderr)
                 mismatches.append(relative_path)
                 continue
