@@ -136,11 +136,11 @@ def check_semantic_token_parity() -> None:
         return
 
     gtk3_tokens = set(re.findall(
-        r"@define-color\\s+([a-zA-Z0-9_-]+)\\s+\\{\\{colors\\.([a-zA-Z0-9_-]+)\\.default\\.hex\\}\\}",
+        r"@define-color\s+([a-zA-Z0-9_-]+)\s+\{\{colors\.([a-zA-Z0-9_-]+)\.default\.hex\}\}",
         gtk3_source,
     ))
     gtk4_tokens = set(re.findall(
-        r"--([a-zA-Z0-9_-]+)\\s*:\\s*\\{\\{colors\\.([a-zA-Z0-9_-]+)\\.default\\.hex\\}\\}",
+        r"--([a-zA-Z0-9_-]+)\s*:\s*\{\{colors\.([a-zA-Z0-9_-]+)\.default\.hex\}\}",
         gtk4_source,
     ))
     # The CSS variable / GTK color name and JSON token should match exactly.
@@ -149,7 +149,7 @@ def check_semantic_token_parity() -> None:
     gtk3_json_tokens = {token for name, token in gtk3_tokens}
     gtk4_json_tokens = {token for name, token in gtk4_tokens}
     shell_tokens = set(re.findall(
-        r"\\{\\{colors\\.([a-zA-Z0-9_-]+)\\.default\\.",
+        r"\{\{colors\.([a-zA-Z0-9_-]+)\.default\.",
         shell_source,
     ))
 
