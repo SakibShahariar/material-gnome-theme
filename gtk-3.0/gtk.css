@@ -1684,12 +1684,12 @@ searchbar > revealer > box {
   transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-.titlebar stackswitcher:checked {
+.titlebar stackswitcher.linked:not(.vertical) > button:not(.suggested-action):not(.destructive-action):checked {
   background-color: @primary;
   color: @on_primary;
 }
 
-.titlebar stackswitcher:checked:hover {
+.titlebar stackswitcher.linked:not(.vertical) > button:not(.suggested-action):not(.destructive-action):checked:hover {
   background-color: alpha(@primary, 0.85);
 }
 
