@@ -2728,14 +2728,24 @@ notebook > header tab button.flat:first-child:dir(rtl) {
   margin-left: 6px;
 }
 
-notebook > header.top tabs:not(:only-child):first-child,
-notebook > header.bottom tabs:not(:only-child):first-child {
+notebook > header.top tabs:not(:only-child):first-child:dir(ltr),
+notebook > header.bottom tabs:not(:only-child):first-child:dir(ltr) {
   margin-left: 0;
 }
 
-notebook > header.top tabs:not(:only-child):last-child,
-notebook > header.bottom tabs:not(:only-child):last-child {
+notebook > header.top tabs:not(:only-child):first-child:dir(rtl),
+notebook > header.bottom tabs:not(:only-child):first-child:dir(rtl) {
   margin-right: 0;
+}
+
+notebook > header.top tabs:not(:only-child):last-child:dir(ltr),
+notebook > header.bottom tabs:not(:only-child):last-child:dir(ltr) {
+  margin-right: 0;
+}
+
+notebook > header.top tabs:not(:only-child):last-child:dir(rtl),
+notebook > header.bottom tabs:not(:only-child):last-child:dir(rtl) {
+  margin-left: 0;
 }
 
 notebook > header.top tabs tab + tab:dir(ltr),
