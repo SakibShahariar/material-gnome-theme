@@ -4777,7 +4777,7 @@ StWidget.focused .app-grid-running-dot {
 #panel.unlock-screen,
 #panel.login-screen,
 #panel.lock-screen {
-  background-color: #151311;
+  background-color: transparent;
   box-shadow: none;
   border: 2px solid transparent;
 }
