@@ -416,7 +416,7 @@
   width: 24px;
   height: 24px;
   padding: 3px;
-  border-radius: 4px;
+  border-radius: 9999px;
   transition: all 150ms ease;
   background-color: transparent;
   box-shadow: none;
@@ -1583,6 +1583,10 @@ StEntry StLabel.hint-text,
 
 .nm-dialog-header-icon {
   icon-size: 32px;
+}
+
+.nm-dialog-header-hbox {
+  spacing: 10px;
 }
 
 .nm-dialog-scroll-view {
@@ -4623,6 +4627,7 @@ StWidget.focused .app-grid-running-dot {
   width: 20px;
   background-color: {{colors.primary.default.hex}};
 }
+
 /* Top Bar — Floating Capsule */
 #panel {
   background-color: transparent;
@@ -4911,6 +4916,3 @@ StWidget.focused .app-grid-running-dot {
 #panel .remote-access-indicator {
   color: {{colors.error.default.hex}};
 }
-
-/* Active top-bar layout; keep this import last so layout rules take precedence. */
-@import url("layouts/active-layout.css");
