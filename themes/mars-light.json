@@ -1,0 +1,260 @@
+{
+  "_meta": {
+    "name": "mars",
+    "variant": "light",
+    "source": "https://github.com/bjarneo/100-themes/tree/main/mars/day",
+    "note": "Reference palette mapped to the Material GNOME semantic preset schema; source palette values are retained."
+  },
+  "colors": {
+    "primary": {
+      "default": {
+        "color": "#ba2c5d"
+      }
+    },
+    "on_primary": {
+      "default": {
+        "color": "#ffffff"
+      }
+    },
+    "primary_container": {
+      "default": {
+        "color": "#edc9d2"
+      }
+    },
+    "on_primary_container": {
+      "default": {
+        "color": "#000000"
+      }
+    },
+    "inverse_primary": {
+      "default": {
+        "color": "#a30149"
+      }
+    },
+    "primary_fixed": {
+      "default": {
+        "color": "#ba2c5d"
+      }
+    },
+    "primary_fixed_dim": {
+      "default": {
+        "color": "#ba2c5d"
+      }
+    },
+    "on_primary_fixed": {
+      "default": {
+        "color": "#ffffff"
+      }
+    },
+    "on_primary_fixed_variant": {
+      "default": {
+        "color": "#ffffff"
+      }
+    },
+    "secondary": {
+      "default": {
+        "color": "#b15804"
+      }
+    },
+    "on_secondary": {
+      "default": {
+        "color": "#ffffff"
+      }
+    },
+    "secondary_container": {
+      "default": {
+        "color": "#eadad6"
+      }
+    },
+    "on_secondary_container": {
+      "default": {
+        "color": "#000000"
+      }
+    },
+    "secondary_fixed": {
+      "default": {
+        "color": "#b15804"
+      }
+    },
+    "secondary_fixed_dim": {
+      "default": {
+        "color": "#b15804"
+      }
+    },
+    "on_secondary_fixed": {
+      "default": {
+        "color": "#ffffff"
+      }
+    },
+    "on_secondary_fixed_variant": {
+      "default": {
+        "color": "#ffffff"
+      }
+    },
+    "tertiary": {
+      "default": {
+        "color": "#ba7900"
+      }
+    },
+    "on_tertiary": {
+      "default": {
+        "color": "#000000"
+      }
+    },
+    "tertiary_container": {
+      "default": {
+        "color": "#eadad6"
+      }
+    },
+    "on_tertiary_container": {
+      "default": {
+        "color": "#000000"
+      }
+    },
+    "tertiary_fixed": {
+      "default": {
+        "color": "#ba7900"
+      }
+    },
+    "tertiary_fixed_dim": {
+      "default": {
+        "color": "#ba7900"
+      }
+    },
+    "on_tertiary_fixed": {
+      "default": {
+        "color": "#000000"
+      }
+    },
+    "on_tertiary_fixed_variant": {
+      "default": {
+        "color": "#000000"
+      }
+    },
+    "error": {
+      "default": {
+        "color": "#b3241f"
+      }
+    },
+    "on_error": {
+      "default": {
+        "color": "#ffffff"
+      }
+    },
+    "error_container": {
+      "default": {
+        "color": "#eadad6"
+      }
+    },
+    "on_error_container": {
+      "default": {
+        "color": "#000000"
+      }
+    },
+    "surface_dim": {
+      "default": {
+        "color": "#eadad6"
+      }
+    },
+    "surface": {
+      "default": {
+        "color": "#fcf5f3"
+      }
+    },
+    "surface_tint": {
+      "default": {
+        "color": "#ba2c5d"
+      }
+    },
+    "surface_bright": {
+      "default": {
+        "color": "#f2ded9"
+      }
+    },
+    "surface_container_lowest": {
+      "default": {
+        "color": "#eadad6"
+      }
+    },
+    "surface_container_low": {
+      "default": {
+        "color": "#eadad6"
+      }
+    },
+    "surface_container": {
+      "default": {
+        "color": "#fcf5f3"
+      }
+    },
+    "surface_container_high": {
+      "default": {
+        "color": "#f2ded9"
+      }
+    },
+    "surface_container_highest": {
+      "default": {
+        "color": "#f2ded9"
+      }
+    },
+    "surface_variant": {
+      "default": {
+        "color": "#b69e98"
+      }
+    },
+    "on_surface": {
+      "default": {
+        "color": "#35201b"
+      }
+    },
+    "on_surface_variant": {
+      "default": {
+        "color": "#1f0f0a"
+      }
+    },
+    "outline": {
+      "default": {
+        "color": "#b69e98"
+      }
+    },
+    "outline_variant": {
+      "default": {
+        "color": "#816c67"
+      }
+    },
+    "inverse_surface": {
+      "default": {
+        "color": "#35201b"
+      }
+    },
+    "inverse_on_surface": {
+      "default": {
+        "color": "#fcf5f3"
+      }
+    },
+    "background": {
+      "default": {
+        "color": "#fcf5f3"
+      }
+    },
+    "on_background": {
+      "default": {
+        "color": "#35201b"
+      }
+    },
+    "shadow": {
+      "default": {
+        "color": "#000000"
+      }
+    },
+    "scrim": {
+      "default": {
+        "color": "#000000"
+      }
+    },
+    "source_color": {
+      "default": {
+        "color": "#ba2c5d"
+      }
+    }
+  }
+}
