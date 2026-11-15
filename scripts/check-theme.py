@@ -134,7 +134,11 @@ def check_theme_presets() -> None:
     }
     families: dict[str, set[str]] = {}
     contrast_failures: dict[tuple[str, str, str], list[tuple[str, float]]] = {}
-    preset_paths = sorted((ROOT / "themes").glob("*.json"))
+    # The classic-* reference collection is legacy material and is not part of the curated 88-family set.
+    preset_paths = sorted(
+        path for path in (ROOT / "themes").glob("*.json")
+        if not path.stem.startswith("classic-")
+    )
     valid_presets = 0
 
     for path in preset_paths:

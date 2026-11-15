@@ -1,7 +1,7 @@
 {
   "_meta": {
     "name": "8-bit",
-    "variant": "day",
+    "variant": "light",
     "source": "https://github.com/bjarneo/100-themes/tree/main/8-bit/day",
     "note": "Palette values mapped into Material GNOME's existing semantic preset schema."
   },
