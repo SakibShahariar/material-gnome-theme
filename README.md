@@ -241,13 +241,20 @@ gnome-shell/layouts/
 
 **To apply a layout:**
 
-1. Copy the layout you want over `gnome-shell/layouts/active-layout.css`. For example:
+Use the switcher script (recommended):
 
-   ```bash
-   cp gnome-shell/layouts/unified-pill.css gnome-shell/layouts/active-layout.css
-   ```
+```bash
+./scripts/set-layout.sh unified-pill   # switch to a layout
+./scripts/set-layout.sh --list         # list available layouts
+```
 
-2. Apply or reinstall the updated theme, then reload GNOME Shell. On Wayland, log out and back in if a shell reload is unavailable.
+It copies the chosen `gnome-shell/layouts/<name>.css` over `active-layout.css` and tells you to reload. An unknown name exits non-zero and lists what's available. Or do it by hand:
+
+```bash
+cp gnome-shell/layouts/unified-pill.css gnome-shell/layouts/active-layout.css
+```
+
+Then apply or reinstall the updated theme, and reload GNOME Shell. On Wayland, log out and back in if a shell reload is unavailable.
 
 `gnome-shell/gnome-shell.css` imports `layouts/active-layout.css` at the end, so you no longer need to edit the large generated stylesheet. The checked-in active layout defaults to Floating Capsule (Glass).
 
