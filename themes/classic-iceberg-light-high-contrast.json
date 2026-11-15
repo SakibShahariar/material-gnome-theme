@@ -1,0 +1,263 @@
+{
+  "_meta": {
+    "name": "Iceberg",
+    "variant": "light-high-contrast",
+    "collection": "classic-color-schemes",
+    "source": "https://github.com/cocopon/iceberg.vim",
+    "license": "MIT",
+    "attribution": "cocopon and Iceberg contributors",
+    "note": "Standard dark and light use the official Iceberg Vim palette. High-contrast and AMOLED variants are project adaptations."
+  },
+  "colors": {
+    "primary": {
+      "default": {
+        "color": "#1B3E7A"
+      }
+    },
+    "primary_container": {
+      "default": {
+        "color": "#D3DCEC"
+      }
+    },
+    "inverse_primary": {
+      "default": {
+        "color": "#1B3E7A"
+      }
+    },
+    "primary_fixed": {
+      "default": {
+        "color": "#1B3E7A"
+      }
+    },
+    "primary_fixed_dim": {
+      "default": {
+        "color": "#1B3E7A"
+      }
+    },
+    "secondary": {
+      "default": {
+        "color": "#57388F"
+      }
+    },
+    "secondary_container": {
+      "default": {
+        "color": "#DDD5EA"
+      }
+    },
+    "secondary_fixed": {
+      "default": {
+        "color": "#57388F"
+      }
+    },
+    "secondary_fixed_dim": {
+      "default": {
+        "color": "#57388F"
+      }
+    },
+    "tertiary": {
+      "default": {
+        "color": "#205B7A"
+      }
+    },
+    "tertiary_container": {
+      "default": {
+        "color": "#D3E7ED"
+      }
+    },
+    "tertiary_fixed": {
+      "default": {
+        "color": "#205B7A"
+      }
+    },
+    "tertiary_fixed_dim": {
+      "default": {
+        "color": "#205B7A"
+      }
+    },
+    "error": {
+      "default": {
+        "color": "#A51F4E"
+      }
+    },
+    "error_container": {
+      "default": {
+        "color": "#F1DCE4"
+      }
+    },
+    "surface_dim": {
+      "default": {
+        "color": "#D1D5DE"
+      }
+    },
+    "surface": {
+      "default": {
+        "color": "#FFFFFF"
+      }
+    },
+    "surface_tint": {
+      "default": {
+        "color": "#1B3E7A"
+      }
+    },
+    "surface_bright": {
+      "default": {
+        "color": "#FFFFFF"
+      }
+    },
+    "surface_container_lowest": {
+      "default": {
+        "color": "#FFFFFF"
+      }
+    },
+    "surface_container_low": {
+      "default": {
+        "color": "#F4F5F7"
+      }
+    },
+    "surface_container": {
+      "default": {
+        "color": "#FFFFFF"
+      }
+    },
+    "surface_container_high": {
+      "default": {
+        "color": "#E1E3E9"
+      }
+    },
+    "surface_container_highest": {
+      "default": {
+        "color": "#CAD0DE"
+      }
+    },
+    "surface_variant": {
+      "default": {
+        "color": "#6C728A"
+      }
+    },
+    "outline": {
+      "default": {
+        "color": "#33374C"
+      }
+    },
+    "outline_variant": {
+      "default": {
+        "color": "#6C728A"
+      }
+    },
+    "inverse_surface": {
+      "default": {
+        "color": "#161821"
+      }
+    },
+    "background": {
+      "default": {
+        "color": "#FFFFFF"
+      }
+    },
+    "shadow": {
+      "default": {
+        "color": "#000000"
+      }
+    },
+    "scrim": {
+      "default": {
+        "color": "#000000"
+      }
+    },
+    "source_color": {
+      "default": {
+        "color": "#1B3E7A"
+      }
+    },
+    "on_primary": {
+      "default": {
+        "color": "#FFFFFF"
+      }
+    },
+    "on_primary_container": {
+      "default": {
+        "color": "#000000"
+      }
+    },
+    "on_primary_fixed": {
+      "default": {
+        "color": "#FFFFFF"
+      }
+    },
+    "on_primary_fixed_variant": {
+      "default": {
+        "color": "#FFFFFF"
+      }
+    },
+    "on_secondary": {
+      "default": {
+        "color": "#FFFFFF"
+      }
+    },
+    "on_secondary_container": {
+      "default": {
+        "color": "#000000"
+      }
+    },
+    "on_secondary_fixed": {
+      "default": {
+        "color": "#FFFFFF"
+      }
+    },
+    "on_secondary_fixed_variant": {
+      "default": {
+        "color": "#FFFFFF"
+      }
+    },
+    "on_tertiary": {
+      "default": {
+        "color": "#FFFFFF"
+      }
+    },
+    "on_tertiary_container": {
+      "default": {
+        "color": "#000000"
+      }
+    },
+    "on_tertiary_fixed": {
+      "default": {
+        "color": "#FFFFFF"
+      }
+    },
+    "on_tertiary_fixed_variant": {
+      "default": {
+        "color": "#FFFFFF"
+      }
+    },
+    "on_error": {
+      "default": {
+        "color": "#FFFFFF"
+      }
+    },
+    "on_error_container": {
+      "default": {
+        "color": "#000000"
+      }
+    },
+    "on_surface": {
+      "default": {
+        "color": "#252A3E"
+      }
+    },
+    "on_surface_variant": {
+      "default": {
+        "color": "#FFFFFF"
+      }
+    },
+    "inverse_on_surface": {
+      "default": {
+        "color": "#FFFFFF"
+      }
+    },
+    "on_background": {
+      "default": {
+        "color": "#252A3E"
+      }
+    }
+  }
+}
