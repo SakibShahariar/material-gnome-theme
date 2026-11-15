@@ -122,9 +122,16 @@ def preset_variant(path: Path) -> tuple[str, str] | None:
 
 def check_theme_presets() -> None:
     """Validate every preset's schema and audit text-color contrast."""
-    colors_css = ROOT / "gtk-4.0" / "colors.css"
-    source = colors_css.read_text(encoding="utf-8")
-    available = set(re.findall(r"--([a-zA-Z0-9_-]+)\s*:", source))
+    colors_template = ROOT / "gtk-4.0" / "colors-template.css"
+    source = colors_template.read_text(encoding="utf-8")
+    available = {
+        name
+        for name, token in re.findall(
+            r"--([a-zA-Z0-9_-]+)\s*:\s*\{\{colors\.([a-zA-Z0-9_-]+)\.default\.hex\}\}",
+            source,
+        )
+        if name == token
+    }
     families: dict[str, set[str]] = {}
     contrast_failures: dict[tuple[str, str, str], list[tuple[str, float]]] = {}
     preset_paths = sorted((ROOT / "themes").glob("*.json"))
