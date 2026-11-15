@@ -1585,10 +1585,6 @@ StEntry StLabel.hint-text,
   icon-size: 32px;
 }
 
-.nm-dialog-header-hbox {
-  spacing: 10px;
-}
-
 .nm-dialog-scroll-view {
   border: none;
   padding: 0;
@@ -3274,7 +3270,6 @@ StWidget.focused .app-grid-running-dot {
 
 .message .message-header .message-close-button {
   margin-left: 3px;
-  padding: 4px;
 }
 
 .workspace-animation {
@@ -4636,7 +4631,7 @@ StWidget.focused .app-grid-running-dot {
   width: calc(100% - 60px);
   height: 30px;
   transition: background-color 250ms ease-in-out;
-  color: #d4c4b5;
+  color: #eee0d4;
   font-weight: bold;
   font-feature-settings: 'tnum';
   font-size: 10pt;
@@ -4645,7 +4640,7 @@ StWidget.focused .app-grid-running-dot {
 
 #panel .panel-corner {
   -panel-corner-radius: 0;
-  -panel-corner-background-color: #151311;
+  -panel-corner-background-color: transparent;
   -panel-corner-border-width: 0;
   -panel-corner-border-color: transparent;
   -panel-corner-opacity: 0;
@@ -4891,7 +4886,7 @@ StWidget.focused .app-grid-running-dot {
 #panel.login-screen .panel-corner,
 #panel.lock-screen .panel-corner {
   -panel-corner-radius: 0;
-  -panel-corner-background-color: #151311;
+  -panel-corner-background-color: transparent;
   -panel-corner-border-color: transparent;
 }
 
