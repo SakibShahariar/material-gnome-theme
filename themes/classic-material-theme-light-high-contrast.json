@@ -246,12 +246,12 @@
     },
     "on_surface_variant": {
       "default": {
-        "color": "#263746"
+        "color": "#000000"
       }
     },
     "inverse_on_surface": {
       "default": {
-        "color": "#000000"
+        "color": "#ffffff"
       }
     },
     "on_background": {
