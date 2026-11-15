@@ -208,7 +208,7 @@
     },
     "on_surface_variant": {
       "default": {
-        "color": "#010203"
+        "color": "#000000"
       }
     },
     "outline": {

@@ -228,6 +228,9 @@ def check_theme_presets() -> None:
         f"across {len(families)} theme families."
     )
     if contrast_failures:
+        for (variant, foreground, background), failures in contrast_failures.items():
+            for filename, ratio in failures:
+                report(ROOT / "themes" / filename, f"WCAG AA contrast {foreground}/{background} is {ratio:.2f}:1 (minimum 4.5:1) in {variant}")
         total = sum(len(items) for items in contrast_failures.values())
         print(
             f"WCAG AA contrast audit: {total} text pairs below 4.5:1 "

@@ -198,7 +198,7 @@
     },
     "surface_variant": {
       "default": {
-        "color": "#9c7285"
+        "color": "#926b7d"
       }
     },
     "on_surface": {
@@ -208,7 +208,7 @@
     },
     "on_surface_variant": {
       "default": {
-        "color": "#ffffff"
+        "color": "#FFFFFF"
       }
     },
     "outline": {
