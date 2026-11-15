@@ -1,0 +1,263 @@
+{
+  "_meta": {
+    "name": "Nord",
+    "variant": "amoled",
+    "collection": "classic-color-schemes",
+    "source": "https://github.com/nordtheme/nord",
+    "license": "MIT",
+    "attribution": "Sven Greb / Arctic Ice Studio",
+    "note": "Uses the official Nord Polar Night, Snow Storm, Frost and Aurora palette. Light is composed from the official Snow Storm colors; high-contrast and AMOLED variants are project adaptations. Foreground pairs are checked to WCAG AA 4.5:1."
+  },
+  "colors": {
+    "primary": {
+      "default": {
+        "color": "#88C0D0"
+      }
+    },
+    "on_primary": {
+      "default": {
+        "color": "#000000"
+      }
+    },
+    "primary_container": {
+      "default": {
+        "color": "#121A25"
+      }
+    },
+    "on_primary_container": {
+      "default": {
+        "color": "#FFFFFF"
+      }
+    },
+    "inverse_primary": {
+      "default": {
+        "color": "#88C0D0"
+      }
+    },
+    "primary_fixed": {
+      "default": {
+        "color": "#88C0D0"
+      }
+    },
+    "primary_fixed_dim": {
+      "default": {
+        "color": "#88C0D0"
+      }
+    },
+    "on_primary_fixed": {
+      "default": {
+        "color": "#000000"
+      }
+    },
+    "on_primary_fixed_variant": {
+      "default": {
+        "color": "#000000"
+      }
+    },
+    "secondary": {
+      "default": {
+        "color": "#5E81AC"
+      }
+    },
+    "on_secondary": {
+      "default": {
+        "color": "#000000"
+      }
+    },
+    "secondary_container": {
+      "default": {
+        "color": "#0B1018"
+      }
+    },
+    "on_secondary_container": {
+      "default": {
+        "color": "#FFFFFF"
+      }
+    },
+    "secondary_fixed": {
+      "default": {
+        "color": "#5E81AC"
+      }
+    },
+    "secondary_fixed_dim": {
+      "default": {
+        "color": "#5E81AC"
+      }
+    },
+    "on_secondary_fixed": {
+      "default": {
+        "color": "#000000"
+      }
+    },
+    "on_secondary_fixed_variant": {
+      "default": {
+        "color": "#000000"
+      }
+    },
+    "tertiary": {
+      "default": {
+        "color": "#8FBCBB"
+      }
+    },
+    "on_tertiary": {
+      "default": {
+        "color": "#000000"
+      }
+    },
+    "tertiary_container": {
+      "default": {
+        "color": "#121A25"
+      }
+    },
+    "on_tertiary_container": {
+      "default": {
+        "color": "#FFFFFF"
+      }
+    },
+    "tertiary_fixed": {
+      "default": {
+        "color": "#8FBCBB"
+      }
+    },
+    "tertiary_fixed_dim": {
+      "default": {
+        "color": "#8FBCBB"
+      }
+    },
+    "on_tertiary_fixed": {
+      "default": {
+        "color": "#000000"
+      }
+    },
+    "on_tertiary_fixed_variant": {
+      "default": {
+        "color": "#000000"
+      }
+    },
+    "error": {
+      "default": {
+        "color": "#BF616A"
+      }
+    },
+    "on_error": {
+      "default": {
+        "color": "#000000"
+      }
+    },
+    "error_container": {
+      "default": {
+        "color": "#121A25"
+      }
+    },
+    "on_error_container": {
+      "default": {
+        "color": "#FFFFFF"
+      }
+    },
+    "surface_dim": {
+      "default": {
+        "color": "#000000"
+      }
+    },
+    "surface": {
+      "default": {
+        "color": "#000000"
+      }
+    },
+    "surface_tint": {
+      "default": {
+        "color": "#88C0D0"
+      }
+    },
+    "surface_bright": {
+      "default": {
+        "color": "#252B35"
+      }
+    },
+    "surface_container_lowest": {
+      "default": {
+        "color": "#000000"
+      }
+    },
+    "surface_container_low": {
+      "default": {
+        "color": "#05080D"
+      }
+    },
+    "surface_container": {
+      "default": {
+        "color": "#0B1018"
+      }
+    },
+    "surface_container_high": {
+      "default": {
+        "color": "#121A25"
+      }
+    },
+    "surface_container_highest": {
+      "default": {
+        "color": "#1B2634"
+      }
+    },
+    "surface_variant": {
+      "default": {
+        "color": "#434C5E"
+      }
+    },
+    "on_surface": {
+      "default": {
+        "color": "#D8DEE9"
+      }
+    },
+    "on_surface_variant": {
+      "default": {
+        "color": "#FFFFFF"
+      }
+    },
+    "outline": {
+      "default": {
+        "color": "#4C566A"
+      }
+    },
+    "outline_variant": {
+      "default": {
+        "color": "#434C5E"
+      }
+    },
+    "inverse_surface": {
+      "default": {
+        "color": "#ECEFF4"
+      }
+    },
+    "inverse_on_surface": {
+      "default": {
+        "color": "#000000"
+      }
+    },
+    "background": {
+      "default": {
+        "color": "#000000"
+      }
+    },
+    "on_background": {
+      "default": {
+        "color": "#D8DEE9"
+      }
+    },
+    "shadow": {
+      "default": {
+        "color": "#000000"
+      }
+    },
+    "scrim": {
+      "default": {
+        "color": "#000000"
+      }
+    },
+    "source_color": {
+      "default": {
+        "color": "#88C0D0"
+      }
+    }
+  }
+}
