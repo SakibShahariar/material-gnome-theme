@@ -53,7 +53,7 @@
     },
     "secondary": {
       "default": {
-        "color": "#ffa28f"
+        "color": "#8fd0ff"
       }
     },
     "on_secondary": {
@@ -63,7 +63,7 @@
     },
     "secondary_container": {
       "default": {
-        "color": "#070411"
+        "color": "#040c11"
       }
     },
     "on_secondary_container": {
@@ -73,12 +73,12 @@
     },
     "secondary_fixed": {
       "default": {
-        "color": "#ffa28f"
+        "color": "#8fd0ff"
       }
     },
     "secondary_fixed_dim": {
       "default": {
-        "color": "#ffa28f"
+        "color": "#8fd0ff"
       }
     },
     "on_secondary_fixed": {
@@ -93,7 +93,7 @@
     },
     "tertiary": {
       "default": {
-        "color": "#ffc390"
+        "color": "#ffd690"
       }
     },
     "on_tertiary": {
@@ -103,7 +103,7 @@
     },
     "tertiary_container": {
       "default": {
-        "color": "#070411"
+        "color": "#110c04"
       }
     },
     "on_tertiary_container": {
@@ -113,12 +113,12 @@
     },
     "tertiary_fixed": {
       "default": {
-        "color": "#ffc390"
+        "color": "#ffd690"
       }
     },
     "tertiary_fixed_dim": {
       "default": {
-        "color": "#ffc390"
+        "color": "#ffd690"
       }
     },
     "on_tertiary_fixed": {
