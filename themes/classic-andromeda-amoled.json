@@ -246,7 +246,7 @@
     },
     "on_surface_variant": {
       "default": {
-        "color": "#d5cbd8"
+        "color": "#ffffff"
       }
     },
     "inverse_on_surface": {
