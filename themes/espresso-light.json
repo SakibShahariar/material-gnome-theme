@@ -8,17 +8,17 @@
   "colors": {
     "primary": {
       "default": {
-        "color": "#a64b50"
+        "color": "#85520A"
       }
     },
     "on_primary": {
       "default": {
-        "color": "#ffffff"
+        "color": "#FFFFFF"
       }
     },
     "primary_container": {
       "default": {
-        "color": "#e9d0ce"
+        "color": "#F1DFC1"
       }
     },
     "on_primary_container": {
@@ -28,27 +28,27 @@
     },
     "inverse_primary": {
       "default": {
-        "color": "#91343c"
+        "color": "#E5B66A"
       }
     },
     "primary_fixed": {
       "default": {
-        "color": "#a64b50"
+        "color": "#F6D9A4"
       }
     },
     "primary_fixed_dim": {
       "default": {
-        "color": "#a64b50"
+        "color": "#E8BD78"
       }
     },
     "on_primary_fixed": {
       "default": {
-        "color": "#ffffff"
+        "color": "#2C1B08"
       }
     },
     "on_primary_fixed_variant": {
       "default": {
-        "color": "#ffffff"
+        "color": "#5C3C16"
       }
     },
     "secondary": {
