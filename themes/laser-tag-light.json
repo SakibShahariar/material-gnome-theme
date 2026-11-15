@@ -98,7 +98,7 @@
     },
     "on_tertiary": {
       "default": {
-        "color": "#000000"
+        "color": "#ffffff"
       }
     },
     "tertiary_container": {
@@ -123,12 +123,12 @@
     },
     "on_tertiary_fixed": {
       "default": {
-        "color": "#000000"
+        "color": "#ffffff"
       }
     },
     "on_tertiary_fixed_variant": {
       "default": {
-        "color": "#000000"
+        "color": "#ffffff"
       }
     },
     "error": {
