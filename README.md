@@ -201,6 +201,21 @@ python scripts/apply-theme.py themes/Aqua-Abyss.json
 
 The script updates `gtk-3.0/colors.css`, `gtk-4.0/colors.css`, and `gnome-shell/gnome-shell.css` from their corresponding templates. Applying a preset replaces the current generated color files, so keep a backup or commit local customizations first. Restart GTK apps and reload GNOME Shell after applying it.
 
+### Diagnostics
+
+Two read-only helpers are available for troubleshooting (safe to paste into bug reports):
+
+```bash
+# Which preset is currently applied, and are the generated files in sync?
+python scripts/theme-status.py                # infer
+python scripts/theme-status.py themes/Aqua-Abyss.json   # check a specific preset
+
+# Broader install/color/drift diagnostics (add --preset to also check drift)
+python scripts/theme-doctor.py [--preset themes/Aqua-Abyss.json]
+```
+
+`theme-status.py` exits `0` when the generated files match the selected preset and `1` on drift. `theme-doctor.py` runs the CSS/preset validator, checks the GTK4 symlink, the installed-theme path, and the running GNOME Shell version, then prints a paste-safe report.
+
 ### Option B: Matugen
 
 [`matugen`](https://github.com/InioX/matugen) is the theme's primary intended color workflow. It can generate a palette from a wallpaper or source color, and it also supports importing a JSON file directly and using its values inside templates — so it can take the same files in `themes/` and output the `colors.css` files for you automatically, no manual copy-pasting required.

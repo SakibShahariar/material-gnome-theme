@@ -34,6 +34,16 @@ jobs:
       - name: Check installer syntax
         run: bash -n install.sh
 
+      - name: Smoke-test theme-status.py and theme-doctor.py
+        run: |
+          # status: regenerate one preset so the check is deterministic, then verify it reports MATCHES.
+          preset="$(ls themes/*.json | head -n 1)"
+          python scripts/apply-theme.py "$preset"
+          python scripts/theme-status.py "$preset"
+          # doctor: should run clean (warnings about missing install/Shell are expected,
+          # but no hard failures in CI).
+          python scripts/theme-doctor.py --preset "$preset"
+
       - name: Test installer in an isolated home
         run: |
           test_home="$RUNNER_TEMP/material-gnome-install-test"
