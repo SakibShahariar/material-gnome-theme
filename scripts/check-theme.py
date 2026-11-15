@@ -64,25 +64,212 @@ def check_local_asset_references(stylesheets: list[Path]) -> None:
                 report(stylesheet, f"local url() target does not exist: {target}")
 
 
+PRESET_VARIANTS = (
+    "dark",
+    "light",
+    "dark-high-contrast",
+    "light-high-contrast",
+    "amoled",
+)
+HEX_COLOR = re.compile(r"^#[0-9a-fA-F]{6}$")
+CONTRAST_PAIRS = (
+    ("on_primary", "primary"),
+    ("on_primary_container", "primary_container"),
+    ("on_secondary", "secondary"),
+    ("on_secondary_container", "secondary_container"),
+    ("on_tertiary", "tertiary"),
+    ("on_tertiary_container", "tertiary_container"),
+    ("on_error", "error"),
+    ("on_error_container", "error_container"),
+    ("on_surface", "surface"),
+    ("on_surface_variant", "surface_variant"),
+    ("on_background", "background"),
+    ("inverse_on_surface", "inverse_surface"),
+    ("on_primary_fixed", "primary_fixed"),
+    ("on_primary_fixed_variant", "primary_fixed_dim"),
+    ("on_secondary_fixed", "secondary_fixed"),
+    ("on_secondary_fixed_variant", "secondary_fixed_dim"),
+    ("on_tertiary_fixed", "tertiary_fixed"),
+    ("on_tertiary_fixed_variant", "tertiary_fixed_dim"),
+)
+
+
+def relative_luminance(color: str) -> float:
+    """Return WCAG relative luminance for a six-digit sRGB hex color."""
+    channels = [int(color[index:index + 2], 16) / 255 for index in (1, 3, 5)]
+    linear = [
+        channel / 12.92 if channel <= 0.04045
+        else ((channel + 0.055) / 1.055) ** 2.4
+        for channel in channels
+    ]
+    return 0.2126 * linear[0] + 0.7152 * linear[1] + 0.0722 * linear[2]
+
+
+def contrast_ratio(foreground: str, background: str) -> float:
+    first = relative_luminance(foreground)
+    second = relative_luminance(background)
+    lighter, darker = max(first, second), min(first, second)
+    return (lighter + 0.05) / (darker + 0.05)
+
+
+def preset_variant(path: Path) -> tuple[str, str] | None:
+    for variant in sorted(PRESET_VARIANTS, key=len, reverse=True):
+        suffix = f"-{variant}"
+        if path.stem.endswith(suffix):
+            return path.stem[:-len(suffix)], variant
+    return None
+
+
 def check_theme_presets() -> None:
-    colors_css = ROOT / "gtk-4.0" / "colors.css"
-    source = colors_css.read_text(encoding="utf-8")
-    available = set(re.findall(r"--([a-zA-Z0-9_-]+)\s*:", source))
-    for path in sorted((ROOT / "themes").glob("*.json")):
+    """Validate every preset's schema and audit text-color contrast."""
+    colors_template = ROOT / "gtk-4.0" / "colors-template.css"
+    source = colors_template.read_text(encoding="utf-8")
+    available = {
+        name
+        for name, token in re.findall(
+            r"--([a-zA-Z0-9_-]+)\s*:\s*\{\{colors\.([a-zA-Z0-9_-]+)\.default\.hex\}\}",
+            source,
+        )
+        if name == token
+    }
+    families: dict[str, set[str]] = {}
+    contrast_failures: dict[tuple[str, str, str], list[tuple[str, float]]] = {}
+    high_contrast_aaa_shortfalls: dict[tuple[str, str, str], list[tuple[str, float]]] = {}
+    # The classic-* reference collection is legacy material and is not part of the curated 88-family set.
+    preset_paths = sorted(
+        path for path in (ROOT / "themes").glob("*.json")
+        if not path.stem.startswith("classic-")
+    )
+    valid_presets = 0
+
+    for path in preset_paths:
+        variant_info = preset_variant(path)
+        if variant_info is None:
+            report(path, "filename must end with one of the five supported variant suffixes")
+            continue
+        family, variant = variant_info
+        families.setdefault(family, set()).add(variant)
+
         try:
             data = json.loads(path.read_text(encoding="utf-8"))
         except (OSError, json.JSONDecodeError) as error:
             report(path, f"invalid JSON: {error}")
             continue
 
+        if not isinstance(data, dict):
+            report(path, "preset root must be a JSON object")
+            continue
+        meta = data.get("_meta")
+        if not isinstance(meta, dict):
+            report(path, "expected a top-level '_meta' object")
+        else:
+            if meta.get("name") != family:
+                report(path, f"_meta.name must match filename family '{family}'")
+            if meta.get("variant") != variant:
+                report(path, f"_meta.variant must match filename variant '{variant}'")
+
         colors = data.get("colors")
         if not isinstance(colors, dict):
             report(path, "expected a top-level 'colors' object")
             continue
 
-        missing = sorted(set(colors) - available)
+        missing = sorted(available - set(colors))
+        extra = sorted(set(colors) - available)
         if missing:
-            report(path, "missing GTK4 CSS variables: " + ", ".join(missing))
+            report(path, "missing semantic tokens: " + ", ".join(missing))
+        if extra:
+            report(path, "unknown semantic tokens: " + ", ".join(extra))
+
+        parsed_colors: dict[str, str] = {}
+        for token, entry in colors.items():
+            if not isinstance(entry, dict):
+                report(path, f"'{token}' must be an object containing 'default.color'")
+                continue
+            default = entry.get("default")
+            if not isinstance(default, dict):
+                report(path, f"'{token}.default' must be an object")
+                continue
+            color = default.get("color")
+            if not isinstance(color, str) or not HEX_COLOR.fullmatch(color):
+                report(path, f"'{token}.default.color' must be a six-digit hex color")
+                continue
+            parsed_colors[token] = color
+
+        if missing or extra or len(parsed_colors) != len(available):
+            continue
+        valid_presets += 1
+
+        threshold = 4.5
+        for foreground_token, background_token in CONTRAST_PAIRS:
+            foreground = parsed_colors.get(foreground_token)
+            background = parsed_colors.get(background_token)
+            if foreground is None or background is None:
+                continue
+            ratio = contrast_ratio(foreground, background)
+            if ratio + 1e-9 < threshold:
+                key = (variant, foreground_token, background_token)
+                contrast_failures.setdefault(key, []).append((path.name, ratio))
+            elif "high-contrast" in variant and ratio < 7.0:
+                key = (variant, foreground_token, background_token)
+                high_contrast_aaa_shortfalls.setdefault(key, []).append((path.name, ratio))
+
+    expected_variants = set(PRESET_VARIANTS)
+    for family, variants in sorted(families.items()):
+        missing = sorted(expected_variants - variants)
+        extra = sorted(variants - expected_variants)
+        if missing:
+            report(ROOT / "themes", f"{family}: missing variants: {', '.join(missing)}")
+        if extra:
+            report(ROOT / "themes", f"{family}: unsupported variants: {', '.join(extra)}")
+
+    print(
+        f"Preset schema: {valid_presets}/{len(preset_paths)} curated files have complete "
+        f"metadata, all {len(available)} semantic tokens, and valid #RRGGBB values "
+        f"across {len(families)} theme families."
+    )
+    if contrast_failures:
+        for (variant, foreground, background), failures in contrast_failures.items():
+            for filename, ratio in failures:
+                report(ROOT / "themes" / filename, f"WCAG AA contrast {foreground}/{background} is {ratio:.2f}:1 (minimum 4.5:1) in {variant}")
+        total = sum(len(items) for items in contrast_failures.values())
+        print(
+            f"WCAG AA contrast audit: {total} text pairs below 4.5:1 "
+            f"across {len(contrast_failures)} variant/token combinations."
+        )
+        for (variant, foreground, background), failures in sorted(
+            contrast_failures.items(),
+            key=lambda item: (-len(item[1]), item[0]),
+        ):
+            examples = ", ".join(
+                f"{name} ({ratio:.2f}:1)" for name, ratio in failures[:3]
+            )
+            print(
+                f"  FAIL [{variant}] {foreground}/{background}: "
+                f"{len(failures)} preset(s); e.g. {examples}"
+            )
+    else:
+        print("WCAG AA contrast audit: all checked text pairs meet 4.5:1.")
+
+    if high_contrast_aaa_shortfalls:
+        total = sum(len(items) for items in high_contrast_aaa_shortfalls.values())
+        print(
+            f"High-contrast AAA advisory: {total} text pairs are AA-compliant "
+            f"but below 7:1 across {len(high_contrast_aaa_shortfalls)} combinations."
+        )
+        for (variant, foreground, background), failures in sorted(
+            high_contrast_aaa_shortfalls.items(),
+            key=lambda item: (-len(item[1]), item[0]),
+        )[:12]:
+            examples = ", ".join(
+                f"{name} ({ratio:.2f}:1)" for name, ratio in failures[:3]
+            )
+            print(
+                f"  NOTE [{variant}] {foreground}/{background}: "
+                f"{len(failures)} preset(s); e.g. {examples}"
+            )
+    else:
+        print("High-contrast AAA advisory: all checked pairs meet 7:1.")
+
 
 
 # GTK3 and GTK4 expose the full semantic palette. GNOME Shell intentionally

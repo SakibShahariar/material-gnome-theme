@@ -8,17 +8,17 @@
   "colors": {
     "primary": {
       "default": {
-        "color": "#00653d"
+        "color": "#005A49"
       }
     },
     "on_primary": {
       "default": {
-        "color": "#ffffff"
+        "color": "#FFFFFF"
       }
     },
     "primary_container": {
       "default": {
-        "color": "#bbd9cf"
+        "color": "#C7F3E7"
       }
     },
     "on_primary_container": {
@@ -28,32 +28,32 @@
     },
     "inverse_primary": {
       "default": {
-        "color": "#035332"
+        "color": "#007A61"
       }
     },
     "primary_fixed": {
       "default": {
-        "color": "#00653d"
+        "color": "#CFF6EA"
       }
     },
     "primary_fixed_dim": {
       "default": {
-        "color": "#00653d"
+        "color": "#9DDEC9"
       }
     },
     "on_primary_fixed": {
       "default": {
-        "color": "#ffffff"
+        "color": "#052D24"
       }
     },
     "on_primary_fixed_variant": {
       "default": {
-        "color": "#ffffff"
+        "color": "#1B5B49"
       }
     },
     "secondary": {
       "default": {
-        "color": "#066264"
+        "color": "#644206"
       }
     },
     "on_secondary": {
@@ -63,7 +63,7 @@
     },
     "secondary_container": {
       "default": {
-        "color": "#dee6e7"
+        "color": "#e7e4de"
       }
     },
     "on_secondary_container": {
@@ -73,12 +73,12 @@
     },
     "secondary_fixed": {
       "default": {
-        "color": "#066264"
+        "color": "#644206"
       }
     },
     "secondary_fixed_dim": {
       "default": {
-        "color": "#066264"
+        "color": "#644206"
       }
     },
     "on_secondary_fixed": {
@@ -93,7 +93,7 @@
     },
     "tertiary": {
       "default": {
-        "color": "#026072"
+        "color": "#023172"
       }
     },
     "on_tertiary": {
@@ -103,7 +103,7 @@
     },
     "tertiary_container": {
       "default": {
-        "color": "#dee6e7"
+        "color": "#dee2e7"
       }
     },
     "on_tertiary_container": {
@@ -113,12 +113,12 @@
     },
     "tertiary_fixed": {
       "default": {
-        "color": "#026072"
+        "color": "#023172"
       }
     },
     "tertiary_fixed_dim": {
       "default": {
-        "color": "#026072"
+        "color": "#023172"
       }
     },
     "on_tertiary_fixed": {

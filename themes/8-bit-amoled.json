@@ -1,7 +1,7 @@
 {
   "_meta": {
     "name": "8-bit",
-    "variant": "oled",
+    "variant": "amoled",
     "source": "https://github.com/bjarneo/100-themes/tree/main/8-bit/oled",
     "note": "Palette values mapped into Material GNOME's existing semantic preset schema."
   },
@@ -53,7 +53,7 @@
     },
     "secondary": {
       "default": {
-        "color": "#1fe4f6"
+        "color": "#1ff679"
       }
     },
     "on_secondary": {
@@ -73,12 +73,12 @@
     },
     "secondary_fixed": {
       "default": {
-        "color": "#1fe4f6"
+        "color": "#1ff679"
       }
     },
     "secondary_fixed_dim": {
       "default": {
-        "color": "#1fe4f6"
+        "color": "#1ff679"
       }
     },
     "on_secondary_fixed": {
@@ -93,7 +93,7 @@
     },
     "tertiary": {
       "default": {
-        "color": "#ffe97e"
+        "color": "#7eb4ff"
       }
     },
     "on_tertiary": {
@@ -113,12 +113,12 @@
     },
     "tertiary_fixed": {
       "default": {
-        "color": "#ffe97e"
+        "color": "#7eb4ff"
       }
     },
     "tertiary_fixed_dim": {
       "default": {
-        "color": "#ffe97e"
+        "color": "#7eb4ff"
       }
     },
     "on_tertiary_fixed": {
