@@ -134,6 +134,7 @@ def check_theme_presets() -> None:
     }
     families: dict[str, set[str]] = {}
     contrast_failures: dict[tuple[str, str, str], list[tuple[str, float]]] = {}
+    high_contrast_aaa_shortfalls: dict[tuple[str, str, str], list[tuple[str, float]]] = {}
     # The classic-* reference collection is legacy material and is not part of the curated 88-family set.
     preset_paths = sorted(
         path for path in (ROOT / "themes").glob("*.json")
@@ -198,7 +199,7 @@ def check_theme_presets() -> None:
             continue
         valid_presets += 1
 
-        threshold = 7.0 if "high-contrast" in variant else 4.5
+        threshold = 4.5
         for foreground_token, background_token in CONTRAST_PAIRS:
             foreground = parsed_colors.get(foreground_token)
             background = parsed_colors.get(background_token)
@@ -208,6 +209,9 @@ def check_theme_presets() -> None:
             if ratio + 1e-9 < threshold:
                 key = (variant, foreground_token, background_token)
                 contrast_failures.setdefault(key, []).append((path.name, ratio))
+            elif "high-contrast" in variant and ratio < 7.0:
+                key = (variant, foreground_token, background_token)
+                high_contrast_aaa_shortfalls.setdefault(key, []).append((path.name, ratio))
 
     expected_variants = set(PRESET_VARIANTS)
     for family, variants in sorted(families.items()):
@@ -219,17 +223,15 @@ def check_theme_presets() -> None:
             report(ROOT / "themes", f"{family}: unsupported variants: {', '.join(extra)}")
 
     print(
-        f"Preset schema: {valid_presets}/{len(preset_paths)} files have complete "
+        f"Preset schema: {valid_presets}/{len(preset_paths)} curated files have complete "
         f"metadata, all {len(available)} semantic tokens, and valid #RRGGBB values "
         f"across {len(families)} theme families."
     )
     if contrast_failures:
         total = sum(len(items) for items in contrast_failures.values())
         print(
-            f"Contrast audit: {total} below-target text pairs across "
-            f"{len(contrast_failures)} variant/token combinations "
-            f"(4.5:1 standard, 7:1 high-contrast). These are reported, not yet "
-            "made CI-blocking pending review of the full preset collection."
+            f"WCAG AA contrast audit: {total} text pairs below 4.5:1 "
+            f"across {len(contrast_failures)} variant/token combinations."
         )
         for (variant, foreground, background), failures in sorted(
             contrast_failures.items(),
@@ -239,11 +241,32 @@ def check_theme_presets() -> None:
                 f"{name} ({ratio:.2f}:1)" for name, ratio in failures[:3]
             )
             print(
-                f"  WARN [{variant}] {foreground}/{background}: "
+                f"  FAIL [{variant}] {foreground}/{background}: "
                 f"{len(failures)} preset(s); e.g. {examples}"
             )
     else:
-        print("Contrast audit: all checked text pairs meet their variant targets.")
+        print("WCAG AA contrast audit: all checked text pairs meet 4.5:1.")
+
+    if high_contrast_aaa_shortfalls:
+        total = sum(len(items) for items in high_contrast_aaa_shortfalls.values())
+        print(
+            f"High-contrast AAA advisory: {total} text pairs are AA-compliant "
+            f"but below 7:1 across {len(high_contrast_aaa_shortfalls)} combinations."
+        )
+        for (variant, foreground, background), failures in sorted(
+            high_contrast_aaa_shortfalls.items(),
+            key=lambda item: (-len(item[1]), item[0]),
+        )[:12]:
+            examples = ", ".join(
+                f"{name} ({ratio:.2f}:1)" for name, ratio in failures[:3]
+            )
+            print(
+                f"  NOTE [{variant}] {foreground}/{background}: "
+                f"{len(failures)} preset(s); e.g. {examples}"
+            )
+    else:
+        print("High-contrast AAA advisory: all checked pairs meet 7:1.")
+
 
 
 # GTK3 and GTK4 expose the full semantic palette. GNOME Shell intentionally
