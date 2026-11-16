@@ -18,7 +18,7 @@
     },
     "primary_container": {
       "default": {
-        "color": "3a3a1c"
+        "color": "#3a3a1c"
       }
     },
     "on_primary_container": {
