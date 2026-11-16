@@ -18,12 +18,12 @@
     },
     "primary_container": {
       "default": {
-        "color": "4f282c"
+        "color": "#4f282c"
       }
     },
     "on_primary_container": {
       "default": {
-        "color": "#000000"
+        "color": "#ffffff"
       }
     },
     "inverse_primary": {
