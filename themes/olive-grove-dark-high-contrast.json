@@ -153,12 +153,12 @@
     },
     "surface_dim": {
       "default": {
-        "color": "#0b0a05"
+        "color": "#0b0d00"
       }
     },
     "surface": {
       "default": {
-        "color": "#100f08"
+        "color": "#101300"
       }
     },
     "surface_tint": {
@@ -168,32 +168,32 @@
     },
     "surface_bright": {
       "default": {
-        "color": "#282716"
+        "color": "#282d0d"
       }
     },
     "surface_container_lowest": {
       "default": {
-        "color": "#050402"
+        "color": "#050700"
       }
     },
     "surface_container_low": {
       "default": {
-        "color": "#0b0a05"
+        "color": "#0b0d00"
       }
     },
     "surface_container": {
       "default": {
-        "color": "#100f08"
+        "color": "#101300"
       }
     },
     "surface_container_high": {
       "default": {
-        "color": "#23210f"
+        "color": "#23280a"
       }
     },
     "surface_container_highest": {
       "default": {
-        "color": "#302e1a"
+        "color": "#30350f"
       }
     },
     "surface_variant": {
@@ -233,7 +233,7 @@
     },
     "background": {
       "default": {
-        "color": "#100f08"
+        "color": "#101300"
       }
     },
     "on_background": {
