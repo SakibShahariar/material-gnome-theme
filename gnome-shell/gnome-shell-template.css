@@ -4162,6 +4162,16 @@ StWidget.focused .app-grid-running-dot {
   border: 1px solid rgba({{colors.on_surface_variant.default.red}}, {{colors.on_surface_variant.default.green}}, {{colors.on_surface_variant.default.blue}}, 0.05);
 }
 
+/* Tooltips — style the built-in .tooltip St node to match the theme.
+   Without this, tooltips fall back to stock Adwaita colors. */
+.tooltip {
+  color: {{colors.on_surface_variant.default.hex}};
+  background-color: {{colors.surface_container_highest.default.hex}};
+  border-radius: 12px;
+  padding: 6px 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+}
+
 /* Switches */
 .toggle-switch {
   background-image: none !important;
