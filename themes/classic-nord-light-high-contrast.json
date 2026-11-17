@@ -6,207 +6,207 @@
     "source": "https://github.com/nordtheme/nord",
     "license": "MIT",
     "attribution": "Sven Greb / Arctic Ice Studio",
-    "note": "Uses the official Nord Polar Night, Snow Storm, Frost and Aurora palette. Light is composed from the official Snow Storm colors; high-contrast and AMOLED variants are project adaptations. Foreground pairs are checked to WCAG AA 4.5:1."
+    "note": "Material 3 tonal-spot scheme regenerated from source_color with matugen."
   },
   "colors": {
     "primary": {
       "default": {
-        "color": "#88C0D0"
+        "color": "#00313b"
       }
     },
     "on_primary": {
       "default": {
-        "color": "#000000"
+        "color": "#ffffff"
       }
     },
     "primary_container": {
       "default": {
-        "color": "#ECEFF4"
+        "color": "#00515f"
       }
     },
     "on_primary_container": {
       "default": {
-        "color": "#000000"
+        "color": "#ffffff"
       }
     },
     "inverse_primary": {
       "default": {
-        "color": "#88C0D0"
+        "color": "#85d2e7"
       }
     },
     "primary_fixed": {
       "default": {
-        "color": "#88C0D0"
+        "color": "#00515f"
       }
     },
     "primary_fixed_dim": {
       "default": {
-        "color": "#88C0D0"
+        "color": "#003843"
       }
     },
     "on_primary_fixed": {
       "default": {
-        "color": "#000000"
+        "color": "#ffffff"
       }
     },
     "on_primary_fixed_variant": {
       "default": {
-        "color": "#000000"
+        "color": "#ffffff"
       }
     },
     "secondary": {
       "default": {
-        "color": "#5E81AC"
+        "color": "#182f36"
       }
     },
     "on_secondary": {
       "default": {
-        "color": "#000000"
+        "color": "#ffffff"
       }
     },
     "secondary_container": {
       "default": {
-        "color": "#F4F6FA"
+        "color": "#364d53"
       }
     },
     "on_secondary_container": {
       "default": {
-        "color": "#000000"
+        "color": "#ffffff"
       }
     },
     "secondary_fixed": {
       "default": {
-        "color": "#5E81AC"
+        "color": "#364d53"
       }
     },
     "secondary_fixed_dim": {
       "default": {
-        "color": "#5E81AC"
+        "color": "#1f363c"
       }
     },
     "on_secondary_fixed": {
       "default": {
-        "color": "#000000"
+        "color": "#ffffff"
       }
     },
     "on_secondary_fixed_variant": {
       "default": {
-        "color": "#000000"
+        "color": "#ffffff"
       }
     },
     "tertiary": {
       "default": {
-        "color": "#8FBCBB"
+        "color": "#242a48"
       }
     },
     "on_tertiary": {
       "default": {
-        "color": "#000000"
+        "color": "#ffffff"
       }
     },
     "tertiary_container": {
       "default": {
-        "color": "#ECEFF4"
+        "color": "#414767"
       }
     },
     "on_tertiary_container": {
       "default": {
-        "color": "#000000"
+        "color": "#ffffff"
       }
     },
     "tertiary_fixed": {
       "default": {
-        "color": "#8FBCBB"
+        "color": "#414767"
       }
     },
     "tertiary_fixed_dim": {
       "default": {
-        "color": "#8FBCBB"
+        "color": "#2b314f"
       }
     },
     "on_tertiary_fixed": {
       "default": {
-        "color": "#000000"
+        "color": "#ffffff"
       }
     },
     "on_tertiary_fixed_variant": {
       "default": {
-        "color": "#000000"
+        "color": "#ffffff"
       }
     },
     "error": {
       "default": {
-        "color": "#BF616A"
+        "color": "#600004"
       }
     },
     "on_error": {
       "default": {
-        "color": "#000000"
+        "color": "#ffffff"
       }
     },
     "error_container": {
       "default": {
-        "color": "#ECEFF4"
+        "color": "#98000a"
       }
     },
     "on_error_container": {
       "default": {
-        "color": "#000000"
+        "color": "#ffffff"
       }
     },
     "surface_dim": {
       "default": {
-        "color": "#F4F6FA"
+        "color": "#b4babc"
       }
     },
     "surface": {
       "default": {
-        "color": "#FFFFFF"
+        "color": "#f5fafc"
       }
     },
     "surface_tint": {
       "default": {
-        "color": "#88C0D0"
+        "color": "#00687a"
       }
     },
     "surface_bright": {
       "default": {
-        "color": "#C3CDDA"
+        "color": "#f5fafc"
       }
     },
     "surface_container_lowest": {
       "default": {
-        "color": "#F4F6FA"
+        "color": "#ffffff"
       }
     },
     "surface_container_low": {
       "default": {
-        "color": "#FFFFFF"
+        "color": "#ecf2f4"
       }
     },
     "surface_container": {
       "default": {
-        "color": "#F4F6FA"
+        "color": "#dee3e5"
       }
     },
     "surface_container_high": {
       "default": {
-        "color": "#ECEFF4"
+        "color": "#d0d5d7"
       }
     },
     "surface_container_highest": {
       "default": {
-        "color": "#D8DEE9"
+        "color": "#c2c7c9"
       }
     },
     "surface_variant": {
       "default": {
-        "color": "#D8DEE9"
+        "color": "#dbe4e7"
       }
     },
     "on_surface": {
       "default": {
-        "color": "#2E3440"
+        "color": "#000000"
       }
     },
     "on_surface_variant": {
@@ -216,32 +216,32 @@
     },
     "outline": {
       "default": {
-        "color": "#4C566A"
+        "color": "#252d30"
       }
     },
     "outline_variant": {
       "default": {
-        "color": "#D8DEE9"
+        "color": "#424b4d"
       }
     },
     "inverse_surface": {
       "default": {
-        "color": "#2E3440"
+        "color": "#2c3133"
       }
     },
     "inverse_on_surface": {
       "default": {
-        "color": "#FFFFFF"
+        "color": "#ffffff"
       }
     },
     "background": {
       "default": {
-        "color": "#FFFFFF"
+        "color": "#f5fafc"
       }
     },
     "on_background": {
       "default": {
-        "color": "#2E3440"
+        "color": "#171c1e"
       }
     },
     "shadow": {
@@ -256,7 +256,7 @@
     },
     "source_color": {
       "default": {
-        "color": "#88C0D0"
+        "color": "#88c0d0"
       }
     }
   }

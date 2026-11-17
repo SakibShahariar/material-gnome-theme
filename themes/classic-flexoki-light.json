@@ -6,152 +6,152 @@
     "source": "https://github.com/kepano/flexoki",
     "license": "MIT",
     "attribution": "Steph Ango (Kepano)",
-    "note": "Standard dark and light use the official Flexoki palette. High-contrast and AMOLED are project adaptations."
+    "note": "Material 3 tonal-spot scheme regenerated from source_color with matugen."
   },
   "colors": {
     "primary": {
       "default": {
-        "color": "#205EA6"
+        "color": "#3e5f90"
       }
     },
     "primary_container": {
       "default": {
-        "color": "#E1ECEB"
+        "color": "#d5e3ff"
       }
     },
     "inverse_primary": {
       "default": {
-        "color": "#205EA6"
+        "color": "#a7c8ff"
       }
     },
     "primary_fixed": {
       "default": {
-        "color": "#205EA6"
+        "color": "#d5e3ff"
       }
     },
     "primary_fixed_dim": {
       "default": {
-        "color": "#205EA6"
+        "color": "#a7c8ff"
       }
     },
     "secondary": {
       "default": {
-        "color": "#24837B"
+        "color": "#555f71"
       }
     },
     "secondary_container": {
       "default": {
-        "color": "#DDF1E4"
+        "color": "#d9e3f8"
       }
     },
     "secondary_fixed": {
       "default": {
-        "color": "#24837B"
+        "color": "#d9e3f8"
       }
     },
     "secondary_fixed_dim": {
       "default": {
-        "color": "#24837B"
+        "color": "#bdc7dc"
       }
     },
     "tertiary": {
       "default": {
-        "color": "#AD8301"
+        "color": "#6e5676"
       }
     },
     "tertiary_container": {
       "default": {
-        "color": "#FAEEC6"
+        "color": "#f8d8fe"
       }
     },
     "tertiary_fixed": {
       "default": {
-        "color": "#AD8301"
+        "color": "#f8d8fe"
       }
     },
     "tertiary_fixed_dim": {
       "default": {
-        "color": "#AD8301"
+        "color": "#dbbde2"
       }
     },
     "error": {
       "default": {
-        "color": "#AF3029"
+        "color": "#ba1a1a"
       }
     },
     "error_container": {
       "default": {
-        "color": "#FFE1D5"
+        "color": "#ffdad6"
       }
     },
     "surface_dim": {
       "default": {
-        "color": "#E6E4D9"
+        "color": "#d9dae0"
       }
     },
     "surface": {
       "default": {
-        "color": "#F2F0E5"
+        "color": "#f9f9ff"
       }
     },
     "surface_tint": {
       "default": {
-        "color": "#205EA6"
+        "color": "#3e5f90"
       }
     },
     "surface_bright": {
       "default": {
-        "color": "#FFFFFF"
+        "color": "#f9f9ff"
       }
     },
     "surface_container_lowest": {
       "default": {
-        "color": "#FFFCF0"
+        "color": "#ffffff"
       }
     },
     "surface_container_low": {
       "default": {
-        "color": "#F2F0E5"
+        "color": "#f3f3fa"
       }
     },
     "surface_container": {
       "default": {
-        "color": "#F2F0E5"
+        "color": "#ededf4"
       }
     },
     "surface_container_high": {
       "default": {
-        "color": "#E6E4D9"
+        "color": "#e7e8ee"
       }
     },
     "surface_container_highest": {
       "default": {
-        "color": "#CECDC3"
+        "color": "#e1e2e9"
       }
     },
     "surface_variant": {
       "default": {
-        "color": "#B7B5AC"
+        "color": "#e0e2ec"
       }
     },
     "outline": {
       "default": {
-        "color": "#6F6E69"
+        "color": "#74777f"
       }
     },
     "outline_variant": {
       "default": {
-        "color": "#B7B5AC"
+        "color": "#c4c6cf"
       }
     },
     "inverse_surface": {
       "default": {
-        "color": "#100F0F"
+        "color": "#2e3035"
       }
     },
     "background": {
       "default": {
-        "color": "#FFFCF0"
+        "color": "#f9f9ff"
       }
     },
     "shadow": {
@@ -166,97 +166,97 @@
     },
     "source_color": {
       "default": {
-        "color": "#205EA6"
+        "color": "#205ea6"
       }
     },
     "on_primary": {
       "default": {
-        "color": "#FFFFFF"
+        "color": "#ffffff"
       }
     },
     "on_primary_container": {
       "default": {
-        "color": "#000000"
+        "color": "#001c3b"
       }
     },
     "on_primary_fixed": {
       "default": {
-        "color": "#FFFFFF"
+        "color": "#001c3b"
       }
     },
     "on_primary_fixed_variant": {
       "default": {
-        "color": "#FFFFFF"
+        "color": "#244777"
       }
     },
     "on_secondary": {
       "default": {
-        "color": "#000000"
+        "color": "#ffffff"
       }
     },
     "on_secondary_container": {
       "default": {
-        "color": "#000000"
+        "color": "#121c2b"
       }
     },
     "on_secondary_fixed": {
       "default": {
-        "color": "#000000"
+        "color": "#121c2b"
       }
     },
     "on_secondary_fixed_variant": {
       "default": {
-        "color": "#000000"
+        "color": "#3d4758"
       }
     },
     "on_tertiary": {
       "default": {
-        "color": "#000000"
+        "color": "#ffffff"
       }
     },
     "on_tertiary_container": {
       "default": {
-        "color": "#000000"
+        "color": "#27132f"
       }
     },
     "on_tertiary_fixed": {
       "default": {
-        "color": "#000000"
+        "color": "#27132f"
       }
     },
     "on_tertiary_fixed_variant": {
       "default": {
-        "color": "#000000"
+        "color": "#553e5d"
       }
     },
     "on_error": {
       "default": {
-        "color": "#FFFFFF"
+        "color": "#ffffff"
       }
     },
     "on_error_container": {
       "default": {
-        "color": "#000000"
+        "color": "#410002"
       }
     },
     "on_surface": {
       "default": {
-        "color": "#100F0F"
+        "color": "#191c20"
       }
     },
     "on_surface_variant": {
       "default": {
-        "color": "#000000"
+        "color": "#43474e"
       }
     },
     "inverse_on_surface": {
       "default": {
-        "color": "#FFFFFF"
+        "color": "#f0f0f7"
       }
     },
     "on_background": {
       "default": {
-        "color": "#100F0F"
+        "color": "#191c20"
       }
     }
   }

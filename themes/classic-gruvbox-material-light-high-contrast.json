@@ -6,152 +6,152 @@
     "source": "https://github.com/sainnhe/gruvbox-material",
     "license": "MIT",
     "attribution": "sainnhe and Gruvbox Material contributors",
-    "note": "Standard dark and light use the official medium-background Material foreground palette. High-contrast and AMOLED variants are project adaptations."
+    "note": "Material 3 tonal-spot scheme regenerated from source_color with matugen."
   },
   "colors": {
     "primary": {
       "default": {
-        "color": "#07515F"
+        "color": "#00313b"
       }
     },
     "primary_container": {
       "default": {
-        "color": "#D9E1CC"
+        "color": "#00515f"
       }
     },
     "inverse_primary": {
       "default": {
-        "color": "#07515F"
+        "color": "#84d2e6"
       }
     },
     "primary_fixed": {
       "default": {
-        "color": "#07515F"
+        "color": "#00515f"
       }
     },
     "primary_fixed_dim": {
       "default": {
-        "color": "#07515F"
+        "color": "#003843"
       }
     },
     "secondary": {
       "default": {
-        "color": "#74345B"
+        "color": "#182f35"
       }
     },
     "secondary_container": {
       "default": {
-        "color": "#EFDEC3"
+        "color": "#364d53"
       }
     },
     "secondary_fixed": {
       "default": {
-        "color": "#74345B"
+        "color": "#364d53"
       }
     },
     "secondary_fixed_dim": {
       "default": {
-        "color": "#74345B"
+        "color": "#1f363c"
       }
     },
     "tertiary": {
       "default": {
-        "color": "#5A5608"
+        "color": "#242a48"
       }
     },
     "tertiary_container": {
       "default": {
-        "color": "#DEE2B6"
+        "color": "#414767"
       }
     },
     "tertiary_fixed": {
       "default": {
-        "color": "#5A5608"
+        "color": "#414767"
       }
     },
     "tertiary_fixed_dim": {
       "default": {
-        "color": "#5A5608"
+        "color": "#2a314f"
       }
     },
     "error": {
       "default": {
-        "color": "#7A0000"
+        "color": "#600004"
       }
     },
     "error_container": {
       "default": {
-        "color": "#F9E0BB"
+        "color": "#98000a"
       }
     },
     "surface_dim": {
       "default": {
-        "color": "#F2E5BC"
+        "color": "#b4babc"
       }
     },
     "surface": {
       "default": {
-        "color": "#FFFFFF"
+        "color": "#f5fafc"
       }
     },
     "surface_tint": {
       "default": {
-        "color": "#07515F"
+        "color": "#00687a"
       }
     },
     "surface_bright": {
       "default": {
-        "color": "#FFFFFF"
+        "color": "#f5fafc"
       }
     },
     "surface_container_lowest": {
       "default": {
-        "color": "#FFFFFF"
+        "color": "#ffffff"
       }
     },
     "surface_container_low": {
       "default": {
-        "color": "#FBF1C7"
+        "color": "#ecf2f4"
       }
     },
     "surface_container": {
       "default": {
-        "color": "#FFFFFF"
+        "color": "#dee3e5"
       }
     },
     "surface_container_high": {
       "default": {
-        "color": "#EEE0B7"
+        "color": "#d0d5d7"
       }
     },
     "surface_container_highest": {
       "default": {
-        "color": "#E5D5AD"
+        "color": "#c2c7c9"
       }
     },
     "surface_variant": {
       "default": {
-        "color": "#7C6F64"
+        "color": "#dbe4e7"
       }
     },
     "outline": {
       "default": {
-        "color": "#3C3836"
+        "color": "#252e30"
       }
     },
     "outline_variant": {
       "default": {
-        "color": "#7C6F64"
+        "color": "#424b4d"
       }
     },
     "inverse_surface": {
       "default": {
-        "color": "#282828"
+        "color": "#2c3133"
       }
     },
     "background": {
       "default": {
-        "color": "#FFFFFF"
+        "color": "#f5fafc"
       }
     },
     "shadow": {
@@ -166,97 +166,97 @@
     },
     "source_color": {
       "default": {
-        "color": "#07515F"
+        "color": "#07515f"
       }
     },
     "on_primary": {
       "default": {
-        "color": "#FFFFFF"
+        "color": "#ffffff"
       }
     },
     "on_primary_container": {
       "default": {
-        "color": "#000000"
+        "color": "#ffffff"
       }
     },
     "on_primary_fixed": {
       "default": {
-        "color": "#FFFFFF"
+        "color": "#ffffff"
       }
     },
     "on_primary_fixed_variant": {
       "default": {
-        "color": "#FFFFFF"
+        "color": "#ffffff"
       }
     },
     "on_secondary": {
       "default": {
-        "color": "#FFFFFF"
+        "color": "#ffffff"
       }
     },
     "on_secondary_container": {
       "default": {
-        "color": "#000000"
+        "color": "#ffffff"
       }
     },
     "on_secondary_fixed": {
       "default": {
-        "color": "#FFFFFF"
+        "color": "#ffffff"
       }
     },
     "on_secondary_fixed_variant": {
       "default": {
-        "color": "#FFFFFF"
+        "color": "#ffffff"
       }
     },
     "on_tertiary": {
       "default": {
-        "color": "#FFFFFF"
+        "color": "#ffffff"
       }
     },
     "on_tertiary_container": {
       "default": {
-        "color": "#000000"
+        "color": "#ffffff"
       }
     },
     "on_tertiary_fixed": {
       "default": {
-        "color": "#FFFFFF"
+        "color": "#ffffff"
       }
     },
     "on_tertiary_fixed_variant": {
       "default": {
-        "color": "#FFFFFF"
+        "color": "#ffffff"
       }
     },
     "on_error": {
       "default": {
-        "color": "#FFFFFF"
+        "color": "#ffffff"
       }
     },
     "on_error_container": {
       "default": {
-        "color": "#000000"
+        "color": "#ffffff"
       }
     },
     "on_surface": {
       "default": {
-        "color": "#30251D"
+        "color": "#000000"
       }
     },
     "on_surface_variant": {
       "default": {
-        "color": "#FFFFFF"
+        "color": "#000000"
       }
     },
     "inverse_on_surface": {
       "default": {
-        "color": "#FFFFFF"
+        "color": "#ffffff"
       }
     },
     "on_background": {
       "default": {
-        "color": "#30251D"
+        "color": "#171c1e"
       }
     }
   }

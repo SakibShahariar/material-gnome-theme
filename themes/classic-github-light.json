@@ -6,152 +6,152 @@
     "source": "https://github.com/primer/github-vscode-theme",
     "license": "MIT",
     "attribution": "GitHub / Primer contributors",
-    "note": "Standard dark and light are mapped from the official GitHub Classic Primer palette. High-contrast and AMOLED variants are project adaptations."
+    "note": "Material 3 tonal-spot scheme regenerated from source_color with matugen."
   },
   "colors": {
     "primary": {
       "default": {
-        "color": "#0366D6"
+        "color": "#445e91"
       }
     },
     "primary_container": {
       "default": {
-        "color": "#DBEDFF"
+        "color": "#d8e2ff"
       }
     },
     "inverse_primary": {
       "default": {
-        "color": "#0366D6"
+        "color": "#adc6ff"
       }
     },
     "primary_fixed": {
       "default": {
-        "color": "#0366D6"
+        "color": "#d8e2ff"
       }
     },
     "primary_fixed_dim": {
       "default": {
-        "color": "#0366D6"
+        "color": "#adc6ff"
       }
     },
     "secondary": {
       "default": {
-        "color": "#28A745"
+        "color": "#565e71"
       }
     },
     "secondary_container": {
       "default": {
-        "color": "#DCFFE4"
+        "color": "#dbe2f9"
       }
     },
     "secondary_fixed": {
       "default": {
-        "color": "#28A745"
+        "color": "#dbe2f9"
       }
     },
     "secondary_fixed_dim": {
       "default": {
-        "color": "#28A745"
+        "color": "#bfc6dc"
       }
     },
     "tertiary": {
       "default": {
-        "color": "#6F42C1"
+        "color": "#715574"
       }
     },
     "tertiary_container": {
       "default": {
-        "color": "#E6DCFD"
+        "color": "#fbd7fc"
       }
     },
     "tertiary_fixed": {
       "default": {
-        "color": "#6F42C1"
+        "color": "#fbd7fc"
       }
     },
     "tertiary_fixed_dim": {
       "default": {
-        "color": "#6F42C1"
+        "color": "#debcdf"
       }
     },
     "error": {
       "default": {
-        "color": "#D73A49"
+        "color": "#ba1a1a"
       }
     },
     "error_container": {
       "default": {
-        "color": "#FFDCE0"
+        "color": "#ffdad6"
       }
     },
     "surface_dim": {
       "default": {
-        "color": "#F6F8FA"
+        "color": "#d9d9e0"
       }
     },
     "surface": {
       "default": {
-        "color": "#FAFBFC"
+        "color": "#f9f9ff"
       }
     },
     "surface_tint": {
       "default": {
-        "color": "#0366D6"
+        "color": "#445e91"
       }
     },
     "surface_bright": {
       "default": {
-        "color": "#FFFFFF"
+        "color": "#f9f9ff"
       }
     },
     "surface_container_lowest": {
       "default": {
-        "color": "#FFFFFF"
+        "color": "#ffffff"
       }
     },
     "surface_container_low": {
       "default": {
-        "color": "#FAFBFC"
+        "color": "#f3f3fa"
       }
     },
     "surface_container": {
       "default": {
-        "color": "#FAFBFC"
+        "color": "#ededf4"
       }
     },
     "surface_container_high": {
       "default": {
-        "color": "#F6F8FA"
+        "color": "#e8e7ee"
       }
     },
     "surface_container_highest": {
       "default": {
-        "color": "#E1E4E8"
+        "color": "#e2e2e9"
       }
     },
     "surface_variant": {
       "default": {
-        "color": "#959DA5"
+        "color": "#e1e2ec"
       }
     },
     "outline": {
       "default": {
-        "color": "#586069"
+        "color": "#74777f"
       }
     },
     "outline_variant": {
       "default": {
-        "color": "#959DA5"
+        "color": "#c4c6d0"
       }
     },
     "inverse_surface": {
       "default": {
-        "color": "#1B1F23"
+        "color": "#2f3036"
       }
     },
     "background": {
       "default": {
-        "color": "#FFFFFF"
+        "color": "#f9f9ff"
       }
     },
     "shadow": {
@@ -166,97 +166,97 @@
     },
     "source_color": {
       "default": {
-        "color": "#0366D6"
+        "color": "#0366d6"
       }
     },
     "on_primary": {
       "default": {
-        "color": "#FFFFFF"
+        "color": "#ffffff"
       }
     },
     "on_primary_container": {
       "default": {
-        "color": "#000000"
+        "color": "#001a41"
       }
     },
     "on_primary_fixed": {
       "default": {
-        "color": "#FFFFFF"
+        "color": "#001a41"
       }
     },
     "on_primary_fixed_variant": {
       "default": {
-        "color": "#FFFFFF"
+        "color": "#2b4678"
       }
     },
     "on_secondary": {
       "default": {
-        "color": "#000000"
+        "color": "#ffffff"
       }
     },
     "on_secondary_container": {
       "default": {
-        "color": "#000000"
+        "color": "#141b2c"
       }
     },
     "on_secondary_fixed": {
       "default": {
-        "color": "#000000"
+        "color": "#141b2c"
       }
     },
     "on_secondary_fixed_variant": {
       "default": {
-        "color": "#000000"
+        "color": "#3f4759"
       }
     },
     "on_tertiary": {
       "default": {
-        "color": "#FFFFFF"
+        "color": "#ffffff"
       }
     },
     "on_tertiary_container": {
       "default": {
-        "color": "#000000"
+        "color": "#29132d"
       }
     },
     "on_tertiary_fixed": {
       "default": {
-        "color": "#FFFFFF"
+        "color": "#29132d"
       }
     },
     "on_tertiary_fixed_variant": {
       "default": {
-        "color": "#FFFFFF"
+        "color": "#583e5b"
       }
     },
     "on_error": {
       "default": {
-        "color": "#000000"
+        "color": "#ffffff"
       }
     },
     "on_error_container": {
       "default": {
-        "color": "#000000"
+        "color": "#410002"
       }
     },
     "on_surface": {
       "default": {
-        "color": "#24292E"
+        "color": "#1a1b20"
       }
     },
     "on_surface_variant": {
       "default": {
-        "color": "#000000"
+        "color": "#44474f"
       }
     },
     "inverse_on_surface": {
       "default": {
-        "color": "#FFFFFF"
+        "color": "#f0f0f7"
       }
     },
     "on_background": {
       "default": {
-        "color": "#24292E"
+        "color": "#1a1b20"
       }
     }
   }

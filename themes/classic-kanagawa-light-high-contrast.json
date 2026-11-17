@@ -6,152 +6,152 @@
     "source": "https://github.com/rebelot/kanagawa.nvim",
     "license": "MIT",
     "attribution": "Tommaso Laurenzi and Kanagawa contributors",
-    "note": "Wave and Lotus use official upstream palettes; Dragon informs the dark high-contrast adaptation. Light high-contrast and AMOLED are project adaptations."
+    "note": "Material 3 tonal-spot scheme regenerated from source_color with matugen."
   },
   "colors": {
     "primary": {
       "default": {
-        "color": "#4D699B"
+        "color": "#052b5b"
       }
     },
     "primary_container": {
       "default": {
-        "color": "#C7D7E0"
+        "color": "#2b497a"
       }
     },
     "inverse_primary": {
       "default": {
-        "color": "#4D699B"
+        "color": "#abc7ff"
       }
     },
     "primary_fixed": {
       "default": {
-        "color": "#4D699B"
+        "color": "#2b497a"
       }
     },
     "primary_fixed_dim": {
       "default": {
-        "color": "#4D699B"
+        "color": "#0f3262"
       }
     },
     "secondary": {
       "default": {
-        "color": "#624C83"
+        "color": "#242c3d"
       }
     },
     "secondary_container": {
       "default": {
-        "color": "#B5CBD2"
+        "color": "#41495b"
       }
     },
     "secondary_fixed": {
       "default": {
-        "color": "#624C83"
+        "color": "#41495b"
       }
     },
     "secondary_fixed_dim": {
       "default": {
-        "color": "#624C83"
+        "color": "#2a3344"
       }
     },
     "tertiary": {
       "default": {
-        "color": "#4E8CA2"
+        "color": "#3a2440"
       }
     },
     "tertiary_container": {
       "default": {
-        "color": "#B7D0AE"
+        "color": "#59405e"
       }
     },
     "tertiary_fixed": {
       "default": {
-        "color": "#4E8CA2"
+        "color": "#59405e"
       }
     },
     "tertiary_fixed_dim": {
       "default": {
-        "color": "#4E8CA2"
+        "color": "#412a47"
       }
     },
     "error": {
       "default": {
-        "color": "#C84053"
+        "color": "#600004"
       }
     },
     "error_container": {
       "default": {
-        "color": "#E5DDB0"
+        "color": "#98000a"
       }
     },
     "surface_dim": {
       "default": {
-        "color": "#E5DDB0"
+        "color": "#b8b8bf"
       }
     },
     "surface": {
       "default": {
-        "color": "#F2ECBC"
+        "color": "#f9f9ff"
       }
     },
     "surface_tint": {
       "default": {
-        "color": "#4D699B"
+        "color": "#415e91"
       }
     },
     "surface_bright": {
       "default": {
-        "color": "#FFFBE0"
+        "color": "#f9f9ff"
       }
     },
     "surface_container_lowest": {
       "default": {
-        "color": "#FFFBE0"
+        "color": "#ffffff"
       }
     },
     "surface_container_low": {
       "default": {
-        "color": "#F9F2C9"
+        "color": "#f0f0f7"
       }
     },
     "surface_container": {
       "default": {
-        "color": "#F2ECBC"
+        "color": "#e2e2e9"
       }
     },
     "surface_container_high": {
       "default": {
-        "color": "#E7DBA0"
+        "color": "#d4d4db"
       }
     },
     "surface_container_highest": {
       "default": {
-        "color": "#DCD5AC"
+        "color": "#c6c6cd"
       }
     },
     "surface_variant": {
       "default": {
-        "color": "#A09CAC"
+        "color": "#e0e2ec"
       }
     },
     "outline": {
       "default": {
-        "color": "#716E61"
+        "color": "#292c33"
       }
     },
     "outline_variant": {
       "default": {
-        "color": "#A09CAC"
+        "color": "#464951"
       }
     },
     "inverse_surface": {
       "default": {
-        "color": "#16161D"
+        "color": "#2e3036"
       }
     },
     "background": {
       "default": {
-        "color": "#F9F2C9"
+        "color": "#f9f9ff"
       }
     },
     "shadow": {
@@ -166,82 +166,82 @@
     },
     "source_color": {
       "default": {
-        "color": "#4D699B"
+        "color": "#4d699b"
       }
     },
     "on_primary": {
       "default": {
-        "color": "#FFFFFF"
+        "color": "#ffffff"
       }
     },
     "on_primary_container": {
       "default": {
-        "color": "#000000"
+        "color": "#ffffff"
       }
     },
     "on_primary_fixed": {
       "default": {
-        "color": "#FFFFFF"
+        "color": "#ffffff"
       }
     },
     "on_primary_fixed_variant": {
       "default": {
-        "color": "#FFFFFF"
+        "color": "#ffffff"
       }
     },
     "on_secondary": {
       "default": {
-        "color": "#FFFFFF"
+        "color": "#ffffff"
       }
     },
     "on_secondary_container": {
       "default": {
-        "color": "#000000"
+        "color": "#ffffff"
       }
     },
     "on_secondary_fixed": {
       "default": {
-        "color": "#FFFFFF"
+        "color": "#ffffff"
       }
     },
     "on_secondary_fixed_variant": {
       "default": {
-        "color": "#FFFFFF"
+        "color": "#ffffff"
       }
     },
     "on_tertiary": {
       "default": {
-        "color": "#000000"
+        "color": "#ffffff"
       }
     },
     "on_tertiary_container": {
       "default": {
-        "color": "#000000"
+        "color": "#ffffff"
       }
     },
     "on_tertiary_fixed": {
       "default": {
-        "color": "#000000"
+        "color": "#ffffff"
       }
     },
     "on_tertiary_fixed_variant": {
       "default": {
-        "color": "#000000"
+        "color": "#ffffff"
       }
     },
     "on_error": {
       "default": {
-        "color": "#FFFFFF"
+        "color": "#ffffff"
       }
     },
     "on_error_container": {
       "default": {
-        "color": "#000000"
+        "color": "#ffffff"
       }
     },
     "on_surface": {
       "default": {
-        "color": "#43436C"
+        "color": "#000000"
       }
     },
     "on_surface_variant": {
@@ -251,12 +251,12 @@
     },
     "inverse_on_surface": {
       "default": {
-        "color": "#FFFFFF"
+        "color": "#ffffff"
       }
     },
     "on_background": {
       "default": {
-        "color": "#43436C"
+        "color": "#191c20"
       }
     }
   }

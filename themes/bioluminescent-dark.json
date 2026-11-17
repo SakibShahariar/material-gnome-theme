@@ -3,242 +3,242 @@
     "name": "bioluminescent",
     "variant": "dark",
     "source": "https://github.com/bjarneo/100-themes/tree/main/bioluminescent/dark",
-    "note": "Reference palette mapped to Material GNOME semantic preset schema; original source colors retained."
+    "note": "Material 3 tonal-spot scheme regenerated from source_color with matugen."
   },
   "colors": {
     "primary": {
       "default": {
-        "color": "#a586fd"
+        "color": "#cfbdfe"
       }
     },
     "on_primary": {
       "default": {
-        "color": "#000000"
+        "color": "#35275d"
       }
     },
     "primary_container": {
       "default": {
-        "color": "#2e2b4e"
+        "color": "#4c3e75"
       }
     },
     "on_primary_container": {
       "default": {
-        "color": "#ffffff"
+        "color": "#e8ddff"
       }
     },
     "inverse_primary": {
       "default": {
-        "color": "#c1b0ff"
+        "color": "#64558f"
       }
     },
     "primary_fixed": {
       "default": {
-        "color": "#a586fd"
+        "color": "#e8ddff"
       }
     },
     "primary_fixed_dim": {
       "default": {
-        "color": "#a586fd"
+        "color": "#cfbdfe"
       }
     },
     "on_primary_fixed": {
       "default": {
-        "color": "#000000"
+        "color": "#201047"
       }
     },
     "on_primary_fixed_variant": {
       "default": {
-        "color": "#000000"
+        "color": "#4c3e75"
       }
     },
     "secondary": {
       "default": {
-        "color": "#7d7d7d"
+        "color": "#cbc2dc"
       }
     },
     "on_secondary": {
       "default": {
-        "color": "#000000"
+        "color": "#332d41"
       }
     },
     "secondary_container": {
       "default": {
-        "color": "#030303"
+        "color": "#494458"
       }
     },
     "on_secondary_container": {
       "default": {
-        "color": "#ffffff"
+        "color": "#e8def8"
       }
     },
     "secondary_fixed": {
       "default": {
-        "color": "#7d7d7d"
+        "color": "#e8def8"
       }
     },
     "secondary_fixed_dim": {
       "default": {
-        "color": "#7d7d7d"
+        "color": "#cbc2dc"
       }
     },
     "on_secondary_fixed": {
       "default": {
-        "color": "#000000"
+        "color": "#1e192b"
       }
     },
     "on_secondary_fixed_variant": {
       "default": {
-        "color": "#000000"
+        "color": "#494458"
       }
     },
     "tertiary": {
       "default": {
-        "color": "#c6c6c6"
+        "color": "#efb8c8"
       }
     },
     "on_tertiary": {
       "default": {
-        "color": "#000000"
+        "color": "#492532"
       }
     },
     "tertiary_container": {
       "default": {
-        "color": "#030303"
+        "color": "#633b49"
       }
     },
     "on_tertiary_container": {
       "default": {
-        "color": "#ffffff"
+        "color": "#ffd9e3"
       }
     },
     "tertiary_fixed": {
       "default": {
-        "color": "#c6c6c6"
+        "color": "#ffd9e3"
       }
     },
     "tertiary_fixed_dim": {
       "default": {
-        "color": "#c6c6c6"
+        "color": "#efb8c8"
       }
     },
     "on_tertiary_fixed": {
       "default": {
-        "color": "#000000"
+        "color": "#31101d"
       }
     },
     "on_tertiary_fixed_variant": {
       "default": {
-        "color": "#000000"
+        "color": "#633b49"
       }
     },
     "error": {
       "default": {
-        "color": "#aa1212"
+        "color": "#ffb4ab"
       }
     },
     "on_error": {
       "default": {
-        "color": "#ffffff"
+        "color": "#690005"
       }
     },
     "error_container": {
       "default": {
-        "color": "#050000"
+        "color": "#93000a"
       }
     },
     "on_error_container": {
       "default": {
-        "color": "#ffffff"
+        "color": "#ffdad6"
       }
     },
     "surface_dim": {
       "default": {
-        "color": "#000405"
+        "color": "#141218"
       }
     },
     "surface": {
       "default": {
-        "color": "#00070a"
+        "color": "#141218"
       }
     },
     "surface_tint": {
       "default": {
-        "color": "#a586fd"
+        "color": "#cfbdfe"
       }
     },
     "surface_bright": {
       "default": {
-        "color": "#001318"
+        "color": "#3b383e"
       }
     },
     "surface_container_lowest": {
       "default": {
-        "color": "#000405"
+        "color": "#0f0d13"
       }
     },
     "surface_container_low": {
       "default": {
-        "color": "#000405"
+        "color": "#1d1b20"
       }
     },
     "surface_container": {
       "default": {
-        "color": "#00070a"
+        "color": "#211f24"
       }
     },
     "surface_container_high": {
       "default": {
-        "color": "#001318"
+        "color": "#2b292f"
       }
     },
     "surface_container_highest": {
       "default": {
-        "color": "#001318"
+        "color": "#36343a"
       }
     },
     "surface_variant": {
       "default": {
-        "color": "#356d76"
+        "color": "#49454e"
       }
     },
     "on_surface": {
       "default": {
-        "color": "#dfeaec"
+        "color": "#e6e1e9"
       }
     },
     "on_surface_variant": {
       "default": {
-        "color": "#f6fbfc"
+        "color": "#cac4cf"
       }
     },
     "outline": {
       "default": {
-        "color": "#356d76"
+        "color": "#948f99"
       }
     },
     "outline_variant": {
       "default": {
-        "color": "#919b9d"
+        "color": "#49454e"
       }
     },
     "inverse_surface": {
       "default": {
-        "color": "#dfeaec"
+        "color": "#e6e1e9"
       }
     },
     "inverse_on_surface": {
       "default": {
-        "color": "#00070a"
+        "color": "#322f35"
       }
     },
     "background": {
       "default": {
-        "color": "#00070a"
+        "color": "#141218"
       }
     },
     "on_background": {
       "default": {
-        "color": "#dfeaec"
+        "color": "#e6e1e9"
       }
     },
     "shadow": {

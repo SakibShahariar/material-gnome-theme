@@ -6,152 +6,152 @@
     "source": "https://github.com/protesilaos/modus-themes",
     "license": "GPL-3.0-or-later",
     "attribution": "Protesilaos Stavrou and GNU Emacs Modus Themes contributors",
-    "note": "Standard dark uses the official Modus Vivendi palette and standard light uses the official Modus Operandi palette. High-contrast and AMOLED variants are project adaptations."
+    "note": "Material 3 tonal-spot scheme regenerated from source_color with matugen."
   },
   "colors": {
     "primary": {
       "default": {
-        "color": "#2fafff"
+        "color": "#99ccf9"
       }
     },
     "primary_container": {
       "default": {
-        "color": "#223e50"
+        "color": "#064b72"
       }
     },
     "inverse_primary": {
       "default": {
-        "color": "#2fafff"
+        "color": "#2c638b"
       }
     },
     "primary_fixed": {
       "default": {
-        "color": "#2fafff"
+        "color": "#cce5ff"
       }
     },
     "primary_fixed_dim": {
       "default": {
-        "color": "#2fafff"
+        "color": "#99ccf9"
       }
     },
     "secondary": {
       "default": {
-        "color": "#feacd0"
+        "color": "#b8c8da"
       }
     },
     "secondary_container": {
       "default": {
-        "color": "#4f3d45"
+        "color": "#394857"
       }
     },
     "secondary_fixed": {
       "default": {
-        "color": "#feacd0"
+        "color": "#d4e4f6"
       }
     },
     "secondary_fixed_dim": {
       "default": {
-        "color": "#feacd0"
+        "color": "#b8c8da"
       }
     },
     "tertiary": {
       "default": {
-        "color": "#00d3d0"
+        "color": "#d1bfe7"
       }
     },
     "tertiary_container": {
       "default": {
-        "color": "#174645"
+        "color": "#4e4162"
       }
     },
     "tertiary_fixed": {
       "default": {
-        "color": "#00d3d0"
+        "color": "#eddcff"
       }
     },
     "tertiary_fixed_dim": {
       "default": {
-        "color": "#00d3d0"
+        "color": "#d1bfe7"
       }
     },
     "error": {
       "default": {
-        "color": "#ff5f59"
+        "color": "#ffb4ab"
       }
     },
     "error_container": {
       "default": {
-        "color": "#502c2b"
+        "color": "#93000a"
       }
     },
     "surface_dim": {
       "default": {
-        "color": "#000000"
+        "color": "#101418"
       }
     },
     "surface": {
       "default": {
-        "color": "#1e1e1e"
+        "color": "#101418"
       }
     },
     "surface_tint": {
       "default": {
-        "color": "#2fafff"
+        "color": "#99ccf9"
       }
     },
     "surface_bright": {
       "default": {
-        "color": "#535353"
+        "color": "#363a3e"
       }
     },
     "surface_container_lowest": {
       "default": {
-        "color": "#000000"
+        "color": "#0b0f12"
       }
     },
     "surface_container_low": {
       "default": {
-        "color": "#1e1e1e"
+        "color": "#181c20"
       }
     },
     "surface_container": {
       "default": {
-        "color": "#1e1e1e"
+        "color": "#1c2024"
       }
     },
     "surface_container_high": {
       "default": {
-        "color": "#303030"
+        "color": "#272a2e"
       }
     },
     "surface_container_highest": {
       "default": {
-        "color": "#535353"
+        "color": "#313539"
       }
     },
     "surface_variant": {
       "default": {
-        "color": "#646464"
+        "color": "#42474e"
       }
     },
     "outline": {
       "default": {
-        "color": "#989898"
+        "color": "#8c9198"
       }
     },
     "outline_variant": {
       "default": {
-        "color": "#646464"
+        "color": "#42474e"
       }
     },
     "inverse_surface": {
       "default": {
-        "color": "#ffffff"
+        "color": "#e0e2e8"
       }
     },
     "background": {
       "default": {
-        "color": "#000000"
+        "color": "#101418"
       }
     },
     "shadow": {
@@ -171,92 +171,92 @@
     },
     "on_primary": {
       "default": {
-        "color": "#000000"
+        "color": "#003351"
       }
     },
     "on_primary_container": {
       "default": {
-        "color": "#ffffff"
+        "color": "#cce5ff"
       }
     },
     "on_primary_fixed": {
       "default": {
-        "color": "#000000"
+        "color": "#001d31"
       }
     },
     "on_primary_fixed_variant": {
       "default": {
-        "color": "#000000"
+        "color": "#064b72"
       }
     },
     "on_secondary": {
       "default": {
-        "color": "#000000"
+        "color": "#23323f"
       }
     },
     "on_secondary_container": {
       "default": {
-        "color": "#ffffff"
+        "color": "#d4e4f6"
       }
     },
     "on_secondary_fixed": {
       "default": {
-        "color": "#000000"
+        "color": "#0d1d2a"
       }
     },
     "on_secondary_fixed_variant": {
       "default": {
-        "color": "#000000"
+        "color": "#394857"
       }
     },
     "on_tertiary": {
       "default": {
-        "color": "#000000"
+        "color": "#372a4a"
       }
     },
     "on_tertiary_container": {
       "default": {
-        "color": "#ffffff"
+        "color": "#eddcff"
       }
     },
     "on_tertiary_fixed": {
       "default": {
-        "color": "#000000"
+        "color": "#221534"
       }
     },
     "on_tertiary_fixed_variant": {
       "default": {
-        "color": "#000000"
+        "color": "#4e4162"
       }
     },
     "on_error": {
       "default": {
-        "color": "#000000"
+        "color": "#690005"
       }
     },
     "on_error_container": {
       "default": {
-        "color": "#ffffff"
+        "color": "#ffdad6"
       }
     },
     "on_surface": {
       "default": {
-        "color": "#ffffff"
+        "color": "#e0e2e8"
       }
     },
     "on_surface_variant": {
       "default": {
-        "color": "#ffffff"
+        "color": "#c2c7ce"
       }
     },
     "inverse_on_surface": {
       "default": {
-        "color": "#000000"
+        "color": "#2d3135"
       }
     },
     "on_background": {
       "default": {
-        "color": "#ffffff"
+        "color": "#e0e2e8"
       }
     }
   }
