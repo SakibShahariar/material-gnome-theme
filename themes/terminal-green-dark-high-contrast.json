@@ -133,17 +133,17 @@
     },
     "error": {
       "default": {
-        "color": "#36bd1e"
+        "color": "#bd1e1e"
       }
     },
     "on_error": {
       "default": {
-        "color": "#000000"
+        "color": "#ffffff"
       }
     },
     "error_container": {
       "default": {
-        "color": "#000100"
+        "color": "#010000"
       }
     },
     "on_error_container": {

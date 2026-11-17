@@ -206,7 +206,7 @@
     },
     "on_surface": {
       "default": {
-        "color": "#5C6A72"
+        "color": "#546068"
       }
     },
     "on_surface_variant": {
@@ -241,7 +241,7 @@
     },
     "on_background": {
       "default": {
-        "color": "#5C6A72"
+        "color": "#546068"
       }
     },
     "shadow": {

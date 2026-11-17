@@ -133,7 +133,7 @@
     },
     "error": {
       "default": {
-        "color": "#6b6605"
+        "color": "#6b0505"
       }
     },
     "on_error": {

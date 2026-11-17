@@ -251,7 +251,7 @@
     },
     "inverse_on_surface": {
       "default": {
-        "color": "#000000"
+        "color": "#faf4ed"
       }
     },
     "on_background": {
