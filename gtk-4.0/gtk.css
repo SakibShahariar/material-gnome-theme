@@ -598,6 +598,15 @@ arrow:hover {
   transform: scale(1.15);
 }
 
+/* When an arrow sits inside a hovered or checked button, that button already
+   paints a primary background and sets on_primary as its foreground. The
+   generic arrow:hover rule above would override that with primary text,
+   giving primary-on-primary. Force it back to the inherited button color. */
+button:hover arrow:hover,
+button:checked arrow:hover {
+  color: inherit;
+}
+
 arrow:active {
   transform: scale(0.9);
   transition: transform 0.1s cubic-bezier(0, 0, 0.2, 1);
