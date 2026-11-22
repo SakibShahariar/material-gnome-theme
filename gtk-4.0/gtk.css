@@ -684,7 +684,7 @@ dropdown button.toggle:checked label {
   color: var(--on_primary);
 }
 
-headerbar popover.background button:not(.suggested-action):not(.destructive-action):not(.flat),
+headerbar popover.background button.image-button:not(.suggested-action):not(.destructive-action):not(.flat),
 button:not(.destructive-action) {
   color: var(--primary);
   background-color: var(--surface_container_highest);
@@ -695,12 +695,12 @@ button:not(.destructive-action) {
               outline-color    0.3s cubic-bezier(0.2, 0, 0, 1);
 }
 
-headerbar popover.background button:not(.suggested-action):not(.destructive-action):not(.flat) {
+headerbar popover.background button.image-button:not(.suggested-action):not(.destructive-action):not(.flat) {
   background-color: var(--primary);
   color: var(--on_primary);
 }
 
-headerbar popover.background button:focus:not(.suggested-action):not(.destructive-action):not(.flat) {
+headerbar popover.background button.image-button:focus:not(.suggested-action):not(.destructive-action):not(.flat) {
   padding: 3px 5px;
   background-color: var(--primary);
   color: var(--on_primary);
@@ -711,7 +711,7 @@ headerbar popover.background button:focus:not(.suggested-action):not(.destructiv
               outline-color    0.3s cubic-bezier(0.2, 0, 0, 1);
 }
 
-headerbar popover.background button:hover:not(.suggested-action):not(.destructive-action):not(.flat),
+headerbar popover.background button.image-button:hover:not(.suggested-action):not(.destructive-action):not(.flat),
 button:hover:not(.destructive-action) {
   border-radius: 16px;
   background-color: var(--primary);
@@ -720,9 +720,9 @@ button:hover:not(.destructive-action) {
   -gtk-icon-filter: brightness(1.2);
 }
 
-headerbar popover.background button.keyboard-activating:not(.suggested-action):not(.destructive-action):not(.flat),
+headerbar popover.background button.image-button.keyboard-activating:not(.suggested-action):not(.destructive-action):not(.flat),
 button.keyboard-activating:not(.destructive-action),
-headerbar popover.background button:active:not(.suggested-action):not(.destructive-action):not(.flat),
+headerbar popover.background button.image-button:active:not(.suggested-action):not(.destructive-action):not(.flat),
 button:active:not(.destructive-action) {
   background-color: var(--primary);
   color: var(--on_primary);
@@ -734,7 +734,7 @@ button:active:not(.destructive-action) {
   outline-offset: 2px;
 }
 
-headerbar popover.background button:checked:not(.suggested-action):not(.destructive-action):not(.flat),
+headerbar popover.background button.image-button:checked:not(.suggested-action):not(.destructive-action):not(.flat),
 button:checked:not(.image-button):not(.flat):not(.background-preview-button):not(.accent-button) {
   background-color: var(--primary);
   color: var(--on_primary);
@@ -744,9 +744,9 @@ button:checked:not(.image-button):not(.flat):not(.background-preview-button):not
               color            0.2s cubic-bezier(0.2, 0, 0, 1);
 }
 
-headerbar popover.background button:checked:not(.suggested-action):not(.destructive-action):not(.flat) label,
-headerbar popover.background button:checked:not(.suggested-action):not(.destructive-action):not(.flat) image,
-headerbar popover.background button:checked:not(.suggested-action):not(.destructive-action):not(.flat) .icon,
+headerbar popover.background button.image-button:checked:not(.suggested-action):not(.destructive-action):not(.flat) label,
+headerbar popover.background button.image-button:checked:not(.suggested-action):not(.destructive-action):not(.flat) image,
+headerbar popover.background button.image-button:checked:not(.suggested-action):not(.destructive-action):not(.flat) .icon,
 button:checked:not(.image-button):not(.flat):not(.background-preview-button):not(.accent-button) label,
 button:checked:not(.image-button):not(.flat):not(.background-preview-button):not(.accent-button) image,
 button:checked:not(.image-button):not(.flat):not(.background-preview-button):not(.accent-button) .icon {
@@ -757,7 +757,19 @@ row button:checked {
   animation: none;
 }
 
-headerbar popover.background button:checked:hover:not(.suggested-action):not(.destructive-action):not(.flat),
+
+/* Text-action buttons in header popovers stay neutral; only compact
+   icon-only buttons get the solid primary treatment above. */
+headerbar popover.background button:not(.image-button):not(.suggested-action):not(.destructive-action) {
+  background-color: var(--surface_container);
+  color: var(--on_surface);
+}
+headerbar popover.background button:not(.image-button):hover:not(.suggested-action):not(.destructive-action) {
+  background-color: var(--primary);
+  color: var(--on_primary);
+}
+
+headerbar popover.background button.image-button:checked:hover:not(.suggested-action):not(.destructive-action):not(.flat),
 button:checked:hover:not(.image-button):not(.flat):not(.background-preview-button):not(.accent-button) {
   background-color: color-mix(in srgb, var(--primary) 90%, var(--on_primary) 10%);
   color: var(--on_primary);
