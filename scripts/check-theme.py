@@ -381,7 +381,10 @@ def check_placeholders() -> None:
     for path in ROOT.rglob("*"):
         if not path.is_file() or path.suffix not in {".css", ".scss"}:
             continue
-        if "template" in path.name.lower():
+        # Files inside template directories (e.g. gnome-shell/layout-templates/)
+        # intentionally contain matugen placeholders, just like *-template.css.
+        if ("template" in path.name.lower()
+                or "template" in str(path.relative_to(ROOT).parent).lower()):
             continue
         try:
             source = path.read_text(encoding="utf-8")

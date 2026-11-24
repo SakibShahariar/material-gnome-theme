@@ -107,7 +107,11 @@ PLACEHOLDER = re.compile(r"\{\{.*?\}\}", re.DOTALL)
 def check_placeholders() -> None:
     offenders = []
     for path in ROOT.rglob("*.css"):
-        if ".git" in path.parts or "template" in path.name.lower():
+        # Template directories (e.g. gnome-shell/layout-templates/) intentionally
+        # contain matugen placeholders, just like *-template.css files.
+        if (".git" in path.parts
+                or "template" in path.name.lower()
+                or "template" in str(path.relative_to(ROOT).parent).lower()):
             continue
         try:
             if PLACEHOLDER.search(path.read_text(encoding="utf-8")):

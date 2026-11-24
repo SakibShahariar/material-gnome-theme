@@ -24,7 +24,7 @@ Persistent repository-specific record of commit-level CI checks and red-cross in
 
 - Repository: `SakibShahariar/material-gnome-theme`
 - Default branch: `master`
-- Checkpoint SHA: `a1df06eb0fbb9cbcff6423606a0ff00a1e48d3ae`
+- Checkpoint SHA: `c4f7af5e60300336fa89519ba254a64fbdf2b546`
 - Initialized: 2026-11-02
 - Baseline: latest branch tip queried through combined commit-status endpoint; empty status list recorded as **unavailable**, not green/red. Older history was not retroactively audited during setup.
 - Next session: review commits after this checkpoint, including the ledger and `AGENTS.md` setup commits; investigate any older red/pending commit specifically identified by the owner.
@@ -37,7 +37,20 @@ Persistent repository-specific record of commit-level CI checks and red-cross in
 
 ## Red-cross investigation log
 
-No red result was confirmed from the status data retrieved during setup.
+### 2026-11-24 — layout-template placeholder regression
+
+- Commit SHAs: `ca76a7b`, `d7166c1`, `f5feb33`, `a82b9ce`, `f8212d0`, `c4f7af5` (and later commits on the same branch)
+- Workflow / run: CI `validate` — e.g. https://github.com/SakibShahariar/material-gnome-theme/actions/runs/45360452216/job/138328875831
+- Failed job / step: `validate` → "Validate theme assets and stylesheets"
+- Failure summary: `check-theme.py` reported unexpanded `{{...}}` placeholders in all 14 files under `gnome-shell/layout-templates/`; `theme-doctor.py` had the same rule.
+- Classification: regression introduced by `ca76a7b` (new matugen-variable layout templates) because the placeholder check skipped only files whose *name* contains "template", not files inside a template directory.
+- Fix: skip CSS files under any path whose parent directory contains "template" in both `scripts/check-theme.py` and `scripts/theme-doctor.py` (this commit).
+- Verification: full CI sequence reproduced locally — `check-theme.py` pass, 620 preset `--dry-run` runs pass, `theme-doctor.py` 5 passed / 0 failed, `bash -n install.sh` pass, isolated-home installer and release-ZIP layout pass.
+- Rerun result: pending CI confirmation on the fix commit.
+
+### Historical failures (resolved)
+
+- Commits such as `9975ea9f`, `8e12ce09`, `90f0009f` failed the `validate` job with preset-schema errors (`_meta.variant` mismatch, missing `shade-color` token) during the Matugen preset regeneration. These are pre-existing failures from intermediate work, not regressions from the 2026-11-24 changes; current `check-theme.py` reports 500/500 curated presets valid.
 
 ### Failure record template
 
@@ -58,3 +71,4 @@ No red result was confirmed from the status data retrieved during setup.
 | Date | Reviewed range / checkpoint | Result summary |
 |---|---|---|
 | 2026-11-02 | Initial checkpoint: `a1df06eb0fbb9cbcff6423606a0ff00a1e48d3ae` | Latest commit queried; empty status response recorded as unavailable. Earlier history not retroactively audited. |
+| 2026-11-24 | `a1df06e..c4f7af5` (421 commits) | 31 red, 444 green, rest unavailable. Current reds traced to layout-template placeholders; validator fix in this commit; historical presets-schema reds resolved. |
