@@ -88,11 +88,6 @@
 @define-color borders {{colors.outline_variant.default.hex}};
 @define-color unfocused_borders {{colors.outline_variant.default.hex}};
 
-/* Status Colors */
-@define-color warning_color {{colors.tertiary.default.hex}};
-@define-color error_color {{colors.error.default.hex}};
-@define-color success_color {{colors.secondary.default.hex}};
-
 /* Window Manager */
 @define-color wm_focused_title {{colors.primary.default.hex}};
 @define-color wm_unfocused_title {{colors.on_surface_variant.default.hex}};

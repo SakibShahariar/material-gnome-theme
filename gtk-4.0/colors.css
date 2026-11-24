@@ -88,11 +88,6 @@
 @define-color borders #41493f;
 @define-color unfocused_borders #41493f;
 
-/* Status Colors */
-@define-color warning_color #ffb0ca;
-@define-color error_color #ffb4ab;
-@define-color success_color #b5cdaf;
-
 /* Window Manager */
 @define-color wm_focused_title #9ad596;
 @define-color wm_unfocused_title #c1c9bc;
