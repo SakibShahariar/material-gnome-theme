@@ -7,6 +7,8 @@ on:
 
 jobs:
   build:
+    # Pre-release tags (e.g. v2.0.0-rc.1) are published manually with curated notes.
+    if: ${{ !contains(github.ref_name, '-') }}
     runs-on: ubuntu-latest
 
     permissions:
