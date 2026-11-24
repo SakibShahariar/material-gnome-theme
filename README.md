@@ -317,14 +317,23 @@ Then apply or reinstall the updated theme, and reload GNOME Shell. On Wayland, l
 
 ## 🎬 Reducing Animations
 
-The GTK stylesheets define keyframe animations; `gnome-shell/gnome-shell.css` does not contain `@keyframes` blocks.
+### Current limits
 
-To remove the GTK keyframe animations manually, comment out the `@keyframes` blocks in the relevant files:
+- **GTK:** GTK3 and GTK4 CSS do not provide a supported `prefers-reduced-motion` media query in the versions this theme targets, so there is no automatic theme-level switch. GNOME's system "Reduce Animation" setting controls Shell and toolkit animations where the toolkit honors it.
+- **GNOME Shell:** `gnome-shell/gnome-shell.css` contains no `@keyframes` blocks. Shell motion comes from St/Shell animations that the theme does not define, so it cannot be disabled from this stylesheet. Use the GNOME accessibility setting instead.
+
+### What this theme does
+
+Decorative GTK4 transitions and keyframe animations (pill pop, icon squash, expressive pop-in/rubberband, check/entry focus pops) are capped at **0.2s**. Functional motion is intentionally kept: spinner `spin` animations and the spinner `pre-delay`/`fade-in` sequence are left unchanged. GTK3 already uses 0.2s for its decorative transitions.
+
+### Manual reduction
+
+To remove the GTK keyframe animations entirely, comment out the `@keyframes` blocks in:
 
 - GTK3: `gtk-3.0/gtk.css` and `gtk-3.0/gtk-dark.css`
 - GTK4 / Libadwaita: `gtk-4.0/gtk.css` and `gtk-4.0/gtk-dark.css`
 
-The paired files are currently identical, so keep both copies in sync. This only removes keyframe animations; other `animation` and `transition` declarations may still animate, and this does not disable GNOME Shell's built-in animations.
+The paired dark files are import shims or copies; keep them in sync. This only removes keyframe animations — other `transition` declarations may still animate, and Shell's own animations are unaffected.
 
 ---
 

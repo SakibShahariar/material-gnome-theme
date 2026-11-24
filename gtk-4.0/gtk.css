@@ -121,7 +121,7 @@ iconview,
 .view {
   background-color: var(--surface_container_low);
   color: var(--primary);
-  transition: background-color 0.4s cubic-bezier(0.2, 0, 0, 1),
+  transition: background-color 0.2s cubic-bezier(0.2, 0, 0, 1),
               color            0.4s cubic-bezier(0.2, 0, 0, 1);
 }
 
@@ -133,9 +133,9 @@ iconview:disabled,
 iconview:selected,
 .view:selected {
   background-color: var(--primary);
-  transition: background-color 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.1),
+  transition: background-color 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.1),
               color            0.3s cubic-bezier(0.2, 0, 0, 1);
-  animation: icon-squash 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+  animation: icon-squash 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
 }
 
 textview text {
@@ -153,11 +153,11 @@ textview border {
 iconview:hover,
 iconview:selected {
   border-radius: 12px;
-  transition: border-radius 0.4s cubic-bezier(0.2, 0, 0, 1);
+  transition: border-radius 0.2s cubic-bezier(0.2, 0, 0, 1);
 }
 
 iconview:hover {
-  animation: expressive-pop-in 0.35s cubic-bezier(0.2, 0, 0, 1) forwards;
+  animation: expressive-pop-in 0.2s cubic-bezier(0.2, 0, 0, 1) forwards;
 }
 
 rubberband,
@@ -174,7 +174,7 @@ flowbox > rubberband {
   border: 1px solid var(--primary);
   background-color: color-mix(in srgb, var(--primary) 15%, transparent);
   border-radius: 4px;
-  animation: expressive-rubberband 0.45s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+  animation: expressive-rubberband 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
 }
 
 /******************************************
@@ -257,7 +257,7 @@ gridview > child:hover {
 
 gridview > child:active {
   background-color: color-mix(in srgb, var(--primary) 12%, transparent);
-  animation: icon-squash 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+  animation: icon-squash 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
 }
 
 gridview > child:selected {
@@ -365,7 +365,7 @@ popover.magnifier > contents,
   border-radius: 24px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.28);
   border: none;
-  animation: expressive-pop-in 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+  animation: expressive-pop-in 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
 }
 
 .osd,
@@ -584,7 +584,7 @@ radio:active {
 
 check:checked,
 radio:checked {
-  animation: check-pop 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+  animation: check-pop 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
 }
 
 /* Arrows */
@@ -636,7 +636,7 @@ button:active {
   transition: background-color 0.1s cubic-bezier(0, 0, 0.2, 1),
               border-radius    0.2s cubic-bezier(0.2, 0, 0, 1),
               color            0.1s cubic-bezier(0, 0, 0.2, 1);
-  animation: pill-pop 0.6s cubic-bezier(0.2, 0, 0, 1) forwards;
+  animation: pill-pop 0.2s cubic-bezier(0.2, 0, 0, 1) forwards;
   outline: 0 solid transparent;
 }
 
@@ -644,7 +644,7 @@ button:checked {
   border-radius: 16px;
   background-color: var(--primary);
   color: var(--on_primary);
-  animation: pill-pop 0.6s cubic-bezier(0.2, 0, 0, 1) forwards;
+  animation: pill-pop 0.2s cubic-bezier(0.2, 0, 0, 1) forwards;
   transition: background-color 0.3s cubic-bezier(0.2, 0, 0, 1),
               border-radius    0.3s cubic-bezier(0.2, 0, 0, 1),
               color            0.2s cubic-bezier(0.2, 0, 0, 1);
@@ -729,7 +729,7 @@ button:active:not(.destructive-action) {
   transition: background-color 0.1s cubic-bezier(0, 0, 0.2, 1),
               border-radius    0.3s cubic-bezier(0.2, 0, 0, 1),
               color            0.1s cubic-bezier(0, 0, 0.2, 1);
-  animation: pill-pop 0.6s cubic-bezier(0.2, 0, 0, 1) forwards;
+  animation: pill-pop 0.2s cubic-bezier(0.2, 0, 0, 1) forwards;
   outline: 2px solid var(--primary);
   outline-offset: 2px;
 }
@@ -738,7 +738,7 @@ headerbar popover.background button.image-button:checked:not(.suggested-action):
 button:checked:not(.image-button):not(.flat):not(.background-preview-button):not(.accent-button) {
   background-color: var(--primary);
   color: var(--on_primary);
-  animation: pill-pop 0.6s cubic-bezier(0.2, 0, 0, 1) forwards;
+  animation: pill-pop 0.2s cubic-bezier(0.2, 0, 0, 1) forwards;
   transition: background-color 0.3s cubic-bezier(0.2, 0, 0, 1),
               border-radius    0.3s cubic-bezier(0.2, 0, 0, 1),
               color            0.2s cubic-bezier(0.2, 0, 0, 1);
@@ -861,7 +861,7 @@ placessidebar list.navigation-sidebar > row:selected,
 placessidebar > viewport > list > row:selected {
   background-color: var(--primary);
   border-radius: 999px;
-  animation: pill-pop 0.6s cubic-bezier(0.2, 0, 0, 1) forwards;
+  animation: pill-pop 0.2s cubic-bezier(0.2, 0, 0, 1) forwards;
 }
 
 placessidebar list.navigation-sidebar > row label,
@@ -892,7 +892,7 @@ placessidebar list.navigation-sidebar > row button.sidebar-button:checked,
 placessidebar > viewport > list > row button.sidebar-button:checked {
   background-color: var(--primary);
   color: var(--on_primary);
-  animation: pill-pop 0.6s cubic-bezier(0.2, 0, 0, 1) forwards;
+  animation: pill-pop 0.2s cubic-bezier(0.2, 0, 0, 1) forwards;
 }
 
 /* ── tab/notebook buttons ── */
@@ -925,7 +925,7 @@ notebook > header menubutton > button.flat:checked {
   background-color: var(--surface_container);
   color: var(--primary);
   border-radius: 999px;
-  animation: pill-pop 0.6s cubic-bezier(0.2, 0, 0, 1) forwards;
+  animation: pill-pop 0.2s cubic-bezier(0.2, 0, 0, 1) forwards;
 }
 
 tabbar tab:not(:selected) button.image-button.tab-close-button:disabled,
@@ -995,7 +995,7 @@ splitbutton.flat > menubutton > button:active {
   background-color: color-mix(in srgb, var(--primary) 12%, transparent);
   color: var(--primary);
   border-radius: 999px;
-  animation: pill-pop 0.6s cubic-bezier(0.2, 0, 0, 1) forwards;
+  animation: pill-pop 0.2s cubic-bezier(0.2, 0, 0, 1) forwards;
   transition: background-color 0.1s cubic-bezier(0, 0, 0.2, 1);
 }
 
@@ -1060,7 +1060,7 @@ menubutton.flat > button {
 button.destructive-action:active {
   color: var(--error);
   background-color: color-mix(in srgb, var(--error) 12%, transparent);
-  animation: pill-pop 0.6s cubic-bezier(0.2, 0, 0, 1) forwards;
+  animation: pill-pop 0.2s cubic-bezier(0.2, 0, 0, 1) forwards;
 }
 
 button.destructive-action:disabled {
@@ -1114,7 +1114,7 @@ splitbutton.destructive-action > button:active,
 menubutton.destructive-action > button:active {
   color: var(--error);
   background-color: color-mix(in srgb, var(--error) 12%, transparent);
-  animation: pill-pop 0.6s cubic-bezier(0.2, 0, 0, 1) forwards;
+  animation: pill-pop 0.2s cubic-bezier(0.2, 0, 0, 1) forwards;
 }
 
 .destructive-action.flat:focus,
@@ -1180,7 +1180,7 @@ menubutton.flat > button:active,
 button.flat:active {
   background-color: color-mix(in srgb, var(--primary) 12%, transparent);
   color: var(--primary);
-  animation: pill-pop 0.6s cubic-bezier(0.2, 0, 0, 1) forwards;
+  animation: pill-pop 0.2s cubic-bezier(0.2, 0, 0, 1) forwards;
   transition: background-color 0.1s cubic-bezier(0, 0, 0.2, 1);
 }
 
@@ -1226,7 +1226,7 @@ menubutton.flat > button:checked,
 button.flat:checked {
   background-color: color-mix(in srgb, var(--primary) 15%, transparent);
   color: var(--primary);
-  animation: pill-pop 0.6s cubic-bezier(0.2, 0, 0, 1) forwards;
+  animation: pill-pop 0.2s cubic-bezier(0.2, 0, 0, 1) forwards;
   transition: background-color 0.2s cubic-bezier(0.2, 0, 0, 1),
               color             0.15s cubic-bezier(0.2, 0, 0, 1);
 }
@@ -1361,13 +1361,13 @@ button.opaque:hover {
 button.keyboard-activating.opaque,
 button.opaque:active {
   background-image: image(color-mix(in srgb, var(--on_surface) 20%, transparent));
-  animation: pill-pop 0.6s cubic-bezier(0.2, 0, 0, 1) forwards;
+  animation: pill-pop 0.2s cubic-bezier(0.2, 0, 0, 1) forwards;
 }
 
 button.opaque:checked {
   background-image: image(color-mix(in srgb, var(--on_surface) 15%, transparent));
   transition: background-image 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
-  animation: pill-pop 0.6s cubic-bezier(0.2, 0, 0, 1) forwards;
+  animation: pill-pop 0.2s cubic-bezier(0.2, 0, 0, 1) forwards;
 }
 
 button.opaque:checked:hover {
@@ -1513,7 +1513,7 @@ button.card:active {
   background-color: color-mix(in srgb, var(--primary) 12%, transparent);
   color: color-mix(in srgb, var(--on_surface_variant) 90%, transparent);
   outline: 0 solid transparent;
-  animation: pill-pop 0.6s cubic-bezier(0.2, 0, 0, 1) forwards;
+  animation: pill-pop 0.2s cubic-bezier(0.2, 0, 0, 1) forwards;
   transition: background-color 0.1s cubic-bezier(0, 0, 0.2, 1);
 }
 
@@ -1522,7 +1522,7 @@ button.card:checked {
   background-color: var(--primary);
   color: var(--on_primary);
   border-color: var(--primary);
-  animation: pill-pop 0.6s cubic-bezier(0.2, 0, 0, 1) forwards;
+  animation: pill-pop 0.2s cubic-bezier(0.2, 0, 0, 1) forwards;
   transition: background-color 0.2s cubic-bezier(0.2, 0, 0, 1);
 }
 
@@ -1543,7 +1543,7 @@ button.card:checked:disabled {
 button.card:checked.keyboard-activating,
 button.card:checked:active {
   background-image: none;
-  animation: pill-pop 0.6s cubic-bezier(0.2, 0, 0, 1) forwards;
+  animation: pill-pop 0.2s cubic-bezier(0.2, 0, 0, 1) forwards;
 }
 
 button.card:checked.has-open-popup {
@@ -1661,7 +1661,7 @@ list > row button.image-button:not(.flat):checked {
   background-color: color-mix(in srgb, var(--primary) 12%, transparent);
   color: var(--primary);
   outline: 0 solid transparent;
-  animation: pill-pop 0.6s cubic-bezier(0.2, 0, 0, 1) forwards;
+  animation: pill-pop 0.2s cubic-bezier(0.2, 0, 0, 1) forwards;
   transition: background-color 0.1s cubic-bezier(0, 0, 0.2, 1);
 }
 
@@ -1740,7 +1740,7 @@ spinbutton:focus-within {
   outline: 2px solid var(--primary);
   outline-offset: -2px;
   border-radius: 14px;
-  animation: entry-focus-pop 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+  animation: entry-focus-pop 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
   transition: background-color 0.2s cubic-bezier(0.2, 0, 0, 1),
               border-radius    0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275),
               outline-color    0.3s cubic-bezier(0.2, 0, 0, 1);
@@ -1894,7 +1894,7 @@ combobox popover listview > row:hover {
 dropdown popover listview > row:active,
 combobox popover listview > row:active {
   background-color: color-mix(in srgb, var(--primary) 12%, transparent);
-  animation: pill-pop 0.6s cubic-bezier(0.2, 0, 0, 1) forwards;
+  animation: pill-pop 0.2s cubic-bezier(0.2, 0, 0, 1) forwards;
   transition: background-color 0.1s cubic-bezier(0, 0, 0.2, 1);
 }
 
@@ -1999,7 +1999,7 @@ button.combo:only-child:active {
   background-color: color-mix(in srgb, var(--primary) 12%, transparent);
   color: var(--primary);
   border-radius: 999px;
-  animation: pill-pop 0.6s cubic-bezier(0.2, 0, 0, 1) forwards;
+  animation: pill-pop 0.2s cubic-bezier(0.2, 0, 0, 1) forwards;
   transition: background-color 0.1s cubic-bezier(0, 0, 0.2, 1);
 }
 
@@ -2007,7 +2007,7 @@ button.combo:only-child:checked {
   background-color: color-mix(in srgb, var(--primary) 15%, transparent);
   color: var(--primary);
   border-radius: 999px;
-  animation: pill-pop 0.6s cubic-bezier(0.2, 0, 0, 1) forwards;
+  animation: pill-pop 0.2s cubic-bezier(0.2, 0, 0, 1) forwards;
   transition: background-color 0.2s cubic-bezier(0.2, 0, 0, 1),
               color            0.15s cubic-bezier(0.2, 0, 0, 1);
 }
@@ -2094,13 +2094,13 @@ button.combo:only-child:disabled {
 
 .toolbar button:active {
   border-radius: 999px;
-  animation: pill-pop 0.6s cubic-bezier(0.2, 0, 0, 1) forwards;
+  animation: pill-pop 0.2s cubic-bezier(0.2, 0, 0, 1) forwards;
   transition: background-color 0.1s cubic-bezier(0, 0, 0.2, 1);
 }
 
 .toolbar button:checked {
   border-radius: 999px;
-  animation: pill-pop 0.6s cubic-bezier(0.2, 0, 0, 1) forwards;
+  animation: pill-pop 0.2s cubic-bezier(0.2, 0, 0, 1) forwards;
 }
 
 .toolbar entry {
@@ -2166,7 +2166,7 @@ searchbar > revealer > box button {
 
 searchbar > revealer > box button:active {
   border-radius: 999px;
-  animation: pill-pop 0.6s cubic-bezier(0.2, 0, 0, 1) forwards;
+  animation: pill-pop 0.2s cubic-bezier(0.2, 0, 0, 1) forwards;
   transition: background-color 0.1s cubic-bezier(0, 0, 0.2, 1);
 }
 
@@ -2215,7 +2215,7 @@ headerbar button:hover:not(.suggested-action):not(.destructive-action) {
 headerbar button:active:not(.suggested-action):not(.destructive-action) {
   background-color: color-mix(in srgb, var(--primary) 12%, transparent);
   border-radius: 999px;
-  animation: pill-pop 0.6s cubic-bezier(0.2, 0, 0, 1) forwards;
+  animation: pill-pop 0.2s cubic-bezier(0.2, 0, 0, 1) forwards;
   transition: background-color 0.1s cubic-bezier(0, 0, 0.2, 1);
 }
 
@@ -2234,7 +2234,7 @@ headerbar button:checked:not(.suggested-action):not(.destructive-action) {
   color: var(--primary);
   border-radius: 999px;
   outline: none;
-  animation: pill-pop 0.6s cubic-bezier(0.2, 0, 0, 1) forwards;
+  animation: pill-pop 0.2s cubic-bezier(0.2, 0, 0, 1) forwards;
   transition: background-color 0.2s cubic-bezier(0.2, 0, 0, 1),
               border-radius    0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275),
               color            0.15s cubic-bezier(0.2, 0, 0, 1);
@@ -2319,7 +2319,7 @@ headerbar button.destructive-action {
 
 headerbar button.suggested-action:active,
 headerbar button.destructive-action:active {
-  animation: pill-pop 0.6s cubic-bezier(0.2, 0, 0, 1) forwards;
+  animation: pill-pop 0.2s cubic-bezier(0.2, 0, 0, 1) forwards;
   transition: background-color 0.1s cubic-bezier(0, 0, 0.2, 1);
 }
 
@@ -2340,7 +2340,7 @@ headerbar entry {
 
 headerbar entry:focus-within {
   border-radius: 8px;
-  animation: entry-focus-pop 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+  animation: entry-focus-pop 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
 }
 
 headerbar entry:disabled {
@@ -2650,7 +2650,7 @@ pathbar > button:hover {
 pathbar > button:active {
   border-radius: 999px;
   background-color: color-mix(in srgb, var(--primary) 16%, transparent);
-  animation: pill-pop 0.6s cubic-bezier(0.2, 0, 0, 1) forwards;
+  animation: pill-pop 0.2s cubic-bezier(0.2, 0, 0, 1) forwards;
   transition: background-color 0.1s cubic-bezier(0, 0, 0.2, 1);
 }
 
@@ -2663,7 +2663,7 @@ pathbar > button:checked {
   background-color: color-mix(in srgb, var(--primary) 15%, transparent);
   color: var(--primary);
   border-radius: 999px;
-  animation: pill-pop 0.6s cubic-bezier(0.2, 0, 0, 1) forwards;
+  animation: pill-pop 0.2s cubic-bezier(0.2, 0, 0, 1) forwards;
   transition: background-color 0.2s cubic-bezier(0.2, 0, 0, 1),
               border-radius    0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275),
               color            0.15s cubic-bezier(0.2, 0, 0, 1);
@@ -2719,7 +2719,7 @@ headerbar .pathbar {
 
 .pathbar > button:active {
   border-radius: 999px;
-  animation: pill-pop 0.6s cubic-bezier(0.2, 0, 0, 1) forwards;
+  animation: pill-pop 0.2s cubic-bezier(0.2, 0, 0, 1) forwards;
   transition: background-color 0.1s cubic-bezier(0, 0, 0.2, 1);
 }
 
@@ -2727,7 +2727,7 @@ headerbar .pathbar {
   background-color: color-mix(in srgb, var(--primary) 15%, transparent);
   color: var(--primary);
   border-radius: 999px;
-  animation: pill-pop 0.6s cubic-bezier(0.2, 0, 0, 1) forwards;
+  animation: pill-pop 0.2s cubic-bezier(0.2, 0, 0, 1) forwards;
 }
 
 /**************
@@ -2951,13 +2951,13 @@ treeview.view row:hover {
 treeview.view row:active {
   background-color: color-mix(in srgb, var(--primary) 10%, transparent);
   border-radius: 999px;
-  animation: pill-pop 0.6s cubic-bezier(0.2, 0, 0, 1) forwards;
+  animation: pill-pop 0.2s cubic-bezier(0.2, 0, 0, 1) forwards;
   transition: background-color 0.1s cubic-bezier(0, 0, 0.2, 1);
 }
 
 treeview.view row:selected {
   border-radius: 999px;
-  animation: pill-pop 0.6s cubic-bezier(0.2, 0, 0, 1) forwards;
+  animation: pill-pop 0.2s cubic-bezier(0.2, 0, 0, 1) forwards;
   transition: background-color 0.2s cubic-bezier(0.2, 0, 0, 1);
 }
 
@@ -2997,14 +2997,14 @@ popover.menu box.inline-buttons button.image-button.model:hover {
 popover.menu box.inline-buttons button.image-button.model:active {
   background-color: color-mix(in srgb, var(--primary) 12%, transparent);
   border-radius: 999px;
-  animation: pill-pop 0.6s cubic-bezier(0.2, 0, 0, 1) forwards;
+  animation: pill-pop 0.2s cubic-bezier(0.2, 0, 0, 1) forwards;
   transition: background-color 0.1s cubic-bezier(0, 0, 0.2, 1);
 }
 
 popover.menu box.inline-buttons button.image-button.model:selected {
   background: image(color-mix(in srgb, currentColor 6%, transparent));
   border-radius: 999px;
-  animation: pill-pop 0.6s cubic-bezier(0.2, 0, 0, 1) forwards;
+  animation: pill-pop 0.2s cubic-bezier(0.2, 0, 0, 1) forwards;
 }
 
 popover.menu box.circular-buttons {
@@ -3026,7 +3026,7 @@ popover.menu box.circular-buttons button.circular.image-button.model:hover {
 popover.menu box.circular-buttons button.circular.image-button.model:active {
   background-color: color-mix(in srgb, var(--primary) 12%, transparent);
   border-radius: 999px;
-  animation: pill-pop 0.6s cubic-bezier(0.2, 0, 0, 1) forwards;
+  animation: pill-pop 0.2s cubic-bezier(0.2, 0, 0, 1) forwards;
   transition: background-color 0.1s cubic-bezier(0, 0, 0.2, 1);
 }
 
@@ -3073,7 +3073,7 @@ popover > contents {
   color: color-mix(in srgb, var(--on_surface_variant) 90%, transparent);
   border: 1px solid var(--outline_variant);
   background-clip: border-box;
-  animation: expressive-pop-in 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+  animation: expressive-pop-in 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
 }
 
 popover > contents > list,
@@ -3107,13 +3107,13 @@ popover > contents list > row:hover {
 popover > contents list > row:active {
   border-radius: 999px;
   background-color: color-mix(in srgb, var(--primary) 10%, transparent);
-  animation: pill-pop 0.6s cubic-bezier(0.2, 0, 0, 1) forwards;
+  animation: pill-pop 0.2s cubic-bezier(0.2, 0, 0, 1) forwards;
   transition: background-color 0.1s cubic-bezier(0, 0, 0.2, 1);
 }
 
 popover > contents list > row:selected {
   border-radius: 999px;
-  animation: pill-pop 0.6s cubic-bezier(0.2, 0, 0, 1) forwards;
+  animation: pill-pop 0.2s cubic-bezier(0.2, 0, 0, 1) forwards;
 }
 
 popover > contents stack > box {
@@ -3181,7 +3181,7 @@ popover modelbutton:active {
   background-color: color-mix(in srgb, var(--primary) 12%, transparent);
   color: var(--primary);
   border-radius: 999px;
-  animation: pill-pop 0.6s cubic-bezier(0.2, 0, 0, 1) forwards;
+  animation: pill-pop 0.2s cubic-bezier(0.2, 0, 0, 1) forwards;
   transition: background-color 0.1s cubic-bezier(0, 0, 0.2, 1);
 }
 
@@ -3272,7 +3272,7 @@ notebook > header > tabs > tab:active {
   color: color-mix(in srgb, var(--on_surface_variant) 90%, transparent);
   box-shadow: none;
   border-radius: 999px;
-  animation: pill-pop-tab 0.6s linear forwards;
+  animation: pill-pop-tab 0.2s linear forwards;
   transition: background-color 0.1s cubic-bezier(0, 0, 0.2, 1),
               border-radius    0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275),
               color            0.1s cubic-bezier(0, 0, 0.2, 1);
@@ -3291,7 +3291,7 @@ notebook > header > tabs > tab:selected:not(:active) {
   color: var(--primary);
   box-shadow: none;
   border-radius: 999px;
-  animation: pill-pop-tab 0.6s linear forwards;
+  animation: pill-pop-tab 0.2s linear forwards;
   transition: background-color 0.2s cubic-bezier(0.2, 0, 0, 1),
               border-radius    0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275),
               color            0.2s cubic-bezier(0.2, 0, 0, 1);
@@ -3399,7 +3399,7 @@ notebook > header > tabs > arrow:hover {
 
 notebook > header > tabs > arrow:active {
   border-radius: 999px;
-  animation: pill-pop 0.6s cubic-bezier(0.2, 0, 0, 1) forwards;
+  animation: pill-pop 0.2s cubic-bezier(0.2, 0, 0, 1) forwards;
   transition: background-color 0.1s cubic-bezier(0, 0, 0.2, 1);
 }
 
@@ -3964,7 +3964,7 @@ check:indeterminate {
   border-color: var(--primary);
   box-shadow: 0 0 0 1px var(--primary),
               inset 0 0 0 2px var(--on_primary);
-  animation: check-pop 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+  animation: check-pop 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
 }
 
 check:focus {
@@ -4034,7 +4034,7 @@ radio:checked {
   border-color: var(--primary);
   box-shadow: inset 0 0 0 4px var(--on_primary),
               0 0 0 1px var(--primary);
-  animation: check-pop 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+  animation: check-pop 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
 }
 
 radio:indeterminate {
@@ -4043,7 +4043,7 @@ radio:indeterminate {
   border-color: var(--primary);
   box-shadow: inset 0 0 0 2px var(--primary),
               0 0 0 1px var(--primary);
-  animation: check-pop 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+  animation: check-pop 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
 }
 
 radio:focus {
@@ -4280,7 +4280,7 @@ checkbutton.selection-mode radio:checked,
 checkbutton.selection-mode radio:indeterminate {
   color: var(--on_primary);
   background-color: var(--primary);
-  animation: check-pop 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+  animation: check-pop 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
 }
 
 checkbutton.selection-mode label:dir(ltr) {
@@ -4881,7 +4881,7 @@ popover.menu listview.view > row:hover {
 popover.menu listview.view > row:active {
   background-color: color-mix(in srgb, var(--primary) 12%, transparent);
   border-radius: 999px;
-  animation: pill-pop 0.6s cubic-bezier(0.2, 0, 0, 1) forwards;
+  animation: pill-pop 0.2s cubic-bezier(0.2, 0, 0, 1) forwards;
   transition: background-color 0.1s cubic-bezier(0, 0, 0.2, 1);
 }
 
@@ -4971,7 +4971,7 @@ row:selected {
   color: var(--primary);
   box-shadow: none;
   border-radius: 8px;
-  animation: pill-pop-row 0.6s cubic-bezier(0.2, 0, 0, 1) forwards;
+  animation: pill-pop-row 0.2s cubic-bezier(0.2, 0, 0, 1) forwards;
 }
 
 row:selected:hover {
@@ -5309,7 +5309,7 @@ expander-widget > box > title:hover {
 expander-widget > box > title:active {
   background-color: color-mix(in srgb, var(--primary) 12%, transparent);
   border-radius: 999px;
-  animation: pill-pop-row 0.6s cubic-bezier(0.2, 0, 0, 1) forwards;
+  animation: pill-pop-row 0.2s cubic-bezier(0.2, 0, 0, 1) forwards;
   transition: background-color 0.1s cubic-bezier(0, 0, 0.2, 1);
 }
 
@@ -5387,7 +5387,7 @@ calendar > grid > label.day-number:selected {
   background-color: var(--primary);
   color: var(--on_primary);
   border-radius: 999px;
-  animation: pill-pop 0.6s cubic-bezier(0.2, 0, 0, 1) forwards;
+  animation: pill-pop 0.2s cubic-bezier(0.2, 0, 0, 1) forwards;
 }
 
 calendar > grid > label.today {
@@ -5416,7 +5416,7 @@ window.dialog.message .dialog-action-area > button {
 window.messagedialog .response-area button:active,
 window.dialog.message .dialog-action-area > button:active {
   border-radius: 999px;
-  animation: pill-pop 0.6s cubic-bezier(0.2, 0, 0, 1) forwards;
+  animation: pill-pop 0.2s cubic-bezier(0.2, 0, 0, 1) forwards;
   transition: background-color 0.1s cubic-bezier(0, 0, 0.2, 1);
 }
 
@@ -5547,7 +5547,7 @@ stacksidebar row:hover {
 
 stacksidebar row:active {
   border-radius: 999px;
-  animation: pill-pop 0.6s cubic-bezier(0.2, 0, 0, 1) forwards;
+  animation: pill-pop 0.2s cubic-bezier(0.2, 0, 0, 1) forwards;
   transition: background-color 0.1s cubic-bezier(0, 0, 0.2, 1);
 }
 
@@ -5555,7 +5555,7 @@ stacksidebar row:selected {
   font-weight: 600;
   border-radius: 999px;
   background-image: linear-gradient(to left, var(--background), var(--surface_container));
-  animation: pill-pop 0.6s cubic-bezier(0.2, 0, 0, 1) forwards;
+  animation: pill-pop 0.2s cubic-bezier(0.2, 0, 0, 1) forwards;
 }
 
 stacksidebar row + row {
@@ -6052,7 +6052,7 @@ colorchooser colorswatch:hover {
 }
 
 colorchooser colorswatch:active {
-  animation: check-pop 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+  animation: check-pop 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
 }
 
 colorswatch#add-color-button {
@@ -6076,7 +6076,7 @@ colorswatch#add-color-button overlay:hover {
 
 colorswatch#add-color-button overlay:active {
   background-color: color-mix(in srgb, var(--on_surface_variant) 30%, transparent);
-  animation: check-pop 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+  animation: check-pop 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
 }
 
 colorswatch:disabled {
@@ -6413,14 +6413,14 @@ stackswitcher.linked > button:not(.suggested-action):not(.destructive-action):ho
 
 stackswitcher.linked > button:not(.suggested-action):not(.destructive-action):active {
   background-color: color-mix(in srgb, var(--primary) 12%, transparent);
-  animation: pill-pop 0.6s cubic-bezier(0.2, 0, 0, 1) forwards;
+  animation: pill-pop 0.2s cubic-bezier(0.2, 0, 0, 1) forwards;
   transition: background-color 0.1s cubic-bezier(0, 0, 0.2, 1);
 }
 
 stackswitcher.linked > button:not(.suggested-action):not(.destructive-action):checked {
   background-color: var(--primary);
   color: var(--on_primary);
-  animation: pill-pop 0.6s cubic-bezier(0.2, 0, 0, 1) forwards;
+  animation: pill-pop 0.2s cubic-bezier(0.2, 0, 0, 1) forwards;
 }
 
 stackswitcher.linked > button:not(.suggested-action):not(.destructive-action):checked:hover {
@@ -6501,14 +6501,14 @@ button.emoji-section:hover {
 
 button.emoji-section:active {
   border-radius: 999px;
-  animation: pill-pop 0.6s cubic-bezier(0.2, 0, 0, 1) forwards;
+  animation: pill-pop 0.2s cubic-bezier(0.2, 0, 0, 1) forwards;
   transition: background-color 0.1s cubic-bezier(0, 0, 0.2, 1);
 }
 
 button.emoji-section:checked {
   color: var(--primary);
   border-radius: 999px;
-  animation: pill-pop 0.6s cubic-bezier(0.2, 0, 0, 1) forwards;
+  animation: pill-pop 0.2s cubic-bezier(0.2, 0, 0, 1) forwards;
 }
 
 popover.emoji-picker emoji {
@@ -6555,7 +6555,7 @@ emoji-completion-row emoji:focus {
 emoji-completion-row:active {
   background-color: color-mix(in srgb, var(--primary) 12%, transparent);
   border-radius: 999px;
-  animation: pill-pop 0.6s cubic-bezier(0.2, 0, 0, 1) forwards;
+  animation: pill-pop 0.2s cubic-bezier(0.2, 0, 0, 1) forwards;
   transition: background-color 0.1s cubic-bezier(0, 0, 0.2, 1);
 }
 
@@ -6634,7 +6634,7 @@ popover.entry-completion > contents {
 .nautilus-window tabbox > tabboxchild > tab:active {
   background-color: color-mix(in srgb, var(--primary) 12%, transparent);
   border-radius: 999px;
-  animation: pill-pop 0.6s cubic-bezier(0.2, 0, 0, 1) forwards;
+  animation: pill-pop 0.2s cubic-bezier(0.2, 0, 0, 1) forwards;
   transition: background-color 0.1s cubic-bezier(0, 0, 0.2, 1);
 }
 
@@ -6649,7 +6649,7 @@ popover.entry-completion > contents {
   color: var(--primary);
   box-shadow: none;
   border-radius: 999px;
-  animation: pill-pop 0.6s cubic-bezier(0.2, 0, 0, 1) forwards;
+  animation: pill-pop 0.2s cubic-bezier(0.2, 0, 0, 1) forwards;
 }
 
 .nautilus-window tabbox > tabboxchild > tab:checked:disabled,
@@ -6712,7 +6712,7 @@ popover.entry-completion > contents {
 }
 
 .nautilus-window banner > revealer > widget button:active {
-  animation: pill-pop 0.6s cubic-bezier(0.2, 0, 0, 1) forwards;
+  animation: pill-pop 0.2s cubic-bezier(0.2, 0, 0, 1) forwards;
   transition: background-color 0.1s cubic-bezier(0, 0, 0.2, 1);
 }
 
@@ -6767,7 +6767,7 @@ banner > revealer > widget {
 
 #NautilusPathButton:active {
   border-radius: 999px;
-  animation: pill-pop 0.6s cubic-bezier(0.2, 0, 0, 1) forwards;
+  animation: pill-pop 0.2s cubic-bezier(0.2, 0, 0, 1) forwards;
   transition: background-color 0.1s cubic-bezier(0, 0, 0.2, 1);
 }
 
@@ -6863,7 +6863,7 @@ window.dialog > box > stack > box > box > notebook.frame {
 
 .math-buttons button:active {
   border-radius: 999px;
-  animation: pill-pop 0.6s cubic-bezier(0.2, 0, 0, 1) forwards;
+  animation: pill-pop 0.2s cubic-bezier(0.2, 0, 0, 1) forwards;
   transition: background-color 0.1s cubic-bezier(0, 0, 0.2, 1);
 }
 
@@ -6886,7 +6886,7 @@ leaflet button.number-button:hover {
 leaflet button.number-button:active {
   background-color: color-mix(in srgb, var(--on_surface_variant) 30%, transparent);
   border-radius: 999px;
-  animation: pill-pop 0.6s cubic-bezier(0.2, 0, 0, 1) forwards;
+  animation: pill-pop 0.2s cubic-bezier(0.2, 0, 0, 1) forwards;
   transition: background-color 0.1s cubic-bezier(0, 0, 0.2, 1);
 }
 
@@ -6912,7 +6912,7 @@ toast-overlay toast {
   color: color-mix(in srgb, var(--on_surface_variant) 90%, transparent);
   border-radius: 12px;
   padding: 8px;
-  animation: expressive-pop-in 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+  animation: expressive-pop-in 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
 }
 
 .datechooser.view,
@@ -6978,7 +6978,7 @@ popover.events button:hover {
 
 popover.events button:active {
   background-color: color-mix(in srgb, var(--primary) 12%, transparent);
-  animation: pill-pop 0.6s cubic-bezier(0.2, 0, 0, 1) forwards;
+  animation: pill-pop 0.2s cubic-bezier(0.2, 0, 0, 1) forwards;
   transition: background-color 0.1s cubic-bezier(0, 0, 0.2, 1);
 }
 
@@ -7110,7 +7110,7 @@ datechooser navigator button.image-button:hover {
 datechooser navigator button.flat:active,
 datechooser navigator button.image-button:active {
   border-radius: 999px;
-  animation: pill-pop 0.6s cubic-bezier(0.2, 0, 0, 1) forwards;
+  animation: pill-pop 0.2s cubic-bezier(0.2, 0, 0, 1) forwards;
   transition: background-color 0.1s cubic-bezier(0, 0, 0.2, 1);
 }
 
@@ -7137,7 +7137,7 @@ datechooser button.day:hover {
 }
 
 datechooser button.day:active {
-  animation: pill-pop 0.6s cubic-bezier(0.2, 0, 0, 1) forwards;
+  animation: pill-pop 0.2s cubic-bezier(0.2, 0, 0, 1) forwards;
   transition: background-color 0.1s cubic-bezier(0, 0, 0.2, 1);
 }
 
@@ -7153,7 +7153,7 @@ datechooser button.day.today:selected {
   background-color: var(--primary);
   color: var(--on_primary);
   font-weight: bold;
-  animation: pill-pop 0.6s cubic-bezier(0.2, 0, 0, 1) forwards;
+  animation: pill-pop 0.2s cubic-bezier(0.2, 0, 0, 1) forwards;
 }
 
 datechooser button.day:selected dot,
@@ -7414,7 +7414,7 @@ screenshot-carousel button:hover,
 screenshot-carousel button:active,
 .featured-carousel button:active {
   border-radius: 999px;
-  animation: pill-pop 0.6s cubic-bezier(0.2, 0, 0, 1) forwards;
+  animation: pill-pop 0.2s cubic-bezier(0.2, 0, 0, 1) forwards;
   transition: background-color 0.1s cubic-bezier(0, 0, 0.2, 1);
 }
 
@@ -7485,7 +7485,7 @@ gs-summary-tile image.loading-icon {
 
 .origin-button > button:active {
   border-radius: 999px;
-  animation: pill-pop 0.6s cubic-bezier(0.2, 0, 0, 1) forwards;
+  animation: pill-pop 0.2s cubic-bezier(0.2, 0, 0, 1) forwards;
   transition: background-color 0.1s cubic-bezier(0, 0, 0.2, 1);
 }
 
@@ -7910,7 +7910,7 @@ app-context-bar .context-tile:hover {
 app-context-bar .context-tile.keyboard-activating,
 app-context-bar .context-tile:active {
   background-color: color-mix(in srgb, currentColor 12%, transparent);
-  animation: pill-pop 0.6s cubic-bezier(0.2, 0, 0, 1) forwards;
+  animation: pill-pop 0.2s cubic-bezier(0.2, 0, 0, 1) forwards;
   transition: background-color 0.1s cubic-bezier(0, 0, 0.2, 1);
 }
 
@@ -8541,7 +8541,7 @@ avatar.image {
   background-color: color-mix(in srgb, var(--primary) 12%, transparent);
   color: var(--primary);
   outline: 0 solid transparent;
-  animation: pill-pop 0.6s cubic-bezier(0.2, 0, 0, 1) forwards;
+  animation: pill-pop 0.2s cubic-bezier(0.2, 0, 0, 1) forwards;
   transition: background-color 0.1s cubic-bezier(0, 0, 0.2, 1);
 }
 
@@ -8555,7 +8555,7 @@ toast {
   background-color: var(--background);
   color: var(--primary);
   border: none;
-  animation: expressive-pop-in 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+  animation: expressive-pop-in 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
 }
 
 .toast:dir(ltr) {
@@ -8587,13 +8587,13 @@ viewswitcher.wide button.toggle:hover {
 
 viewswitcher.wide button.toggle:active {
   border-radius: 999px;
-  animation: pill-pop 0.6s cubic-bezier(0.2, 0, 0, 1) forwards;
+  animation: pill-pop 0.2s cubic-bezier(0.2, 0, 0, 1) forwards;
   transition: background-color 0.1s cubic-bezier(0, 0, 0.2, 1);
 }
 
 viewswitcher.wide button.toggle:checked {
   border-radius: 999px;
-  animation: pill-pop 0.6s cubic-bezier(0.2, 0, 0, 1) forwards;
+  animation: pill-pop 0.2s cubic-bezier(0.2, 0, 0, 1) forwards;
 }
 
 viewswitcher.narrow button.toggle {
@@ -8611,12 +8611,12 @@ viewswitcher.narrow button.toggle:last-child {
 }
 
 viewswitcher.narrow button.toggle:active {
-  animation: pill-pop 0.6s cubic-bezier(0.2, 0, 0, 1) forwards;
+  animation: pill-pop 0.2s cubic-bezier(0.2, 0, 0, 1) forwards;
   transition: background-color 0.1s cubic-bezier(0, 0, 0.2, 1);
 }
 
 viewswitcher.narrow button.toggle:checked {
-  animation: pill-pop 0.6s cubic-bezier(0.2, 0, 0, 1) forwards;
+  animation: pill-pop 0.2s cubic-bezier(0.2, 0, 0, 1) forwards;
 }
 
 viewswitcher button.toggle {
@@ -8676,12 +8676,12 @@ viewswitcherbar actionbar > revealer > box viewswitcher.narrow button.toggle:hov
 }
 
 viewswitcherbar actionbar > revealer > box viewswitcher.narrow button.toggle:active {
-  animation: pill-pop 0.6s cubic-bezier(0.2, 0, 0, 1) forwards;
+  animation: pill-pop 0.2s cubic-bezier(0.2, 0, 0, 1) forwards;
   transition: background-color 0.1s cubic-bezier(0, 0, 0.2, 1);
 }
 
 viewswitcherbar actionbar > revealer > box viewswitcher.narrow button.toggle:checked {
-  animation: pill-pop 0.6s cubic-bezier(0.2, 0, 0, 1) forwards;
+  animation: pill-pop 0.2s cubic-bezier(0.2, 0, 0, 1) forwards;
 }
 
 viewswitcherbar actionbar > revealer > box viewswitcher.narrow button.toggle > stack > box.narrow {
@@ -8748,7 +8748,7 @@ indicatorbin > mask {
 indicatorbin.needs-attention > indicator {
   background-color: var(--primary);
   color: var(--on_primary);
-  animation: check-pop 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+  animation: check-pop 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
 }
 
 indicatorbin.needs-attention > indicator > label {
@@ -8843,7 +8843,7 @@ preferencesgroup > box button.accent-button:active {
 preferencesgroup > box button.accent-button:checked {
   outline: 3px solid var(--primary);
   outline-offset: -3px;
-  animation: check-pop 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+  animation: check-pop 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
 }
 
 preferencesgroup > box button.accent-button.blue,
@@ -8940,7 +8940,7 @@ window.about .main-page .app-version:selected {
   background-color: var(--primary);
   color: var(--on_primary);
   border-radius: 999px;
-  animation: pill-pop 0.6s cubic-bezier(0.2, 0, 0, 1) forwards;
+  animation: pill-pop 0.2s cubic-bezier(0.2, 0, 0, 1) forwards;
 }
 
 window.about .subpage > viewport > clamp > box {
@@ -9604,7 +9604,7 @@ panelthemeselector checkbutton.follow:checked,
 panelthemeselector checkbutton.light:checked,
 panelthemeselector checkbutton.dark:checked {
   box-shadow: inset 0 0 0 2px var(--primary);
-  animation: check-pop 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+  animation: check-pop 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
 }
 
 themeselector checkbutton.follow,
@@ -9706,7 +9706,7 @@ themeswitcher checkbutton:active {
 
 themeswitcher checkbutton:checked {
   box-shadow: inset 0 0 0 2px var(--primary);
-  animation: check-pop 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+  animation: check-pop 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
 }
 
 themeswitcher checkbutton radio,
