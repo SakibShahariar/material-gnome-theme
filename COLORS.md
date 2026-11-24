@@ -31,6 +31,12 @@ GTK4's `gtk.css` and `gtk-dark.css` import `colors.css` relatively. When linking
 
 GNOME Shell's St stylesheet uses concrete color values rendered from the same palette input. It does not automatically read the GTK4 stylesheet at runtime, so changing only GTK4's `colors.css` does not recolor GNOME Shell. Regenerate all three outputs together.
 
+## Contrast policy
+
+`scripts/check-theme.py` audits every curated preset in `themes/` (excluding the legacy `classic-*` collection) for WCAG AA contrast on the core foreground/background token pairs, with a minimum of **4.5:1**. High-contrast variants are additionally checked against a 7:1 advisory. CI fails when a curated preset falls below the AA threshold.
+
+There is **no override mechanism** for intentional low-contrast art presets: every curated preset must meet 4.5:1 for the audited pairs. To keep an experimental palette, develop it outside `themes/` and copy it in only after its token pairs pass. A preset that deliberately relies on low contrast is not eligible for the curated set.
+
 ## Extension integration
 
 Extensions that consume GTK-style CSS custom properties should use the GTK4 token names above rather than inventing a parallel naming scheme. Extensions with their own Matugen templates should read the same semantic color object and use the same token meaning (for example, `primary` for the accent and `on_primary` for foreground content on that accent). GNOME Shell CSS values must be rendered into the extension/theme stylesheet; do not assume GTK4's `var(--...)` definitions are automatically available in St stylesheets.
