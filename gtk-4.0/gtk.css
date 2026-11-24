@@ -2970,67 +2970,6 @@ columnview.view cell:active {
   transition: background-color 0.1s cubic-bezier(0, 0, 0.2, 1);
 }
 
-/*********
- * Menus *
- *********/
-menubar {
-  padding: 0;
-  background-color: var(--background);
-  color: color-mix(in srgb, var(--on_surface_variant) 90%, transparent);
-}
-
-menubar:backdrop {
-  background-color: var(--background);
-  color: var(--on_surface_variant);
-}
-
-.csd menubar {
-  transition: background-color 75ms cubic-bezier(0, 0, 0.2, 1),
-              color            75ms cubic-bezier(0, 0, 0.2, 1);
-}
-
-menubar > item {
-  transition: background-color 0.2s cubic-bezier(0.2, 0, 0, 1),
-              border-radius    0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275),
-              color            0.2s cubic-bezier(0.2, 0, 0, 1);
-  min-height: 20px;
-  padding: 4px 8px;
-  border-radius: 8px;
-  color: var(--on_surface_variant);
-}
-
-menubar > item:hover {
-  background-color: color-mix(in srgb, var(--primary) 5%, transparent);
-  border-radius: 12px;
-  color: var(--primary);
-}
-
-menubar > item:selected {
-  background-color: color-mix(in srgb, var(--primary) 8%, transparent);
-  color: var(--primary);
-  border-radius: 999px;
-  animation: pill-pop 0.6s cubic-bezier(0.2, 0, 0, 1) forwards;
-  transition: none;
-}
-
-menubar > item:disabled {
-  color: color-mix(in srgb, var(--on_surface) 38%, transparent);
-  animation: none;
-}
-
-menubar > item label:disabled {
-  color: inherit;
-}
-
-menubar > item popover.menu popover.menu {
-  margin-left: 9px;
-}
-
-menubar > item popover.menu.background popover.menu.background > contents {
-  margin: 0;
-  border-radius: 12px;
-}
-
 /**********************
  * Popover Base Menus *
  **********************/
@@ -3139,7 +3078,7 @@ popover > contents {
 
 popover > contents > list,
 popover > contents > .view,
-popover > contents > toolbar {
+popover > contents > .toolbar {
   border-style: none;
   box-shadow: none;
   background-color: transparent;
@@ -3186,7 +3125,7 @@ popover > contents > box > button {
 }
 
 popover .view:not(:selected),
-popover toolbar {
+popover .toolbar {
   background-color: var(--surface_container);
 }
 
