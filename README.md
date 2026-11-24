@@ -215,6 +215,8 @@ For a wallpaper-based palette, use the recommended flow: **choose a wallpaper in
 
 For the shared palette token names, generated files, and Matugen integration contract, see [COLORS.md](COLORS.md) and the [Matugen template example](matugen-templates.example.toml).
 
+Browse every bundled preset in the [generated preview gallery](docs/preview/index.html), which shows primary/surface/key token swatches and the exact filename to apply. Regenerate it with `python3 scripts/generate-preview.py` (or verify freshness with `--check`).
+
 The `themes/` folder contains a set of premade color themes as JSON files (Material You–style color tokens). A few examples:
 
 | Aqua Abyss | Arctic Blood | Forgotten Atelier |
