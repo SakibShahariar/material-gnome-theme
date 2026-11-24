@@ -2031,8 +2031,8 @@ StScrollBar StButton#hhandle:active {
   selection-background-color: {{colors.primary.default.hex}};
   selected-color: {{colors.on_primary.default.hex}} !important;
   color: {{colors.primary.default.hex}};
-  background-color: rgba({{colors.surface_container.default.red}}, {{colors.surface_container.default.green}}, {{colors.surface_container.default.blue}}, 0.4) !important;
-  border: 2px solid rgba({{colors.primary.default.red}}, {{colors.primary.default.green}}, {{colors.primary.default.blue}}, 0.05) !important;
+  background-color: rgba({{colors.primary.default.red}}, {{colors.primary.default.green}}, {{colors.primary.default.blue}}, 0.14) !important;
+  border: 2px solid rgba({{colors.primary.default.red}}, {{colors.primary.default.green}}, {{colors.primary.default.blue}}, 0.35) !important;
   box-shadow: none !important;
   margin-top: 24px;
   margin-bottom: 6px;
@@ -2040,15 +2040,15 @@ StScrollBar StButton#hhandle:active {
 
 .search-entry:hover {
   color: {{colors.primary.default.hex}};
-  background-color: rgba({{colors.surface_container.default.red}}, {{colors.surface_container.default.green}}, {{colors.surface_container.default.blue}}, 0.45) !important;
-  border: 2px solid rgba({{colors.primary.default.red}}, {{colors.primary.default.green}}, {{colors.primary.default.blue}}, 0.15) !important;
+  background-color: rgba({{colors.primary.default.red}}, {{colors.primary.default.green}}, {{colors.primary.default.blue}}, 0.20) !important;
+  border: 2px solid rgba({{colors.primary.default.red}}, {{colors.primary.default.green}}, {{colors.primary.default.blue}}, 0.50) !important;
   box-shadow: none !important;
 }
 
 .search-entry:focus {
   color: {{colors.primary.default.hex}};
-  background-color: rgba({{colors.surface_container.default.red}}, {{colors.surface_container.default.green}}, {{colors.surface_container.default.blue}}, 0.5) !important;
-  border: 2px solid rgba({{colors.primary.default.red}}, {{colors.primary.default.green}}, {{colors.primary.default.blue}}, 0.3) !important;
+  background-color: rgba({{colors.primary.default.red}}, {{colors.primary.default.green}}, {{colors.primary.default.blue}}, 0.28) !important;
+  border: 2px solid rgba({{colors.primary.default.red}}, {{colors.primary.default.green}}, {{colors.primary.default.blue}}, 0.70) !important;
   box-shadow: none !important;
 }
 
@@ -2072,7 +2072,7 @@ StScrollBar StButton#hhandle:active {
 }
 
 .search-entry StLabel.hint-text {
-  color: {{colors.on_surface_variant.default.hex}};
+  color: {{colors.primary.default.hex}};
 }
 
 /* Slider */
@@ -4570,16 +4570,16 @@ StWidget.focused .app-grid-running-dot {
 .overview-components-light .search-entry,
 .overview-components-dark .search-entry {
   caret-color: {{colors.primary.default.hex}} !important;
-  background-color: rgba({{colors.on_surface_variant.default.red}}, {{colors.on_surface_variant.default.green}}, {{colors.on_surface_variant.default.blue}}, 0.06) !important;
-  border: 1px solid rgba({{colors.on_surface_variant.default.red}}, {{colors.on_surface_variant.default.green}}, {{colors.on_surface_variant.default.blue}}, 0.08) !important;
+  background-color: rgba({{colors.primary.default.red}}, {{colors.primary.default.green}}, {{colors.primary.default.blue}}, 0.14) !important;
+  border: 2px solid rgba({{colors.primary.default.red}}, {{colors.primary.default.green}}, {{colors.primary.default.blue}}, 0.35) !important;
   box-shadow: none !important;
 }
 
 .overview-components-transparent .search-entry:focus,
 .overview-components-light .search-entry:focus,
 .overview-components-dark .search-entry:focus {
-  background-color: rgba({{colors.on_surface_variant.default.red}}, {{colors.on_surface_variant.default.green}}, {{colors.on_surface_variant.default.blue}}, 0.1) !important;
-  border: 1px solid rgba({{colors.primary.default.red}}, {{colors.primary.default.green}}, {{colors.primary.default.blue}}, 0.3) !important;
+  background-color: rgba({{colors.primary.default.red}}, {{colors.primary.default.green}}, {{colors.primary.default.blue}}, 0.28) !important;
+  border: 2px solid rgba({{colors.primary.default.red}}, {{colors.primary.default.green}}, {{colors.primary.default.blue}}, 0.70) !important;
 }
 
 .overview-components-transparent .search-entry .search-entry-icon,
@@ -4591,7 +4591,7 @@ StWidget.focused .app-grid-running-dot {
 .overview-components-transparent .search-entry StLabel.hint-text,
 .overview-components-light .search-entry StLabel.hint-text,
 .overview-components-dark .search-entry StLabel.hint-text {
-  color: {{colors.on_surface_variant.default.hex}} !important;
+  color: {{colors.primary.default.hex}} !important;
 }
 
 .overview-components-transparent .search-section-content,
@@ -4675,7 +4675,6 @@ StWidget.focused .app-grid-running-dot {
 .panel-button.clock-display .clock {
   color: inherit !important;
   text-shadow: none !important;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2) !important;
   background-color: rgba({{colors.surface_container.default.red}}, {{colors.surface_container.default.green}}, {{colors.surface_container.default.blue}}, 0.9) !important;
   border: 2px solid rgba({{colors.primary.default.red}}, {{colors.primary.default.green}}, {{colors.primary.default.blue}}, 0.3) !important;
   border-radius: 10px !important;
@@ -4687,13 +4686,6 @@ StWidget.focused .app-grid-running-dot {
   color: {{colors.primary.default.hex}};
   border: 2px solid {{colors.primary.default.hex}};
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
-}
-
-.panel-button.clock-display:hover .clock {
-  background-color: rgba({{colors.surface_container_high.default.red}}, {{colors.surface_container_high.default.green}}, {{colors.surface_container_high.default.blue}}, 0.95) !important;
-  color: {{colors.primary.default.hex}} !important;
-  border: 2px solid {{colors.primary.default.hex}} !important;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25) !important;
 }
 
 /* ── ACTIVE / CHECKED / FOCUS — bg=primary, fg=on_primary ── */
@@ -4708,7 +4700,7 @@ StWidget.focused .app-grid-running-dot {
 #panel .panel-button:checked:hover {
   color: {{colors.on_primary.default.hex}};
   background-color: {{colors.primary.default.hex}};
-  border: 2px solid {{colors.primary.default.hex}};
+  border: 2px solid {{colors.primary.default.hex}} !important;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
@@ -4920,4 +4912,126 @@ StWidget.focused .app-grid-running-dot {
 #panel .screencast-indicator,
 #panel .remote-access-indicator {
   color: {{colors.error.default.hex}};
+}
+
+/* ── Clock pill: one consistent dark pill + thin outline in every state ──
+   Keeps the outer button dark and removes the nested inner pill/outline that
+   made the border look thicker on hover/click. */
+#panel .panel-button.clock-display:hover,
+#panel .panel-button.clock-display:active,
+#panel .panel-button.clock-display:focus,
+#panel .panel-button.clock-display:checked,
+#panel .panel-button.clock-display:overview,
+#panel.light-panel .panel-button.clock-display:hover,
+#panel.light-panel .panel-button.clock-display:active,
+#panel.light-panel .panel-button.clock-display:focus,
+#panel.light-panel .panel-button.clock-display:checked,
+#panel.light-panel .panel-button.clock-display:overview,
+#panel.dark-panel .panel-button.clock-display:hover,
+#panel.dark-panel .panel-button.clock-display:active,
+#panel.dark-panel .panel-button.clock-display:focus,
+#panel.dark-panel .panel-button.clock-display:checked,
+#panel.dark-panel .panel-button.clock-display:overview,
+#panel.transparent-panel .panel-button.clock-display:hover,
+#panel.transparent-panel .panel-button.clock-display:active,
+#panel.transparent-panel .panel-button.clock-display:focus,
+#panel.transparent-panel .panel-button.clock-display:checked,
+#panel.transparent-panel .panel-button.clock-display:overview {
+  color: {{colors.primary.default.hex}} !important;
+  background-color: {{colors.surface_container.default.hex}} !important;
+  border: 2px solid rgba({{colors.primary.default.red}}, {{colors.primary.default.green}}, {{colors.primary.default.blue}}, 0.3) !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2) !important;
+}
+
+#panel .panel-button.clock-display:hover .clock,
+#panel .panel-button.clock-display:active .clock,
+#panel .panel-button.clock-display:focus .clock,
+#panel .panel-button.clock-display:checked .clock,
+#panel .panel-button.clock-display:overview .clock,
+#panel.light-panel .panel-button.clock-display:hover .clock,
+#panel.light-panel .panel-button.clock-display:active .clock,
+#panel.light-panel .panel-button.clock-display:focus .clock,
+#panel.light-panel .panel-button.clock-display:checked .clock,
+#panel.light-panel .panel-button.clock-display:overview .clock,
+#panel.dark-panel .panel-button.clock-display:hover .clock,
+#panel.dark-panel .panel-button.clock-display:active .clock,
+#panel.dark-panel .panel-button.clock-display:focus .clock,
+#panel.dark-panel .panel-button.clock-display:checked .clock,
+#panel.dark-panel .panel-button.clock-display:overview .clock,
+#panel.transparent-panel .panel-button.clock-display:hover .clock,
+#panel.transparent-panel .panel-button.clock-display:active .clock,
+#panel.transparent-panel .panel-button.clock-display:focus .clock,
+#panel.transparent-panel .panel-button.clock-display:checked .clock,
+#panel.transparent-panel .panel-button.clock-display:overview .clock {
+  color: {{colors.primary.default.hex}} !important;
+  background-color: {{colors.surface_container.default.hex}} !important;
+  border: 2px solid rgba({{colors.primary.default.red}}, {{colors.primary.default.green}}, {{colors.primary.default.blue}}, 0.3) !important;
+}
+
+
+
+#panel .panel-button.clock-display:hover .clock,
+#panel .panel-button.clock-display:active .clock,
+#panel .panel-button.clock-display:focus .clock,
+#panel .panel-button.clock-display:checked .clock,
+#panel .panel-button.clock-display:overview .clock,
+#panel.light-panel .panel-button.clock-display:hover .clock,
+#panel.light-panel .panel-button.clock-display:active .clock,
+#panel.light-panel .panel-button.clock-display:focus .clock,
+#panel.light-panel .panel-button.clock-display:checked .clock,
+#panel.light-panel .panel-button.clock-display:overview .clock,
+#panel.dark-panel .panel-button.clock-display:hover .clock,
+#panel.dark-panel .panel-button.clock-display:active .clock,
+#panel.dark-panel .panel-button.clock-display:focus .clock,
+#panel.dark-panel .panel-button.clock-display:checked .clock,
+#panel.dark-panel .panel-button.clock-display:overview .clock,
+#panel.transparent-panel .panel-button.clock-display:hover .clock,
+#panel.transparent-panel .panel-button.clock-display:active .clock,
+#panel.transparent-panel .panel-button.clock-display:focus .clock,
+#panel.transparent-panel .panel-button.clock-display:checked .clock,
+#panel.transparent-panel .panel-button.clock-display:overview .clock,
+#panel .panel-button.clock-display:hover .clock *,
+#panel .panel-button.clock-display:active .clock *,
+#panel .panel-button.clock-display:focus .clock *,
+#panel .panel-button.clock-display:checked .clock *,
+#panel .panel-button.clock-display:overview .clock *,
+#panel.light-panel .panel-button.clock-display:hover .clock *,
+#panel.light-panel .panel-button.clock-display:active .clock *,
+#panel.light-panel .panel-button.clock-display:focus .clock *,
+#panel.light-panel .panel-button.clock-display:checked .clock *,
+#panel.light-panel .panel-button.clock-display:overview .clock *,
+#panel.dark-panel .panel-button.clock-display:hover .clock *,
+#panel.dark-panel .panel-button.clock-display:active .clock *,
+#panel.dark-panel .panel-button.clock-display:focus .clock *,
+#panel.dark-panel .panel-button.clock-display:checked .clock *,
+#panel.dark-panel .panel-button.clock-display:overview .clock *,
+#panel.transparent-panel .panel-button.clock-display:hover .clock *,
+#panel.transparent-panel .panel-button.clock-display:active .clock *,
+#panel.transparent-panel .panel-button.clock-display:focus .clock *,
+#panel.transparent-panel .panel-button.clock-display:checked .clock *,
+#panel.transparent-panel .panel-button.clock-display:overview .clock * {
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* ── Override blur extensions' whitish overview search ──
+   Their stylesheet loads after the theme with high specificity, so use
+   higher specificity here to keep the search field on-palette. */
+#overviewGroup#overviewGroup .search-entry,
+#overviewGroup#overviewGroup .search-entry:focus {
+  color: {{colors.primary.default.hex}} !important;
+  background-color: rgba({{colors.surface_container.default.red}}, {{colors.surface_container.default.green}}, {{colors.surface_container.default.blue}}, 0.94) !important;
+  border: 2px solid rgba({{colors.primary.default.red}}, {{colors.primary.default.green}}, {{colors.primary.default.blue}}, 0.50) !important;
+  box-shadow: inset 0 0 0 1px rgba({{colors.primary.default.red}}, {{colors.primary.default.green}}, {{colors.primary.default.blue}}, 0.10), 0 2px 10px rgba(0, 0, 0, 0.25) !important;
+}
+
+#overviewGroup#overviewGroup .search-entry:focus {
+  background-color: rgba({{colors.surface_container.default.red}}, {{colors.surface_container.default.green}}, {{colors.surface_container.default.blue}}, 1) !important;
+  border-color: rgba({{colors.primary.default.red}}, {{colors.primary.default.green}}, {{colors.primary.default.blue}}, 0.85) !important;
+}
+
+#overviewGroup#overviewGroup .search-entry .search-entry-icon,
+#overviewGroup#overviewGroup .search-entry StLabel.hint-text {
+  color: {{colors.primary.default.hex}} !important;
 }
