@@ -1,0 +1,272 @@
+/* Structured Box Island Layout */
+#panel {
+  background-color: rgba({{colors.surface_container.default.red}}, {{colors.surface_container.default.green}}, {{colors.surface_container.default.blue}}, 0.85);
+  border: 2px solid rgba({{colors.primary.default.red}}, {{colors.primary.default.green}}, {{colors.primary.default.blue}}, 0.3);
+  border-radius: 8px;
+  width: calc(100% - 20px);
+  height: 28px;
+  transition: background-color 250ms ease-in-out;
+  color: {{colors.on_surface.default.hex}};
+  font-weight: bold;
+  font-feature-settings: 'tnum';
+  font-size: 9pt;
+  margin: 4px 10px 0px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+#panel .panel-corner {
+  -panel-corner-radius: 0;
+  -panel-corner-background-color: transparent;
+  -panel-corner-border-width: 0;
+  -panel-corner-border-color: transparent;
+  -panel-corner-opacity: 0;
+}
+
+#panel .panel-button {
+  -natural-hpadding: 6px;
+  -minimum-hpadding: 6px;
+  font-weight: bold;
+  color: {{colors.primary.default.hex}};
+  background-color: transparent;
+  transition: all 150ms ease-in-out;
+  border-radius: 4px;
+  margin: 2px 2px;
+  padding: 0 4px;
+  border: none;
+  box-shadow: none;
+  text-shadow: none;
+}
+
+.panel-button.clock-display .clock {
+  color: inherit !important;
+  text-shadow: none !important;
+  background-color: transparent !important;
+  border: none !important;
+  border-radius: 4px !important;
+  transition: all 150ms ease-in-out !important;
+}
+
+#panel .panel-button:hover {
+  background-color: rgba({{colors.primary.default.red}}, {{colors.primary.default.green}}, {{colors.primary.default.blue}}, 0.15);
+  color: {{colors.primary.default.hex}};
+  border: none;
+}
+
+/* ── ACTIVE / CHECKED / FOCUS — bg=primary, fg=on_primary ── */
+
+#panel .panel-button:active,
+#panel .panel-button:active:hover,
+#panel .panel-button:overview,
+#panel .panel-button:overview:hover,
+#panel .panel-button:focus,
+#panel .panel-button:focus:hover,
+#panel .panel-button:checked,
+#panel .panel-button:checked:hover {
+  color: {{colors.on_primary.default.hex}};
+  background-color: {{colors.primary.default.hex}};
+  border: none !important;
+}
+
+.panel-button.clock-display:active .clock,
+.panel-button.clock-display:overview .clock,
+.panel-button.clock-display:focus .clock,
+.panel-button.clock-display:checked .clock {
+  color: {{colors.on_primary.default.hex}} !important;
+  background-color: {{colors.primary.default.hex}} !important;
+  border: none !important;
+}
+
+/* ── LOCK / LOGIN SCREENS ──────────────── */
+
+.unlock-screen #panel .panel-button,
+.login-screen #panel .panel-button,
+.lock-screen #panel .panel-button {
+  color: {{colors.primary.default.hex}};
+  background-color: transparent;
+  border-radius: 4px;
+  margin: 0 2px;
+}
+
+.unlock-screen #panel .panel-button:focus,
+.unlock-screen #panel .panel-button:hover,
+.unlock-screen #panel .panel-button:active,
+.login-screen #panel .panel-button:focus,
+.login-screen #panel .panel-button:hover,
+.login-screen #panel .panel-button:active,
+.lock-screen #panel .panel-button:focus,
+.lock-screen #panel .panel-button:hover,
+.lock-screen #panel .panel-button:active {
+  color: {{colors.on_primary.default.hex}};
+  background-color: {{colors.primary.default.hex}};
+}
+
+/* ── ICONS ─────────────────────────────── */
+
+#panel .panel-button .system-status-icon {
+  icon-size: 14px;
+  padding: 2px;
+  margin: 0;
+  -st-icon-style: symbolic;
+}
+
+#panel .panel-button .appindicator-trayicons-box {
+  margin: 0 2px;
+}
+
+#panel .panel-button .app-menu-icon {
+  -st-icon-style: symbolic;
+}
+
+/* ── ACTIVITIES BUTTON ─────────────────── */
+
+#panel .panel-button#panelActivities {
+  -natural-hpadding: 10px;
+}
+
+#panel .panel-button#panelActivities StBoxLayout {
+  padding: 0 1px;
+  spacing: 3px;
+}
+
+#panel .panel-button#panelActivities .workspace-dot {
+  border-radius: 2px;
+  min-width: 5px;
+  min-height: 5px;
+  background-color: {{colors.primary.default.hex}};
+}
+
+/* ── OVERVIEW / LOCK PANEL STATES ──────── */
+
+#panel:overview,
+#panel.unlock-screen,
+#panel.login-screen,
+#panel.lock-screen {
+  background-color: transparent;
+  box-shadow: none;
+  border: 2px solid transparent;
+}
+
+#panel:overview StLabel,
+#panel:overview StIcon,
+#panel.unlock-screen StLabel,
+#panel.unlock-screen StIcon,
+#panel.login-screen StLabel,
+#panel.login-screen StIcon,
+#panel.lock-screen StLabel,
+#panel.lock-screen StIcon {
+  color: {{colors.primary.default.hex}};
+}
+
+#panel:overview .panel-button:hover,
+#panel.unlock-screen .panel-button:hover,
+#panel.login-screen .panel-button:hover,
+#panel.lock-screen .panel-button:hover {
+  color: {{colors.primary.default.hex}};
+  background-color: rgba({{colors.primary.default.red}}, {{colors.primary.default.green}}, {{colors.primary.default.blue}}, 0.08);
+}
+
+#panel:overview .panel-button:hover.clock-display,
+#panel.unlock-screen .panel-button:hover.clock-display,
+#panel.login-screen .panel-button:hover.clock-display,
+#panel.lock-screen .panel-button:hover.clock-display {
+  box-shadow: none;
+  color: {{colors.primary.default.hex}};
+}
+
+#panel:overview .panel-button:hover.clock-display .clock,
+#panel.unlock-screen .panel-button:hover.clock-display .clock,
+#panel.login-screen .panel-button:hover.clock-display .clock,
+#panel.lock-screen .panel-button:hover.clock-display .clock {
+  color: {{colors.primary.default.hex}};
+  background-color: rgba({{colors.primary.default.red}}, {{colors.primary.default.green}}, {{colors.primary.default.blue}}, 0.08);
+}
+
+#panel:overview .panel-button:active,
+#panel:overview .panel-button:overview,
+#panel:overview .panel-button:focus,
+#panel:overview .panel-button:checked,
+#panel.unlock-screen .panel-button:active,
+#panel.unlock-screen .panel-button:overview,
+#panel.unlock-screen .panel-button:focus,
+#panel.unlock-screen .panel-button:checked,
+#panel.login-screen .panel-button:active,
+#panel.login-screen .panel-button:overview,
+#panel.login-screen .panel-button:focus,
+#panel.login-screen .panel-button:checked,
+#panel.lock-screen .panel-button:active,
+#panel.lock-screen .panel-button:overview,
+#panel.lock-screen .panel-button:focus,
+#panel.lock-screen .panel-button:checked {
+  color: {{colors.on_primary.default.hex}};
+  background-color: rgba({{colors.primary.default.red}}, {{colors.primary.default.green}}, {{colors.primary.default.blue}}, 0.2);
+}
+
+#panel:overview .panel-button:active.clock-display,
+#panel:overview .panel-button:overview.clock-display,
+#panel:overview .panel-button:focus.clock-display,
+#panel:overview .panel-button:checked.clock-display,
+#panel.unlock-screen .panel-button:active.clock-display,
+#panel.unlock-screen .panel-button:overview.clock-display,
+#panel.unlock-screen .panel-button:focus.clock-display,
+#panel.unlock-screen .panel-button:checked.clock-display,
+#panel.login-screen .panel-button:active.clock-display,
+#panel.login-screen .panel-button:overview.clock-display,
+#panel.login-screen .panel-button:focus.clock-display,
+#panel.login-screen .panel-button:checked.clock-display,
+#panel.lock-screen .panel-button:active.clock-display,
+#panel.lock-screen .panel-button:overview.clock-display,
+#panel.lock-screen .panel-button:focus.clock-display,
+#panel.lock-screen .panel-button:checked.clock-display {
+  box-shadow: none;
+  color: {{colors.on_primary.default.hex}};
+}
+
+#panel:overview .panel-button:active.clock-display .clock,
+#panel:overview .panel-button:overview.clock-display .clock,
+#panel:overview .panel-button:focus.clock-display .clock,
+#panel:overview .panel-button:checked.clock-display .clock,
+#panel.unlock-screen .panel-button:active.clock-display .clock,
+#panel.unlock-screen .panel-button:overview.clock-display .clock,
+#panel.unlock-screen .panel-button:focus.clock-display .clock,
+#panel.unlock-screen .panel-button:checked.clock-display .clock,
+#panel.login-screen .panel-button:active.clock-display .clock,
+#panel.login-screen .panel-button:overview.clock-display .clock,
+#panel.login-screen .panel-button:focus.clock-display .clock,
+#panel.login-screen .panel-button:checked.clock-display .clock,
+#panel.lock-screen .panel-button:active.clock-display .clock,
+#panel.lock-screen .panel-button:overview.clock-display .clock,
+#panel.lock-screen .panel-button:focus.clock-display .clock,
+#panel.lock-screen .panel-button:checked.clock-display .clock {
+  background-color: {{colors.primary.default.hex}};
+  color: {{colors.on_primary.default.hex}};
+}
+
+#panel:overview .panel-button#panelActivities .workspace-dot,
+#panel.unlock-screen .panel-button#panelActivities .workspace-dot,
+#panel.login-screen .panel-button#panelActivities .workspace-dot,
+#panel.lock-screen .panel-button#panelActivities .workspace-dot {
+  background-color: {{colors.primary.default.hex}};
+}
+
+#panel:overview .panel-corner,
+#panel.unlock-screen .panel-corner,
+#panel.login-screen .panel-corner,
+#panel.lock-screen .panel-corner {
+  -panel-corner-radius: 0;
+  -panel-corner-background-color: transparent;
+  -panel-corner-border-color: transparent;
+}
+
+/* ── SPECIAL INDICATORS ────────────────── */
+
+#panel Gjs_status_keyboard_InputSourceIndicator.panel-button,
+#panel Gjs_appindicatorsupport_rgcjonas_gmail_com_indicatorStatusIcon_IndicatorStatusIcon.panel-button,
+#panel Gjs_appindicatorsupport_rgcjonas_gmail_com_indicatorStatusIcon_AppIndicatorsIndicatorStatusIcon.panel-button {
+  -natural-hpadding: 10px !important;
+  -minimum-hpadding: 10px !important;
+}
+
+#panel .screencast-indicator,
+#panel .remote-access-indicator {
+  color: {{colors.error.default.hex}};
+}

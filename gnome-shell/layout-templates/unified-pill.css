@@ -1,0 +1,259 @@
+/* Top Bar — Floating Capsule Layout */
+#panel {
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+  width: calc(100% - 60px);
+  height: 32px;
+  transition-duration: 250ms;
+  color: {{colors.on_surface.default.hex}};
+  font-weight: bold;
+  font-feature-settings: 'tnum';
+  font-size: 10pt;
+  margin: 2px 2px 0px;
+}
+
+#panel .panel-corner {
+  -panel-corner-radius: 0;
+  -panel-corner-background-color: transparent;
+  -panel-corner-border-width: 0;
+  -panel-corner-border-color: transparent;
+  -panel-corner-opacity: 0;
+  transition-duration: 250ms;
+}
+
+/* ── FLOATING CAPSULE ZONES ────────────── */
+
+#panel #panelLeft,
+#panel #panelCenter,
+#panel #panelRight {
+  background-color: rgba({{colors.surface_container.default.red}}, {{colors.surface_container.default.green}}, {{colors.surface_container.default.blue}}, 0.75);
+  border-radius: 999px;
+  border: 1.5px solid rgba({{colors.primary.default.red}}, {{colors.primary.default.green}}, {{colors.primary.default.blue}}, 0.25);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.35),
+              0 1px 0 rgba(255, 255, 255, 0.06) inset;
+  padding: 0 10px;
+  margin: 1px 6px;
+  width: max-content;
+  min-width: 0;
+  x-align: center;
+  y-align: center;
+}
+
+/* ── INDIVIDUAL BUTTONS ────────────────── */
+
+#panel .panel-button {
+  -natural-hpadding: 8px;
+  -minimum-hpadding: 8px;
+  font-weight: bold;
+  color: {{colors.primary.default.hex}};
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
+  margin: 0;
+  padding: 0 6px;
+  text-shadow: none;
+  transition: all 150ms ease-in-out;
+}
+
+/* Clock */
+.panel-button.clock-display .clock {
+  color: inherit !important;
+  text-shadow: none !important;
+  background-color: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  transition: all 150ms ease-in-out !important;
+}
+
+/* ── HOVER ─────────────────────────────── */
+
+#panel .panel-button:hover {
+  background-color: rgba({{colors.primary.default.red}}, {{colors.primary.default.green}}, {{colors.primary.default.blue}}, 0.12);
+  border-radius: 999px;
+  color: {{colors.primary.default.hex}};
+  box-shadow: none;
+}
+
+/* ── ACTIVE / CHECKED / FOCUS ──────────── */
+
+#panel .panel-button:active,
+#panel .panel-button:active:hover,
+#panel .panel-button:overview,
+#panel .panel-button:overview:hover,
+#panel .panel-button:focus,
+#panel .panel-button:focus:hover,
+#panel .panel-button:checked,
+#panel .panel-button:checked:hover {
+  color: {{colors.on_primary.default.hex}};
+  background-color: {{colors.primary.default.hex}};
+  border-radius: 999px;
+  box-shadow: none;
+}
+
+/* ── LOCK / LOGIN SCREENS ──────────────── */
+
+.unlock-screen #panel #panelLeft,
+.unlock-screen #panel #panelCenter,
+.unlock-screen #panel #panelRight,
+.login-screen  #panel #panelLeft,
+.login-screen  #panel #panelCenter,
+.login-screen  #panel #panelRight,
+.lock-screen   #panel #panelLeft,
+.lock-screen   #panel #panelCenter,
+.lock-screen   #panel #panelRight {
+  background-color: rgba({{colors.surface_container.default.red}}, {{colors.surface_container.default.green}}, {{colors.surface_container.default.blue}}, 0.85);
+  border: 1.5px solid rgba({{colors.primary.default.red}}, {{colors.primary.default.green}}, {{colors.primary.default.blue}}, 0.3);
+  border-radius: 999px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+}
+
+.unlock-screen #panel .panel-button,
+.login-screen  #panel .panel-button,
+.lock-screen   #panel .panel-button {
+  color: {{colors.primary.default.hex}};
+  background-color: transparent;
+  border: none;
+}
+
+.unlock-screen #panel .panel-button:focus,
+.unlock-screen #panel .panel-button:hover,
+.unlock-screen #panel .panel-button:active,
+.login-screen  #panel .panel-button:focus,
+.login-screen  #panel .panel-button:hover,
+.login-screen  #panel .panel-button:active,
+.lock-screen   #panel .panel-button:focus,
+.lock-screen   #panel .panel-button:hover,
+.lock-screen   #panel .panel-button:active {
+  color: {{colors.on_primary.default.hex}};
+  background-color: {{colors.primary.default.hex}};
+  border-radius: 999px;
+  box-shadow: none;
+}
+
+/* ── ICONS ─────────────────────────────── */
+
+#panel .panel-button .system-status-icon {
+  icon-size: 16px;
+  padding: 4px;
+  margin: 0;
+  -st-icon-style: symbolic;
+}
+
+#panel .panel-button .appindicator-trayicons-box {
+  margin: 0 4px;
+}
+
+#panel .panel-button .app-menu-icon {
+  -st-icon-style: symbolic;
+}
+
+/* ── ACTIVITIES BUTTON ─────────────────── */
+
+#panel .panel-button#panelActivities {
+  -natural-hpadding: 14px;
+}
+
+#panel .panel-button#panelActivities StBoxLayout {
+  padding: 0 3px;
+  spacing: 6px;
+}
+
+#panel .panel-button#panelActivities .workspace-dot {
+  border-radius: 9999px;
+  min-width: 6px;
+  min-height: 6px;
+  background-color: {{colors.primary.default.hex}};
+}
+
+/* ── OVERVIEW / LOCK PANEL STATES ──────── */
+
+#panel:overview,
+#panel.unlock-screen,
+#panel.login-screen,
+#panel.lock-screen {
+  background-color: transparent;
+  box-shadow: none;
+  border: 2px solid transparent;
+}
+
+#panel:overview #panelLeft,
+#panel:overview #panelCenter,
+#panel:overview #panelRight,
+#panel.unlock-screen #panelLeft,
+#panel.unlock-screen #panelCenter,
+#panel.unlock-screen #panelRight,
+#panel.login-screen #panelLeft,
+#panel.login-screen #panelCenter,
+#panel.login-screen #panelRight,
+#panel.lock-screen #panelLeft,
+#panel.lock-screen #panelCenter,
+#panel.lock-screen #panelRight {
+  background-color: transparent;
+  border-color: transparent;
+  box-shadow: none;
+}
+
+#panel:overview StLabel,
+#panel:overview StIcon,
+#panel.unlock-screen StLabel,
+#panel.unlock-screen StIcon,
+#panel.login-screen StLabel,
+#panel.login-screen StIcon,
+#panel.lock-screen StLabel,
+#panel.lock-screen StIcon {
+  color: {{colors.primary.default.hex}};
+}
+
+#panel:overview .panel-button:hover,
+#panel.unlock-screen .panel-button:hover,
+#panel.login-screen .panel-button:hover,
+#panel.lock-screen .panel-button:hover {
+  color: {{colors.primary.default.hex}};
+  background-color: rgba({{colors.primary.default.red}}, {{colors.primary.default.green}}, {{colors.primary.default.blue}}, 0.08);
+  border-radius: 999px;
+}
+
+#panel:overview .panel-button:active,
+#panel:overview .panel-button:overview,
+#panel:overview .panel-button:focus,
+#panel:overview .panel-button:checked,
+#panel.unlock-screen .panel-button:active,
+#panel.unlock-screen .panel-button:focus,
+#panel.unlock-screen .panel-button:checked,
+#panel.login-screen .panel-button:active,
+#panel.login-screen .panel-button:focus,
+#panel.login-screen .panel-button:checked,
+#panel.lock-screen .panel-button:active,
+#panel.lock-screen .panel-button:focus,
+#panel.lock-screen .panel-button:checked {
+  color: {{colors.on_primary.default.hex}};
+  background-color: {{colors.primary.default.hex}};
+  border-radius: 999px;
+}
+
+/* ── PANEL CORNERS ─────────────────────── */
+
+#panel:overview .panel-corner,
+#panel.unlock-screen .panel-corner,
+#panel.login-screen .panel-corner,
+#panel.lock-screen .panel-corner {
+  -panel-corner-radius: 0;
+  -panel-corner-background-color: transparent;
+  -panel-corner-border-color: transparent;
+}
+
+/* ── SPECIAL INDICATORS ────────────────── */
+
+#panel Gjs_status_keyboard_InputSourceIndicator.panel-button,
+#panel Gjs_appindicatorsupport_rgcjonas_gmail_com_indicatorStatusIcon_IndicatorStatusIcon.panel-button,
+#panel Gjs_appindicatorsupport_rgcjonas_gmail_com_indicatorStatusIcon_AppIndicatorsIndicatorStatusIcon.panel-button {
+  -natural-hpadding: 14px !important;
+  -minimum-hpadding: 14px !important;
+}
+
+#panel .screencast-indicator,
+#panel .remote-access-indicator {
+  color: {{colors.error.default.hex}};
+}
