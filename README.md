@@ -271,7 +271,7 @@ cp gnome-shell/layouts/unified-pill.css gnome-shell/layouts/active-layout.css
 
 Then apply or reinstall the updated theme, and reload GNOME Shell. On Wayland, log out and back in if a shell reload is unavailable.
 
-`gnome-shell/gnome-shell.css` imports `layouts/active-layout.css` at the end, so you no longer need to edit the large generated stylesheet. The checked-in active layout defaults to Floating Capsule (Glass).
+`gnome-shell/gnome-shell.css` is generated from `gnome-shell/gnome-shell-template.css`, which embeds the active top-bar layout at the end. To switch layouts, replace that embedded section (palette-driven versions live in `gnome-shell/layout-templates/`) and regenerate with `scripts/apply-theme.py`.
 
 ---
 

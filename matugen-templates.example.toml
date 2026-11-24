@@ -12,3 +12,77 @@ output_path = '~/.themes/Material-Gnome/gtk-4.0/colors.css'
 [templates.material_gnome_shell]
 input_path = '~/.themes/Material-Gnome/gnome-shell/gnome-shell-template.css'
 output_path = '~/.themes/Material-Gnome/gnome-shell/gnome-shell.css'
+
+# Optional: palette-driven layout templates (matugen counterparts of the
+# static presets in gnome-shell/layouts). Change the active one by pointing
+# input_path at a different file; merge the rendered output into
+# gnome-shell.css (merge-layout.sh in the dotfiles pipeline does this).
+
+[templates.material_gnome_layout_active-layout]
+input_path = '~/.themes/Material-Gnome/gnome-shell/layout-templates/active-layout.css'
+output_path = '~/.themes/Material-Gnome/gnome-shell/layouts/active-layout.css'
+
+
+[templates.material_gnome_layout_default-transparecy]
+input_path = '~/.themes/Material-Gnome/gnome-shell/layout-templates/default-transparecy.css'
+output_path = '~/.themes/Material-Gnome/gnome-shell/layouts/default-transparecy.css'
+
+
+[templates.material_gnome_layout_default]
+input_path = '~/.themes/Material-Gnome/gnome-shell/layout-templates/default.css'
+output_path = '~/.themes/Material-Gnome/gnome-shell/layouts/default.css'
+
+
+[templates.material_gnome_layout_floating-capsule-glass]
+input_path = '~/.themes/Material-Gnome/gnome-shell/layout-templates/floating-capsule-glass.css'
+output_path = '~/.themes/Material-Gnome/gnome-shell/layouts/floating-capsule-glass.css'
+
+
+[templates.material_gnome_layout_floating-capsule]
+input_path = '~/.themes/Material-Gnome/gnome-shell/layout-templates/floating-capsule.css'
+output_path = '~/.themes/Material-Gnome/gnome-shell/layouts/floating-capsule.css'
+
+
+[templates.material_gnome_layout_pill-duo]
+input_path = '~/.themes/Material-Gnome/gnome-shell/layout-templates/pill-duo.css'
+output_path = '~/.themes/Material-Gnome/gnome-shell/layouts/pill-duo.css'
+
+
+[templates.material_gnome_layout_segmented-dock]
+input_path = '~/.themes/Material-Gnome/gnome-shell/layout-templates/segmented-dock.css'
+output_path = '~/.themes/Material-Gnome/gnome-shell/layouts/segmented-dock.css'
+
+
+[templates.material_gnome_layout_segmented-pill]
+input_path = '~/.themes/Material-Gnome/gnome-shell/layout-templates/segmented-pill.css'
+output_path = '~/.themes/Material-Gnome/gnome-shell/layouts/segmented-pill.css'
+
+
+[templates.material_gnome_layout_structured-box]
+input_path = '~/.themes/Material-Gnome/gnome-shell/layout-templates/structured-box.css'
+output_path = '~/.themes/Material-Gnome/gnome-shell/layouts/structured-box.css'
+
+
+[templates.material_gnome_layout_unified-bar]
+input_path = '~/.themes/Material-Gnome/gnome-shell/layout-templates/unified-bar.css'
+output_path = '~/.themes/Material-Gnome/gnome-shell/layouts/unified-bar.css'
+
+
+[templates.material_gnome_layout_unified-border]
+input_path = '~/.themes/Material-Gnome/gnome-shell/layout-templates/unified-border.css'
+output_path = '~/.themes/Material-Gnome/gnome-shell/layouts/unified-border.css'
+
+
+[templates.material_gnome_layout_unified-capsule-bottom]
+input_path = '~/.themes/Material-Gnome/gnome-shell/layout-templates/unified-capsule-bottom.css'
+output_path = '~/.themes/Material-Gnome/gnome-shell/layouts/unified-capsule-bottom.css'
+
+
+[templates.material_gnome_layout_unified-capsule]
+input_path = '~/.themes/Material-Gnome/gnome-shell/layout-templates/unified-capsule.css'
+output_path = '~/.themes/Material-Gnome/gnome-shell/layouts/unified-capsule.css'
+
+
+[templates.material_gnome_layout_unified-pill]
+input_path = '~/.themes/Material-Gnome/gnome-shell/layout-templates/unified-pill.css'
+output_path = '~/.themes/Material-Gnome/gnome-shell/layouts/unified-pill.css'
