@@ -76,6 +76,8 @@ Material-Gnome/
 
 The GTK4 version requirement is based on the [official GTK CSS documentation](https://docs.gtk.org/gtk4/css-properties.html), which documents custom-property support starting with GTK 4.16.
 
+See the [compatibility and version matrix](docs/compatibility.md) for tested versions, reported-working versions, known limitations, and a post-upgrade checklist.
+
 ## 🚀 Installation
 
 ### 1. Deploy the Theme Files
@@ -136,6 +138,44 @@ ln -sf ~/.themes/Material-Gnome/gtk-4.0/gtk.css ~/.config/gtk-4.0/gtk.css
 ln -sf ~/.themes/Material-Gnome/gtk-4.0/gtk-dark.css ~/.config/gtk-4.0/gtk-dark.css
 ln -sf ~/.themes/Material-Gnome/gtk-4.0/colors.css ~/.config/gtk-4.0/colors.css
 ```
+
+### 4. Uninstall, rollback, and affected paths
+
+The installer writes to these locations for the current user:
+
+| Path | What happens |
+|---|---|
+| `~/.themes/Material-Gnome/gtk-3.0/` | Copied from the repository checkout or release ZIP. |
+| `~/.themes/Material-Gnome/gtk-4.0/` | Copied; contains `colors.css` and the GTK4 stylesheets. |
+| `~/.themes/Material-Gnome/gnome-shell/` | Copied; used by the User Themes extension. |
+| `~/.themes/Material-Gnome/themes/` and `index.theme` | Copied; bundled preset JSON files and theme metadata. |
+| `~/.config/gtk-4.0/gtk.css`, `gtk-dark.css`, `colors.css` | Symlinked to the matching files under `~/.themes/Material-Gnome/gtk-4.0/`. |
+| `~/.config/gtk-4.0/<file>.bak.XXXXXX` | Created only with `./install.sh --force`, when a regular file occupied a symlink target. |
+| Flatpak overrides (with `--flatpak`) | User-level `flatpak override` entries granting read-only theme/config access; no files are copied into Flatpak sandboxes. |
+
+To uninstall cleanly:
+
+```bash
+rm ~/.config/gtk-4.0/gtk.css ~/.config/gtk-4.0/gtk-dark.css ~/.config/gtk-4.0/colors.css
+rm -rf ~/.themes/Material-Gnome
+```
+
+If you used `--force`, restore a backup before removing the symlinks, for example:
+
+```bash
+cp -a ~/.config/gtk-4.0/gtk.css.bak.XXXXXX ~/.config/gtk-4.0/gtk.css
+```
+
+Then set **Legacy Applications** and **Shell** back to your previous theme in GNOME Tweaks. If you installed with `--flatpak`, remove the overrides with `flatpak override --user --reset` (this clears all user overrides) or remove only the theme-related filesystem permissions you granted. Log out and back in after major theme changes if GTK apps or the Shell still show old styling.
+
+**Matugen and generated files:** `gtk-3.0/colors.css`, `gtk-4.0/colors.css`, and `gnome-shell/gnome-shell.css` are generated from the templates described in [COLORS.md](COLORS.md). Applying a preset or running Matugen overwrites them in the checkout; re-run `./install.sh` (or copy those files again) to refresh `~/.themes/Material-Gnome`. Changing only GTK4's `colors.css` does not recolor GNOME Shell.
+
+**Troubleshooting**
+
+* *Theme not applying:* confirm the User Themes extension is ON, the theme name is `Material-Gnome`, and the Shell was reloaded or the session restarted.
+* *Missing assets:* re-run `./install.sh` from a full checkout; partial copies can omit `assets/` or `index.theme`.
+* *Stale colors:* regenerate all three layers from one palette, then reinstall and restart GTK apps; see [COLORS.md](COLORS.md).
+* *GTK4 apps ignoring the theme:* check all three symlinks in `~/.config/gtk-4.0/`, including `colors.css`; run `python3 scripts/theme-doctor.py` for diagnostics.
 
 ### Optional: Manager App
 

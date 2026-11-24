@@ -2,6 +2,8 @@
 
 Material GNOME uses one semantic Material 3 palette as the source for GTK3, GTK4/Libadwaita, and GNOME Shell. Keep the token names aligned across generated files; do not maintain independent hand-edited palettes for each toolkit.
 
+For tested toolkit/Matugen versions and how they relate to this contract, see [docs/compatibility.md](docs/compatibility.md).
+
 ## Canonical inputs
 
 There are two supported ways to provide the palette:
