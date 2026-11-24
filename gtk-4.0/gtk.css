@@ -7654,7 +7654,7 @@ flowboxchild.card:not(.category-tile) {
 }
 
 .category-tile.card.category-play {
-  background: linear-gradient(75deg, var(--on_primary) 0%, #eb5ec3 50%, var(--primary) 100%);
+  background: linear-gradient(75deg, var(--on_primary) 0%, var(--primary) 50%, var(--secondary) 100%);
   color: var(--on_secondary);
 }
 
