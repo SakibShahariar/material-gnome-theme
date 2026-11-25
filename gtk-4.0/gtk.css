@@ -4455,29 +4455,36 @@ scale.color.vertical:dir(rtl) > trough > slider {
 /*****************
  * Progress bars *
  *****************/
+/*
+ * GtkProgressBar — documented node tree:
+ *   progressbar[.osd] > trough[.empty/.full] > progress[.pulse]
+ * https://docs.gtk.org/gtk4/class.ProgressBar.html#css-nodes
+ * Values are unchanged from the upstream baseline; only descendant
+ * selectors are tightened to the documented parent/child relationships.
+ */
 progressbar {
   color: var(--on_surface_variant);
   font-size: smaller;
   border-radius: 9999px;
 }
 
-progressbar.horizontal trough,
-progressbar.horizontal progress {
+progressbar.horizontal > trough,
+progressbar.horizontal > trough > progress {
   min-height: 4px;
 }
 
-progressbar.vertical trough,
-progressbar.vertical progress {
+progressbar.vertical > trough,
+progressbar.vertical > trough > progress {
   min-width: 4px;
 }
 
-progressbar trough {
+progressbar > trough {
   border-radius: 9999px;
   background-color: var(--secondary_container);
   transition: background-color 0.2s cubic-bezier(0.2, 0, 0, 1);
 }
 
-progressbar progress {
+progressbar > trough > progress {
   border-radius: 9999px;
   background-color: var(--primary);
   transition: background-color 0.2s cubic-bezier(0.2, 0, 0, 1);
@@ -4492,15 +4499,15 @@ progressbar.osd {
   padding: 0;
 }
 
-progressbar.osd trough {
+progressbar.osd > trough {
   background-color: color-mix(in srgb, var(--on_surface) 16%, transparent);
 }
 
-progressbar.osd progress {
+progressbar.osd > trough > progress {
   background-color: var(--primary);
 }
 
-progressbar trough.empty progress {
+progressbar > trough.empty > progress {
   all: unset;
 }
 
