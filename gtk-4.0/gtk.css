@@ -3888,6 +3888,10 @@ scrollbar.horizontal button.up {
 /**********
  * Switch *
  **********/
+/*
+ * GtkSwitch — documented nodes: switch with two image subnodes and a slider.
+ * https://docs.gtk.org/gtk4/class.Switch.html#css-nodes
+ */
 switch {
   padding: 2px;
   min-width: 36px;
@@ -3936,13 +3940,16 @@ switch:checked > slider {
 /*************************
  * Check and Radio items *
  *************************/
-checkbutton,
-radiobutton {
+/*
+ * GtkCheckButton — documented nodes: checkbutton > check, or > radio when
+ * grouped. https://docs.gtk.org/gtk4/class.CheckButton.html#css-nodes
+ */
+checkbutton {
   outline: none;
   border-spacing: 3px;
 }
 
-check {
+checkbutton > check {
   -gtk-icon-size: 20px;
   min-height: 20px;
   min-width: 20px;
@@ -3957,8 +3964,8 @@ check {
               transform        0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
-check:checked,
-check:indeterminate {
+checkbutton > check:checked,
+checkbutton > check:indeterminate {
   -gtk-icon-source: none;
   background-color: var(--primary);
   border-color: var(--primary);
@@ -3967,45 +3974,45 @@ check:indeterminate {
   animation: check-pop 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
 }
 
-check:focus {
+checkbutton > check:focus {
   outline: 1px solid var(--primary);
   outline-offset: 2px;
 }
 
-check:hover {
+checkbutton > check:hover {
   background-color: color-mix(in srgb, var(--on_surface) 8%, transparent);
   border-color: var(--on_surface);
 }
 
-check:active {
+checkbutton > check:active {
   background-color: color-mix(in srgb, var(--on_surface) 12%, transparent);
   transform: scale(0.88);
   transition: transform 0.1s cubic-bezier(0, 0, 0.2, 1);
 }
 
-check:checked:hover,
-check:indeterminate:hover {
+checkbutton > check:checked:hover,
+checkbutton > check:indeterminate:hover {
   background-color: var(--primary);
   outline: 6px solid color-mix(in srgb, var(--primary) 15%, transparent);
   outline-offset: -6px;
 }
 
-check:checked:active,
-check:indeterminate:active {
+checkbutton > check:checked:active,
+checkbutton > check:indeterminate:active {
   background-color: var(--primary);
   outline: 6px solid color-mix(in srgb, var(--primary) 20%, transparent);
   outline-offset: -6px;
   transform: scale(0.88);
 }
 
-check:disabled {
+checkbutton > check:disabled {
   opacity: 0.38;
   background-color: transparent;
   border-color: color-mix(in srgb, var(--outline) 38%, transparent);
   animation: none;
 }
 
-check:disabled:checked {
+checkbutton > check:disabled:checked {
   background-color: color-mix(in srgb, var(--primary) 38%, transparent);
   border-color: color-mix(in srgb, var(--primary) 38%, transparent);
   box-shadow: 0 0 0 1px color-mix(in srgb, var(--primary) 38%, transparent),
@@ -4013,7 +4020,7 @@ check:disabled:checked {
   animation: none;
 }
 
-radio {
+checkbutton > radio {
   -gtk-icon-size: 20px;
   min-height: 20px;
   min-width: 20px;
@@ -4028,7 +4035,7 @@ radio {
               transform        0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
-radio:checked {
+checkbutton > radio:checked {
   -gtk-icon-source: none;
   background-color: var(--primary);
   border-color: var(--primary);
@@ -4037,7 +4044,7 @@ radio:checked {
   animation: check-pop 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
 }
 
-radio:indeterminate {
+checkbutton > radio:indeterminate {
   -gtk-icon-source: none;
   background-color: transparent;
   border-color: var(--primary);
@@ -4046,45 +4053,45 @@ radio:indeterminate {
   animation: check-pop 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
 }
 
-radio:focus {
+checkbutton > radio:focus {
   outline: 1px solid var(--primary);
   outline-offset: 2px;
 }
 
-radio:hover {
+checkbutton > radio:hover {
   background-color: color-mix(in srgb, var(--on_surface) 8%, transparent);
   border-color: var(--on_surface);
 }
 
-radio:active {
+checkbutton > radio:active {
   background-color: color-mix(in srgb, var(--on_surface) 12%, transparent);
   transform: scale(0.88);
   transition: transform 0.1s cubic-bezier(0, 0, 0.2, 1);
 }
 
-radio:checked:hover,
-radio:indeterminate:hover {
+checkbutton > radio:checked:hover,
+checkbutton > radio:indeterminate:hover {
   background-color: var(--primary);
   outline: 6px solid color-mix(in srgb, var(--primary) 15%, transparent);
   outline-offset: -6px;
 }
 
-radio:checked:active,
-radio:indeterminate:active {
+checkbutton > radio:checked:active,
+checkbutton > radio:indeterminate:active {
   background-color: var(--primary);
   outline: 6px solid color-mix(in srgb, var(--primary) 20%, transparent);
   outline-offset: -6px;
   transform: scale(0.88);
 }
 
-radio:disabled {
+checkbutton > radio:disabled {
   opacity: 0.38;
   background-color: transparent;
   border-color: color-mix(in srgb, var(--outline) 38%, transparent);
   animation: none;
 }
 
-radio:disabled:checked {
+checkbutton > radio:disabled:checked {
   background-color: color-mix(in srgb, var(--primary) 38%, transparent);
   border-color: color-mix(in srgb, var(--primary) 38%, transparent);
   box-shadow: inset 0 0 0 4px var(--on_primary),
@@ -4093,17 +4100,17 @@ radio:disabled:checked {
 }
 
 popover modelbutton.flat check,
-popover modelbutton.flat check:focus,
-popover modelbutton.flat check:hover,
-popover modelbutton.flat check:focus:hover,
-popover modelbutton.flat check:active,
-popover modelbutton.flat check:disabled,
+popover modelbutton.flat checkbutton > check:focus,
+popover modelbutton.flat checkbutton > check:hover,
+popover modelbutton.flat checkbutton > check:focus:hover,
+popover modelbutton.flat checkbutton > check:active,
+popover modelbutton.flat checkbutton > check:disabled,
 popover modelbutton.flat radio,
-popover modelbutton.flat radio:focus,
-popover modelbutton.flat radio:hover,
-popover modelbutton.flat radio:focus:hover,
-popover modelbutton.flat radio:active,
-popover modelbutton.flat radio:disabled {
+popover modelbutton.flat checkbutton > radio:focus,
+popover modelbutton.flat checkbutton > radio:hover,
+popover modelbutton.flat checkbutton > radio:focus:hover,
+popover modelbutton.flat checkbutton > radio:active,
+popover modelbutton.flat checkbutton > radio:disabled {
   transition: none;
   box-shadow: none;
   background-image: none;
@@ -4123,47 +4130,47 @@ popover modelbutton.flat radio.right:dir(ltr) {
 }
 
 popover.menu check,
-popover.menu radio {
+popover.menu checkbutton > radio {
   transition: none;
   margin: 0;
   padding: 0;
   animation: none;
 }
 
-popover.menu check:dir(ltr),
-popover.menu radio:dir(ltr) {
+popover.menu checkbutton > check:dir(ltr),
+popover.menu checkbutton > radio:dir(ltr) {
   margin-right: 6px;
   margin-left: -3px;
 }
 
-popover.menu check:dir(rtl),
-popover.menu radio:dir(rtl) {
+popover.menu checkbutton > check:dir(rtl),
+popover.menu checkbutton > radio:dir(rtl) {
   margin-left: 6px;
   margin-right: -3px;
 }
 
 popover.menu check,
-popover.menu check:hover,
-popover.menu check:disabled,
-popover.menu check:checked:hover,
-popover.menu check:indeterminate:hover,
+popover.menu checkbutton > check:hover,
+popover.menu checkbutton > check:disabled,
+popover.menu checkbutton > check:checked:hover,
+popover.menu checkbutton > check:indeterminate:hover,
 popover.menu radio,
-popover.menu radio:hover,
-popover.menu radio:disabled,
-popover.menu radio:checked:hover,
-popover.menu radio:indeterminate:hover {
+popover.menu checkbutton > radio:hover,
+popover.menu checkbutton > radio:disabled,
+popover.menu checkbutton > radio:checked:hover,
+popover.menu checkbutton > radio:indeterminate:hover {
   box-shadow: none;
 }
 
-popover.menu check {
+popover.menu checkbutton > check {
   min-height: 16px;
   min-width: 16px;
   -gtk-icon-size: 16px;
   border-radius: 2px;
 }
 
-popover.menu check:checked,
-popover.menu check:indeterminate {
+popover.menu checkbutton > check:checked,
+popover.menu checkbutton > check:indeterminate {
   -gtk-icon-source: none;
   background-color: var(--primary);
   border-color: var(--primary);
@@ -4171,13 +4178,13 @@ popover.menu check:indeterminate {
               inset 0 0 0 2px var(--on_primary);
 }
 
-popover.menu radio {
+popover.menu checkbutton > radio {
   min-height: 16px;
   min-width: 16px;
   -gtk-icon-size: 16px;
 }
 
-popover.menu radio:checked {
+popover.menu checkbutton > radio:checked {
   -gtk-icon-source: none;
   background-color: var(--primary);
   border-color: var(--primary);
@@ -4185,7 +4192,7 @@ popover.menu radio:checked {
               0 0 0 1px var(--primary);
 }
 
-popover.menu radio:indeterminate {
+popover.menu checkbutton > radio:indeterminate {
   -gtk-icon-source: none;
   background-color: transparent;
   border-color: var(--primary);
@@ -4193,14 +4200,14 @@ popover.menu radio:indeterminate {
               0 0 0 1px var(--primary);
 }
 
-check:not(:checked):active {
+checkbutton > check:not(:checked):active {
   -gtk-icon-transform: rotate(90deg);
 }
 
 treeview.view radio,
 treeview.view check,
 columnview.view radio,
-columnview.view check {
+columnview.view checkbutton > check {
   padding: 0;
   margin: 0;
   transition: none;
@@ -4208,25 +4215,25 @@ columnview.view check {
 }
 
 treeview.view radio,
-treeview.view radio:hover,
-treeview.view radio:disabled,
-treeview.view radio:checked:hover,
-treeview.view radio:indeterminate:hover,
+treeview.view checkbutton > radio:hover,
+treeview.view checkbutton > radio:disabled,
+treeview.view checkbutton > radio:checked:hover,
+treeview.view checkbutton > radio:indeterminate:hover,
 treeview.view check,
-treeview.view check:hover,
-treeview.view check:disabled,
-treeview.view check:checked:hover,
-treeview.view check:indeterminate:hover,
+treeview.view checkbutton > check:hover,
+treeview.view checkbutton > check:disabled,
+treeview.view checkbutton > check:checked:hover,
+treeview.view checkbutton > check:indeterminate:hover,
 columnview.view radio,
-columnview.view radio:hover,
-columnview.view radio:disabled,
-columnview.view radio:checked:hover,
-columnview.view radio:indeterminate:hover,
+columnview.view checkbutton > radio:hover,
+columnview.view checkbutton > radio:disabled,
+columnview.view checkbutton > radio:checked:hover,
+columnview.view checkbutton > radio:indeterminate:hover,
 columnview.view check,
-columnview.view check:hover,
-columnview.view check:disabled,
-columnview.view check:checked:hover,
-columnview.view check:indeterminate:hover {
+columnview.view checkbutton > check:hover,
+columnview.view checkbutton > check:disabled,
+columnview.view checkbutton > check:checked:hover,
+columnview.view checkbutton > check:indeterminate:hover {
   box-shadow: none;
 }
 
@@ -4241,22 +4248,22 @@ columnview.view:hover radio,
 columnview.view:selected check,
 columnview.view:selected radio,
 columnview.view:focus check,
-columnview.view:focus radio {
+columnview.view:focus checkbutton > radio {
   box-shadow: none;
 }
 
-treeview.view:hover check:checked,
-treeview.view:hover radio:checked,
-treeview.view:selected check:checked,
-treeview.view:selected radio:checked,
-treeview.view:focus check:checked,
-treeview.view:focus radio:checked,
-columnview.view:hover check:checked,
-columnview.view:hover radio:checked,
-columnview.view:selected check:checked,
-columnview.view:selected radio:checked,
-columnview.view:focus check:checked,
-columnview.view:focus radio:checked {
+treeview.view:hover checkbutton > check:checked,
+treeview.view:hover checkbutton > radio:checked,
+treeview.view:selected checkbutton > check:checked,
+treeview.view:selected checkbutton > radio:checked,
+treeview.view:focus checkbutton > check:checked,
+treeview.view:focus checkbutton > radio:checked,
+columnview.view:hover checkbutton > check:checked,
+columnview.view:hover checkbutton > radio:checked,
+columnview.view:selected checkbutton > check:checked,
+columnview.view:selected checkbutton > radio:checked,
+columnview.view:focus checkbutton > check:checked,
+columnview.view:focus checkbutton > radio:checked {
   color: var(--on_primary);
   background-color: var(--primary);
 }
@@ -4267,17 +4274,17 @@ checkbutton.selection-mode {
 }
 
 checkbutton.selection-mode check,
-checkbutton.selection-mode radio {
+checkbutton.selection-mode checkbutton > radio {
   padding: 6px;
   border-radius: 9999px;
   transition: background-color 0.2s cubic-bezier(0.2, 0, 0, 1),
               transform        0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
-checkbutton.selection-mode check:checked,
-checkbutton.selection-mode check:indeterminate,
-checkbutton.selection-mode radio:checked,
-checkbutton.selection-mode radio:indeterminate {
+checkbutton.selection-mode checkbutton > check:checked,
+checkbutton.selection-mode checkbutton > check:indeterminate,
+checkbutton.selection-mode checkbutton > radio:checked,
+checkbutton.selection-mode checkbutton > radio:indeterminate {
   color: var(--on_primary);
   background-color: var(--primary);
   animation: check-pop 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
