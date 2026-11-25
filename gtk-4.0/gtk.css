@@ -397,6 +397,31 @@ windowcontrols > button:active {
   background-color: var(--surface_container_highest);
 }
 
+windowcontrols > button.minimize,
+windowcontrols > button.maximize,
+windowcontrols > button.close {
+  min-width: 22px;
+  min-height: 30px;
+  padding: 6px 0;
+  border: none;
+  border-radius: var(--mg-radius-pill);
+  background-color: transparent;
+  color: var(--mg-accent);
+}
+
+windowcontrols > button.minimize > image,
+windowcontrols > button.maximize > image,
+windowcontrols > button.close > image {
+  background-color: color-mix(in srgb, var(--mg-accent) 10%, transparent);
+  border-radius: var(--mg-radius-pill);
+}
+
+windowcontrols > button.minimize:hover > image,
+windowcontrols > button.maximize:hover > image,
+windowcontrols > button.close:hover > image {
+  background-color: color-mix(in srgb, var(--mg-accent) 18%, transparent);
+}
+
 windowcontrols > image.icon {
   -gtk-icon-size: 16px;
 }
@@ -1340,7 +1365,7 @@ scrollbar > range > trough {
 }
 
 scrollbar > range > trough > slider {
-  background-color: var(--mg-outline);
+  background-color: color-mix(in srgb, var(--mg-outline) 55%, transparent);
   border-radius: var(--mg-radius-pill);
   min-width: 8px;
   min-height: 8px;
@@ -1526,7 +1551,7 @@ flowbox > flowboxchild {
   color: inherit;
   border: none;
   border-radius: var(--mg-radius-sm);
-  padding: var(--mg-space-2);
+  padding: 6px;
 }
 
 list > row.activatable:hover,
@@ -1595,6 +1620,39 @@ list.boxed-list {
   border: 1px solid var(--mg-outline-soft);
   border-radius: var(--mg-radius-md);
   padding: 2px;
+}
+
+/* Nautilus places sidebar uses the documented list/row nodes inside its own
+ * "placessidebar" node. Give the selected row the same accent container as
+ * other selected rows, and keep its label legible. */
+placessidebar list.navigation-sidebar > row,
+placessidebar > viewport > list > row {
+  border-radius: var(--mg-radius-pill);
+  background-color: transparent;
+  color: var(--mg-muted-fg);
+}
+
+placessidebar list.navigation-sidebar > row:hover,
+placessidebar > viewport > list > row:hover {
+  background-color: color-mix(in srgb, var(--mg-accent) 8%, transparent);
+}
+
+placessidebar list.navigation-sidebar > row:selected,
+placessidebar > viewport > list > row:selected {
+  background-color: var(--mg-accent-container);
+  color: var(--mg-on-accent-container);
+}
+
+placessidebar list.navigation-sidebar > row:selected label,
+placessidebar list.navigation-sidebar > row:selected image,
+placessidebar > viewport > list > row:selected label,
+placessidebar > viewport > list > row:selected image {
+  color: var(--mg-on-accent-container);
+}
+
+gridview > child label,
+flowbox > flowboxchild label {
+  color: var(--mg-accent);
 }
 
 /* Rubberband selection and DnD nodes. */
