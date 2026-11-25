@@ -2739,6 +2739,10 @@ headerbar .pathbar {
 /**************
  * Tree Views *
  **************/
+/* GtkTreeView — treeview.view > header > button > sort-indicator, plus
+ * rubberband and dndtarget subnodes.
+ * https://docs.gtk.org/gtk4/class.TreeView.html#css-nodes
+ */
 columnview.view,
 treeview.view {
   border-left-color: var(--surface_container_low);
@@ -5376,6 +5380,11 @@ expander-widget:not(decoration):not(window):drop(active) {
 /************
  * Calendar *
  ************/
+/*
+ * GtkCalendar — calendar.view > header > button / stack.month / label.year,
+ * and > grid > label[.day-name/.week-number/.day-number/.other-month/.today].
+ * https://docs.gtk.org/gtk4/class.Calendar.html#css-nodes
+ */
 calendar {
   padding: 0;
   border: 1px solid color-mix(in srgb, var(--outline) 12%, transparent);
