@@ -3046,6 +3046,11 @@ popover.menu label.title {
 /************
  * Popovers *
  ************/
+/*
+ * GtkPopover — popover.background[.menu] with arrow and contents subnodes.
+ * The popover node itself is transparent; the visible surface is contents.
+ * https://docs.gtk.org/gtk4/class.Popover.html#css-nodes
+ */
 popover.background {
   font: initial;
 }
@@ -4502,13 +4507,11 @@ progressbar.vertical > trough > progress {
 progressbar > trough {
   border-radius: 9999px;
   background-color: var(--secondary_container);
-  transition: background-color 0.2s cubic-bezier(0.2, 0, 0, 1);
 }
 
 progressbar > trough > progress {
   border-radius: 9999px;
   background-color: var(--primary);
-  transition: background-color 0.2s cubic-bezier(0.2, 0, 0, 1);
 }
 
 progressbar.osd {
@@ -4546,6 +4549,10 @@ levelbar > trough {
   background-color: var(--surface_container_highest);
 }
 
+levelbar > trough > block {
+  transition: background-color 0.2s cubic-bezier(0.2, 0, 0, 1);
+}
+
 levelbar.horizontal > trough > block {
   min-height: 4px;
   border-radius: 9999px;
@@ -4574,7 +4581,6 @@ levelbar.vertical.discrete > trough > block:not(:last-child) {
 
 levelbar > trough > block.low {
   background-color: var(--error);
-  transition: background-color 0.2s cubic-bezier(0.2, 0, 0, 1);
 }
 
 levelbar > trough > block.high,
@@ -4585,7 +4591,6 @@ levelbar > trough > block:not(.empty) {
 
 levelbar > trough > block.full {
   background-color: var(--tertiary);
-  transition: background-color 0.2s cubic-bezier(0.2, 0, 0, 1);
 }
 
 levelbar > trough > block.empty {
@@ -4773,6 +4778,8 @@ scrolledwindow > undershoot {
   border: none;
 }
 
+/* GtkSeparator — a single separator node with .horizontal / .vertical.
+ * https://docs.gtk.org/gtk4/class.Separator.html#css-nodes */
 separator {
   min-width: 1px;
   min-height: 1px;
