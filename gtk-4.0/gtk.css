@@ -2995,17 +2995,11 @@ popover.menu box.inline-buttons button.image-button.model {
               border-radius    0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-popover.menu box.inline-buttons button.image-button.model:hover {
-  background-color: color-mix(in srgb, var(--primary) 8%, transparent);
-  border-radius: 16px;
-}
+popover.menu box.inline-buttons button.image-button.model:hover,
 
-popover.menu box.inline-buttons button.image-button.model:active {
-  background-color: color-mix(in srgb, var(--primary) 12%, transparent);
-  border-radius: 999px;
-  animation: pill-pop 0.2s cubic-bezier(0.2, 0, 0, 1) forwards;
-  transition: background-color 0.1s cubic-bezier(0, 0, 0.2, 1);
-}
+
+popover.menu box.inline-buttons button.image-button.model:active,
+
 
 popover.menu box.inline-buttons button.image-button.model:selected {
   background: image(color-mix(in srgb, currentColor 6%, transparent));
@@ -4800,6 +4794,13 @@ separator.sidebar {
 /*********
  * Lists *
  *********/
+/*
+ * GtkListBox — list[.separators/.rich-list/.navigation-sidebar/.boxed-list]
+ * > row[.activatable]; GtkListView uses listview > row[.activatable].
+ * https://docs.gtk.org/gtk4/class.ListBox.html#css-nodes
+ * https://docs.gtk.org/gtk4/class.ListView.html#css-nodes
+ * "list.content" is an application-added class kept for compatibility.
+ */
 list.content,
 list.boxed-list {
   border-radius: 12px;
