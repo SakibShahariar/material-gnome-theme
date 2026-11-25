@@ -49,13 +49,13 @@
   --mg-headerbar-fg: var(--on_surface);
   --mg-view-bg: var(--surface_container_low);
   --mg-view-fg: var(--on_surface);
-  --mg-card-bg: var(--surface_container);
+  --mg-card-bg: var(--surface_bright);
   --mg-card-fg: var(--on_surface);
-  --mg-raised-bg: var(--surface_container_high);
+  --mg-raised-bg: var(--surface_container_highest);
   --mg-raised-fg: var(--on_surface);
-  --mg-dialog-bg: var(--surface_container_high);
+  --mg-dialog-bg: var(--surface_bright);
   --mg-dialog-fg: var(--on_surface);
-  --mg-popover-bg: var(--surface_container_high);
+  --mg-popover-bg: var(--surface_bright);
   --mg-popover-fg: var(--on_surface);
   --mg-input-bg: var(--surface_container_highest);
   --mg-input-fg: var(--on_surface);
@@ -173,8 +173,21 @@ arrow,
 separator,
 stackswitcher > button,
 notebook > header > tabs > arrow,
-popover menu button.model {
+popover menu button.model,
+highlight,
+slider {
   background-image: none;
+}
+
+/* GTK computes min size as min-size minus padding and border; custom gizmo
+ * nodes must not end up with a negative minimum. */
+highlight,
+slider {
+  padding: 0;
+  border: none;
+  margin: 0;
+  min-width: 16px;
+  min-height: 16px;
 }
 
 /* Text selection is shared by labels, entries and text views. */
@@ -211,7 +224,7 @@ label:visited {
 :disabled label,
 :disabled image {
   color: var(--on_surface_variant);
-  opacity: 0.55;
+  opacity: 0.7;
 }
 
 /* Backdrop (unfocused window) state. */
@@ -323,7 +336,7 @@ headerbar > windowhandle > box > box.end {
 
 headerbar title,
 headerbar > windowhandle > box > title {
-  color: var(--mg-headerbar-fg);
+  color: var(--mg-accent);
   font-weight: bold;
   font-size: 1.05em;
 }
@@ -358,19 +371,21 @@ windowcontrols button,
 windowcontrols > button.minimize,
 windowcontrols > button.maximize,
 windowcontrols > button.close {
-  min-width: 28px;
-  min-height: 28px;
+  min-width: 26px;
+  min-height: 26px;
   padding: 0;
-  border: none;
+  border: 1px solid var(--mg-outline-soft);
   border-radius: 50%;
-  background-color: transparent;
-  color: var(--mg-headerbar-fg);
+  background-color: var(--surface_container_high);
+  color: var(--mg-accent);
+  -gtk-icon-size: 14px;
   box-shadow: none;
 }
 
 windowcontrols > button.minimize:hover,
 windowcontrols > button.maximize:hover {
-  background-color: var(--surface_container_high);
+  background-color: var(--mg-accent-container);
+  color: var(--mg-on-accent-container);
 }
 
 windowcontrols > button.close:hover {
@@ -517,6 +532,18 @@ headerbar button:disabled,
 toolbar button:disabled {
   background-color: transparent;
   opacity: 0.45;
+}
+
+/* Headerbar actions use the accent so they stay legible on the dark surface. */
+headerbar button,
+headerbar button.flat {
+  color: var(--mg-accent);
+}
+
+headerbar button:hover,
+headerbar button.flat:hover {
+  background-color: color-mix(in srgb, var(--mg-accent) 10%, transparent);
+  color: var(--mg-accent);
 }
 
 /* Emphasis classes documented on the button node. */
@@ -879,8 +906,8 @@ entry > text.readonly {
 placeholder,
 text placeholder,
 entry placeholder {
-  color: var(--mg-placeholder-fg);
-  opacity: 0.75;
+  color: var(--mg-muted-fg);
+  opacity: 0.9;
 }
 
 /* Overwrite mode uses the block-cursor node documented for GtkText. */
@@ -954,6 +981,7 @@ label {
 }
 
 label.title {
+  color: var(--mg-accent);
   font-weight: bold;
   font-size: 1.1em;
 }
@@ -1012,7 +1040,7 @@ spinbutton > text {
 spinbutton > button.up,
 spinbutton > button.down {
   background-color: transparent;
-  color: var(--mg-muted-fg);
+  color: var(--mg-accent);
   border: none;
   border-radius: 0;
   min-width: 22px;
@@ -1244,6 +1272,7 @@ scale > trough {
 
 scale > trough > highlight {
   background-color: var(--mg-accent-dim);
+  min-height: 8px;
   border: none;
   border-radius: var(--mg-radius-pill);
 }
