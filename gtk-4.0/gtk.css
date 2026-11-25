@@ -401,6 +401,11 @@ spinner:checked:disabled {
 /****************
  * Text Entries *
  ****************/
+/*
+ * GtkEntry — entry[.flat/.warning/.error] > text, image.left, image.right,
+ * progress[.pulse]; GtkSearchEntry is entry.search.
+ * https://docs.gtk.org/gtk4/class.Entry.html#css-nodes
+ */
 entry headerbar popover.background entry,
 headerbar popover.background entry entry,
 entry {
@@ -5294,6 +5299,8 @@ columnview row:not(:selected) cell editablelabel.editing text selection {
 /*************
  * Expanders *
  *************/
+/* GtkExpander — expander-widget > box > title > expander.
+ * https://docs.gtk.org/gtk4/class.Expander.html#css-nodes */
 expander {
   transition: color 0.2s cubic-bezier(0.2, 0, 0, 1),
               transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
