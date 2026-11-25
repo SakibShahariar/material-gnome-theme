@@ -621,6 +621,12 @@ arrow:active {
 /***********
  * Buttons *
  ***********/
+/*
+ * GtkButton — a single button node with .image-button / .text-button / .flat
+ * / .keyboard-activating / .suggested-action / .destructive-action / .circular
+ * classes; button-like widgets add .toggle, .popup, .scale, .lock, .color.
+ * https://docs.gtk.org/gtk4/class.Button.html#css-nodes
+ */
 button {
   border-radius: 12px;
   transition: background-color 0.3s cubic-bezier(0.2, 0, 0, 1), border-radius 0.3s cubic-bezier(0.2, 0, 0, 1), color 0.2s cubic-bezier(0.2, 0, 0, 1), outline-color 0.3s cubic-bezier(0.2, 0, 0, 1);
@@ -1043,23 +1049,6 @@ button.flat {
   background-color: transparent;
   outline: 0 solid transparent;
   outline-offset: 2px;
-  color: var(--primary);
-}
-
-#NautilusPathButton,
-filechooser #pathbarbox > stack > box > button,
-window.messagedialog .response-area button:not(.destructive-action),
-window.dialog.message .dialog-action-area > button:not(.destructive-action),
-.app-notification button,
-headerbar button:not(.suggested-action):not(.destructive-action),
-.toolbar button:not(.destructive-action),
-splitbutton.suggested-action > button,
-splitbutton.suggested-action > menubutton > button,
-splitbutton.opaque > button,
-splitbutton.opaque > menubutton > button,
-menubutton.suggested-action > button,
-menubutton.opaque > button,
-menubutton.flat > button {
   color: var(--primary);
 }
 
