@@ -2135,6 +2135,8 @@ button.combo:only-child:disabled {
   margin-bottom: 6px;
 }
 
+/* GtkSearchBar — searchbar > revealer > box > child / button.close.
+ * https://docs.gtk.org/gtk4/class.SearchBar.html#css-nodes */
 searchbar > revealer > box {
   padding: 6px;
   border-spacing: 0;
@@ -4658,6 +4660,8 @@ statusbar frame > border {
   border: none;
 }
 
+/* GtkActionBar — actionbar > revealer > box > box.start / center / box.end.
+ * https://docs.gtk.org/gtk4/class.ActionBar.html#css-nodes */
 actionbar {
   box-shadow: none;
 }
@@ -6445,6 +6449,8 @@ shortcut > .keycap {
   caret-color: var(--primary);
 }
 
+/* GtkStackSwitcher — stackswitcher node with button children; the .linked
+ * class groups them. https://docs.gtk.org/gtk4/class.StackSwitcher.html#css-nodes */
 stackswitcher {
   min-height: 0;
   padding: 0;
