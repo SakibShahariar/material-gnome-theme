@@ -1716,6 +1716,9 @@ button > image {
 /*****************
  * GtkSpinButton *
  *****************/
+/* GtkSpinButton — spinbutton[.horizontal/.vertical] with text, button.up,
+ * button.down and undershoot.left/right subnodes.
+ * https://docs.gtk.org/gtk4/class.SpinButton.html#css-nodes */
 spinbutton {
   border-radius: 9px;
   padding: 0;
@@ -2627,6 +2630,7 @@ window.devel headerbar:backdrop {
 /************
  * Pathbars *
  ************/
+/* Nautilus pathbar buttons reuse the documented button node. */
 pathbar > button {
   padding-left: 5px;
   padding-right: 5px;
@@ -5772,6 +5776,8 @@ filechooser child.activatable filelistcell.dim-label {
   color: color-mix(in srgb, var(--on_surface_variant) 70%, transparent);
 }
 
+/* Nautilus places sidebar: a list/navigation-sidebar tree with row children.
+ * https://docs.gtk.org/gtk4/class.ListBox.html#css-nodes */
 placessidebar {
   background-color: transparent;
 }
@@ -6043,6 +6049,8 @@ infobar.error:hover > revealer > box {
 /************
  * Tooltips *
  ************/
+/* GTK tooltips use the tooltip / tooltip.background window class.
+ * https://docs.gtk.org/gtk4/class.Window.html#css-nodes */
 tooltip {
   padding: 6px 12px;
   box-shadow: none;
