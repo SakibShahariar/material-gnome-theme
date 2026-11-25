@@ -4686,6 +4686,9 @@ statusbar {
   padding: 6px 18px;
 }
 
+/* GtkScrolledWindow — scrolledwindow[.frame] with overshoot/undershoot
+ * subnodes (.left/.right/.top/.bottom) and scrollbar children.
+ * https://docs.gtk.org/gtk4/class.ScrolledWindow.html#css-nodes */
 scrolledwindow viewport.frame {
   border: none;
 }
@@ -5829,6 +5832,8 @@ placesview > actionbar > revealer > box > label {
 /*********
  * Paned *
  *********/
+/* GtkPaned — paned > separator[.wide]; text direction controls child order.
+ * https://docs.gtk.org/gtk4/class.Paned.html#css-nodes */
 paned > separator {
   min-width: 1px;
   min-height: 1px;
