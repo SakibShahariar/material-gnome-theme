@@ -2062,10 +2062,7 @@ button.combo:only-child:disabled {
   background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.1) 30%, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0.4));
 }
 
-.toolbar.horizontal > separator {
-  margin: 2px;
-}
-
+.toolbar.horizontal > separator,
 .toolbar.vertical > separator {
   margin: 2px;
 }
@@ -2173,6 +2170,11 @@ searchbar > revealer > box entry {
 /***************
  * Header bars *
  ***************/
+/*
+ * GtkHeaderBar — headerbar > windowhandle > box > box.start / title / box.end,
+ * with windowcontrols.start / windowcontrols.end subnodes at each end.
+ * https://docs.gtk.org/gtk4/class.HeaderBar.html#css-nodes
+ */
 headerbar button:not(.suggested-action):not(.destructive-action) {
   color: var(--primary);
   background-color: transparent;
@@ -2603,10 +2605,7 @@ headerbar.default-decoration windowcontrols menubutton button {
   box-shadow: none;
 }
 
-window > .titlebar:not(.flat) {
-  box-shadow: none;
-}
-
+window > .titlebar:not(.flat),
 window > .titlebar headerbar:not(.flat) {
   box-shadow: none;
 }
