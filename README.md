@@ -45,7 +45,7 @@ This theme is the base layer of the [Material-Gnome (Dotfiles)](https://github.c
 ```text
 Material-Gnome/
 ├── gtk-3.0/         # GTK3 Stylesheet & Assets
-├── gtk-4.0/         # GTK4 stylesheet, written against official GTK CSS docs
+├── gtk-4.0/         # GTK4 stylesheet (doc-guided rewrite in progress)
 ├── gnome-shell/     # GNOME Shell Desktop Theme
 │   └── layouts/     # Swappable top bar layout styles
 ├── themes/          # Premade color themes (applied via Matugen)
@@ -351,12 +351,12 @@ If you want to tweak or override specific elements (like changing the accent col
 
 ## 🙏 Acknowledgements
 
-The GTK3 stylesheet and GNOME Shell theme build on base files from these excellent theme repos by [Fausto-Korpsvart](https://github.com/Fausto-Korpsvart) — credit to the original author:
+All three stylesheets build on base files from these excellent theme repos by [Fausto-Korpsvart](https://github.com/Fausto-Korpsvart) — credit to the original author:
 
 * [Gruvbox-GTK-Theme](https://github.com/Fausto-Korpsvart/Gruvbox-GTK-Theme)
 * [Tokyonight-GTK-Theme](https://github.com/Fausto-Korpsvart/Tokyonight-GTK-Theme)
 
-The GTK4 stylesheet is written from scratch against the official [GTK CSS documentation](https://docs.gtk.org/gtk4/css-overview.html), using each widget's documented CSS nodes rather than a third-party base.
+GTK4 widget rules are being progressively rewritten against the official [GTK CSS documentation](https://docs.gtk.org/gtk4/css-overview.html) and each widget's documented CSS nodes, starting from the proven upstream-based baseline.
 
 Both upstream repos are licensed under GPL-3.0, same as this project.
 
