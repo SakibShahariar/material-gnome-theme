@@ -381,7 +381,8 @@ popover.magnifier > contents,
 }
 
 /* Spinner — https://docs.gtk.org/gtk4/class.Spinner.html#css-nodes
- * A single spinner node; :checked marks an active animation. */
+ * A single spinner node. The docs state that :checked is added while the
+ * animation is active, so visibility and motion are driven by that flag. */
 spinner {
   background: none;
   opacity: 0;
@@ -3889,15 +3890,23 @@ scrollbar.horizontal button.up {
  * Switch *
  **********/
 /*
- * GtkSwitch — documented nodes: switch with two image subnodes and a slider.
+ * GtkSwitch — documented node tree:
+ *   switch
+ *   ├── image     (on-state indicator)
+ *   ├── image     (off-state indicator)
+ *   ╰── slider
+ * States used here: :checked (switch is on) and :disabled.
  * https://docs.gtk.org/gtk4/class.Switch.html#css-nodes
+ *
+ * The two image nodes are intentionally transparent: the on/off state is
+ * conveyed by the slider position and the track color.
  */
 switch {
-  padding: 2px;
   min-width: 36px;
   min-height: 20px;
-  border-radius: 9999px;
+  padding: 2px;
   border: 2px solid var(--outline);
+  border-radius: 9999px;
   background-color: var(--surface_container_highest);
   transition: background-color 0.2s cubic-bezier(0.2, 0, 0, 1),
               border-color 0.2s cubic-bezier(0.2, 0, 0, 1);
@@ -3920,9 +3929,9 @@ switch > slider {
   min-width: 12px;
   min-height: 12px;
   margin: 2px;
+  border: none;
   border-radius: 9999px;
   outline: none;
-  border: none;
   background-color: var(--outline);
   transition: min-width 0.2s cubic-bezier(0.2, 0, 0, 1),
               min-height 0.2s cubic-bezier(0.2, 0, 0, 1),
