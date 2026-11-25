@@ -3237,6 +3237,12 @@ magnifier {
 /*************
  * Notebooks *
  *************/
+/*
+ * GtkNotebook — notebook > header[.top/.bottom/.left/.right] > tabs
+ * > tab[.reorderable-page], plus > stack.
+ * https://docs.gtk.org/gtk4/class.Notebook.html#css-nodes
+ * The tabbar selectors are kept for libadwaita's AdwTabBar compatibility.
+ */
 tabbar tab,
 tabbar tabbox > tabboxchild > tab,
 notebook > header > tabs > tab {
