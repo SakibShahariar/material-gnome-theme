@@ -6171,65 +6171,13 @@ window.ssd {
   box-shadow: inset 0 1px color-mix(in srgb, var(--on_surface_variant) 10%, transparent);
 }
 
-windowcontrols > button:not(.suggested-action):not(.destructive-action) {
-  min-height: 22px;
-  min-width: 22px;
-  padding: 6px 0;
-  margin-left: 0;
-  margin-right: 0;
-  transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1),
-              color     0.2s  cubic-bezier(0.2, 0, 0, 1);
-}
-
-windowcontrols > button.minimize:not(.suggested-action):not(.destructive-action),
-windowcontrols > button.maximize:not(.suggested-action):not(.destructive-action),
-windowcontrols > button.close:not(.suggested-action):not(.destructive-action) {
-  color: color-mix(in srgb, var(--primary) 70%, transparent);
-  background: none;
-  box-shadow: none;
-}
-
-windowcontrols > button.minimize:not(.suggested-action):not(.destructive-action) > image,
-windowcontrols > button.maximize:not(.suggested-action):not(.destructive-action) > image,
-windowcontrols > button.close:not(.suggested-action):not(.destructive-action) > image {
-  background-color: color-mix(in srgb, var(--primary) 10%, transparent);
-  transition: background-color 0.2s cubic-bezier(0.2, 0, 0, 1),
-              transform        0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
-}
-
-windowcontrols > button.minimize:hover:not(.suggested-action):not(.destructive-action),
-windowcontrols > button.maximize:hover:not(.suggested-action):not(.destructive-action),
-windowcontrols > button.close:hover:not(.suggested-action):not(.destructive-action) {
-  color: var(--primary);
-  transform: scale(1.12);
-}
-
-windowcontrols > button.minimize:hover:not(.suggested-action):not(.destructive-action) > image,
-windowcontrols > button.maximize:hover:not(.suggested-action):not(.destructive-action) > image,
-windowcontrols > button.close:hover:not(.suggested-action):not(.destructive-action) > image {
-  background-color: color-mix(in srgb, var(--primary) 15%, transparent);
-}
-
-windowcontrols > button.minimize:active:not(.suggested-action):not(.destructive-action),
-windowcontrols > button.maximize:active:not(.suggested-action):not(.destructive-action),
-windowcontrols > button.close:active:not(.suggested-action):not(.destructive-action) {
-  color: var(--primary);
-  transform: scale(0.9);
-  transition: transform 0.1s cubic-bezier(0, 0, 0.2, 1);
-}
-
-windowcontrols > button.minimize:active:not(.suggested-action):not(.destructive-action) > image,
-windowcontrols > button.maximize:active:not(.suggested-action):not(.destructive-action) > image,
-windowcontrols > button.close:active:not(.suggested-action):not(.destructive-action) > image {
-  background-color: color-mix(in srgb, currentColor 20%, transparent);
-}
-
-windowcontrols > button.minimize:backdrop:not(.suggested-action):not(.destructive-action),
-windowcontrols > button.maximize:backdrop:not(.suggested-action):not(.destructive-action),
-windowcontrols > button.close:backdrop:not(.suggested-action):not(.destructive-action) {
-  opacity: 0.65;
-}
-
+/*
+ * GtkWindowControls — documented nodes: windowcontrols with image.icon and
+ * button.minimize / button.maximize / button.close children.
+ * https://docs.gtk.org/gtk4/class.WindowControls.html#css-nodes
+ * The visual treatment is unchanged from the previous upstream-based rules;
+ * only the selector noise (repeated :not(.suggested-action) chains) is gone.
+ */
 windowcontrols {
   border-spacing: 6px;
 }
@@ -6246,9 +6194,53 @@ windowcontrols:not(.empty).end:dir(ltr) {
   margin-right: 6px;
 }
 
-windowcontrols > button:not(.suggested-action):not(.destructive-action) > image {
+windowcontrols > button {
+  min-height: 22px;
+  min-width: 22px;
+  padding: 6px 0;
+  margin-left: 0;
+  margin-right: 0;
+  transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1),
+              color     0.2s  cubic-bezier(0.2, 0, 0, 1);
+}
+
+windowcontrols > button.minimize,
+windowcontrols > button.maximize,
+windowcontrols > button.close {
+  color: color-mix(in srgb, var(--primary) 70%, transparent);
+  background: none;
+  box-shadow: none;
+}
+
+windowcontrols > button > image {
+  background-color: color-mix(in srgb, var(--primary) 10%, transparent);
   border-radius: 100%;
   padding: 0;
+  transition: background-color 0.2s cubic-bezier(0.2, 0, 0, 1),
+              transform        0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+windowcontrols > button:hover {
+  color: var(--primary);
+  transform: scale(1.12);
+}
+
+windowcontrols > button:hover > image {
+  background-color: color-mix(in srgb, var(--primary) 15%, transparent);
+}
+
+windowcontrols > button:active {
+  color: var(--primary);
+  transform: scale(0.9);
+  transition: transform 0.1s cubic-bezier(0, 0, 0.2, 1);
+}
+
+windowcontrols > button:active > image {
+  background-color: color-mix(in srgb, currentColor 20%, transparent);
+}
+
+windowcontrols > button:backdrop {
+  opacity: 0.65;
 }
 
 .view:selected,
