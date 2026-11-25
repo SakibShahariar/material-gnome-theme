@@ -4514,55 +4514,60 @@ progressbar > trough.empty > progress {
 /*************
  * Level Bar *
  *************/
-levelbar trough {
+/*
+ * GtkLevelBar — documented tree: levelbar > trough > block.filled/.empty,
+ * with .level-name classes on filled blocks.
+ * https://docs.gtk.org/gtk4/class.LevelBar.html#css-nodes
+ */
+levelbar > trough {
   padding: 2px;
   border-radius: 9999px;
   background-color: var(--surface_container_highest);
 }
 
-levelbar.horizontal block {
+levelbar.horizontal > trough > block {
   min-height: 4px;
   border-radius: 9999px;
 }
 
-levelbar.horizontal.discrete block {
+levelbar.horizontal.discrete > trough > block {
   min-width: 24px;
 }
 
-levelbar.horizontal.discrete block:not(:last-child) {
+levelbar.horizontal.discrete > trough > block:not(:last-child) {
   margin-right: 4px;
 }
 
-levelbar.vertical block {
+levelbar.vertical > trough > block {
   min-width: 4px;
   border-radius: 9999px;
 }
 
-levelbar.vertical.discrete block {
+levelbar.vertical.discrete > trough > block {
   min-height: 24px;
 }
 
-levelbar.vertical.discrete block:not(:last-child) {
+levelbar.vertical.discrete > trough > block:not(:last-child) {
   margin-bottom: 4px;
 }
 
-levelbar block.low {
+levelbar > trough > block.low {
   background-color: var(--error);
   transition: background-color 0.2s cubic-bezier(0.2, 0, 0, 1);
 }
 
-levelbar block.high,
-levelbar block:not(.empty) {
+levelbar > trough > block.high,
+levelbar > trough > block:not(.empty) {
   background-color: var(--primary);
   transition: background-color 0.2s cubic-bezier(0.2, 0, 0, 1);
 }
 
-levelbar block.full {
+levelbar > trough > block.full {
   background-color: var(--tertiary);
   transition: background-color 0.2s cubic-bezier(0.2, 0, 0, 1);
 }
 
-levelbar block.empty {
+levelbar > trough > block.empty {
   background-color: var(--secondary_container);
   transition: background-color 0.2s cubic-bezier(0.2, 0, 0, 1);
 }
