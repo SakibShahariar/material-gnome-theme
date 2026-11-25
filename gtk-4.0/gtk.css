@@ -4618,7 +4618,9 @@ window.dialog.print .dialog-action-box {
  * Frames *
  **********/
 /*
- * GtkFrame uses a frame node with label and child subnodes.
+ * GtkFrame — a single frame node whose border is drawn in CSS, with a label
+ * subnode and a child widget subnode. ".frame" and "border" are legacy
+ * application classes kept for compatibility.
  * https://docs.gtk.org/gtk4/class.Frame.html#css-nodes
  */
 frame,
@@ -4632,17 +4634,14 @@ frame > list,
 }
 
 frame.view,
-.frame.view {
+.frame.view,
+frame {
   border-radius: 12px;
 }
 
 frame.flat,
 .frame.flat {
   border-style: none;
-}
-
-frame {
-  border-radius: 12px;
 }
 
 frame > label {
