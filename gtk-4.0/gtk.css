@@ -180,6 +180,8 @@ flowbox > rubberband {
 /******************************************
  * Container Flow: Grid, Lists, Flowboxes *
  ******************************************/
+/* GtkFlowBox — flowbox > flowboxchild, with a rubberband subnode.
+ * https://docs.gtk.org/gtk4/class.FlowBox.html#css-nodes */
 flowbox > flowboxchild {
   padding: 6px;
   border-radius: 16px;
@@ -243,6 +245,8 @@ list.boxed-list row button.suggested-action {
   background-color: transparent;
 }
 
+/* GtkGridView — gridview > child[.activatable], with rubberband subnode.
+ * https://docs.gtk.org/gtk4/class.GridView.html#css-nodes */
 gridview > child {
   padding: 6px;
   border-radius: 16px;
@@ -279,6 +283,9 @@ coverflow cover {
 /******************
  * Labels & Text  *
  ******************/
+/* GtkLabel — a single label node with selection/link subnodes; the classes
+ * used here (.separator, .title, .dim-label) are documented style classes.
+ * https://docs.gtk.org/gtk4/class.Label.html#css-nodes */
 label.separator {
   color: color-mix(in srgb, var(--outline) 50%, transparent);
 }
@@ -2938,6 +2945,8 @@ treeview.view acceleditor > label {
   background-color: var(--primary);
 }
 
+/* GtkStack — a single stack node; .view is an application style class.
+ * https://docs.gtk.org/gtk4/class.Stack.html#css-nodes */
 stack.view treeview.view {
   min-height: 34px;
 }
@@ -5919,6 +5928,8 @@ video image .osd {
 /**************
  * GtkInfoBar *
  **************/
+/* GtkInfoBar — infobar[.info/.warning/.error/.question] with a .close button.
+ * https://docs.gtk.org/gtk4/class.InfoBar.html#css-nodes */
 infobar > revealer > box {
   padding: 6px;
   border-spacing: 12px;
