@@ -380,7 +380,8 @@ popover.magnifier > contents,
   border-radius: 9999px;
 }
 
-/* Spinner */
+/* Spinner — https://docs.gtk.org/gtk4/class.Spinner.html#css-nodes
+ * A single spinner node; :checked marks an active animation. */
 spinner {
   background: none;
   opacity: 0;
@@ -3034,13 +3035,10 @@ popover.menu box.circular-buttons button.circular.image-button.model:focus {
   background-color: color-mix(in srgb, var(--primary) 6%, transparent);
 }
 
+/* Menu item edge indicators: documented arrow/check/radio subnodes. */
 popover.menu arrow.left,
 popover.menu radio.left,
-popover.menu check.left {
-  margin-left: 0;
-  margin-right: 0;
-}
-
+popover.menu check.left,
 popover.menu arrow.right,
 popover.menu radio.right,
 popover.menu check.right {
@@ -3729,6 +3727,11 @@ tabbox:drop(active) {
 /**************
  * Scrollbars *
  **************/
+/*
+ * GtkScrollbar — scrollbar[.horizontal/.vertical] > range[.fine-tune]
+ * > trough > slider, plus documented positional and overlay classes.
+ * https://docs.gtk.org/gtk4/class.Scrollbar.html#css-nodes
+ */
 scrollbar {
   transition: background-color 75ms cubic-bezier(0, 0, 0.2, 1);
   background-color: transparent;
@@ -4603,6 +4606,10 @@ window.dialog.print .dialog-action-box {
 /**********
  * Frames *
  **********/
+/*
+ * GtkFrame uses a frame node with label and child subnodes.
+ * https://docs.gtk.org/gtk4/class.Frame.html#css-nodes
+ */
 frame,
 .frame {
   border: 1px solid color-mix(in srgb, var(--outline) 12%, transparent);
