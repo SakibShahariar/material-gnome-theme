@@ -1409,10 +1409,7 @@ toolbar.osd .linked > button:first-child:dir(ltr) {
 frame.documents-dropdown .linked > button:first-child:dir(rtl),
 .osd .scale-popup.background .linked > button:first-child:dir(rtl),
 .app-notification .linked > button:first-child:dir(rtl),
-toolbar.osd .linked > button:first-child:dir(rtl) {
-  border-radius: 0 12px 12px 0;
-}
-
+toolbar.osd .linked > button:first-child:dir(rtl),
 frame.documents-dropdown .linked > button:last-child:dir(ltr),
 .osd .scale-popup.background .linked > button:last-child:dir(ltr),
 .app-notification .linked > button:last-child:dir(ltr),
@@ -1533,11 +1530,7 @@ searchbar > revealer > box {
 }
 
 .nemo-window .primary-toolbar .linked > button:first-child:not(.text-button):dir(rtl),
-.titlebar .linked > button:first-child:not(.suggested-action):not(.destructive-action):dir(rtl) {
-  border-top-right-radius: 9999px;
-  border-bottom-right-radius: 9999px;
-}
-
+.titlebar .linked > button:first-child:not(.suggested-action):not(.destructive-action):dir(rtl),
 .nemo-window .primary-toolbar .linked > button:last-child:not(.text-button):dir(ltr),
 .titlebar .linked > button:last-child:not(.suggested-action):not(.destructive-action):dir(ltr) {
   border-top-right-radius: 9999px;
@@ -1729,10 +1722,7 @@ searchbar > revealer > box {
 .titlebar.selection-mode + separator,
 .titlebar.selection-mode + separator.sidebar,
 .selection-mode .titlebar + separator,
-.selection-mode .titlebar + separator.sidebar {
-  background-color: @primary;
-}
-
+.selection-mode .titlebar + separator.sidebar,
 .titlebar.selection-mode + separator:backdrop,
 .titlebar.selection-mode + separator.sidebar:backdrop,
 .selection-mode .titlebar + separator:backdrop,
@@ -2018,11 +2008,7 @@ headerbar.windowhandle viewswitchertitle > squeezer > viewswitcher > box.horizon
 }
 
 .caja-pathbar button:first-child:dir(rtl),
-.path-bar.linked:not(.vertical) > button:first-child:dir(rtl) {
-  border-top-right-radius: 12px;
-  border-bottom-right-radius: 12px;
-}
-
+.path-bar.linked:not(.vertical) > button:first-child:dir(rtl),
 .caja-pathbar button:last-child:dir(ltr),
 .path-bar.linked:not(.vertical) > button:last-child:dir(ltr) {
   border-top-right-radius: 12px;
@@ -2809,7 +2795,7 @@ scrollbar.right {
   border-left: 1px solid transparent;
 }
 
-scrollbar slider {
+scrollbar > contents > trough > slider {
   transition: background-color 75ms cubic-bezier(0, 0, 0.2, 1);
   min-width: 8px;
   min-height: 8px;
@@ -2819,32 +2805,32 @@ scrollbar slider {
   background-color: alpha(@on_surface, 0.4);
 }
 
-scrollbar slider:hover {
+scrollbar > contents > trough > slider:hover {
   background-color: alpha(@on_surface, 0.5);
 }
 
-scrollbar slider:active {
+scrollbar > contents > trough > slider:active {
   background-color: @primary;
 }
 
-scrollbar slider:disabled {
+scrollbar > contents > trough > slider:disabled {
   background-color: alpha(@on_surface, 0.2);
 }
 
-scrollbar.fine-tune slider {
+scrollbar.fine-tune > contents > trough > slider {
   min-width: 4px;
   min-height: 4px;
 }
 
-scrollbar.fine-tune.horizontal slider {
+scrollbar.fine-tune.horizontal > contents > trough > slider {
   margin: 2px 0;
 }
 
-scrollbar.fine-tune.vertical slider {
+scrollbar.fine-tune.vertical > contents > trough > slider {
   margin: 0 2px;
 }
 
-scrollbar.overlay-indicator:not(.fine-tune) slider {
+scrollbar.overlay-indicator:not(.fine-tune) > contents > trough > slider {
   transition-property: background-color, min-height, min-width;
 }
 
@@ -2853,7 +2839,7 @@ scrollbar.overlay-indicator:not(.dragging):not(.hovering) {
   background-color: transparent;
 }
 
-scrollbar.overlay-indicator:not(.dragging):not(.hovering) slider {
+scrollbar.overlay-indicator:not(.dragging):not(.hovering) > contents > trough > slider {
   min-width: 4px;
   min-height: 4px;
   margin: 3px;
@@ -2877,7 +2863,7 @@ scrollbar.overlay-indicator:not(.dragging):not(.hovering) button:disabled {
   background-color: alpha(@on_surface, 0.2);
 }
 
-scrollbar.overlay-indicator:not(.dragging):not(.hovering).horizontal slider {
+scrollbar.overlay-indicator:not(.dragging):not(.hovering).horizontal > contents > trough > slider {
   min-width: 24px;
 }
 
@@ -2885,7 +2871,7 @@ scrollbar.overlay-indicator:not(.dragging):not(.hovering).horizontal button {
   min-width: 8px;
 }
 
-scrollbar.overlay-indicator:not(.dragging):not(.hovering).vertical slider {
+scrollbar.overlay-indicator:not(.dragging):not(.hovering).vertical > contents > trough > slider {
   min-height: 24px;
 }
 
@@ -2898,11 +2884,11 @@ scrollbar.overlay-indicator.hovering {
   background-color: transparent;
 }
 
-scrollbar.horizontal slider {
+scrollbar.horizontal > contents > trough > slider {
   min-width: 24px;
 }
 
-scrollbar.vertical slider {
+scrollbar.vertical > contents > trough > slider {
   min-height: 24px;
 }
 
@@ -2960,7 +2946,7 @@ switch:disabled {
   opacity: 0.5;
 }
 
-switch slider {
+switch > slider {
   transition: background-color 75ms cubic-bezier(0, 0, 0.2, 1), box-shadow 75ms cubic-bezier(0, 0, 0.2, 1);
   min-width: 18px;
   min-height: 18px;
@@ -2973,9 +2959,9 @@ switch slider {
   color: transparent;
 }
 
-switch:focus slider,
-switch:hover slider,
-switch:focus:hover slider {
+switch:focus > slider,
+switch:hover > slider,
+switch:focus:hover > slider {
   box-shadow: 0 0 0 6px alpha(@on_surface, 0.12);
 }
 
@@ -3215,16 +3201,7 @@ menu menuitem check {
 }
 
 #MozillaGtkWidget > widget > checkbutton > check:checked,
-menu menuitem check:checked {
-  -gtk-icon-source: none;
-  background-color: @primary;
-  border: 2px solid @primary;
-  border-radius: 3px;
-  box-shadow: 0 0 0 1px @primary, inset 0 0 0 2px @on_primary;
-  min-height: 16px;
-  min-width: 16px;
-}
-
+menu menuitem check:checked,
 #MozillaGtkWidget > widget > checkbutton > check:indeterminate,
 menu menuitem check:indeterminate {
   -gtk-icon-source: none;
@@ -3363,39 +3340,39 @@ scale.fine-tune.vertical {
   padding-right: 15px;
 }
 
-scale.fine-tune slider {
+scale.fine-tune > contents > trough > slider {
   margin: -7px;
 }
 
-scale trough {
+scale > contents > trough > trough {
   transition: background-color 75ms cubic-bezier(0, 0, 0.2, 1);
   outline: none;
   background-color: alpha(@on_surface, 0.2);
 }
 
-scale trough:disabled {
+scale > contents > trough > trough:disabled {
   background-color: alpha(@on_surface, 0.1);
 }
 
-scale highlight {
+scale > contents > trough > highlight {
   transition: background-color 75ms cubic-bezier(0, 0, 0.2, 1);
   background-color: @primary;
 }
 
-scale highlight:disabled {
+scale > contents > trough > highlight:disabled {
   background-color: alpha(@on_surface, 0.32);
 }
 
-scale fill {
+scale > contents > trough > fill {
   transition: background-color 75ms cubic-bezier(0, 0, 0.2, 1);
   background-color: alpha(@on_surface, 0.2);
 }
 
-scale fill:disabled {
+scale > contents > trough > fill:disabled {
   background-color: transparent;
 }
 
-scale slider {
+scale > contents > trough > slider {
   min-height: 18px;
   min-width: 18px;
   margin: -8px;
@@ -3406,15 +3383,15 @@ scale slider {
   box-shadow: inset 0 0 0 2px @primary;
 }
 
-scale slider:hover {
+scale > contents > trough > slider:hover {
   box-shadow: inset 0 0 0 2px @primary, 0 0 0 8px alpha(@on_surface, 0.12);
 }
 
-scale slider:active {
+scale > contents > trough > slider:active {
   box-shadow: inset 0 0 0 4px @primary, 0 0 0 8px alpha(@on_surface, 0.12);
 }
 
-scale slider:disabled {
+scale > contents > trough > slider:disabled {
   box-shadow: inset 0 0 0 2px alpha(@on_surface, 0.32);
 }
 
@@ -3529,8 +3506,8 @@ scale.color.horizontal {
   padding: 0 0 12px 0;
 }
 
-scale.color.horizontal slider:dir(ltr),
-scale.color.horizontal slider:dir(rtl) {
+scale.color.horizontal > contents > trough > slider:dir(ltr),
+scale.color.horizontal > contents > trough > slider:dir(rtl) {
   margin-bottom: -13.5px;
   margin-top: 11.5px;
 }
@@ -3562,23 +3539,23 @@ progressbar {
   transition: color 0.2s ease;
 }
 
-progressbar.horizontal trough,
-progressbar.horizontal progress {
+progressbar.horizontal > trough,
+progressbar.horizontal > trough > progress {
   min-height: 6px;
 }
 
-progressbar.vertical trough,
-progressbar.vertical progress {
+progressbar.vertical > trough,
+progressbar.vertical > trough > progress {
   min-width: 6px;
 }
 
-progressbar trough {
+progressbar > trough {
   border-radius: 12px;
   background-color: alpha(@on_surface, 0.12);
   transition: background-color 0.2s ease;
 }
 
-progressbar progress {
+progressbar > trough > progress {
   border-radius: 12px;
   background-color: @primary;
   transition: background-color 0.2s ease;
@@ -3590,16 +3567,16 @@ progressbar.osd {
   background-color: transparent;
 }
 
-progressbar.osd trough {
+progressbar.osd > trough {
   background-color: transparent;
 }
 
-progressbar.osd progress {
+progressbar.osd > trough > progress {
   background-color: @primary;
   transition: background-color 0.2s ease;
 }
 
-progressbar trough.empty progress {
+progressbar > trough.empty > progress {
   min-width: 0;
   min-height: 0;
   background-color: transparent;
@@ -3610,57 +3587,57 @@ progressbar trough.empty progress {
 /*************
  * Level Bar *
  *************/
-levelbar.horizontal block {
+levelbar.horizontal > trough > block {
   min-height: 6px;
   transition: background-color 0.2s ease;
 }
 
-levelbar.horizontal.discrete block {
+levelbar.horizontal.discrete > trough > block {
   min-width: 34px;
 }
 
-levelbar.horizontal.discrete block:not(:last-child):dir(ltr) {
+levelbar.horizontal.discrete > trough > block:not(:last-child):dir(ltr) {
   margin-right: 2px;
 }
 
-levelbar.horizontal.discrete block:not(:last-child):dir(rtl) {
+levelbar.horizontal.discrete > trough > block:not(:last-child):dir(rtl) {
   margin-left: 2px;
 }
 
-levelbar.vertical block {
+levelbar.vertical > trough > block {
   min-width: 6px;
   transition: background-color 0.2s ease;
 }
 
-levelbar.vertical.discrete block {
+levelbar.vertical.discrete > trough > block {
   min-height: 34px;
 }
 
-levelbar.vertical.discrete block:not(:last-child) {
+levelbar.vertical.discrete > trough > block:not(:last-child) {
   margin-bottom: 2px;
 }
 
-levelbar trough {
+levelbar > trough {
   border-radius: 12px;
   transition: background-color 0.2s ease;
 }
 
-levelbar block.low {
+levelbar > trough > block.low {
   background-color: @tertiary;
   transition: background-color 0.2s ease;
 }
 
-levelbar block.high {
+levelbar > trough > block.high {
   background-color: @primary;
   transition: background-color 0.2s ease;
 }
 
-levelbar block.full {
+levelbar > trough > block.full {
   background-color: @secondary;
   transition: background-color 0.2s ease;
 }
 
-levelbar block.empty {
+levelbar > trough > block.empty {
   background-color: alpha(@on_surface, 0.12);
   transition: background-color 0.2s ease;
 }
@@ -4997,12 +4974,7 @@ decoration:backdrop {
   border: none;
 }
 
-.ssd decoration {
-  border: none;
-  border-radius: 12px 12px 0 0;
-  box-shadow: none;
-}
-
+.ssd decoration,
 .ssd decoration:backdrop {
   border: none;
   border-radius: 12px 12px 0 0;
