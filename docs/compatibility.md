@@ -32,6 +32,7 @@ This document records what is **supported**, what was **verified in the developm
 
 - GTK4 older than 4.16 does not support the custom-property syntax used by this theme.
 - Some applications ignore user CSS entirely; this is not a theme defect.
+- Apps that draw their own canvas, such as Loupe, choose their background from the system color scheme (`org.gnome.desktop.interface color-scheme`), not from the theme stylesheet. A light backdrop in an otherwise dark setup means the system scheme is still `prefer-light`; set it to `prefer-dark` to match the dark palette.
 - GNOME Shell St CSS selectors and properties change between Shell releases. A clean upgrade is not a guarantee that the panel layout or overview styling still matches.
 - The Shell stylesheet does not read GTK4 `var(--...)` values at runtime. Recolor all three layers together as described in [COLORS.md](../COLORS.md).
 
