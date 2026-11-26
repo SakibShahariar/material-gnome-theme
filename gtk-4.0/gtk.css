@@ -138,6 +138,34 @@ iconview:selected,
   animation: icon-squash 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
 }
 
+/* GtkText input-method subnode and its documented role classes. */
+preedit {
+  background-color: color-mix(in srgb, var(--surface_container_highest) 90%, transparent);
+  color: var(--on_surface);
+  border-radius: 4px;
+}
+
+preedit.whole {
+  text-decoration-line: underline;
+  text-decoration-color: var(--outline);
+}
+
+preedit.selection {
+  background-color: var(--primary_container);
+  color: var(--on_primary_container);
+}
+
+preedit.prediction {
+  opacity: 0.7;
+  text-decoration-line: underline;
+}
+
+preedit.spelling-error,
+preedit.compose-error {
+  text-decoration-line: underline;
+  text-decoration-color: var(--error);
+}
+
 textview text {
   background-color: var(--surface_container_low);
   transition: background-color 0.3s cubic-bezier(0.2, 0, 0, 1);
@@ -9120,7 +9148,9 @@ placessidebar > scrolledwindow > scrollbar > range > trough,
 leaflet.unfolded > box > scrolledwindow > scrollbar > range > trough,
 leaflet.unfolded .contacts-contact-list > scrolledwindow > scrollbar > range > trough,
 .sidebar-pane toolbarview > stack > box > widget > widget > scrolledwindow > scrollbar > range > trough {
-  margin: 0 -8px 0 0;
+  /* A negative horizontal margin makes GTK compute a negative minimum
+   * width for trough gizmos in libadwaita sidebars. */
+  margin: 0;
 }
 
 .sidebar-pane .sidebar > scrolledwindow > scrollbar > range > trough > slider,
