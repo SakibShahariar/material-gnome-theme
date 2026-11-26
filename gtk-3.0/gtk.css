@@ -59,7 +59,9 @@ flowbox flowboxchild:selected {
   color: @primary;
   background-color: alpha(@primary, 0.2);
   transition: background-color 0.2s ease, color 0.2s ease;
-}.nemo-window .nemo-window-pane widget.entry:selected,
+}
+
+.nemo-window .nemo-window-pane widget.entry:selected,
 window.background.csd evview.view.content-view:selected,
 window.background.csd evview.view.content-view:selected:backdrop,
 .nautilus-window.background.csd notebook widget.view:selected,
@@ -91,7 +93,9 @@ treeview.view:selected,
 .linked:not(.vertical) > entry:first-child:dir(ltr) {
   border-top-left-radius: 12px;
   border-bottom-left-radius: 12px;
-}.linked:not(.vertical) > button:first-child:dir(rtl),
+}
+
+.linked:not(.vertical) > button:first-child:dir(rtl),
 .linked:not(.vertical) > spinbutton.vertical:first-child:dir(rtl),
 .linked:not(.vertical) > spinbutton:first-child:not(.vertical):dir(rtl),
 .linked:not(.vertical) > entry:first-child:dir(rtl),
@@ -1236,7 +1240,9 @@ combobox > .linked:not(.vertical) > entry:not(:only-child) {
 combobox > .linked:not(.vertical) > entry:not(:only-child):first-child:dir(ltr) {
   margin-right: -34px;
   padding-right: 34px;
-}combobox > .linked:not(.vertical) > entry:not(:only-child):first-child:dir(rtl),
+}
+
+combobox > .linked:not(.vertical) > entry:not(:only-child):first-child:dir(rtl),
 combobox > .linked:not(.vertical) > entry:not(:only-child):last-child:dir(ltr) {
   margin-left: -34px;
   padding-left: 34px;
@@ -3139,7 +3145,9 @@ check {
   border: 2px solid alpha(@primary, 0.38);
   border-radius: 3px;
   transition: background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
-}check:checked,
+}
+
+check:checked,
 check:indeterminate {
   -gtk-icon-source: none;
   background-color: @primary;
@@ -4871,7 +4879,9 @@ colorswatch:last-child:not(.bottom):dir(ltr) overlay {
 colorswatch:last-child:not(.bottom):dir(rtl) overlay {
   border-top-left-radius: 12px;
   border-bottom-left-radius: 12px;
-}colorswatch.dark,
+}
+
+colorswatch.dark,
 colorswatch.light {
   color: @on_surface;
   transition: color 0.2s ease;
@@ -6307,7 +6317,9 @@ window.background > grid > widget > widget > scrolledwindow > viewport > grid > 
 .nemo-window .primary-toolbar .path-bar.linked:not(.vertical) > button.slider-button:first-child:dir(ltr) {
   border-top-left-radius: 12px;
   border-bottom-left-radius: 12px;
-}.nemo-window .primary-toolbar .path-bar.linked:not(.vertical) > button.slider-button:first-child:dir(rtl),
+}
+
+.nemo-window .primary-toolbar .path-bar.linked:not(.vertical) > button.slider-button:first-child:dir(rtl),
 .nemo-window .primary-toolbar .path-bar.linked:not(.vertical) > button.slider-button:last-child:dir(ltr) {
   border-top-right-radius: 12px;
   border-bottom-right-radius: 12px;
