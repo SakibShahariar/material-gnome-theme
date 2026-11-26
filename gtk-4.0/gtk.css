@@ -180,8 +180,6 @@ flowbox > rubberband {
 /******************************************
  * Container Flow: Grid, Lists, Flowboxes *
  ******************************************/
-/* GtkFlowBox — flowbox > flowboxchild, with a rubberband subnode.
- * https://docs.gtk.org/gtk4/class.FlowBox.html#css-nodes */
 flowbox > flowboxchild {
   padding: 6px;
   border-radius: 16px;
@@ -245,8 +243,6 @@ list.boxed-list row button.suggested-action {
   background-color: transparent;
 }
 
-/* GtkGridView — gridview > child[.activatable], with rubberband subnode.
- * https://docs.gtk.org/gtk4/class.GridView.html#css-nodes */
 gridview > child {
   padding: 6px;
   border-radius: 16px;
@@ -283,9 +279,6 @@ coverflow cover {
 /******************
  * Labels & Text  *
  ******************/
-/* GtkLabel — a single label node with selection/link subnodes; the classes
- * used here (.separator, .title, .dim-label) are documented style classes.
- * https://docs.gtk.org/gtk4/class.Label.html#css-nodes */
 label.separator {
   color: color-mix(in srgb, var(--outline) 50%, transparent);
 }
@@ -387,9 +380,7 @@ popover.magnifier > contents,
   border-radius: 9999px;
 }
 
-/* Spinner — https://docs.gtk.org/gtk4/class.Spinner.html#css-nodes
- * A single spinner node. The docs state that :checked is added while the
- * animation is active, so visibility and motion are driven by that flag. */
+/* Spinner */
 spinner {
   background: none;
   opacity: 0;
@@ -409,11 +400,6 @@ spinner:checked:disabled {
 /****************
  * Text Entries *
  ****************/
-/*
- * GtkEntry — entry[.flat/.warning/.error] > text, image.left, image.right,
- * progress[.pulse]; GtkSearchEntry is entry.search.
- * https://docs.gtk.org/gtk4/class.Entry.html#css-nodes
- */
 entry headerbar popover.background entry,
 headerbar popover.background entry entry,
 entry {
@@ -629,12 +615,6 @@ arrow:active {
 /***********
  * Buttons *
  ***********/
-/*
- * GtkButton — a single button node with .image-button / .text-button / .flat
- * / .keyboard-activating / .suggested-action / .destructive-action / .circular
- * classes; button-like widgets add .toggle, .popup, .scale, .lock, .color.
- * https://docs.gtk.org/gtk4/class.Button.html#css-nodes
- */
 button {
   border-radius: 12px;
   transition: background-color 0.3s cubic-bezier(0.2, 0, 0, 1), border-radius 0.3s cubic-bezier(0.2, 0, 0, 1), color 0.2s cubic-bezier(0.2, 0, 0, 1), outline-color 0.3s cubic-bezier(0.2, 0, 0, 1);
@@ -1723,9 +1703,6 @@ button > image {
 /*****************
  * GtkSpinButton *
  *****************/
-/* GtkSpinButton — spinbutton[.horizontal/.vertical] with text, button.up,
- * button.down and undershoot.left/right subnodes.
- * https://docs.gtk.org/gtk4/class.SpinButton.html#css-nodes */
 spinbutton {
   border-radius: 9px;
   padding: 0;
@@ -2145,8 +2122,6 @@ button.combo:only-child:disabled {
   margin-bottom: 6px;
 }
 
-/* GtkSearchBar — searchbar > revealer > box > child / button.close.
- * https://docs.gtk.org/gtk4/class.SearchBar.html#css-nodes */
 searchbar > revealer > box {
   padding: 6px;
   border-spacing: 0;
@@ -2183,11 +2158,6 @@ searchbar > revealer > box entry {
 /***************
  * Header bars *
  ***************/
-/*
- * GtkHeaderBar — headerbar > windowhandle > box > box.start / title / box.end,
- * with windowcontrols.start / windowcontrols.end subnodes at each end.
- * https://docs.gtk.org/gtk4/class.HeaderBar.html#css-nodes
- */
 headerbar button:not(.suggested-action):not(.destructive-action) {
   color: var(--primary);
   background-color: transparent;
@@ -2637,7 +2607,6 @@ window.devel headerbar:backdrop {
 /************
  * Pathbars *
  ************/
-/* Nautilus pathbar buttons reuse the documented button node. */
 pathbar > button {
   padding-left: 5px;
   padding-right: 5px;
@@ -2741,10 +2710,6 @@ headerbar .pathbar {
 /**************
  * Tree Views *
  **************/
-/* GtkTreeView — treeview.view > header > button > sort-indicator, plus
- * rubberband and dndtarget subnodes.
- * https://docs.gtk.org/gtk4/class.TreeView.html#css-nodes
- */
 columnview.view,
 treeview.view {
   border-left-color: var(--surface_container_low);
@@ -2945,8 +2910,6 @@ treeview.view acceleditor > label {
   background-color: var(--primary);
 }
 
-/* GtkStack — a single stack node; .view is an application style class.
- * https://docs.gtk.org/gtk4/class.Stack.html#css-nodes */
 stack.view treeview.view {
   min-height: 34px;
 }
@@ -3042,7 +3005,6 @@ popover.menu box.circular-buttons button.circular.image-button.model:focus {
   background-color: color-mix(in srgb, var(--primary) 6%, transparent);
 }
 
-/* Menu item edge indicators: documented arrow/check/radio subnodes. */
 popover.menu arrow.left,
 popover.menu radio.left,
 popover.menu check.left,
@@ -3061,11 +3023,6 @@ popover.menu label.title {
 /************
  * Popovers *
  ************/
-/*
- * GtkPopover — popover.background[.menu] with arrow and contents subnodes.
- * The popover node itself is transparent; the visible surface is contents.
- * https://docs.gtk.org/gtk4/class.Popover.html#css-nodes
- */
 popover.background {
   font: initial;
 }
@@ -3244,12 +3201,6 @@ magnifier {
 /*************
  * Notebooks *
  *************/
-/*
- * GtkNotebook — notebook > header[.top/.bottom/.left/.right] > tabs
- * > tab[.reorderable-page], plus > stack.
- * https://docs.gtk.org/gtk4/class.Notebook.html#css-nodes
- * The tabbar selectors are kept for libadwaita's AdwTabBar compatibility.
- */
 tabbar tab,
 tabbar tabbox > tabboxchild > tab,
 notebook > header > tabs > tab {
@@ -3745,11 +3696,6 @@ tabbox:drop(active) {
 /**************
  * Scrollbars *
  **************/
-/*
- * GtkScrollbar — scrollbar[.horizontal/.vertical] > range[.fine-tune]
- * > trough > slider, plus documented positional and overlay classes.
- * https://docs.gtk.org/gtk4/class.Scrollbar.html#css-nodes
- */
 scrollbar {
   transition: background-color 75ms cubic-bezier(0, 0, 0.2, 1);
   background-color: transparent;
@@ -3909,18 +3855,6 @@ scrollbar.horizontal button.up {
 /**********
  * Switch *
  **********/
-/*
- * GtkSwitch — documented node tree:
- *   switch
- *   ├── image     (on-state indicator)
- *   ├── image     (off-state indicator)
- *   ╰── slider
- * States used here: :checked (switch is on) and :disabled.
- * https://docs.gtk.org/gtk4/class.Switch.html#css-nodes
- *
- * The two image nodes are intentionally transparent: the on/off state is
- * conveyed by the slider position and the track color.
- */
 switch {
   min-width: 36px;
   min-height: 20px;
@@ -4330,11 +4264,6 @@ checkbutton.selection-mode label:dir(rtl) {
 /************
  * GtkScale *
  ************/
-/*
- * Documented tree: scale[.fine-tune/.marks-before/.marks-after] > value,
- * > marks.top|bottom > mark > indicator/label, and > trough > fill/highlight/slider.
- * https://docs.gtk.org/gtk4/class.Scale.html#css-nodes
- */
 scale {
   min-height: 16px;
   min-width: 16px;
@@ -4496,13 +4425,6 @@ scale.color.vertical:dir(rtl) > trough > slider {
 /*****************
  * Progress bars *
  *****************/
-/*
- * GtkProgressBar — documented node tree:
- *   progressbar[.osd] > trough[.empty/.full] > progress[.pulse]
- * https://docs.gtk.org/gtk4/class.ProgressBar.html#css-nodes
- * Values are unchanged from the upstream baseline; only descendant
- * selectors are tightened to the documented parent/child relationships.
- */
 progressbar {
   color: var(--on_surface_variant);
   font-size: smaller;
@@ -4637,12 +4559,6 @@ window.dialog.print .dialog-action-box {
 /**********
  * Frames *
  **********/
-/*
- * GtkFrame — a single frame node whose border is drawn in CSS, with a label
- * subnode and a child widget subnode. ".frame" and "border" are legacy
- * application classes kept for compatibility.
- * https://docs.gtk.org/gtk4/class.Frame.html#css-nodes
- */
 frame,
 .frame {
   border: 1px solid color-mix(in srgb, var(--outline) 12%, transparent);
@@ -4673,8 +4589,6 @@ statusbar frame > border {
   border: none;
 }
 
-/* GtkActionBar — actionbar > revealer > box > box.start / center / box.end.
- * https://docs.gtk.org/gtk4/class.ActionBar.html#css-nodes */
 actionbar {
   box-shadow: none;
 }
@@ -4703,9 +4617,6 @@ statusbar {
   padding: 6px 18px;
 }
 
-/* GtkScrolledWindow — scrolledwindow[.frame] with overshoot/undershoot
- * subnodes (.left/.right/.top/.bottom) and scrollbar children.
- * https://docs.gtk.org/gtk4/class.ScrolledWindow.html#css-nodes */
 scrolledwindow viewport.frame {
   border: none;
 }
@@ -4798,8 +4709,6 @@ scrolledwindow > undershoot {
   border: none;
 }
 
-/* GtkSeparator — a single separator node with .horizontal / .vertical.
- * https://docs.gtk.org/gtk4/class.Separator.html#css-nodes */
 separator {
   min-width: 1px;
   min-height: 1px;
@@ -4821,13 +4730,6 @@ separator.sidebar {
 /*********
  * Lists *
  *********/
-/*
- * GtkListBox — list[.separators/.rich-list/.navigation-sidebar/.boxed-list]
- * > row[.activatable]; GtkListView uses listview > row[.activatable].
- * https://docs.gtk.org/gtk4/class.ListBox.html#css-nodes
- * https://docs.gtk.org/gtk4/class.ListView.html#css-nodes
- * "list.content" is an application-added class kept for compatibility.
- */
 list.content,
 list.boxed-list {
   border-radius: 12px;
@@ -5333,8 +5235,6 @@ columnview row:not(:selected) cell editablelabel.editing text selection {
 /*************
  * Expanders *
  *************/
-/* GtkExpander — expander-widget > box > title > expander.
- * https://docs.gtk.org/gtk4/class.Expander.html#css-nodes */
 expander {
   transition: color 0.2s cubic-bezier(0.2, 0, 0, 1),
               transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
@@ -5403,11 +5303,6 @@ expander-widget:not(decoration):not(window):drop(active) {
 /************
  * Calendar *
  ************/
-/*
- * GtkCalendar — calendar.view > header > button / stack.month / label.year,
- * and > grid > label[.day-name/.week-number/.day-number/.other-month/.today].
- * https://docs.gtk.org/gtk4/class.Calendar.html#css-nodes
- */
 calendar {
   padding: 0;
   border: 1px solid color-mix(in srgb, var(--outline) 12%, transparent);
@@ -5479,11 +5374,6 @@ calendar > grid > label.day-number.other-month {
 /***********
  * Dialogs *
  ***********/
-/*
- * Dialog windows reuse the window node with dialog-specific style classes;
- * the response area is an ordinary box containing button nodes.
- * https://docs.gtk.org/gtk4/class.Dialog.html
- */
 window.messagedialog .response-area button,
 window.dialog.message .dialog-action-area > button {
   border-radius: 9px;
@@ -5785,8 +5675,6 @@ filechooser child.activatable filelistcell.dim-label {
   color: color-mix(in srgb, var(--on_surface_variant) 70%, transparent);
 }
 
-/* Nautilus places sidebar: a list/navigation-sidebar tree with row children.
- * https://docs.gtk.org/gtk4/class.ListBox.html#css-nodes */
 placessidebar {
   background-color: transparent;
 }
@@ -5851,8 +5739,6 @@ placesview > actionbar > revealer > box > label {
 /*********
  * Paned *
  *********/
-/* GtkPaned — paned > separator[.wide]; text direction controls child order.
- * https://docs.gtk.org/gtk4/class.Paned.html#css-nodes */
 paned > separator {
   min-width: 1px;
   min-height: 1px;
@@ -5928,8 +5814,6 @@ video image .osd {
 /**************
  * GtkInfoBar *
  **************/
-/* GtkInfoBar — infobar[.info/.warning/.error/.question] with a .close button.
- * https://docs.gtk.org/gtk4/class.InfoBar.html#css-nodes */
 infobar > revealer > box {
   padding: 6px;
   border-spacing: 12px;
@@ -6060,8 +5944,6 @@ infobar.error:hover > revealer > box {
 /************
  * Tooltips *
  ************/
-/* GTK tooltips use the tooltip / tooltip.background window class.
- * https://docs.gtk.org/gtk4/class.Window.html#css-nodes */
 tooltip {
   padding: 6px 12px;
   box-shadow: none;
@@ -6205,12 +6087,6 @@ colorchooser .popover .osd:backdrop {
 /**********************
  * Window Decorations *
  **********************/
-/*
- * GtkWindow — window.background[.csd/.solid-csd/.ssd]
- * [.maximized/.fullscreen/.tiled*] > child / .titlebar[.default-decoration].
- * Subclasses add .dialog, .popup, .tooltip, .aboutdialog, .filechooser, etc.
- * https://docs.gtk.org/gtk4/class.Window.html#css-nodes
- */
 window {
   border: none;
 }
@@ -6468,8 +6344,6 @@ shortcut > .keycap {
   caret-color: var(--primary);
 }
 
-/* GtkStackSwitcher — stackswitcher node with button children; the .linked
- * class groups them. https://docs.gtk.org/gtk4/class.StackSwitcher.html#css-nodes */
 stackswitcher {
   min-height: 0;
   padding: 0;
