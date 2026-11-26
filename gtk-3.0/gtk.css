@@ -3344,13 +3344,13 @@ scale.fine-tune > contents > trough > slider {
   margin: -7px;
 }
 
-scale > contents > trough > trough {
+scale > contents > trough {
   transition: background-color 75ms cubic-bezier(0, 0, 0.2, 1);
   outline: none;
   background-color: alpha(@on_surface, 0.2);
 }
 
-scale > contents > trough > trough:disabled {
+scale > contents > trough:disabled {
   background-color: alpha(@on_surface, 0.1);
 }
 
