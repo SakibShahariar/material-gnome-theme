@@ -333,8 +333,6 @@
   border: 2px solid rgba({{colors.primary.default.red}}, {{colors.primary.default.green}}, {{colors.primary.default.blue}}, 0.3) !important;
 }
 
-
-
 #panel .panel-button.clock-display:hover .clock,
 #panel .panel-button.clock-display:active .clock,
 #panel .panel-button.clock-display:focus .clock,

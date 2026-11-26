@@ -785,7 +785,6 @@ row button:checked {
   animation: none;
 }
 
-
 /* Text-action buttons in header popovers stay neutral; only compact
    icon-only buttons get the solid primary treatment above. */
 headerbar popover.background button:not(.image-button):not(.suggested-action):not(.destructive-action) {
@@ -2996,9 +2995,7 @@ popover.menu box.inline-buttons button.image-button.model {
 
 popover.menu box.inline-buttons button.image-button.model:hover,
 
-
 popover.menu box.inline-buttons button.image-button.model:active,
-
 
 popover.menu box.inline-buttons button.image-button.model:selected {
   background: image(color-mix(in srgb, currentColor 6%, transparent));
