@@ -4893,9 +4893,6 @@ StWidget.focused .app-grid-running-dot {
   color: {{colors.error.default.hex}};
 }
 
-/* ── Clock pill: one consistent dark pill + thin outline in every state ──
-   Keeps the outer button dark and removes the nested inner pill/outline that
-   made the border look thicker on hover/click. */
 #panel .panel-button.clock-display:hover,
 #panel .panel-button.clock-display:active,
 #panel .panel-button.clock-display:focus,
@@ -4994,9 +4991,6 @@ StWidget.focused .app-grid-running-dot {
   box-shadow: none !important;
 }
 
-/* ── Override blur extensions' whitish overview search ──
-   Their stylesheet loads after the theme with high specificity, so use
-   higher specificity here to keep the search field on-palette. */
 #overviewGroup#overviewGroup .search-entry,
 #overviewGroup#overviewGroup .search-entry:focus {
   color: {{colors.primary.default.hex}} !important;
