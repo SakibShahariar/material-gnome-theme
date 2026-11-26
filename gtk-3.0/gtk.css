@@ -668,7 +668,7 @@ actionbar > revealer > box button:checked:not(.suggested-action):not(.destructiv
 window.background > box.vertical > box.horizontal > frame > scrolledwindow > viewport.frame list button.flat,
 terminal-window notebook > header > box button.flat,
 notebook > header > button.flat,
-notebook > header tab:not(:checked) button.flat {
+notebook > header > tabs > tab:not(:checked) button.flat {
   color: alpha(@primary, 0.6);
   background-color: transparent;
   transition: background-color 0.2s ease, color 0.2s ease;
@@ -677,15 +677,15 @@ notebook > header tab:not(:checked) button.flat {
 window.background > box.vertical > box.horizontal > frame > scrolledwindow > viewport.frame list button.flat:hover,
 terminal-window notebook > header > box button.flat:hover,
 notebook > header > button.flat:hover,
-notebook > header tab:not(:checked) button.flat:hover,
+notebook > header > tabs > tab:not(:checked) button.flat:hover,
 window.background > box.vertical > box.horizontal > frame > scrolledwindow > viewport.frame list button.flat:active,
 terminal-window notebook > header > box button.flat:active,
 notebook > header > button.flat:active,
-notebook > header tab:not(:checked) button.flat:active,
+notebook > header > tabs > tab:not(:checked) button.flat:active,
 window.background > box.vertical > box.horizontal > frame > scrolledwindow > viewport.frame list button.flat:focus,
 terminal-window notebook > header > box button.flat:focus,
 notebook > header > button.flat:focus,
-notebook > header tab:not(:checked) button.flat:focus {
+notebook > header > tabs > tab:not(:checked) button.flat:focus {
   color: @primary;
   background-color: alpha(@primary, 0.1);
 }
@@ -693,7 +693,7 @@ notebook > header tab:not(:checked) button.flat:focus {
 window.background > box.vertical > box.horizontal > frame > scrolledwindow > viewport.frame list button.flat:checked,
 terminal-window notebook > header > box button.flat:checked,
 notebook > header > button.flat:checked,
-notebook > header tab:not(:checked) button.flat:checked {
+notebook > header > tabs > tab:not(:checked) button.flat:checked {
   background-color: alpha(@primary, 0.2);
   color: @primary;
 }
@@ -701,7 +701,7 @@ notebook > header tab:not(:checked) button.flat:checked {
 window.background > box.vertical > box.horizontal > frame > scrolledwindow > viewport.frame list button.flat:disabled,
 terminal-window notebook > header > box button.flat:disabled,
 notebook > header > button.flat:disabled,
-notebook > header tab:not(:checked) button.flat:disabled {
+notebook > header > tabs > tab:not(:checked) button.flat:disabled {
   color: alpha(@primary, 0.3);
 }
 
@@ -791,7 +791,7 @@ button.circular label,
 .nautilus-window .floating-bar button,
 placessidebar.sidebar row button.sidebar-button,
 notebook > header > button.flat,
-notebook > header tab button.flat,
+notebook > header > tabs > tab button.flat,
 spinbutton.vertical button,
 spinbutton:not(.vertical) button {
   min-height: 24px;
@@ -2509,7 +2509,7 @@ modelbutton.flat arrow.right {
  * Notebooks *
  *************/
 tabbox > tab,
-notebook > header tab {
+notebook > header > tabs > tab {
   transition: background-color 75ms cubic-bezier(0, 0, 0.2, 1), color 75ms cubic-bezier(0, 0, 0.2, 1);
   min-height: 24px;
   min-width: 24px;
@@ -2523,25 +2523,25 @@ notebook > header tab {
 }
 
 tabbox > tab:hover,
-notebook > header tab:hover {
+notebook > header > tabs > tab:hover {
   background-color: alpha(@on_surface, 0.08);
   color: @primary;
 }
 
 tabbox > tab:disabled,
-notebook > header tab:disabled {
+notebook > header > tabs > tab:disabled {
   color: alpha(@on_surface, 0.4);
 }
 
 tabbox > tab:checked,
-notebook > header tab:checked {
+notebook > header > tabs > tab:checked {
   transition: background-color 75ms cubic-bezier(0, 0, 0.2, 1), color 75ms cubic-bezier(0, 0, 0.2, 1);
   background-color: @surface_container_low;
   color: @primary;
 }
 
 tabbox > tab:checked:disabled,
-notebook > header tab:checked:disabled {
+notebook > header > tabs > tab:checked:disabled {
   color: alpha(@on_surface, 0.5);
 }
 
@@ -2664,33 +2664,33 @@ notebook > header.right > tabs > arrow {
   border-right-style: none;
 }
 
-notebook > header tab > box {
+notebook > header > tabs > tab > box {
   transition: background-color 75ms cubic-bezier(0, 0, 0.2, 1);
   margin: -6px -12px;
   padding: 6px 12px;
 }
 
-notebook > header tab > box:drop(active) {
+notebook > header > tabs > tab > box:drop(active) {
   background-color: alpha(@primary, 0.15);
   color: @on_surface;
 }
 
-notebook > header tab button.flat:last-child:dir(ltr) {
+notebook > header > tabs > tab button.flat:last-child:dir(ltr) {
   margin-left: 6px;
   margin-right: -6px;
 }
 
-notebook > header tab button.flat:last-child:dir(rtl) {
+notebook > header > tabs > tab button.flat:last-child:dir(rtl) {
   margin-right: 6px;
   margin-left: -6px;
 }
 
-notebook > header tab button.flat:first-child:dir(ltr) {
+notebook > header > tabs > tab button.flat:first-child:dir(ltr) {
   margin-left: -6px;
   margin-right: 6px;
 }
 
-notebook > header tab button.flat:first-child:dir(rtl) {
+notebook > header > tabs > tab button.flat:first-child:dir(rtl) {
   margin-right: -6px;
   margin-left: 6px;
 }
