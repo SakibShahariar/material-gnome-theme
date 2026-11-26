@@ -3903,10 +3903,6 @@ switch:checked > slider {
 /*************************
  * Check and Radio items *
  *************************/
-/*
- * GtkCheckButton — documented nodes: checkbutton > check, or > radio when
- * grouped. https://docs.gtk.org/gtk4/class.CheckButton.html#css-nodes
- */
 checkbutton {
   outline: none;
   border-spacing: 3px;
@@ -4475,11 +4471,6 @@ progressbar > trough.empty > progress {
 /*************
  * Level Bar *
  *************/
-/*
- * GtkLevelBar — documented tree: levelbar > trough > block.filled/.empty,
- * with .level-name classes on filled blocks.
- * https://docs.gtk.org/gtk4/class.LevelBar.html#css-nodes
- */
 levelbar > trough {
   padding: 2px;
   border-radius: 9999px;
@@ -6143,13 +6134,6 @@ window.ssd {
   box-shadow: inset 0 1px color-mix(in srgb, var(--on_surface_variant) 10%, transparent);
 }
 
-/*
- * GtkWindowControls — documented nodes: windowcontrols with image.icon and
- * button.minimize / button.maximize / button.close children.
- * https://docs.gtk.org/gtk4/class.WindowControls.html#css-nodes
- * The visual treatment is unchanged from the previous upstream-based rules;
- * only the selector noise (repeated :not(.suggested-action) chains) is gone.
- */
 windowcontrols {
   border-spacing: 6px;
 }
