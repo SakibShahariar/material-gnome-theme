@@ -1360,11 +1360,7 @@ StEntry StLabel.hint-text,
   text-shadow: none;
 }
 
-#LookingGlassDialog StBoxLayout#EvalBox {
-  spacing: 6px;
-  padding: 6px;
-}
-
+#LookingGlassDialog StBoxLayout#EvalBox,
 #LookingGlassDialog StBoxLayout#ResultsArea {
   spacing: 6px;
   padding: 6px;
@@ -1703,10 +1699,7 @@ StEntry StLabel.hint-text,
 }
 
 #overview StScrollBar StButton#vhandle:hover,
-#overview StScrollBar StButton#hhandle:hover {
-  background-color: {{colors.primary.default.hex}};
-}
-
+#overview StScrollBar StButton#hhandle:hover,
 #overview StScrollBar StButton#vhandle:active,
 #overview StScrollBar StButton#hhandle:active {
   background-color: {{colors.primary.default.hex}};
@@ -2012,10 +2005,7 @@ StScrollBar StButton#hhandle {
 }
 
 StScrollBar StButton#vhandle:hover,
-StScrollBar StButton#hhandle:hover {
-  background-color: {{colors.primary.default.hex}};
-}
-
+StScrollBar StButton#hhandle:hover,
 StScrollBar StButton#vhandle:active,
 StScrollBar StButton#hhandle:active {
   background-color: {{colors.primary.default.hex}};
@@ -3503,16 +3493,8 @@ StWidget.focused .app-grid-running-dot {
   color: {{colors.on_primary.default.hex}};
 }
 
-.quick-toggle:checked:hover {
-  background-color: {{colors.primary_container.default.hex}} !important;
-  color: {{colors.on_primary_container.default.hex}};
-}
-
-.quick-menu-toggle .quick-toggle-arrow:checked:hover {
-  background-color: {{colors.primary_container.default.hex}} !important;
-  color: {{colors.on_primary_container.default.hex}};
-}
-
+.quick-toggle:checked:hover,
+.quick-menu-toggle .quick-toggle-arrow:checked:hover,
 .quick-toggle-has-menu .quick-toggle-menu-button:checked:hover {
   background-color: {{colors.primary_container.default.hex}} !important;
   color: {{colors.on_primary_container.default.hex}};
@@ -4482,10 +4464,7 @@ StWidget.focused .app-grid-running-dot {
 
 #panel.light-panel .panel-button,
 #panel.dark-panel .panel-button,
-#panel.transparent-panel .panel-button {
-  color: {{colors.on_surface_variant.default.hex}} !important;
-}
-
+#panel.transparent-panel .panel-button,
 #panel.light-panel .panel-button.clock-display .clock,
 #panel.dark-panel .panel-button.clock-display .clock,
 #panel.transparent-panel .panel-button.clock-display .clock {
