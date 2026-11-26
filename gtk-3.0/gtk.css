@@ -3395,7 +3395,7 @@ scale > contents > trough > slider:disabled {
   box-shadow: inset 0 0 0 2px alpha(@on_surface, 0.32);
 }
 
-scale marks,
+scale > marks,
 scale value {
   color: alpha(@on_surface, 0.7);
   transition: color 0.2s ease;
@@ -3481,18 +3481,22 @@ scale.vertical.marks-after:not(.marks-before) slider {
   box-shadow: 0 0 0 1px alpha(@primary, 0.3);
 }
 
-scale indicator {
+scale > marks > mark {
+  background-color: transparent;
+}
+
+scale > marks > mark > indicator {
   background-color: alpha(@on_surface, 0.2);
   color: transparent;
   transition: background-color 0.2s ease;
 }
 
-scale.horizontal indicator {
+scale.horizontal > marks > mark > indicator {
   min-height: 8px;
   min-width: 1px;
 }
 
-scale.vertical indicator {
+scale.vertical > marks > mark > indicator {
   min-height: 1px;
   min-width: 8px;
 }
