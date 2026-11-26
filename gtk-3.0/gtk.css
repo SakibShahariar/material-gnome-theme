@@ -67,7 +67,7 @@ window.background.csd evview.view.content-view:selected:backdrop,
 .nautilus-window.background.csd notebook widget.view:selected,
 spinbutton.vertical selection,
 spinbutton:not(.vertical) selection,
-entry selection,
+entry > selection,
 label selection,
 textview text selection:focus,
 textview text selection,
@@ -389,16 +389,16 @@ window.background.csd > box.horizontal > box.vertical > scrolledwindow.view > vi
   color: alpha(@on_surface, 0.4);
 }
 
-window.background.csd > leaflet > box.vertical > scrolledwindow.view > viewport.frame > stack entry image,
-window.background.csd > hdyleaflet > box.vertical > scrolledwindow.view > viewport.frame > stack entry image,
-window.background.csd > box.horizontal > box.vertical > scrolledwindow.view > viewport.frame > stack entry image {
+window.background.csd > leaflet > box.vertical > scrolledwindow.view > viewport.frame > stack entry > image,
+window.background.csd > hdyleaflet > box.vertical > scrolledwindow.view > viewport.frame > stack entry > image,
+window.background.csd > box.horizontal > box.vertical > scrolledwindow.view > viewport.frame > stack entry > image {
   color: alpha(@on_surface, 0.6);
   transition: color 0.2s ease;
 }
 
-window.background.csd > leaflet > box.vertical > scrolledwindow.view > viewport.frame > stack entry image:disabled,
-window.background.csd > hdyleaflet > box.vertical > scrolledwindow.view > viewport.frame > stack entry image:disabled,
-window.background.csd > box.horizontal > box.vertical > scrolledwindow.view > viewport.frame > stack entry image:disabled {
+window.background.csd > leaflet > box.vertical > scrolledwindow.view > viewport.frame > stack entry > image:disabled,
+window.background.csd > hdyleaflet > box.vertical > scrolledwindow.view > viewport.frame > stack entry > image:disabled,
+window.background.csd > box.horizontal > box.vertical > scrolledwindow.view > viewport.frame > stack entry > image:disabled {
   color: alpha(@on_surface, 0.3);
 }
 
@@ -457,7 +457,7 @@ entry.flat {
 
 spinbutton.vertical image,
 spinbutton:not(.vertical) image,
-entry image {
+entry > image {
   color: alpha(@on_surface, 0.7);
   transition: color 0.2s ease;
 }
@@ -466,34 +466,34 @@ spinbutton.vertical image:hover,
 spinbutton:not(.vertical) image:hover,
 spinbutton.vertical image:active,
 spinbutton:not(.vertical) image:active,
-entry image:hover,
-entry image:active {
+entry > image:hover,
+entry > image:active {
   color: @primary;
 }
 
 spinbutton.vertical image:disabled,
 spinbutton:not(.vertical) image:disabled,
-entry image:disabled {
+entry > image:disabled {
   color: alpha(@on_surface, 0.4);
 }
 
 spinbutton.vertical image.left,
 spinbutton:not(.vertical) image.left,
-entry image.left {
+entry > image.left {
   margin-left: 1px;
   margin-right: 6px;
 }
 
 spinbutton.vertical image.right,
 spinbutton:not(.vertical) image.right,
-entry image.right {
+entry > image.right {
   margin-left: 6px;
   margin-right: 1px;
 }
 
-spinbutton.vertical undershoot.left,
-spinbutton:not(.vertical) undershoot.left,
-entry undershoot.left {
+spinbutton.vertical > undershoot.left,
+spinbutton:not(.vertical) > undershoot.left,
+entry > undershoot.left {
   background-color: transparent;
   background-image: linear-gradient(to top, transparent 50%, alpha(@on_surface, 0.3) 50%);
   padding-left: 1px;
@@ -504,9 +504,9 @@ entry undershoot.left {
   margin: 4px 0;
 }
 
-spinbutton.vertical undershoot.right,
-spinbutton:not(.vertical) undershoot.right,
-entry undershoot.right {
+spinbutton.vertical > undershoot.right,
+spinbutton:not(.vertical) > undershoot.right,
+entry > undershoot.right {
   background-color: transparent;
   background-image: linear-gradient(to top, transparent 50%, alpha(@on_surface, 0.3) 50%);
   padding-right: 1px;
@@ -567,7 +567,7 @@ entry.warning:disabled {
 
 spinbutton.vertical progress,
 spinbutton:not(.vertical) progress,
-entry progress {
+entry > progress {
   margin: 2px -8px;
   border-bottom: 2px solid @primary;
   background-color: transparent;
@@ -1634,21 +1634,21 @@ searchbar > revealer > box {
   color: alpha(@primary, 0.5);
 }
 
-.nemo-window .primary-toolbar entry image,
-.titlebar entry image {
+.nemo-window .primary-toolbar entry > image,
+.titlebar entry > image {
   color: alpha(@primary, 0.7);
   transition: color 0.2s ease;
 }
 
-.nemo-window .primary-toolbar entry image:hover,
-.titlebar entry image:hover,
-.nemo-window .primary-toolbar entry image:active,
-.titlebar entry image:active {
+.nemo-window .primary-toolbar entry > image:hover,
+.titlebar entry > image:hover,
+.nemo-window .primary-toolbar entry > image:active,
+.titlebar entry > image:active {
   color: @primary;
 }
 
-.nemo-window .primary-toolbar entry image:disabled,
-.titlebar entry image:disabled {
+.nemo-window .primary-toolbar entry > image:disabled,
+.titlebar entry > image:disabled {
   color: alpha(@primary, 0.5);
 }
 
@@ -4788,21 +4788,13 @@ colorswatch.top overlay {
   border-top-right-radius: 12px;
 }
 
-colorswatch.bottom {
-  border-bottom-left-radius: 12px;
-  border-bottom-right-radius: 12px;
-}
-
+colorswatch.bottom,
 colorswatch.bottom overlay {
   border-bottom-left-radius: 12px;
   border-bottom-right-radius: 12px;
 }
 
-colorswatch.left {
-  border-top-left-radius: 12px;
-  border-bottom-left-radius: 12px;
-}
-
+colorswatch.left,
 colorswatch:first-child:not(.top):dir(ltr) {
   border-top-left-radius: 12px;
   border-bottom-left-radius: 12px;
@@ -4813,26 +4805,14 @@ colorswatch:first-child:not(.top):dir(rtl) {
   border-bottom-right-radius: 12px;
 }
 
-colorswatch.left overlay {
-  border-top-left-radius: 12px;
-  border-bottom-left-radius: 12px;
-}
-
+colorswatch.left overlay,
 colorswatch:first-child:not(.top):dir(ltr) overlay {
   border-top-left-radius: 12px;
   border-bottom-left-radius: 12px;
 }
 
-colorswatch:first-child:not(.top):dir(rtl) overlay {
-  border-top-right-radius: 12px;
-  border-bottom-right-radius: 12px;
-}
-
-colorswatch.right {
-  border-top-right-radius: 12px;
-  border-bottom-right-radius: 12px;
-}
-
+colorswatch:first-child:not(.top):dir(rtl) overlay,
+colorswatch.right,
 colorswatch:last-child:not(.bottom):dir(ltr) {
   border-top-right-radius: 12px;
   border-bottom-right-radius: 12px;
@@ -4843,11 +4823,7 @@ colorswatch:last-child:not(.bottom):dir(rtl) {
   border-bottom-left-radius: 12px;
 }
 
-colorswatch.right overlay {
-  border-top-right-radius: 12px;
-  border-bottom-right-radius: 12px;
-}
-
+colorswatch.right overlay,
 colorswatch:last-child:not(.bottom):dir(ltr) overlay {
   border-top-right-radius: 12px;
   border-bottom-right-radius: 12px;
@@ -5264,14 +5240,8 @@ popover.emoji-completion .emoji:hover {
   transition: background-color 0.2s ease;
 }
 
-.nautilus-window.background.csd:not(.unified) notebook > stack {
-  background-color: transparent;
-}
-
-.nautilus-window.background.csd:not(.unified) notebook scrolledwindow > .view:not(:selected):not(:hover):not(:checked) {
-  background-color: transparent;
-}
-
+.nautilus-window.background.csd:not(.unified) notebook > stack,
+.nautilus-window.background.csd:not(.unified) notebook scrolledwindow > .view:not(:selected):not(:hover):not(:checked),
 .nautilus-window.background.csd:not(.unified) notebook placesview > stack > frame > scrolledwindow > viewport > list {
   background-color: transparent;
 }
